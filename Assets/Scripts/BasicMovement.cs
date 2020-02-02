@@ -56,7 +56,7 @@ public class BasicMovement : MonoBehaviour
     void FixedUpdate()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, distanceToGround, ground, QueryTriggerInteraction.Ignore);
-        //Debug.Log(isGrounded);
+        Debug.Log(isGrounded);
         inputs = Vector3.zero;
         inputs.x = Input.GetAxis("Horizontal");
         inputs.z = Input.GetAxis("Vertical");
