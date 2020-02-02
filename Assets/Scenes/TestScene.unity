@@ -238,6 +238,7 @@ GameObject:
   - component: {fileID: 169758590}
   - component: {fileID: 169758589}
   - component: {fileID: 169758594}
+  - component: {fileID: 169758595}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -349,13 +350,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb5431ca8a8df7f47bc4f3ec21bcd252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
-  jumpHeight: 12
+  speed: 7
+  jumpHeight: 9
   distanceToGround: 1.05
   ground:
     serializedVersion: 2
     m_Bits: 256
   maxExtraJumps: 1
+--- !u!114 &169758595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169758588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a999661153ba68c48938048fc3b8ad86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallMultiplier: 1.1
+  lowJumpMultiplier: 1.05
 --- !u!1001 &266848096
 PrefabInstance:
   m_ObjectHideFlags: 0
