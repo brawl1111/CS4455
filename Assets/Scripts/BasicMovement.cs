@@ -38,7 +38,7 @@ public class BasicMovement : MonoBehaviour
         
         if (Input.GetKeyDown("space") && isGrounded)
         {
-            Debug.Log("normal jump");
+            //Debug.Log("normal jump");
         	//rb.AddForce(Vector3.up * Mathf.Sqrt(jumpHeight * -2f * Physics.gravity.y), ForceMode.VelocityChange);
             //rb.AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
             rb.velocity = Vector3.up * jumpHeight;
