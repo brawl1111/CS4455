@@ -25,12 +25,12 @@ public class BasicMovement : MonoBehaviour
         groundCheck = transform.GetChild(0);
         /*
 		GroundCheck gets the first child of the capsule. In this case, it's an empty child
-		that's centered within the capsule. This is for checking if the capsule is "grounded." We use
+		that's located at the bottom of the capsule. This is for checking if the capsule is "grounded." We use
 		a function called Physics.CheckSphere which draws an imaginary sphere centered around
 		groundCheck and determines if anything is intersecting that sphere.
         */
     }
-
+ 
     // Update is called once per frame
     void Update()
     {
