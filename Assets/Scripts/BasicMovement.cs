@@ -22,6 +22,7 @@ public class BasicMovement : MonoBehaviour
     {
         extraJumps = maxExtraJumps;
         rb = GetComponent<Rigidbody>();
+        
         groundCheck = transform.GetChild(0);
         /*
 		GroundCheck gets the first child of the capsule. In this case, it's an empty child
@@ -56,7 +57,7 @@ public class BasicMovement : MonoBehaviour
     void FixedUpdate()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, distanceToGround, ground, QueryTriggerInteraction.Ignore);
-        Debug.Log(isGrounded);
+        //Debug.Log(isGrounded);
         inputs = Vector3.zero;
         inputs.x = Input.GetAxis("Horizontal");
         inputs.z = Input.GetAxis("Vertical");

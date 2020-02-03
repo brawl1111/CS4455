@@ -312,6 +312,7 @@ GameObject:
   - component: {fileID: 169758594}
   - component: {fileID: 169758595}
   - component: {fileID: 169758596}
+  - component: {fileID: 169758589}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -319,6 +320,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &169758589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169758588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b624731e95662d45bf7b46f4bdfe0b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &169758590
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -532,7 +545,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 326760346}
-  - component: {fileID: 326760345}
   - component: {fileID: 326760347}
   - component: {fileID: 326760348}
   - component: {fileID: 326760349}
@@ -543,25 +555,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &326760345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 326760344}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26a4c8f6137c6f842a0be48c17c05bd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  jumpHeight: 2
-  distanceToGround: 0
-  ground:
-    serializedVersion: 2
-    m_Bits: 0
-  maxExtraJumps: 0
 --- !u!4 &326760346
 Transform:
   m_ObjectHideFlags: 0
