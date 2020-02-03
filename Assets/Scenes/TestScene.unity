@@ -596,6 +596,7 @@ GameObject:
   m_Component:
   - component: {fileID: 412482557}
   - component: {fileID: 412482558}
+  - component: {fileID: 412482559}
   m_Layer: 0
   m_Name: Hurtbox
   m_TagString: Hurtbox
@@ -625,11 +626,23 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 412482556}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 3.1826043, y: 1.5892954, z: 1}
   m_Center: {x: -0.13566041, y: 0.096380234, z: 0}
+--- !u!114 &412482559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412482556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85dadb21b8ad4ec4a98b05234ec010a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &701652925 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100058, guid: 62a1903fd3708d7499742985e02168a7,
@@ -1495,7 +1508,7 @@ GameObject:
   - component: {fileID: 3565168492831671169}
   m_Layer: 0
   m_Name: polySurface1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1576,7 +1589,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6733466173671660238}
   - component: {fileID: 7721784502293899486}
-  - component: {fileID: 7721784502293899487}
   m_Layer: 0
   m_Name: Baby_Demon_Model
   m_TagString: Enemy
@@ -1600,15 +1612,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &7721784502293899487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7721784502293899485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85dadb21b8ad4ec4a98b05234ec010a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
