@@ -72,8 +72,8 @@ public class CharacterMovement : MonoBehaviour
 
     void Update()
     {
-    	CalculateVerticalMovement();
-    	CalculateForwardMovement();
+    	// CalculateVerticalMovement();
+    	// CalculateForwardMovement();
     }
 
     void FixedUpdate()
@@ -86,8 +86,8 @@ public class CharacterMovement : MonoBehaviour
     	{
     		RotateModel(input.x, input.y);
     	}	
-    	//CalculateForwardMovement();
-    	// CalculateVerticalMovement();
+    	CalculateForwardMovement();
+    	CalculateVerticalMovement();
     	
     }
 
