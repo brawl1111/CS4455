@@ -37,14 +37,14 @@ public class BasicMovement : MonoBehaviour
     {
         if (isGrounded) extraJumps = maxExtraJumps; //if player is on ground, reset double jump count
         
-        if (Input.GetKeyDown("space") && isGrounded)
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
             //Debug.Log("normal jump");
         	//rb.AddForce(Vector3.up * Mathf.Sqrt(jumpHeight * -2f * Physics.gravity.y), ForceMode.VelocityChange);
             //rb.AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
             rb.velocity = Vector3.up * jumpHeight;
         }
-        else if (Input.GetKeyDown("space") && extraJumps > 0)
+        else if (Input.GetButtonDown("Jump") && extraJumps > 0)
         {
             //Debug.Log("double jump");
             //rb.AddForce(Vector3.up * Mathf.Sqrt(jumpHeight * -2f * Physics.gravity.y), ForceMode.VelocityChange);
