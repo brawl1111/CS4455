@@ -9,6 +9,12 @@ the inputs into on-screen changes.
 */
 public class PlayerInput : MonoBehaviour
 {
+	public static PlayerInput Instance
+	{
+		get {return s_Instance; }
+	}
+
+	protected static PlayerInput s_Instance;
 	public Vector2 InputVector
     {
         get
@@ -38,6 +44,10 @@ public class PlayerInput : MonoBehaviour
     void Awake()
     {
     	spinCooldownWait = new WaitForSeconds(spinCooldownTime);
+    	if (s_Instance == null)
+    		s_Instance = this;
+    	else if (s_Instance != this)
+    		throw new UnityException("There cannot be more than one PlayerInput script.");
     }
 
     void Update()

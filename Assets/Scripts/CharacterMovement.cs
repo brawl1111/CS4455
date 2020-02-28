@@ -72,22 +72,23 @@ public class CharacterMovement : MonoBehaviour
 
     void Update()
     {
-    	// CalculateVerticalMovement();
     	// CalculateForwardMovement();
+    	if (isGroundedCheck) extraJumps = maxExtraJumps;
+    	CalculateVerticalMovement();
     }
 
     void FixedUpdate()
     {
     	isGroundedCheck = Physics.CheckSphere(groundCheck.position, distanceToGround, ground, QueryTriggerInteraction.Ignore);
     	
-    	if (isGroundedCheck) extraJumps = maxExtraJumps;
+    	// if (isGroundedCheck) extraJumps = maxExtraJumps;
     	Vector2 input = m_Input.InputVector;
     	if (input.x != 0f || input.y != 0f)
     	{
     		RotateModel(input.x, input.y);
     	}	
     	CalculateForwardMovement();
-    	CalculateVerticalMovement();
+    	//CalculateVerticalMovement();
     	
     }
 
@@ -116,28 +117,47 @@ public class CharacterMovement : MonoBehaviour
     	if (!m_Input.Jump && (isGrounded || isGroundedCheck))
     		canJump = true;
 
+    	// if (isGroundedCheck)
+    	// {
+    	// 	verticalSpeed = Physics.gravity.y * 0.3f;
+    	// 	//Debug.Log("IsGrounded");
+    	// 	if (m_Input.Jump && canJump)
+    	// 	{
+    	// 		Debug.Log("detected jump");
+    	// 		verticalSpeed = jumpSpeed;
+    	// 		isGroundedCheck = false;
+    	// 	}
+    	// } else
+    	// {
+    	// 	//Debug.Log("not grounded");
+    	// 	verticalSpeed += Physics.gravity.y * gravityScale * Time.deltaTime;
+    	// 	if (m_Input.Jump && extraJumps > 0 && canJump)
+    	// 	{
+    	// 		Debug.Log("detected double jump");
+    	// 		verticalSpeed = jumpSpeed;
+    	// 		extraJumps--;
+    	// 		canJump = false;
+    	// 	}
+    	// 	//Debug.Log("not grounded verticalSpeed: " + verticalSpeed);
+    	// }
     	if (isGroundedCheck)
     	{
     		verticalSpeed = Physics.gravity.y * 0.3f;
-    		//Debug.Log("IsGrounded");
-    		if (m_Input.Jump && canJump)
+    		if (Input.GetButtonDown("Jump"))
     		{
     			Debug.Log("detected jump");
     			verticalSpeed = jumpSpeed;
-    			isGroundedCheck = false;
+    			//isGroundedCheck = false;
     		}
     	} else
     	{
-    		//Debug.Log("not grounded");
-    		verticalSpeed += Physics.gravity.y * gravityScale * Time.deltaTime;
-    		if (m_Input.Jump && extraJumps > 0 && canJump)
+    		if (Input.GetButtonDown("Jump") && extraJumps >0)
     		{
-    			Debug.Log("detected double jump");
     			verticalSpeed = jumpSpeed;
     			extraJumps--;
-    			canJump = false;
+    			Debug.Log("detected double jump");
     		}
-    		//Debug.Log("not grounded verticalSpeed: " + verticalSpeed);
+    		verticalSpeed += Physics.gravity.y * gravityScale * Time.deltaTime;
     	}
     	/*verticalSpeed += Physics.gravity.y * gravityScale * Time.deltaTime;
     	if (m_Input.Jump && isGrounded)
