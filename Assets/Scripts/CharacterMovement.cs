@@ -24,6 +24,8 @@ public class CharacterMovement : MonoBehaviour
 	private Transform groundCheck;
 	public bool isGroundedCheck;
 
+	private bool canDoubleJump;
+
     //smoothing vars for horizontal movements
     public float turnSmoothing = 15f;
     public float speedDampTime = 0.1f;
@@ -39,6 +41,7 @@ public class CharacterMovement : MonoBehaviour
     private int extraJumps;
     private bool canJump;
     
+    private int cycleCount = 0;
 
     protected bool IsMoveInput
      {
@@ -73,22 +76,40 @@ public class CharacterMovement : MonoBehaviour
     void Update()
     {
     	// CalculateForwardMovement();
-    	if (isGroundedCheck) extraJumps = maxExtraJumps;
-    	CalculateVerticalMovement();
-    }
-
-    void FixedUpdate()
-    {
-    	isGroundedCheck = Physics.CheckSphere(groundCheck.position, distanceToGround, ground, QueryTriggerInteraction.Ignore);
-    	
-    	// if (isGroundedCheck) extraJumps = maxExtraJumps;
+    	//if (isGroundedCheck) extraJumps = maxExtraJumps;
+    	//CalculateVerticalMovement();
     	Vector2 input = m_Input.InputVector;
     	if (input.x != 0f || input.y != 0f)
     	{
     		RotateModel(input.x, input.y);
     	}	
     	CalculateForwardMovement();
-    	//CalculateVerticalMovement();
+    	CalculateVerticalMovement();
+
+    	// Vector3 movement;
+
+    	// movement = currSpeed * transform.forward * Time.deltaTime;
+    	// movement.y = verticalSpeed * Time.deltaTime;
+    	// //Debug.Log(movement.y);
+    	// //Debug.Log("movement: " + movement + " transform: " + transform.position);
+    	// charCtrl.Move(movement);
+    	// //isGrounded = charCtrl.isGrounded;
+    	
+    	// anim.SetBool(isGroundedState, true);
+    }
+
+    void FixedUpdate()
+    {
+    	isGroundedCheck = Physics.CheckSphere(groundCheck.position, distanceToGround, ground, QueryTriggerInteraction.Ignore);
+    	
+    	if (isGroundedCheck) extraJumps = maxExtraJumps;
+    	// Vector2 input = m_Input.InputVector;
+    	// if (input.x != 0f || input.y != 0f)
+    	// {
+    	// 	RotateModel(input.x, input.y);
+    	// }	
+    	// CalculateForwardMovement();
+    	// CalculateVerticalMovement();
     	
     }
 
@@ -140,38 +161,45 @@ public class CharacterMovement : MonoBehaviour
     	// 	}
     	// 	//Debug.Log("not grounded verticalSpeed: " + verticalSpeed);
     	// }
-    	if (isGroundedCheck)
+    	// if (isGroundedCheck && Input.GetButtonDown("Jump"))
+    	// {
+
+    	// 	//verticalSpeed = Physics.gravity.y * 0.3f;
+    	// 	// if (Input.GetButtonDown("Jump"))
+    	// 	// {
+    	// 		Debug.Log("detected jump " + cycleCount);
+    	// 		verticalSpeed = jumpSpeed;
+    	// 	// 	//isGroundedCheck = false;
+    	// 	// }
+    	// } else if (Input.GetButtonDown("Jump") && extraJumps > 0)
+    	// {
+    		
+    	// 		verticalSpeed = jumpSpeed;
+    	// 		extraJumps--;
+    	// 		Debug.Log("detected double jump " + cycleCount);
+    	// } else if (!isGroundedCheck)
+    	// {
+    	// 	verticalSpeed += Physics.gravity.y * gravityScale * Time.deltaTime;
+
+    	// }
+    	if (Input.GetButtonDown("Jump"))
     	{
-    		verticalSpeed = Physics.gravity.y * 0.3f;
-    		if (Input.GetButtonDown("Jump"))
-    		{
-    			Debug.Log("detected jump");
-    			verticalSpeed = jumpSpeed;
-    			//isGroundedCheck = false;
-    		}
-    	} else
-    	{
-    		if (Input.GetButtonDown("Jump") && extraJumps >0)
+    		if (isGroundedCheck)
     		{
     			verticalSpeed = jumpSpeed;
-    			extraJumps--;
-    			Debug.Log("detected double jump");
+    			canDoubleJump = true;
     		}
-    		verticalSpeed += Physics.gravity.y * gravityScale * Time.deltaTime;
+    		else
+    		{
+    			if (canDoubleJump)
+    			{
+    				canDoubleJump = false;
+    				verticalSpeed = jumpSpeed;
+    			}
+    		}
     	}
-    	/*verticalSpeed += Physics.gravity.y * gravityScale * Time.deltaTime;
-    	if (m_Input.Jump && isGrounded)
-    	{
-    		Debug.Log("detected jump");
-    		verticalSpeed = jumpSpeed;
-    		isGrounded = false;
-    	} else if (m_Input.Jump && extraJumps > 0)
-    	{
-    		Debug.Log("detected double jump");
-    		verticalSpeed = jumpSpeed;
-    		extraJumps--;
-    		canJump = false;
-    	}*/
+    	verticalSpeed += Physics.gravity.y * gravityScale * Time.deltaTime;
+    	cycleCount++;
     }
 
     void RotateModel(float h, float v)
