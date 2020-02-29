@@ -17,7 +17,7 @@ public class CharacterMovement : MonoBehaviour
     private bool isGrounded = true;
     private float verticalSpeed = 0f;
     public float gravityScale = 2f;
-    public float jumpSpeed = 5f;
+    public float jumpSpeed = 1f;
 
     public float distanceToGround;
 	public LayerMask ground;
@@ -101,15 +101,17 @@ public class CharacterMovement : MonoBehaviour
     void FixedUpdate()
     {
     	isGroundedCheck = Physics.CheckSphere(groundCheck.position, distanceToGround, ground, QueryTriggerInteraction.Ignore);
-    	
-    	if (isGroundedCheck) extraJumps = maxExtraJumps;
+    	isGrounded = charCtrl.isGrounded;
+
+    	if (isGroundedCheck || isGrounded) extraJumps = maxExtraJumps;
     	// Vector2 input = m_Input.InputVector;
     	// if (input.x != 0f || input.y != 0f)
     	// {
     	// 	RotateModel(input.x, input.y);
     	// }	
-    	// CalculateForwardMovement();
-    	// CalculateVerticalMovement();
+    	//CalculateForwardMovement();
+    	//CalculateVerticalMovement();
+
     	
     }
 
@@ -182,24 +184,52 @@ public class CharacterMovement : MonoBehaviour
     	// 	verticalSpeed += Physics.gravity.y * gravityScale * Time.deltaTime;
 
     	// }
-    	if (Input.GetButtonDown("Jump"))
+    	// if (m_Input.Jump)
+    	// {
+    	// 	if (isGroundedCheck || isGrounded)
+    	// 	{
+    	// 		verticalSpeed = jumpSpeed;
+    	// 		canDoubleJump = true;
+    	// 	}
+    	// 	else
+    	// 	{
+    	// 		if (canDoubleJump)
+    	// 		{
+    	// 			canDoubleJump = false;
+    	// 			verticalSpeed = jumpSpeed;
+    	// 		}
+    	// 	}
+    	// }
+    	// verticalSpeed += Physics.gravity.y * gravityScale * Time.deltaTime;
+
+    	// if (isGrounded || isGroundedCheck)
+    	// {
+    	// 	verticalSpeed = Physics.gravity.y * 0.3f;
+    	// 	if (m_Input.Jump)
+    	// 	{
+    	// 		verticalSpeed = jumpSpeed;
+    	// 	}
+    	// }
+    	// else
+    	// {
+    	// 	if (m_Input.Jump && extraJumps > 0)
+    	// 	{
+    	// 		verticalSpeed = jumpSpeed;
+    	// 		extraJumps--;
+    	// 	}
+    	// 	verticalSpeed += Physics.gravity.y * gravityScale * Time.deltaTime;
+    	// }
+
+
+    	if (m_Input.Jump && (isGrounded || isGroundedCheck))
     	{
-    		if (isGroundedCheck)
-    		{
-    			verticalSpeed = jumpSpeed;
-    			canDoubleJump = true;
-    		}
-    		else
-    		{
-    			if (canDoubleJump)
-    			{
-    				canDoubleJump = false;
-    				verticalSpeed = jumpSpeed;
-    			}
-    		}
+    		rb.velocity = Vector3.up * jumpSpeed;
+    	} else if (m_Input.Jump && extraJumps > 0)
+    	{
+    		rb.velocity = Vector3.up * jumpSpeed;
+    		extraJumps--;
     	}
-    	verticalSpeed += Physics.gravity.y * gravityScale * Time.deltaTime;
-    	cycleCount++;
+    	//cycleCount++;
     }
 
     void RotateModel(float h, float v)
@@ -212,18 +242,30 @@ public class CharacterMovement : MonoBehaviour
     	transform.rotation = newRotation;
     }
 
-    void OnAnimatorMove()
-    {
-    	Vector3 movement;
+    // void OnAnimatorMove()
+    // {
+    // 	// Vector3 movement;
 
-    	movement = currSpeed * transform.forward * Time.deltaTime;
-    	movement.y = verticalSpeed * Time.deltaTime;
-    	//Debug.Log(movement.y);
-    	//Debug.Log("movement: " + movement + " transform: " + transform.position);
-    	charCtrl.Move(movement);
-    	//isGrounded = charCtrl.isGrounded;
-    	if (isGroundedCheck) anim.SetBool(isGroundedState, true);
-    	else anim.SetBool(isGroundedState, false);
+    // 	// movement = currSpeed * transform.forward * Time.deltaTime;
+    // 	// Debug.Log("verticalSpeed: " + verticalSpeed);
+    // 	// movement.y = verticalSpeed * Time.deltaTime;
+    // 	// //Debug.Log(movement.y);
+    // 	// Debug.Log("movement: " + movement + " transform: " + transform.position);
+    // 	// charCtrl.Move(movement);
+    // 	// //isGrounded = charCtrl.isGrounded;
+    // 	// if (isGroundedCheck || isGrounded) anim.SetBool(isGroundedState, true);
+    // 	// else anim.SetBool(isGroundedState, false);
     	
-    }
+    // 	// Vector3 newRootPos = this.transform.position;
+    // 	// Vector3 lerpedPos = Vector3.LerpUnclamped(this.transform.position, newRootPos, 2f);
+    // 	// Debug.Log(lerpedPos);
+    // 	// this.transform.position = lerpedPos;
+    // 	// if (isGroundedCheck || isGrounded) anim.SetBool(isGroundedState, true);
+    // 	// else anim.SetBool(isGroundedState, false);
+    // 	// Vector3 move;
+    // 	// move = this.transform.forward * Time.deltaTime * currSpeed;
+    // 	// this.transform.position = move;
+    // 	// CalculateForwardMovement();
+    // 	// rb.MovePosition(this.transform.position + Vector3.one * currSpeed * Time.deltaTime);
+    // }
 }

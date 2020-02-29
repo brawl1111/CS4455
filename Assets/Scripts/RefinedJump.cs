@@ -11,6 +11,7 @@ public class RefinedJump : MonoBehaviour
  
 	public float fallMultiplier = 2.5f;
 	public float lowJumpMultiplier = 2f;
+    public float gravityScale = 2f;
 
 	private Rigidbody rb;
 
@@ -19,17 +20,18 @@ public class RefinedJump : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
  		if (rb.velocity.y < 0)
  		{
  			//When player is falling, apply more gravity to fall faster.
- 			rb.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1);
+ 			rb.velocity += Vector3.up * Physics.gravity.y * gravityScale * (fallMultiplier - 1) * Time.deltaTime;
+            Debug.Log(rb.velocity);
  		}
- 		else if (rb.velocity.y > 0 && !Input.GetKey("space"))
+ 		else if (rb.velocity.y > 0 && !Input.GetButtonDown("Jump"))
  		{
- 			//Basically if the player holds space for longer, the player will jump higher.
- 			rb.velocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1);
+ 			//Basically if the player holds jump for longer, the player will jump higher.
+ 			rb.velocity += Vector3.up * Physics.gravity.y * gravityScale * (lowJumpMultiplier - 1) * Time.deltaTime;
  		}
     }
 }
