@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TreeScrpit : MonoBehaviour
+public class TreeScript : MonoBehaviour
 {
     public AudioClip treeCrack;
     public AudioClip treeHitGround;

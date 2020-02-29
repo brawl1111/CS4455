@@ -5,6 +5,9 @@ using UnityEngine;
 public class GateAnimator : MonoBehaviour
 {
 
+    public AudioClip gateOpen;
+    public AudioSource audioSource;
+
     private Animation anim;
     private bool swinging = false;
     private bool unswinging = false;
@@ -22,24 +25,31 @@ public class GateAnimator : MonoBehaviour
 
     void Update()
     {
+        // We're currently swinging
         if (anim.isPlaying)
         {
             return;
         }
+        // We should be swinging out
         if (!anim.isPlaying && swinging)
         {
             anim.Play("Gate Swing");
+            audioSource.PlayOneShot(gateOpen);
             inSwing = true;
         }
+        // We should be swinging in
         if (!anim.isPlaying && unswinging)
         {
             anim.Play("Gate Unswing");
+            audioSource.PlayOneShot(gateOpen);
             inSwing = false;
         }
+        // We're done swinging and we're out
         if (inSwing)
         {
             swinging = false;
         }
+        // We're done swinging and we're in
         else
         {
             unswinging = false;
