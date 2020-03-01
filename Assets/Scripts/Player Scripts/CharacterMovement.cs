@@ -40,6 +40,13 @@ public class CharacterMovement : MonoBehaviour
     public int maxExtraJumps;
     private int extraJumps;
     private bool canJump;
+
+
+    //bunch of variables to support spinning
+    private bool isSpinningCooldownOver = true;
+    private bool isSpinning = false;
+    private WaitForSeconds spinCooldownWait;
+    public float speedWhileSpinning = 2.5f;
     
     private int cycleCount = 0;
 
@@ -51,9 +58,15 @@ public class CharacterMovement : MonoBehaviour
     private int moveState = Animator.StringToHash("Movement");
     private int speedFloat = Animator.StringToHash("forward");
     private int isGroundedState = Animator.StringToHash("isGrounded");
+    private int spinState = Animator.StringToHash("spinTrigger");
+    private int doneSpinning = Animator.StringToHash("doneSpinning");
+
+    private Transform hurtbox;
 
     void Awake()
     {
+        spinCooldownWait = new WaitForSeconds(1.5f);
+
     	anim = GetComponent<Animator>();
     	if (anim == null) Debug.Log("Animator could not be found");
 
@@ -71,54 +84,33 @@ public class CharacterMovement : MonoBehaviour
         extraJumps = maxExtraJumps;
 
         groundCheck = transform.GetChild(0);
+        hurtbox = transform.GetChild(1);
     }
 
     void Update()
     {
-    	// CalculateForwardMovement();
-    	//if (isGroundedCheck) extraJumps = maxExtraJumps;
-    	//CalculateVerticalMovement();
     	Vector2 input = m_Input.InputVector;
     	if (input.x != 0f || input.y != 0f)
     	{
     		RotateModel(input.x, input.y);
-    	}	
+    	}
+        if (Input.GetButtonDown("Fire1") && isSpinningCooldownOver)
+        {
+            anim.SetBool(doneSpinning, false);
+            anim.SetTrigger(spinState);
+            isSpinningCooldownOver = false;
+            isSpinning = true;
+            //hurtbox.gameObject.SetActive(true);
+
+        }
     	CalculateForwardMovement();
     	CalculateVerticalMovement();
 
-    	// Vector3 movement;
-
-    	// movement = currSpeed * transform.forward * Time.deltaTime;
-    	// movement.y = verticalSpeed * Time.deltaTime;
-    	// //Debug.Log(movement.y);
-    	// //Debug.Log("movement: " + movement + " transform: " + transform.position);
-    	// charCtrl.Move(movement);
-    	// //isGrounded = charCtrl.isGrounded;
-    	
-    	// anim.SetBool(isGroundedState, true);
     }
 
-    void FixedUpdate()
-    {
-    	isGroundedCheck = Physics.CheckSphere(groundCheck.position, distanceToGround, ground, QueryTriggerInteraction.Ignore);
-    	isGrounded = charCtrl.isGrounded;
-
-    	if (isGroundedCheck || isGrounded) extraJumps = maxExtraJumps;
-    	// Vector2 input = m_Input.InputVector;
-    	// if (input.x != 0f || input.y != 0f)
-    	// {
-    	// 	RotateModel(input.x, input.y);
-    	// }	
-    	//CalculateForwardMovement();
-    	//CalculateVerticalMovement();
-
-    	
-    }
-
-
-    void CalculateForwardMovement()
-    {
-    	Vector2 input = m_Input.InputVector;
+    public void SetAnimDoneSpinning() {
+        anim.SetBool(doneSpinning, true);
+        Vector2 input = m_Input.InputVector;
         if (input.sqrMagnitude > 1f)
             input.Normalize();
 
@@ -133,6 +125,77 @@ public class CharacterMovement : MonoBehaviour
 
         // Set the animator parameter to control what animation is being played.
         anim.SetFloat(speedFloat, currSpeed);
+    }
+
+    public void StartSpinCooldown()
+    {
+        isSpinning = false;
+        StartCoroutine(SpinCooldown());
+    }
+
+    IEnumerator SpinCooldown()
+    {
+        yield return spinCooldownWait;
+        Debug.Log("cooldown coroutine over");
+        isSpinningCooldownOver = true;
+    }   
+
+    void FixedUpdate()
+    {
+    	isGroundedCheck = Physics.CheckSphere(groundCheck.position, distanceToGround, ground, QueryTriggerInteraction.Ignore);
+    	isGrounded = charCtrl.isGrounded;
+
+    	if (isGroundedCheck || isGrounded) extraJumps = maxExtraJumps;
+        // if (true)
+        // {
+        //     hurtbox.gameObject.SetActive(true);
+        //     anim.SetBool("isSpinning", true);
+        // }
+        // else
+        // {
+        //     hurtbox.gameObject.SetActive(false);
+        //     anim.SetBool("isSpinning", false);
+        // }
+    	//CalculateForwardMovement();
+    	//CalculateVerticalMovement();
+    	
+    }
+
+
+    void CalculateForwardMovement()
+    {
+        if (!isSpinning)
+        {    
+        	Vector2 input = m_Input.InputVector;
+            if (input.sqrMagnitude > 1f)
+                input.Normalize();
+
+            // Calculate the speed intended by input.
+            desiredSpeed = input.magnitude * maxSpeed;
+
+            // Determine change to speed based on whether there is currently any move input.
+            float acceleration = IsMoveInput ? groundAcceleration : groundDeceleration;
+
+            // Adjust the forward speed towards the desired speed.
+            currSpeed = Mathf.MoveTowards(currSpeed, desiredSpeed, acceleration * Time.deltaTime);
+
+            // Set the animator parameter to control what animation is being played.
+            anim.SetFloat(speedFloat, currSpeed);
+        }
+        else
+        {
+            //Debug.Log("moving while spinning");
+            anim.SetFloat(speedFloat, 0.0f);
+            Vector3 inputs = Vector3.zero;
+            inputs.x = Input.GetAxis("Horizontal");
+            inputs.z = Input.GetAxis("Vertical");
+            // if (inputs != Vector3.zero)
+            // {
+            //     transform.forward = inputs;
+            // }
+            Debug.Log(inputs);
+            rb.MovePosition(rb.position + inputs * speedWhileSpinning * Time.deltaTime);
+        }
     }
 
     void CalculateVerticalMovement()
@@ -267,5 +330,6 @@ public class CharacterMovement : MonoBehaviour
     // 	// this.transform.position = move;
     // 	// CalculateForwardMovement();
     // 	// rb.MovePosition(this.transform.position + Vector3.one * currSpeed * Time.deltaTime);
+    // 	this.transform.position = anim.rootPosition;
     // }
 }

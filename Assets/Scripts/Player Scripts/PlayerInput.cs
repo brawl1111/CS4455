@@ -29,13 +29,15 @@ public class PlayerInput : MonoBehaviour
     }
     public bool Spin
     {
-        get;
-        private set;
+        get {
+        	return isSpinning;
+        }
     }
 
 
     protected Vector2 movement;
-    protected bool isSpinning;
+    protected bool isSpinning = false;
+    protected bool canSpin = true;
 
     private WaitForSeconds spinCooldownWait;
     Coroutine attackCooldownCoroutine;
@@ -54,6 +56,13 @@ public class PlayerInput : MonoBehaviour
     {
         movement.Set(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         Jump = Input.GetButtonDown("Jump");
+        if (Input.GetButtonDown("Fire1") && canSpin)
+        {
+        	isSpinning = true;
+        	Debug.Log("spinning");
+        	StartCoroutine(SpinCooldown());
+
+        }
         // if (Input.GetButtonDown("Fire1") && !isSpinning)
         // {
         // 	isSpinning = true;
@@ -66,10 +75,17 @@ public class PlayerInput : MonoBehaviour
         // }
     }
 
+    public void SetIsSpinningFalse()
+    {
+        isSpinning = false;
+    }
+
+
     IEnumerator SpinCooldown()
     {
-    	isSpinning = true;
+    	canSpin = false;
     	yield return spinCooldownWait;
-    	isSpinning = false;
+    	canSpin = true;
+        isSpinning = false;
     }
 }

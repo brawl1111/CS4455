@@ -26,7 +26,7 @@ public class RefinedJump : MonoBehaviour
  		{
  			//When player is falling, apply more gravity to fall faster.
  			rb.velocity += Vector3.up * Physics.gravity.y * gravityScale * (fallMultiplier - 1) * Time.deltaTime;
-            Debug.Log(rb.velocity);
+            //Debug.Log(rb.velocity);
  		}
  		else if (rb.velocity.y > 0 && !Input.GetButtonDown("Jump"))
  		{
