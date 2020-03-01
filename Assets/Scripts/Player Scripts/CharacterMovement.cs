@@ -47,6 +47,7 @@ public class CharacterMovement : MonoBehaviour
     private bool isSpinning = false;
     private WaitForSeconds spinCooldownWait;
     public float speedWhileSpinning = 2.5f;
+    public float spinJumpBoost = 8f;
     
     private int cycleCount = 0;
 
@@ -96,6 +97,10 @@ public class CharacterMovement : MonoBehaviour
     	}
         if (Input.GetButtonDown("Fire1") && isSpinningCooldownOver)
         {
+            if (!(isGroundedCheck || isGrounded))
+            {
+                rb.velocity = Vector3.up * spinJumpBoost;
+            }
             anim.SetBool(doneSpinning, false);
             anim.SetTrigger(spinState);
             isSpinningCooldownOver = false;

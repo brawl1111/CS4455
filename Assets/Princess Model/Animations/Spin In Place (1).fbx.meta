@@ -72,7 +72,7 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.74508363
+      - time: 0.6003468
         functionName: SetAnimDoneSpinning
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: 6f0ec01145be4ea498905c2a9a7bf921,
@@ -80,7 +80,7 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.74508363
+      - time: 0.6003468
         functionName: StartSpinCooldown
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: 6f0ec01145be4ea498905c2a9a7bf921,
@@ -88,7 +88,7 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.74508363
+      - time: 0.6003468
         functionName: DisableHurtbox
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: fe9234d29a28db74289f3ccc54b7c1f0,
