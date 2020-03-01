@@ -543,7 +543,7 @@ MonoBehaviour:
   groundAcceleration: 20
   groundDeceleration: 20
   maxExtraJumps: 1
-  speedWhileSpinning: 10
+  speedWhileSpinning: 8
   spinJumpBoost: 8
 --- !u!1 &230274897
 GameObject:
