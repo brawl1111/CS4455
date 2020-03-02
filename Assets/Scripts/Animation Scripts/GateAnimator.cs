@@ -36,14 +36,14 @@ public class GateAnimator : MonoBehaviour
         if (!anim.isPlaying && swinging)
         {
             anim.Play("Gate Swing");
-            audioSource.PlayOneShot(gateOpen);
+            EventManager.TriggerEvent<GateSwingEvent, Vector3>(gameObject.transform.position);
             inSwing = true;
         }
         // We should be swinging in
         if (!anim.isPlaying && unswinging)
         {
             anim.Play("Gate Unswing");
-            audioSource.PlayOneShot(gateOpen);
+            EventManager.TriggerEvent<GateSwingEvent, Vector3>(gameObject.transform.position);
             inSwing = false;
         }
         // We're done swinging and we're out

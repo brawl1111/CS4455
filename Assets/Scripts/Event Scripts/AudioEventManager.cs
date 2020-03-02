@@ -10,6 +10,7 @@ public class AudioEventManager : MonoBehaviour
 
     public AudioClip treeCrack;
     public AudioClip treeHitGround;
+    public AudioClip gateSwing;
     /*
     public AudioClip[] minionJabberAudio = null;
     public AudioClip[] boxAudio = null;
@@ -29,6 +30,8 @@ public class AudioEventManager : MonoBehaviour
     private UnityAction<Vector3> treeCrackEventListener;
 
     private UnityAction<Vector3> treeHitGroundEventListener;
+
+    private UnityAction<Vector3> gateSwingEventListener;
     /*
 
     private UnityAction<Vector3,float> boxCollisionEventListener;
@@ -61,6 +64,8 @@ public class AudioEventManager : MonoBehaviour
         treeCrackEventListener = new UnityAction<Vector3>(TreeCrackEventHandler);
 
         treeHitGroundEventListener = new UnityAction<Vector3>(TreeHitGroundEventHandler);
+
+        gateSwingEventListener = new UnityAction<Vector3>(GateSwingEventHandler);
         /*
         boxCollisionEventListener = new UnityAction<Vector3,float>(boxCollisionEventHandler);
 
@@ -102,6 +107,7 @@ public class AudioEventManager : MonoBehaviour
     {
         EventManager.StartListening<TreeCrackEvent, Vector3>(treeCrackEventListener);
         EventManager.StartListening<TreeHitGroundEvent, Vector3>(treeHitGroundEventListener);
+        EventManager.StartListening<GateSwingEvent, Vector3>(gateSwingEventListener);
         /*
         EventManager.StartListening<BoxCollisionEvent, Vector3,float>(boxCollisionEventListener);
         EventManager.StartListening<PlayerLandsEvent, Vector3, float>(playerLandsEventListener);
@@ -123,6 +129,7 @@ public class AudioEventManager : MonoBehaviour
     {
         EventManager.StopListening<TreeCrackEvent, Vector3>(treeCrackEventListener);
         EventManager.StopListening<TreeHitGroundEvent, Vector3>(treeHitGroundEventListener);
+        EventManager.StopListening<GateSwingEvent, Vector3>(gateSwingEventListener);
         /*
         EventManager.StopListening<BoxCollisionEvent, Vector3,float>(boxCollisionEventListener);
         EventManager.StopListening<PlayerLandsEvent, Vector3, float>(playerLandsEventListener);
@@ -152,6 +159,15 @@ public class AudioEventManager : MonoBehaviour
     {
         EventSound3D sound = Instantiate(eventSound3DPrefab, worldPos, Quaternion.identity, null);
         sound.audioSrc.clip = treeHitGround;
+        sound.audioSrc.minDistance = 0f;
+        sound.audioSrc.maxDistance = 100f;
+        sound.audioSrc.Play();
+    }
+
+    void GateSwingEventHandler(Vector3 worldPos)
+    {
+        EventSound3D sound = Instantiate(eventSound3DPrefab, worldPos, Quaternion.identity, null);
+        sound.audioSrc.clip = gateSwing;
         sound.audioSrc.minDistance = 0f;
         sound.audioSrc.maxDistance = 100f;
         sound.audioSrc.Play();
