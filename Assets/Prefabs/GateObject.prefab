@@ -343,6 +343,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gateOpen: {fileID: 8300000, guid: 251e516755372415998ca2eec1b4c85e, type: 3}
   audioSource: {fileID: 1822119531811775716}
+  princess: {fileID: -927199367670048503, guid: d680c521f8b66ec44bec4ccc9289990a,
+    type: 3}
+  section: -1
 --- !u!82 &1822119531811775716
 AudioSource:
   m_ObjectHideFlags: 0

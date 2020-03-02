@@ -25,14 +25,14 @@ public class TreeScript : MonoBehaviour
         // Gets the player object and checks if they are currently spinning
         // If so, we're gonna start the falling animation
         GameObject collider = collision.gameObject;
-        if (collider.gameObject == GameObject.Find("PlayerContainer"))
+        if (collider.gameObject == GameObject.Find("Princess") && collider.gameObject.GetComponent<CharacterMovement>().GetIsSpinning())
         {
-            GameObject player = collider.gameObject.transform.GetChild(1).gameObject;
-            if (player == GameObject.Find("Player") && player.GetComponent<SpinAttack>().getIsSpinning())
-            {
+            // GameObject player = collider.gameObject.transform.GetChild(1).gameObject;
+            // if (player == GameObject.Find("Player") && player.GetComponent<SpinningAttackPrincess>().getIsSpinning())
+            // {
                 gameObject.GetComponent<Animation>().Play("Tree Fall");
                 audioSource.PlayOneShot(treeCrack);
-            }
+            // }
         }
         // But wait, what about when we hit the ground? We'll want to play
         // A sound to suggest that the tree has finished moving

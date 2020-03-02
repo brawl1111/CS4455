@@ -41,14 +41,16 @@ public class CharacterMovement : MonoBehaviour
     private int extraJumps;
     private bool canJump;
 
-
     //bunch of variables to support spinning
     private bool isSpinningCooldownOver = true;
     private bool isSpinning = false;
     private WaitForSeconds spinCooldownWait;
     public float speedWhileSpinning = 2.5f;
     public float spinJumpBoost = 8f;
-    
+
+    //information on llamas for each section, where each index is a section
+    private int[] llamas = new int[] {0, 0, 0, 0};
+
     private int cycleCount = 0;
 
     protected bool IsMoveInput
@@ -132,6 +134,11 @@ public class CharacterMovement : MonoBehaviour
         anim.SetFloat(speedFloat, currSpeed);
     }
 
+    public bool GetIsSpinning()
+    {
+        return isSpinning;
+    }
+
     public void StartSpinCooldown()
     {
         isSpinning = false;
@@ -143,7 +150,17 @@ public class CharacterMovement : MonoBehaviour
         yield return spinCooldownWait;
         Debug.Log("cooldown coroutine over");
         isSpinningCooldownOver = true;
-    }   
+    }
+
+    public void IncrementLlamaCount(int section)
+    {
+        llamas[section] = llamas[section] + 1;
+    }
+
+    public int GetLlamaCount(int section)
+    {
+        return llamas[section];
+    }
 
     void FixedUpdate()
     {
@@ -163,14 +180,14 @@ public class CharacterMovement : MonoBehaviour
         // }
     	//CalculateForwardMovement();
     	//CalculateVerticalMovement();
-    	
+
     }
 
 
     void CalculateForwardMovement()
     {
         if (!isSpinning)
-        {    
+        {
         	Vector2 input = m_Input.InputVector;
             if (input.sqrMagnitude > 1f)
                 input.Normalize();
@@ -243,7 +260,7 @@ public class CharacterMovement : MonoBehaviour
     	// 	// }
     	// } else if (Input.GetButtonDown("Jump") && extraJumps > 0)
     	// {
-    		
+
     	// 		verticalSpeed = jumpSpeed;
     	// 		extraJumps--;
     	// 		Debug.Log("detected double jump " + cycleCount);
@@ -323,7 +340,7 @@ public class CharacterMovement : MonoBehaviour
     // 	// //isGrounded = charCtrl.isGrounded;
     // 	// if (isGroundedCheck || isGrounded) anim.SetBool(isGroundedState, true);
     // 	// else anim.SetBool(isGroundedState, false);
-    	
+
     // 	// Vector3 newRootPos = this.transform.position;
     // 	// Vector3 lerpedPos = Vector3.LerpUnclamped(this.transform.position, newRootPos, 2f);
     // 	// Debug.Log(lerpedPos);
