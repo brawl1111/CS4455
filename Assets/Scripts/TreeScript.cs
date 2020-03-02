@@ -31,7 +31,7 @@ public class TreeScript : MonoBehaviour
             // if (player == GameObject.Find("Player") && player.GetComponent<SpinningAttackPrincess>().getIsSpinning())
             // {
                 gameObject.GetComponent<Animation>().Play("Tree Fall");
-                audioSource.PlayOneShot(treeCrack);
+                EventManager.TriggerEvent<TreeCrackEvent, Vector3>(this.gameObject.transform.position);
             // }
         }
         // But wait, what about when we hit the ground? We'll want to play
@@ -39,7 +39,7 @@ public class TreeScript : MonoBehaviour
         // In this case, Ground is eqivalent to layer 8
         else if (collider.gameObject.layer == 8)
         {
-            audioSource.PlayOneShot(treeHitGround);
+            EventManager.TriggerEvent<TreeHitGroundEvent, Vector3>(this.gameObject.transform.position);
         }
     }
 }
