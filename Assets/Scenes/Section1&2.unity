@@ -9136,6 +9136,11 @@ PrefabInstance:
       propertyPath: treeHitGround
       value: 
       objectReference: {fileID: 8300000, guid: a60b88135287a4121b57f8542df5484d, type: 3}
+    - target: {fileID: 7629222877236713455, guid: f2b3a32e7f7174ba58e94328bd69904d,
+        type: 3}
+      propertyPath: gateSwing
+      value: 
+      objectReference: {fileID: 8300000, guid: 251e516755372415998ca2eec1b4c85e, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2b3a32e7f7174ba58e94328bd69904d, type: 3}
 --- !u!1001 &5092204912352751342

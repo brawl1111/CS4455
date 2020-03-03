@@ -8,6 +8,8 @@ public class TreeScript : MonoBehaviour
     public AudioClip treeHitGround;
     public AudioSource audioSource;
 
+    private bool isFalling = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,13 +28,16 @@ public class TreeScript : MonoBehaviour
         // If so, we're gonna start the falling animation
         Debug.Log(collision);
         GameObject collider = collision.gameObject;
-        if (collider.gameObject == GameObject.Find("Princess") && collider.gameObject.GetComponent<CharacterMovement>().GetIsSpinning())
+        if (collider.gameObject == GameObject.Find("Princess") &&
+            collider.gameObject.GetComponent<CharacterMovement>().GetIsSpinning() &&
+            !isFalling)
         {
             // GameObject player = collider.gameObject.transform.GetChild(1).gameObject;
             // if (player == GameObject.Find("Player") && player.GetComponent<SpinningAttackPrincess>().getIsSpinning())
             // {
                 gameObject.GetComponent<Animation>().Play("Tree Fall");
                 EventManager.TriggerEvent<TreeCrackEvent, Vector3>(this.gameObject.transform.position);
+                isFalling = true;
             // }
         }
         // But wait, what about when we hit the ground? We'll want to play
