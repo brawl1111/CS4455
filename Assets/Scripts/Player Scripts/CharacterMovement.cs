@@ -107,6 +107,7 @@ public class CharacterMovement : MonoBehaviour
             anim.SetTrigger(spinState);
             isSpinningCooldownOver = false;
             isSpinning = true;
+            EventManager.TriggerEvent<SpinSFXEvent, Vector3>(this.transform.position);
             //hurtbox.gameObject.SetActive(true);
 
         }

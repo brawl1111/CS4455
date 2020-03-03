@@ -12,7 +12,8 @@ public class AudioEventManager : MonoBehaviour
     public AudioClip treeHitGround;
     public AudioClip gateSwing;
     public AudioClip jumpSFX;
-    public AudioClip llamaPickup;
+    public AudioClip llamaPickupSFX;
+    public AudioClip SpinSFX;
     /*
     public AudioClip[] minionJabberAudio = null;
     public AudioClip[] boxAudio = null;
@@ -38,6 +39,8 @@ public class AudioEventManager : MonoBehaviour
     private UnityAction<Vector3> jumpSFXEventListener;
 
     private UnityAction<Vector3> llamaPickupSFXListener;
+
+    private UnityAction<Vector3> spinSFXListener;
     /*
 
     private UnityAction<Vector3,float> boxCollisionEventListener;
@@ -76,6 +79,8 @@ public class AudioEventManager : MonoBehaviour
         jumpSFXEventListener = new UnityAction<Vector3>(JumpSFXEventHandler);
 
         llamaPickupSFXListener = new UnityAction<Vector3>(LlamaPickupSFXEventHandler);
+
+        spinSFXListener = new UnityAction<Vector3>(SpinSFXEventHandler);
         /*
         boxCollisionEventListener = new UnityAction<Vector3,float>(boxCollisionEventHandler);
 
@@ -120,6 +125,7 @@ public class AudioEventManager : MonoBehaviour
         EventManager.StartListening<GateSwingEvent, Vector3>(gateSwingEventListener);
         EventManager.StartListening<JumpSFXEvent, Vector3>(jumpSFXEventListener);
         EventManager.StartListening<LlamaPickupSFXEvent, Vector3>(llamaPickupSFXListener);
+        EventManager.StartListening<SpinSFXEvent, Vector3>(spinSFXListener);
         /*
         EventManager.StartListening<BoxCollisionEvent, Vector3,float>(boxCollisionEventListener);
         EventManager.StartListening<PlayerLandsEvent, Vector3, float>(playerLandsEventListener);
@@ -144,6 +150,7 @@ public class AudioEventManager : MonoBehaviour
         EventManager.StopListening<GateSwingEvent, Vector3>(gateSwingEventListener);
         EventManager.StopListening<JumpSFXEvent, Vector3>(jumpSFXEventListener);
         EventManager.StopListening<LlamaPickupSFXEvent, Vector3>(llamaPickupSFXListener);
+        EventManager.StopListening<SpinSFXEvent, Vector3>(spinSFXListener);
         /*
         EventManager.StopListening<BoxCollisionEvent, Vector3,float>(boxCollisionEventListener);
         EventManager.StopListening<PlayerLandsEvent, Vector3, float>(playerLandsEventListener);
@@ -200,7 +207,16 @@ public class AudioEventManager : MonoBehaviour
     void LlamaPickupSFXEventHandler(Vector3 worldPos)
     {
         EventSound3D sound = Instantiate(eventSound3DPrefab, worldPos, Quaternion.identity, null);
-        sound.audioSrc.clip = llamaPickup;
+        sound.audioSrc.clip = llamaPickupSFX;
+        sound.audioSrc.minDistance = 0f;
+        sound.audioSrc.maxDistance = 100f;
+        sound.audioSrc.Play();
+    }
+
+    void SpinSFXEventHandler(Vector3 worldPos)
+    {
+        EventSound3D sound = Instantiate(eventSound3DPrefab, worldPos, Quaternion.identity, null);
+        sound.audioSrc.clip = SpinSFX;
         sound.audioSrc.minDistance = 0f;
         sound.audioSrc.maxDistance = 100f;
         sound.audioSrc.Play();
