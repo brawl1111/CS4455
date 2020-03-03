@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class HealthManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+	private int health = 3;
+	public static HealthManager Instance
+	{
+		get {return s_Instance;}
+	}
+	private static HealthManager s_Instance;
+
+	void Awake()
     {
-        
+    	if (s_Instance == null)
+    		s_Instance = this;
+    	else if (s_Instance != this)
+    		throw new UnityException("There cannot be more than one HealthManager script. The instances are " + s_Instance.name + " and " + name + ".");
+    		
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public int GetHealth()
     {
-        
+    	return health;
     }
+
+    public void AddHealth(int i) { health += i; }
+    public void SubtractHealth(int i) { health -= i; }
 }
