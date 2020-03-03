@@ -60,7 +60,7 @@ public class GateAnimator : MonoBehaviour
 
     void OnTriggerEnter(Collider c)
     {
-        if (c.attachedRigidbody && !inSwing && princess.GetComponent<CharacterMovement>().GetLlamaCount(section) == 3)
+        if (c.attachedRigidbody && !inSwing && LlamaCounter.Instance.GetLlamaCount() == 3)
         {
             swinging = true;
         }
