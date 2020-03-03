@@ -19,6 +19,7 @@ public class LlamaScript : MonoBehaviour
             //Debug.Log(collider.gameObject.GetComponent<CharacterMovement>().GetLlamaCount(section));
             LlamaCounter.Instance.IncrementLlamaCount();
             collected = true;
+            EventManager.TriggerEvent<LlamaPickupSFXEvent, Vector3>(this.transform.position);
             this.gameObject.SetActive(false);
         }
     }

@@ -68,7 +68,7 @@ public class CharacterMovement : MonoBehaviour
 
     void Awake()
     {
-        spinCooldownWait = new WaitForSeconds(1.5f);
+        spinCooldownWait = new WaitForSeconds(1f);
 
     	anim = GetComponent<Animator>();
     	if (anim == null) Debug.Log("Animator could not be found");
@@ -148,7 +148,7 @@ public class CharacterMovement : MonoBehaviour
     IEnumerator SpinCooldown()
     {
         yield return spinCooldownWait;
-        Debug.Log("cooldown coroutine over");
+        //Debug.Log("cooldown coroutine over");
         isSpinningCooldownOver = true;
     }
 
@@ -309,9 +309,11 @@ public class CharacterMovement : MonoBehaviour
     	if (m_Input.Jump && (isGrounded || isGroundedCheck))
     	{
     		rb.velocity = Vector3.up * jumpSpeed;
+            EventManager.TriggerEvent<JumpSFXEvent, Vector3>(this.transform.position);
     	} else if (m_Input.Jump && extraJumps > 0)
     	{
     		rb.velocity = Vector3.up * jumpSpeed;
+            EventManager.TriggerEvent<JumpSFXEvent, Vector3>(this.transform.position);
     		extraJumps--;
     	}
     	//cycleCount++;

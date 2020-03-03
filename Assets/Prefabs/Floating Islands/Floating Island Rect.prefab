@@ -86,7 +86,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3453064667966699441}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -103,7 +103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3267213607045702684}
   m_Layer: 8
-  m_Name: Floating Island 2
+  m_Name: Floating Island Rect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -211,7 +211,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8332237174283032644}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
