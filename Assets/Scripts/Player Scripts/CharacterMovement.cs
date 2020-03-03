@@ -215,15 +215,15 @@ public class CharacterMovement : MonoBehaviour
             // {
             //     transform.forward = inputs;
             // }
-            Debug.Log(inputs);
+            //Debug.Log(inputs);
             rb.MovePosition(rb.position + inputs * speedWhileSpinning * Time.deltaTime);
         }
     }
 
     void CalculateVerticalMovement()
     {
-    	if (!m_Input.Jump && (isGrounded || isGroundedCheck))
-    		canJump = true;
+    	// if (!m_Input.Jump && (isGrounded || isGroundedCheck))
+    	// 	canJump = true;
 
     	// if (isGroundedCheck)
     	// {
