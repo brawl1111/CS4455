@@ -126,7 +126,7 @@ AnimatorStateTransition:
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102688469283419262}
   m_Solo: 0
-  m_Mute: 0
+  m_Mute: 1
   m_IsExit: 0
   serializedVersion: 3
   m_TransitionDuration: 0.11595905
@@ -290,6 +290,9 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 1102622119299700960}
     m_Position: {x: 876, y: 252, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 7171843874983771643}
+    m_Position: {x: 911, y: 317, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 1101697779312900854}
@@ -315,3 +318,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf2614f97fa1fb245a7852d397999634, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1102 &7171843874983771643
+AnimatorState:
+  serializedVersion: 5
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: knockback
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 31c82075096fd4b48aec3ffd5819657f, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 

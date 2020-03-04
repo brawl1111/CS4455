@@ -9,12 +9,14 @@ public class BombChase : MonoBehaviour
 
     private NavMeshAgent navAgent;
     private Animator anim;
+    private GameObject[] walls;
 
     public GameObject player;
     public GameObject[] waypoints;
     public int curWaypoint = -1;
     public int fuseTime = 1;
     public float aggroRange = 4.0f;
+    public float blastRadius = 5;
 
     public bool isExploded = false;
 
@@ -47,6 +49,10 @@ public class BombChase : MonoBehaviour
 
         //player = GameObject.Find("BombTestPlayer");
 
+        anim.Play("walk");      // muted transition walk->idle, so now it loops
+
+        walls = GameObject.FindGameObjectsWithTag("WALL");
+
     }
 
     // Update is called once per frame
@@ -64,10 +70,8 @@ public class BombChase : MonoBehaviour
         {
             aIState = AIState.Chase;
         }
-        else
-        {
-            aIState = AIState.Patrol;
-        }
+
+        // used to have an else making it go back to patrol, but now it just chases you down until it explodes
 
 
 
@@ -155,6 +159,16 @@ public class BombChase : MonoBehaviour
 
         //navAgent.isStopped = true;
         anim.Play("attack01");
+
+        yield return new WaitForSecondsRealtime(anim.GetCurrentAnimatorStateInfo(0).length);        // wait until exploding animation is done to set wall to inactive
+
+        foreach (GameObject wall in walls)
+        {
+            if (Vector3.Distance(transform.position, wall.transform.position) <= blastRadius)
+            {
+                wall.SetActive(false);
+            }
+        }
 
         //isExploded = true;
 
