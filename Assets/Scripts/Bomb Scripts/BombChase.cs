@@ -10,6 +10,7 @@ public class BombChase : MonoBehaviour
     private NavMeshAgent navAgent;
     private Animator anim;
     private GameObject[] walls;
+    private AudioSource audioSource;
 
     public GameObject player;
     public GameObject[] waypoints;
@@ -46,6 +47,8 @@ public class BombChase : MonoBehaviour
         waypoints = new GameObject[2];
         waypoints[0] = GameObject.Find("Waypoint1");
         waypoints[1] = GameObject.Find("Waypoint2");
+
+        audioSource = GetComponent<AudioSource>();
 
         //player = GameObject.Find("BombTestPlayer");
 
@@ -159,9 +162,9 @@ public class BombChase : MonoBehaviour
 
         //navAgent.isStopped = true;
         anim.Play("attack01");
-
-        yield return new WaitForSecondsRealtime(anim.GetCurrentAnimatorStateInfo(0).length);        // wait until exploding animation is done to set wall to inactive
-
+        float animTime = anim.GetCurrentAnimatorStateInfo(0).length;
+        audioSource.PlayDelayed(animTime / 2);
+        yield return new WaitForSecondsRealtime(animTime);        // wait until exploding animation is done to set wall to inactive
         foreach (GameObject wall in walls)
         {
             if (Vector3.Distance(transform.position, wall.transform.position) <= blastRadius)
