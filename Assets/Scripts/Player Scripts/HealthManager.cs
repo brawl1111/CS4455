@@ -13,19 +13,26 @@ public class HealthManager : MonoBehaviour
 
 	void Awake()
     {
+        Debug.Log("Am I here?");
     	if (s_Instance == null)
     		s_Instance = this;
     	else if (s_Instance != this)
     		throw new UnityException("There cannot be more than one HealthManager script. The instances are " + s_Instance.name + " and " + name + ".");
-    		
     }
-
 
     public int GetHealth()
     {
     	return health;
     }
 
-    public void AddHealth(int i) { health += i; }
-    public void SubtractHealth(int i) { health -= i; }
+    public void AddHealth(int i)
+    {
+        health += i;
+        GameObject.Find("HeartContainer").GetComponent<HeartPopulator>().AddHeartIcon();
+    }
+    public void SubtractHealth(int i)
+    {
+        health -= i;
+        GameObject.Find("HeartContainer").GetComponent<HeartPopulator>().RemoveHeartIcon();
+    }
 }

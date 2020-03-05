@@ -33,6 +33,7 @@ public class LlamaCounter : MonoBehaviour
     {
     	llamaCount++;
         Debug.Log("you now have " + llamaCount + " llamas");
+        GameObject.Find("LlamaContainer").GetComponent<LlamaPopulator>().AddLlamaIcon();
     }
 
     public void ThreexLlamaCount()
@@ -45,6 +46,7 @@ public class LlamaCounter : MonoBehaviour
     public void ResetLlamaCount()
     {
     	llamaCount = 0;
+        GameObject.Find("LlamaContainer").GetComponent<LlamaPopulator>().RemoveLlamaIcons();
     }
 
     public int GetLlamaCount()
