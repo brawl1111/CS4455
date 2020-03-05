@@ -9,12 +9,16 @@ public class BombChase : MonoBehaviour
 
     private NavMeshAgent navAgent;
     private Animator anim;
+    private GameObject[] walls;
+    private AudioSource audioSource;
+    private HealthManager princessHealthManager;
 
     public GameObject player;
     public GameObject[] waypoints;
     public int curWaypoint = -1;
     public int fuseTime = 1;
     public float aggroRange = 4.0f;
+    public float blastRadius = 5;
 
     public bool isExploded = false;
 
@@ -45,7 +49,15 @@ public class BombChase : MonoBehaviour
         waypoints[0] = GameObject.Find("Waypoint1");
         waypoints[1] = GameObject.Find("Waypoint2");
 
+        audioSource = GetComponent<AudioSource>();
+
         //player = GameObject.Find("BombTestPlayer");
+
+        anim.Play("walk");      // muted transition walk->idle, so now it loops
+
+        walls = GameObject.FindGameObjectsWithTag("WALL");
+
+        princessHealthManager = GetComponent<HealthManager>();
 
     }
 
@@ -64,10 +76,8 @@ public class BombChase : MonoBehaviour
         {
             aIState = AIState.Chase;
         }
-        else
-        {
-            aIState = AIState.Patrol;
-        }
+
+        // used to have an else making it go back to patrol, but now it just chases you down until it explodes
 
 
 
@@ -155,6 +165,22 @@ public class BombChase : MonoBehaviour
 
         //navAgent.isStopped = true;
         anim.Play("attack01");
+        float animTime = anim.GetCurrentAnimatorStateInfo(0).length;
+        audioSource.PlayDelayed(animTime / 2);
+        yield return new WaitForSecondsRealtime(animTime);        // wait until exploding animation is done to set wall to inactive
+        foreach (GameObject wall in walls)
+        {
+            if (Vector3.Distance(transform.position, wall.transform.position) <= blastRadius)
+            {
+                wall.SetActive(false);
+            }
+        }
+
+        if (Vector3.Distance(transform.position, player.transform.position) <= blastRadius / 2)
+        {
+            Debug.Log("princess lost health from bomb");
+            princessHealthManager.SubtractHealth(1);        // lose 1 health when hit by bomb
+        }
 
         //isExploded = true;
 
