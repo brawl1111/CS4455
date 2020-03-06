@@ -50,7 +50,7 @@ public class HealthManager : MonoBehaviour
                 isAlive = false;
             	GameObject player = GameObject.FindWithTag("Player");
             	player.GetComponent<Animator>().SetTrigger("hasDied");
-            	player.GetComponent<Rigidbody>().isKinematic = true;
+            	//player.GetComponent<Rigidbody>().isKinematic = true;
                 player.GetComponent<CharacterMovement>().enabled = false;
             } else 
             {
