@@ -2626,7 +2626,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 198974025}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Small Tiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
