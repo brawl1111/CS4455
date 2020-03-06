@@ -17,10 +17,11 @@ public class LlamaScript : MonoBehaviour
         {
             //collider.gameObject.GetComponent<CharacterMovement>().IncrementLlamaCount(section);
             //Debug.Log(collider.gameObject.GetComponent<CharacterMovement>().GetLlamaCount(section));
-            LlamaCounter.Instance.IncrementLlamaCount();
             collected = true;
             EventManager.TriggerEvent<LlamaPickupSFXEvent, Vector3>(this.transform.position);
+            Debug.Log("detected llama collision");
             this.gameObject.SetActive(false);
+            LlamaCounter.Instance.IncrementLlamaCount();
         }
     }
 }
