@@ -51,6 +51,7 @@ public class HealthManager : MonoBehaviour
             	GameObject player = GameObject.FindWithTag("Player");
             	player.GetComponent<Animator>().SetTrigger("hasDied");
             	player.GetComponent<Rigidbody>().isKinematic = true;
+                player.GetComponent<CharacterMovement>().enabled = false;
             } else 
             {
                 StartCoroutine(InvincibilityFrames());
@@ -63,5 +64,34 @@ public class HealthManager : MonoBehaviour
     {
         yield return invincibilityFramesDuration;
         inInvincibilityFrames = false;
+    }
+
+
+    public void Update()
+    {
+        //Kill player or restore/remove health for testing purposes
+        if (Input.GetKeyDown("p")) KillPlayer();
+        if (Input.GetKeyDown("o")) RestoreAllHealth();
+        if (Input.GetKeyDown("i")) RemoveOneHealth();
+        if (Input.GetKeyDown("u")) RestoreOneHealth();
+    }
+
+    public void KillPlayer()
+    {
+        SubtractHealth(health);
+    }
+
+    public void RestoreAllHealth()
+    {
+        AddHealth(3 - health);
+    }
+
+    public void RemoveOneHealth()
+    {
+        SubtractHealth(1);
+    }
+    public void RestoreOneHealth()
+    {
+        AddHealth(1);
     }
 }
