@@ -27,6 +27,6 @@ public class BombCounter : MonoBehaviour
         spawnBombScript.decrementBombs();
 
         //spawnBombScriptPool.decrementBombs();     // for weird pooling stuff
-        Debug.Log("bomb disabled");
+        //Debug.Log("bomb disabled");
     }
 }
