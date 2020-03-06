@@ -32,8 +32,64 @@ public class HealthManager : MonoBehaviour
     }
     public void SubtractHealth(int i)
     {
+<<<<<<< HEAD
         health -= i;
         GameObject.Find("HeartContainer").GetComponent<HeartPopulator>().RemoveHeartIcon();
         Debug.Log("health: " + health);
+=======
+        if (!inInvincibilityFrames && isAlive)
+        {    
+            health -= i;
+            GameObject.Find("HeartContainer").GetComponent<HeartPopulator>().RemoveHeartIcon();
+            Debug.Log("health: " + health);
+            inInvincibilityFrames = true;
+            if (health == 0) {
+                isAlive = false;
+            	GameObject player = GameObject.FindWithTag("Player");
+            	player.GetComponent<Animator>().SetTrigger("hasDied");
+            	player.GetComponent<Rigidbody>().isKinematic = true;
+                player.GetComponent<CharacterMovement>().enabled = false;
+            } else 
+            {
+                StartCoroutine(InvincibilityFrames());
+            }
+        }
+    }
+
+
+    IEnumerator InvincibilityFrames()
+    {
+        yield return invincibilityFramesDuration;
+        inInvincibilityFrames = false;
+    }
+
+
+    public void Update()
+    {
+        //Kill player or restore/remove health for testing purposes
+        if (Input.GetKeyDown("p")) KillPlayer();
+        if (Input.GetKeyDown("o")) RestoreAllHealth();
+        if (Input.GetKeyDown("i")) RemoveOneHealth();
+        if (Input.GetKeyDown("u")) RestoreOneHealth();
+    }
+
+    public void KillPlayer()
+    {
+        SubtractHealth(health);
+    }
+
+    public void RestoreAllHealth()
+    {
+        AddHealth(3 - health);
+    }
+
+    public void RemoveOneHealth()
+    {
+        SubtractHealth(1);
+    }
+    public void RestoreOneHealth()
+    {
+        AddHealth(1);
+>>>>>>> parent of 6699f5d... Imported yet another free asset. Might be worthless. Also started working on Section3_4
     }
 }

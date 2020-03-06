@@ -9439,7 +9439,10 @@ RectTransform:
 =======
   m_Father: {fileID: 0}
   m_RootOrder: 23
+<<<<<<< HEAD
 >>>>>>> a6c697501dec026f48b23293e92114f641b143c4
+=======
+>>>>>>> parent of 6699f5d... Imported yet another free asset. Might be worthless. Also started working on Section3_4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -16481,7 +16484,10 @@ RectTransform:
 =======
   m_Father: {fileID: 0}
   m_RootOrder: 22
+<<<<<<< HEAD
 >>>>>>> a6c697501dec026f48b23293e92114f641b143c4
+=======
+>>>>>>> parent of 6699f5d... Imported yet another free asset. Might be worthless. Also started working on Section3_4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
