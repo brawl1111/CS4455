@@ -26,7 +26,7 @@ public class TreeScript : MonoBehaviour
     {
         // Gets the player object and checks if they are currently spinning
         // If so, we're gonna start the falling animation
-        Debug.Log(collision);
+        //Debug.Log(collision);
         GameObject collider = collision.gameObject;
         if (collider.gameObject == GameObject.Find("Princess") &&
             collider.gameObject.GetComponent<CharacterMovement>().GetIsSpinning() &&

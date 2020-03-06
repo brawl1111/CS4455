@@ -34,6 +34,12 @@ public class LlamaPopulator : MonoBehaviour
 
     public void RemoveLlamaIcons()
     {
+        //Debug.Log("llamas stack: " + llamas);
+        if (llamas == null)
+        {
+            llamas = new Stack<GameObject>();
+            return;
+        }
         while (llamas.Count > 0)
         {
             Destroy(llamas.Pop());

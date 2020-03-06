@@ -8,6 +8,7 @@ Singleton design for tracking how many llamas the player has collected
 public class LlamaCounter : MonoBehaviour
 {
 	private int llamaCount = 0;
+    private LlamaPopulator llamaPopulator;
 	public static LlamaCounter Instance
 	{
 		get {return s_Instance;}
@@ -20,20 +21,23 @@ public class LlamaCounter : MonoBehaviour
     		s_Instance = this;
     	else if (s_Instance != this)
     		throw new UnityException("There cannot be more than one LlamaCounter script. The instances are " + s_Instance.name + " and " + name + ".");
+        llamaPopulator = GameObject.Find("LlamaContainer").GetComponent<LlamaPopulator>();
+        if (llamaPopulator == null) Debug.Log("LlamaContainer could not be found");
 
+        
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        ResetLlamaCount();
+        ResetLlamaCount();   
     }
 
     public void IncrementLlamaCount()
     {
     	llamaCount++;
         Debug.Log("you now have " + llamaCount + " llamas");
-        GameObject.Find("LlamaContainer").GetComponent<LlamaPopulator>().AddLlamaIcon();
+        llamaPopulator.AddLlamaIcon();
     }
 
     public void ThreexLlamaCount()
@@ -46,7 +50,8 @@ public class LlamaCounter : MonoBehaviour
     public void ResetLlamaCount()
     {
     	llamaCount = 0;
-        GameObject.Find("LlamaContainer").GetComponent<LlamaPopulator>().RemoveLlamaIcons();
+        //Debug.Log(llamaPopulator);
+        llamaPopulator.RemoveLlamaIcons();
     }
 
     public int GetLlamaCount()

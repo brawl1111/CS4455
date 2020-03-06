@@ -13,7 +13,7 @@ public class HealthManager : MonoBehaviour
 
 	void Awake()
     {
-        Debug.Log("Am I here?");
+        //Debug.Log("Am I here?");
     	if (s_Instance == null)
     		s_Instance = this;
     	else if (s_Instance != this)
@@ -34,5 +34,6 @@ public class HealthManager : MonoBehaviour
     {
         health -= i;
         GameObject.Find("HeartContainer").GetComponent<HeartPopulator>().RemoveHeartIcon();
+        Debug.Log("health: " + health);
     }
 }

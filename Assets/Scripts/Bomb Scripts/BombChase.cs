@@ -11,7 +11,7 @@ public class BombChase : MonoBehaviour
     private Animator anim;
     private GameObject[] walls;
     private AudioSource audioSource;
-    private HealthManager princessHealthManager;
+    //private HealthManager princessHealthManager;
 
     public GameObject player;
     public GameObject[] waypoints;
@@ -57,7 +57,7 @@ public class BombChase : MonoBehaviour
 
         walls = GameObject.FindGameObjectsWithTag("WALL");
 
-        princessHealthManager = GetComponent<HealthManager>();
+        //princessHealthManager = GetComponent<HealthManager>();
 
     }
 
@@ -179,7 +179,7 @@ public class BombChase : MonoBehaviour
         if (Vector3.Distance(transform.position, player.transform.position) <= blastRadius / 2)
         {
             Debug.Log("princess lost health from bomb");
-            princessHealthManager.SubtractHealth(1);        // lose 1 health when hit by bomb
+            HealthManager.Instance.SubtractHealth(1);        // lose 1 health when hit by bomb
         }
 
         //isExploded = true;
