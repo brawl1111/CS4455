@@ -116,6 +116,7 @@ public class AudioEventManager : MonoBehaviour
         sound.audioSrc.clip = llamaPickupSFX;
         sound.audioSrc.minDistance = 0f;
         sound.audioSrc.maxDistance = 100f;
+        sound.audioSrc.volume = 0.5f;
         sound.audioSrc.Play();
     }
 
