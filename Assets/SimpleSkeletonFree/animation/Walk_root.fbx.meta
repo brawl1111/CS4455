@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b40d1bf3e39a52544a8c3ca2d15d48c2
+guid: 6360ebd9e7df29249ae8ec7f5ebab365
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable:
@@ -26,7 +26,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -70,12 +70,7 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips:
-  - afb1efdc6cb0a7b49aae10e6113d59a0
-  - 11eebf6d9775b9f4dae0fcdb25f3d1b3
-  - e33de6a369f8fd74b8f251ebba2f8c41
-  - 565d7bdee9496b847a3b218355dff0d9
-  - 8ac2b1e2ecba486468e85353e3ebc0c0
+  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
@@ -92,10 +87,10 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 3
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
