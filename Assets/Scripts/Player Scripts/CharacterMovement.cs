@@ -312,7 +312,7 @@ public class CharacterMovement : MonoBehaviour
     	if (m_Input.Jump && (isGrounded || isGroundedCheck))
     	{
     		rb.velocity = Vector3.up * jumpSpeed;
-            Debug.Log(rb.velocity);
+            //Debug.Log(rb.velocity);
             EventManager.TriggerEvent<JumpSFXEvent, Vector3>(this.transform.position);
     	} else if (m_Input.Jump && extraJumps > 0)
     	{
