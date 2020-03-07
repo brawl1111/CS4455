@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\cw\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\cw\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_CS4455.-1004028528.00" t="ExcludeRecursive" />
+    <e p="C:\Users\cw\Desktop\Stuff\UnityStuff\CS4455" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="DungeonVoxels" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="Knight.cs" t="Include" />
+            <e p="LightFlicker.cs" t="Include" />
+            <e p="SpikeTrap.cs" t="Include" />
+            <e p="TargetFollow.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Free Low Poly Desert Pack" t="Include">
+          <e p="Materials" t="Include">
+            <e p="Shaders" t="Include">
+              <e p="Vertex_Color_Basic.shader" t="Include" />
+              <e p="Vertex_Color_Unlit.shader" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="JKT_ART" t="Include">
+          <e p="ETC" t="Include">
+            <e p="MatCap.shader" t="Include" />
+          </e>
+        </e>
+        <e p="LowPolyGround" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="FreeCamera.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="Animation Scripts" t="Include">
+            <e p="GateAnimator.cs" t="Include" />
+            <e p="PlatformAttach.cs" t="Include" />
+            <e p="SpinCooldown.cs" t="Include" />
+          </e>
+          <e p="Bomb Scripts" t="Include">
+            <e p="BombChase.cs" t="Include" />
+            <e p="BombCounter.cs" t="Include" />
+            <e p="BombKnockback.cs" t="Include" />
+            <e p="DestroyAfterExplode.cs" t="Include" />
+            <e p="SpawnBomb.cs" t="Include" />
+          </e>
+          <e p="CameraController.cs" t="Include" />
+          <e p="EnemyKilled.cs" t="Include" />
+          <e p="ETC" t="Include">
+            <e p="ProceduralTriangleMesh.cs" t="Include" />
+          </e>
+          <e p="Event Scripts" t="Include">
+            <e p="AudioEventManager.cs" t="Include" />
+            <e p="EventManager.cs" t="Include" />
+            <e p="EventSound3D.cs" t="Include" />
+            <e p="GameQuitter.cs" t="Include" />
+            <e p="GameResumer.cs" t="Include" />
+            <e p="GameStarter.cs" t="Include" />
+            <e p="GameToMenuScript.cs" t="Include" />
+            <e p="GateSwingEvent.cs" t="Include" />
+            <e p="JumpSFXEvent.cs" t="Include" />
+            <e p="LlamaPickupSFXEvent.cs" t="Include" />
+            <e p="PauseMenuToggle.cs" t="Include" />
+            <e p="SpinSFXEvent.cs" t="Include" />
+            <e p="TreeCrackEvent.cs" t="Include" />
+            <e p="TreeHitGroundEvent.cs" t="Include" />
+          </e>
+          <e p="Explode Wall" t="Include">
+            <e p="ExplodeWall.cs" t="Include" />
+          </e>
+          <e p="Fan Scripts" t="Include">
+            <e p="FanLift.cs" t="Include" />
+          </e>
+          <e p="Goomba Scripts" t="Include">
+            <e p="GoombaChase.cs" t="Include" />
+          </e>
+          <e p="LlamaCounter.cs" t="Include" />
+          <e p="LlamaScript.cs" t="Include" />
+          <e p="Player Scripts" t="Include">
+            <e p="BasicMovement.cs" t="Include" />
+            <e p="CharacterMovement.cs" t="Include" />
+            <e p="HealthManager.cs" t="Include" />
+            <e p="PlayerInput.cs" t="Include" />
+            <e p="PlayerTeleports.cs" t="Include" />
+            <e p="RefinedJump.cs" t="Include" />
+            <e p="SpinAttack.cs" t="Include" />
+            <e p="SpinningAttackPrincess.cs" t="Include" />
+          </e>
+          <e p="RotateToFaceMovement.cs" t="Include" />
+          <e p="Spider Scripts" t="Include">
+            <e p="SpiderChase.cs" t="Include" />
+          </e>
+          <e p="TreeScript.cs" t="Include" />
+          <e p="TurnTile.cs" t="Include" />
+          <e p="UI Scripts" t="Include">
+            <e p="HeartPopulator.cs" t="Include" />
+            <e p="LlamaPopulator.cs" t="Include" />
+          </e>
+          <e p="Utility" t="Include">
+            <e p="EnemyCounter.cs" t="Include" />
+            <e p="EnemyDamageController.cs" t="Include" />
+            <e p="SpawnEnemy.cs" t="Include" />
+          </e>
+          <e p="VelocityReporter.cs" t="Include" />
+        </e>
+        <e p="SimpleSkeletonFree" t="Include">
+          <e p="Script" t="Include">
+            <e p="Character" t="Include">
+              <e p="PlayerController.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="CS4455.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

@@ -9,6 +9,8 @@ TagManager:
   - Knockable Tree
   - BOMB
   - WALL
+  - Spike
+  - spawner
   layers:
   - Default
   - TransparentFX
