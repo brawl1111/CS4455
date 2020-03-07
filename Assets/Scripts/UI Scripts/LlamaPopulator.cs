@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class LlamaPopulator : MonoBehaviour
 {
     public Sprite llamaIcon;
+    public Text llamaCountText;
     private Stack<GameObject> llamas;
 
     // Start is called before the first frame update
@@ -18,6 +19,16 @@ public class LlamaPopulator : MonoBehaviour
     void Update()
     {
 
+    }
+
+    public void AddLlamaCount(int llamaCount)
+    {
+        llamaCountText.GetComponent<Text>().text = llamaCount.ToString();
+    }
+
+    public void RemoveLlamaCount(int llamaCount)
+    {
+        llamaCountText.GetComponent<Text>().text = llamaCount.ToString();
     }
 
     public void AddLlamaIcon()

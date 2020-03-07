@@ -14,6 +14,7 @@ public class AudioEventManager : MonoBehaviour
     public AudioClip jumpSFX;
     public AudioClip llamaPickupSFX;
     public AudioClip SpinSFX;
+    public AudioClip[] footstepSFX;
 
 
     private UnityAction<Vector3> treeCrackEventListener;
@@ -28,6 +29,8 @@ public class AudioEventManager : MonoBehaviour
 
     private UnityAction<Vector3> spinSFXListener;
 
+    private UnityAction<Vector3> footstepSFXListener;
+
     void Awake()
     {
         treeCrackEventListener = new UnityAction<Vector3>(TreeCrackEventHandler);
@@ -41,6 +44,8 @@ public class AudioEventManager : MonoBehaviour
         llamaPickupSFXListener = new UnityAction<Vector3>(LlamaPickupSFXEventHandler);
 
         spinSFXListener = new UnityAction<Vector3>(SpinSFXEventHandler);
+
+        footstepSFXListener = new UnityAction<Vector3>(FootStepSFXEventHandler);
     }
 
 
@@ -61,6 +66,7 @@ public class AudioEventManager : MonoBehaviour
         EventManager.StartListening<JumpSFXEvent, Vector3>(jumpSFXEventListener);
         EventManager.StartListening<LlamaPickupSFXEvent, Vector3>(llamaPickupSFXListener);
         EventManager.StartListening<SpinSFXEvent, Vector3>(spinSFXListener);
+        EventManager.StartListening<FootstepSFXEvent, Vector3>(footstepSFXListener);
     }
 
     void OnDisable()
@@ -71,6 +77,7 @@ public class AudioEventManager : MonoBehaviour
         EventManager.StopListening<JumpSFXEvent, Vector3>(jumpSFXEventListener);
         EventManager.StopListening<LlamaPickupSFXEvent, Vector3>(llamaPickupSFXListener);
         EventManager.StopListening<SpinSFXEvent, Vector3>(spinSFXListener);
+        EventManager.StopListening<FootstepSFXEvent, Vector3>(footstepSFXListener);
     }
 
     void TreeCrackEventHandler(Vector3 worldPos)
@@ -116,6 +123,7 @@ public class AudioEventManager : MonoBehaviour
         sound.audioSrc.clip = llamaPickupSFX;
         sound.audioSrc.minDistance = 0f;
         sound.audioSrc.maxDistance = 100f;
+        sound.audioSrc.volume = 0.5f;
         sound.audioSrc.Play();
     }
 
@@ -125,6 +133,16 @@ public class AudioEventManager : MonoBehaviour
         sound.audioSrc.clip = SpinSFX;
         sound.audioSrc.minDistance = 0f;
         sound.audioSrc.maxDistance = 100f;
+        sound.audioSrc.Play();
+    }
+
+    void FootStepSFXEventHandler(Vector3 worldPos)
+    {
+        EventSound3D sound = Instantiate(eventSound3DPrefab, worldPos, Quaternion.identity, null);
+        sound.audioSrc.clip = this.footstepSFX[Random.Range(0, footstepSFX.Length)];
+        sound.audioSrc.minDistance = 0f;
+        sound.audioSrc.maxDistance = 100f;
+        sound.audioSrc.volume = 0.2f;
         sound.audioSrc.Play();
     }
 }
