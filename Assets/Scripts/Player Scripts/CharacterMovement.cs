@@ -81,6 +81,7 @@ public class CharacterMovement : MonoBehaviour
 
     	charCtrl = GetComponent<CharacterController>();
     	if (charCtrl == null) Debug.Log("CharacterController could not be found");
+        //Debug.Log(charCtrl);
 
         //Disable CharacterController's collider's interference with the model's capsule collider.
         Physics.IgnoreCollision(charCtrl, GetComponent<CapsuleCollider>());
@@ -97,6 +98,7 @@ public class CharacterMovement : MonoBehaviour
     	{
     		RotateModel(input.x, input.y);
     	}
+        //Debug.Log(isGrounded);
         if (Input.GetButtonDown("Fire1") && isSpinningCooldownOver)
         {
             if (!(isGroundedCheck || isGrounded))
@@ -310,6 +312,7 @@ public class CharacterMovement : MonoBehaviour
     	if (m_Input.Jump && (isGrounded || isGroundedCheck))
     	{
     		rb.velocity = Vector3.up * jumpSpeed;
+            Debug.Log(rb.velocity);
             EventManager.TriggerEvent<JumpSFXEvent, Vector3>(this.transform.position);
     	} else if (m_Input.Jump && extraJumps > 0)
     	{
