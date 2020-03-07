@@ -29,6 +29,7 @@ public class SpiderChase : MonoBehaviour
         aiState = AIState.Patrol;
         player = GameObject.FindGameObjectWithTag("Player");
         aggroRange = 8.0f;
+        patrolRadius = 15;            // so are these supposed to be assigned in Inspector/Start()
     }
 
     // Update is called once per frame

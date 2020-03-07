@@ -1148,7 +1148,7 @@ MonoBehaviour:
   aggroRange: 0
   player: {fileID: 0}
   jumpDist: 0
-  patrolRadius: 0
+  patrolRadius: 10
   aiState: 0
 --- !u!1 &1719841372004032
 GameObject:
