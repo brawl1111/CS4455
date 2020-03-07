@@ -24,20 +24,20 @@ public class LlamaCounter : MonoBehaviour
         llamaPopulator = GameObject.Find("LlamaContainer").GetComponent<LlamaPopulator>();
         if (llamaPopulator == null) Debug.Log("LlamaContainer could not be found");
 
-
+        
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        //ResetLlamaCount();
+        //ResetLlamaCount();   
     }
 
     public void IncrementLlamaCount()
     {
     	llamaCount++;
         Debug.Log("you now have " + llamaCount + " llamas");
-        llamaPopulator.AddLlamaCount(llamaCount);
+        llamaPopulator.AddLlamaIcon();
     }
 
     public void ThreexLlamaCount()
@@ -51,7 +51,7 @@ public class LlamaCounter : MonoBehaviour
     {
     	llamaCount = 0;
         //Debug.Log(llamaPopulator);
-        llamaPopulator.RemoveLlamaCount(llamaCount);
+        llamaPopulator.RemoveLlamaIcons();
     }
 
     public int GetLlamaCount()
