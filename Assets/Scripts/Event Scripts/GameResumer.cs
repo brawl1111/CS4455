@@ -18,7 +18,6 @@ public class GameResumer : MonoBehaviour
 
     public void ResumeGame()
     {
-        Debug.Log("We resumin");
         this.transform.parent.GetComponent<PauseMenuToggle>().PauseMenuOff();
     }
 }
