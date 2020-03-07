@@ -10,7 +10,7 @@ public class HealthManager : MonoBehaviour
 		get {return s_Instance;}
 	}
 	private static HealthManager s_Instance;
-
+    private GameOverMenuToggle gameOverToggle;
     private WaitForSeconds invincibilityFramesDuration;
     private bool inInvincibilityFrames = false;
     private bool isAlive = true;
@@ -24,6 +24,7 @@ public class HealthManager : MonoBehaviour
     		throw new UnityException("There cannot be more than one HealthManager script. The instances are " + s_Instance.name + " and " + name + ".");
 
         invincibilityFramesDuration = new WaitForSeconds(2f);
+        gameOverToggle = GameObject.Find("GameOverCanvas").GetComponent<GameOverMenuToggle>();
     }
 
     public int GetHealth()
@@ -41,7 +42,7 @@ public class HealthManager : MonoBehaviour
     public void SubtractHealth(int i)
     {
         if (!inInvincibilityFrames && isAlive)
-        {    
+        {
             health -= i;
             GameObject.Find("HeartContainer").GetComponent<HeartPopulator>().RemoveHeartIcon();
             Debug.Log("health: " + health);
@@ -52,7 +53,9 @@ public class HealthManager : MonoBehaviour
             	player.GetComponent<Animator>().SetTrigger("hasDied");
             	//player.GetComponent<Rigidbody>().isKinematic = true;
                 player.GetComponent<CharacterMovement>().enabled = false;
-            } else 
+                gameOverToggle.GameOverMenuOn();
+            }
+            else
             {
                 StartCoroutine(InvincibilityFrames());
             }
