@@ -37,6 +37,7 @@ public class SkeletonSM : MonoBehaviour
     bool ifSwapPatrol;
     bool ifSwapReady;
     bool ifSwapAttack;
+    bool isColliding;
 
     // Start is called before the first frame update
     void Start()
@@ -54,6 +55,7 @@ public class SkeletonSM : MonoBehaviour
         readyTime = new WaitForSeconds(3f);
         ifSwapReady = true;
         ifSwapAttack = true;
+        isColliding = false;
     }
 
     // Update is called once per frame
@@ -148,7 +150,6 @@ public class SkeletonSM : MonoBehaviour
                 break;
         }
 
-
     }
 
     IEnumerator SwapToPatrol()
@@ -191,5 +192,28 @@ public class SkeletonSM : MonoBehaviour
         NavMesh.SamplePosition (randDirection, out navHit, dist, layermask);
 
         return navHit.position;
+    }
+
+    void OnTriggerEnter(Collider collision)
+    {
+        Vector3 heading = player.transform.position - transform.position;
+        float side = Vector3.Dot(heading, transform.forward);
+
+        if (isColliding) return;
+        if (side > 0 && collision.gameObject.CompareTag("Hurtbox"))
+        {
+            isColliding = true;
+            if (skeletonAnim.GetBool("attackBuffer") && skeletonAnim.GetBool("inMeleeDist"))
+            {
+
+            }
+            StartCoroutine(SkeletonHitCD());
+        }
+    }
+
+    IEnumerator SkeletonHitCD()
+    {
+        yield return idleTime;
+        isColliding = false;
     }
 }
