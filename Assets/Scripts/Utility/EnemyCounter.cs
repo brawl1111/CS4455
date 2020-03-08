@@ -6,7 +6,7 @@ public class EnemyCounter : MonoBehaviour
 {
 
     private GameObject mySpawner;
-    private AdvancedSpawnEnemy spawnScript;
+    //private AdvancedSpawnEnemy spawnScript;
     private SpawnEnemy spawnEnemyScript;
     //private Spawn spawnBombScriptPool;
 
@@ -29,12 +29,12 @@ public class EnemyCounter : MonoBehaviour
 
     private void OnDisable()
     {
-        spawnScript.decrementEnemyCount();
+        spawnEnemyScript.decrementEnemyCount();
     }
 
     public void setSpawner(GameObject spawner)      // this is called by the spawner
     {
         mySpawner = spawner;
-        spawnScript = mySpawner.GetComponent<AdvancedSpawnEnemy>();
+        spawnEnemyScript = mySpawner.GetComponent<SpawnEnemy>();
     }
 }

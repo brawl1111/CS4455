@@ -15,6 +15,7 @@ public class BombChase : MonoBehaviour
 
     public GameObject player;
     public GameObject[] waypoints;
+    public int patrolRadius;
     public int curWaypoint = -1;
     public int fuseTime = 1;
     public float aggroRange = 4.0f;
@@ -91,7 +92,9 @@ public class BombChase : MonoBehaviour
                 {
                     if (navAgent.pathPending == false)
                     {
-                        setNextWaypoint();
+                        Vector3 randPos = RandomNavSphere(gameObject.transform.position, patrolRadius, -1);
+                        navAgent.SetDestination(randPos);
+
                     }
                 }
                 break;
@@ -252,4 +255,13 @@ public class BombChase : MonoBehaviour
         return isExploded;
     }
 
+    public Vector3 RandomNavSphere(Vector3 origin, float distance, int layermask)
+    {
+        Vector3 randomDirection = UnityEngine.Random.insideUnitSphere * distance;
+        randomDirection += origin;
+        NavMeshHit navHit;
+        NavMesh.SamplePosition(randomDirection, out navHit, distance, layermask);
+        return navHit.position;
+
+    }
 }
