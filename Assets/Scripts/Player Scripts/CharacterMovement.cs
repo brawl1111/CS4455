@@ -12,6 +12,7 @@ public class CharacterMovement : MonoBehaviour
     private Rigidbody rb;
     private PlayerInput m_Input;
     public CharacterController charCtrl;
+    public Transform camTransform;
 
     //variables for jumping/ground check
     private bool isGrounded = true;
@@ -99,7 +100,9 @@ public class CharacterMovement : MonoBehaviour
     		RotateModel(input.x, input.y);
     	}
         //Debug.Log(isGrounded);
-        if (Input.GetButtonDown("Fire1") && isSpinningCooldownOver)
+
+        //Spin if player pushes LControl or any of the trigger buttons
+        if ((Input.GetAxis("XBOX_360_LTrigger") != 0 || Input.GetButtonDown("Fire1")) && isSpinningCooldownOver)
         {
             if (!(isGroundedCheck || isGrounded))
             {
@@ -214,6 +217,8 @@ public class CharacterMovement : MonoBehaviour
             Vector3 inputs = Vector3.zero;
             inputs.x = Input.GetAxis("Horizontal");
             inputs.z = Input.GetAxis("Vertical");
+            inputs = camTransform.TransformDirection(inputs);
+            inputs.Set(inputs.x, 0f, inputs.z);
             // if (inputs != Vector3.zero)
             // {
             //     transform.forward = inputs;
@@ -327,6 +332,8 @@ public class CharacterMovement : MonoBehaviour
     {
     	Vector3 targetDir = new Vector3(h, 0f, v);
     	//Debug.Log(targetDir);
+        targetDir = camTransform.TransformDirection(targetDir);
+        targetDir.Set(targetDir.x, 0f, targetDir.z);
     	Quaternion targetRotation = Quaternion.LookRotation(targetDir, Vector3.up);
     	Quaternion newRotation = Quaternion.Lerp(rb.rotation, targetRotation, turnSmoothing * Time.deltaTime);
     	//rb.MoveRotation(newRotation);

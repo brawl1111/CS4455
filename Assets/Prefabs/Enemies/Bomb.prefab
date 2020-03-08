@@ -30021,6 +30021,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   waypoints: []
+  patrolRadius: 15
   curWaypoint: -1
   fuseTime: 7
   aggroRange: 4
