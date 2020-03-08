@@ -39,6 +39,8 @@ public class SkeletonSM : MonoBehaviour
     bool ifSwapAttack;
     bool isColliding;
 
+    private int skeletonHealth;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,11 +58,13 @@ public class SkeletonSM : MonoBehaviour
         ifSwapReady = true;
         ifSwapAttack = true;
         isColliding = false;
+        skeletonHealth = 3;
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(skeletonHealth);
         float distToPlayer = Vector3.Distance(transform.position, player.transform.position);
         switch(aiState)
         {
@@ -149,7 +153,6 @@ public class SkeletonSM : MonoBehaviour
                 }
                 break;
         }
-
     }
 
     IEnumerator SwapToPatrol()
@@ -208,14 +211,31 @@ public class SkeletonSM : MonoBehaviour
                 skeletonAnim.SetBool("Block", true);
                 //Debug.Log("Hit");
             }
+            StartCoroutine(SkeletonShieldCD());
+        } else if (side < 0 && collision.gameObject.CompareTag("Hurtbox"))
+        {
+            isColliding = true;
+            if (skeletonAnim.GetBool("attackBuffer") && skeletonAnim.GetBool("inMeleeDist"))
+            {
+                skeletonAnim.SetBool("HitBack", true);
+                skeletonHealth -= 1;
+                //Debug.Log("Hit");
+            }
             StartCoroutine(SkeletonHitCD());
         }
+    }
+
+    IEnumerator SkeletonShieldCD()
+    {
+        yield return idleTime;
+        isColliding = false;
+        skeletonAnim.SetBool("Block", false);
     }
 
     IEnumerator SkeletonHitCD()
     {
         yield return idleTime;
         isColliding = false;
-        skeletonAnim.SetBool("Block", false);
+        skeletonAnim.SetBool("HitBack", false);
     }
 }
