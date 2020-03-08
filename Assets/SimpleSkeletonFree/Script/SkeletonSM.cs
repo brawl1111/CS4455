@@ -54,7 +54,7 @@ public class SkeletonSM : MonoBehaviour
     void Update()
     {
         float distToPlayer = Vector3.Distance(transform.position, player.transform.position);
-        Debug.Log(distToPlayer);
+        //Debug.Log(distToPlayer);
         switch(aiState)
         {
             case AIState.idle_state:
