@@ -4,22 +4,26 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public GameObject player;
+    //public GameObject player;
     private Vector3 offset;
     public float rotationSpeed = 1f;
-    public Transform Target, Player;
+    public Transform target, player;
     float moveX, moveY;
 
     void Start()
     {
-        offset = transform.position - player.transform.position;
+        //offset = target.transform.position - transform.position;
     }
 
 
     void LateUpdate()
     {
-        transform.position = player.transform.position + offset;
-        //CamControl();
+        //transform.position = player.transform.position + offset;
+        CamControl();
+        // float desiredAngle = target.transform.eulerAngles.y;
+        // Quaternion rotation = Quaternion.Euler(0, desiredAngle, 0);
+        // transform.position = target.transform.position - (rotation * offset);
+        // transform.LookAt(target.transform);
     }
 
     void CamControl()
@@ -28,9 +32,9 @@ public class CameraController : MonoBehaviour
         moveY -= Input.GetAxis("Mouse Y") * rotationSpeed;
         moveY = Mathf.Clamp(moveY, -35, 60);
 
-        transform.LookAt(Target);
+        transform.LookAt(target);
 
-        Target.rotation = Quaternion.Euler(moveY, moveX, 0);
+        target.rotation = Quaternion.Euler(moveY, moveX, 0);
         //Player.rotation = Quaternion.Euler(0, moveX, 0);
     }
 }
