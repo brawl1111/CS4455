@@ -24295,6 +24295,7 @@ GameObject:
   - component: {fileID: 1934487963}
   - component: {fileID: 1934487962}
   - component: {fileID: 1934487961}
+  - component: {fileID: 1934487972}
   m_Layer: 0
   m_Name: Princess
   m_TagString: Player
@@ -24483,6 +24484,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d063abf5f9a1946829875016838fc7c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1934487972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934487960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 160f41abaf4f43b469077900c9193ed6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1935125920 stripped
@@ -27717,6 +27730,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650893461483020833, guid: 695a322a422ca4ce488ad2cc089e212d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -5.899994
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 695a322a422ca4ce488ad2cc089e212d, type: 3}
