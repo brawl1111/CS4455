@@ -15,6 +15,7 @@ public class AudioEventManager : MonoBehaviour
     public AudioClip llamaPickupSFX;
     public AudioClip SpinSFX;
     public AudioClip[] footstepSFX;
+    public AudioClip boxBreak;
 
 
     private UnityAction<Vector3> treeCrackEventListener;
@@ -31,6 +32,8 @@ public class AudioEventManager : MonoBehaviour
 
     private UnityAction<Vector3> footstepSFXListener;
 
+    private UnityAction<Vector3> boxBreakEventListener;
+
     void Awake()
     {
         treeCrackEventListener = new UnityAction<Vector3>(TreeCrackEventHandler);
@@ -46,6 +49,8 @@ public class AudioEventManager : MonoBehaviour
         spinSFXListener = new UnityAction<Vector3>(SpinSFXEventHandler);
 
         footstepSFXListener = new UnityAction<Vector3>(FootStepSFXEventHandler);
+
+        boxBreakEventListener = new UnityAction<Vector3>(BoxBreakEventHandler);
     }
 
 
@@ -67,6 +72,7 @@ public class AudioEventManager : MonoBehaviour
         EventManager.StartListening<LlamaPickupSFXEvent, Vector3>(llamaPickupSFXListener);
         EventManager.StartListening<SpinSFXEvent, Vector3>(spinSFXListener);
         EventManager.StartListening<FootstepSFXEvent, Vector3>(footstepSFXListener);
+        EventManager.StartListening<BreakableBoxBreakEvent, Vector3>(boxBreakEventListener);
     }
 
     void OnDisable()
@@ -78,6 +84,7 @@ public class AudioEventManager : MonoBehaviour
         EventManager.StopListening<LlamaPickupSFXEvent, Vector3>(llamaPickupSFXListener);
         EventManager.StopListening<SpinSFXEvent, Vector3>(spinSFXListener);
         EventManager.StopListening<FootstepSFXEvent, Vector3>(footstepSFXListener);
+        EventManager.StopListening<BreakableBoxBreakEvent, Vector3>(boxBreakEventListener);
     }
 
     void TreeCrackEventHandler(Vector3 worldPos)
@@ -143,6 +150,15 @@ public class AudioEventManager : MonoBehaviour
         sound.audioSrc.minDistance = 0f;
         sound.audioSrc.maxDistance = 100f;
         sound.audioSrc.volume = 0.2f;
+        sound.audioSrc.Play();
+    }
+
+    void BoxBreakEventHandler(Vector3 worldPos)
+    {
+        EventSound3D sound = Instantiate(eventSound3DPrefab, worldPos, Quaternion.identity, null);
+        sound.audioSrc.clip = boxBreak;
+        sound.audioSrc.minDistance = 0f;
+        sound.audioSrc.maxDistance = 100f;
         sound.audioSrc.Play();
     }
 }

@@ -23,7 +23,7 @@ public class SkeletonSM : MonoBehaviour
     public float wanderTimer;
 
     private Transform target;
-    private float timer;
+    //private float timer;
 
     private WaitForSeconds cooldown;
     private WaitForSeconds idleTime;
@@ -35,10 +35,9 @@ public class SkeletonSM : MonoBehaviour
     bool inRange;
     bool ifSwapIdle;
     bool ifSwapPatrol;
-    bool inMeleeDist;
-    bool attackBuffer;
     bool ifSwapReady;
     bool ifSwapAttack;
+    bool isColliding;
 
     // Start is called before the first frame update
     void Start()
@@ -46,18 +45,17 @@ public class SkeletonSM : MonoBehaviour
         skeletonNav = GetComponent<NavMeshAgent>();
         skeletonAnim = GetComponent<Animator>();
         aiState = AIState.idle_state;
-        timer = 0;
+        //timer = 0;
         inRange = false;
         ifSwapIdle = true;
         ifSwapPatrol = true;
         cooldown = new WaitForSeconds(5f);
         idleTime = new WaitForSeconds(1f);
         player = GameObject.FindWithTag("Player");
-        inMeleeDist = false;
-        attackBuffer = false;
         readyTime = new WaitForSeconds(3f);
         ifSwapReady = true;
         ifSwapAttack = true;
+        isColliding = false;
     }
 
     // Update is called once per frame
@@ -152,7 +150,6 @@ public class SkeletonSM : MonoBehaviour
                 break;
         }
 
-
     }
 
     IEnumerator SwapToPatrol()
@@ -195,5 +192,28 @@ public class SkeletonSM : MonoBehaviour
         NavMesh.SamplePosition (randDirection, out navHit, dist, layermask);
 
         return navHit.position;
+    }
+
+    void OnTriggerEnter(Collider collision)
+    {
+        Vector3 heading = player.transform.position - transform.position;
+        float side = Vector3.Dot(heading, transform.forward);
+
+        if (isColliding) return;
+        if (side > 0 && collision.gameObject.CompareTag("Hurtbox"))
+        {
+            isColliding = true;
+            if (skeletonAnim.GetBool("attackBuffer") && skeletonAnim.GetBool("inMeleeDist"))
+            {
+                Debug.Log("Hit");
+            }
+            StartCoroutine(SkeletonHitCD());
+        }
+    }
+
+    IEnumerator SkeletonHitCD()
+    {
+        yield return idleTime;
+        isColliding = false;
     }
 }
