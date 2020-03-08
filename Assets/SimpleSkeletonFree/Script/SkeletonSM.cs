@@ -28,6 +28,7 @@ public class SkeletonSM : MonoBehaviour
     private WaitForSeconds cooldown;
     private WaitForSeconds idleTime;
     private WaitForSeconds readyTime;
+    private WaitForSeconds deathTime;
 
     private GameObject player;
 
@@ -59,12 +60,13 @@ public class SkeletonSM : MonoBehaviour
         ifSwapAttack = true;
         isColliding = false;
         skeletonHealth = 3;
+        deathTime = new WaitForSeconds(2f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(skeletonHealth);
+        //Debug.Log(skeletonHealth);
         float distToPlayer = Vector3.Distance(transform.position, player.transform.position);
         switch(aiState)
         {
@@ -153,6 +155,11 @@ public class SkeletonSM : MonoBehaviour
                 }
                 break;
         }
+        if (skeletonHealth == 0)
+        {
+            skeletonAnim.SetBool("isDead", true);
+            StartCoroutine(DeathAnimation());
+        }
     }
 
     IEnumerator SwapToPatrol()
@@ -217,7 +224,7 @@ public class SkeletonSM : MonoBehaviour
             isColliding = true;
             if (skeletonAnim.GetBool("attackBuffer") && skeletonAnim.GetBool("inMeleeDist"))
             {
-                skeletonAnim.SetBool("HitBack", true);
+                skeletonAnim.SetBool("BackHit", true);
                 skeletonHealth -= 1;
                 //Debug.Log("Hit");
             }
@@ -236,6 +243,13 @@ public class SkeletonSM : MonoBehaviour
     {
         yield return idleTime;
         isColliding = false;
-        skeletonAnim.SetBool("HitBack", false);
+        skeletonAnim.SetBool("BackHit", false);
+    }
+
+    IEnumerator DeathAnimation()
+    {
+        yield return deathTime;
+        Destroy(gameObject);
+        //skeletonAnim.SetBool("isDead", false);
     }
 }
