@@ -22,9 +22,6 @@
             </e>
           </e>
         </e>
-        <e p="Goomba Scripts" t="Include">
-          <e p="GoombaChase.cs" t="Include" />
-        </e>
         <e p="JKT_ART" t="Include">
           <e p="ETC" t="Include">
             <e p="MatCap.shader" t="Include" />
@@ -79,6 +76,9 @@
             <e p="FanLift.cs" t="Include" />
           </e>
           <e p="FlyControl.cs" t="Include" />
+          <e p="Goomba Scripts" t="Include">
+            <e p="GoombaChase.cs" t="Include" />
+          </e>
           <e p="LlamaCounter.cs" t="Include" />
           <e p="LlamaScript.cs" t="Include" />
           <e p="Player Scripts" t="Include">
