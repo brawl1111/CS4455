@@ -1476,66 +1476,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7629222877236713455, guid: f2b3a32e7f7174ba58e94328bd69904d,
-        type: 3}
-      propertyPath: footstepSFX.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7629222877236713455, guid: f2b3a32e7f7174ba58e94328bd69904d,
-        type: 3}
-      propertyPath: treeCrack
-      value: 
-      objectReference: {fileID: 8300000, guid: 74a6533555e764b528806b189702cda3, type: 3}
-    - target: {fileID: 7629222877236713455, guid: f2b3a32e7f7174ba58e94328bd69904d,
-        type: 3}
-      propertyPath: treeHitGround
-      value: 
-      objectReference: {fileID: 8300000, guid: a60b88135287a4121b57f8542df5484d, type: 3}
-    - target: {fileID: 7629222877236713455, guid: f2b3a32e7f7174ba58e94328bd69904d,
-        type: 3}
-      propertyPath: gateSwing
-      value: 
-      objectReference: {fileID: 8300000, guid: 251e516755372415998ca2eec1b4c85e, type: 3}
-    - target: {fileID: 7629222877236713455, guid: f2b3a32e7f7174ba58e94328bd69904d,
-        type: 3}
-      propertyPath: jumpSFX
-      value: 
-      objectReference: {fileID: 8300000, guid: 999b67639624f904d87967c231cb126f, type: 3}
-    - target: {fileID: 7629222877236713455, guid: f2b3a32e7f7174ba58e94328bd69904d,
-        type: 3}
-      propertyPath: llamaPickup
-      value: 
-      objectReference: {fileID: 8300000, guid: 224aeeb6fc0c8aa47847054c971bc600, type: 3}
-    - target: {fileID: 7629222877236713455, guid: f2b3a32e7f7174ba58e94328bd69904d,
-        type: 3}
-      propertyPath: SpinSFX
-      value: 
-      objectReference: {fileID: 8300000, guid: 52304db3cb062c54f8087812eac7a31a, type: 3}
-    - target: {fileID: 7629222877236713455, guid: f2b3a32e7f7174ba58e94328bd69904d,
-        type: 3}
-      propertyPath: llamaPickupSFX
-      value: 
-      objectReference: {fileID: 8300000, guid: 224aeeb6fc0c8aa47847054c971bc600, type: 3}
-    - target: {fileID: 7629222877236713455, guid: f2b3a32e7f7174ba58e94328bd69904d,
-        type: 3}
-      propertyPath: footstepSFX.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: 2876c6cd0ebab7741872d9766b83bf19, type: 3}
-    - target: {fileID: 7629222877236713455, guid: f2b3a32e7f7174ba58e94328bd69904d,
-        type: 3}
-      propertyPath: footstepSFX.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: 8dc0f377f1070a244b8817cef640d444, type: 3}
-    - target: {fileID: 7629222877236713455, guid: f2b3a32e7f7174ba58e94328bd69904d,
-        type: 3}
-      propertyPath: footstepSFX.Array.data[2]
-      value: 
-      objectReference: {fileID: 8300000, guid: 25536c739aa843c4594120128788cf4e, type: 3}
-    - target: {fileID: 7629222877236713455, guid: f2b3a32e7f7174ba58e94328bd69904d,
-        type: 3}
-      propertyPath: footstepSFX.Array.data[3]
-      value: 
-      objectReference: {fileID: 8300000, guid: 2add689f724a7144bb41532deb576888, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2b3a32e7f7174ba58e94328bd69904d, type: 3}
 --- !u!1 &309916361
@@ -2539,6 +2479,7 @@ GameObject:
   - component: {fileID: 778774136}
   - component: {fileID: 778774135}
   - component: {fileID: 778774134}
+  - component: {fileID: 778774138}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2624,6 +2565,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 22.977001, y: 0, z: 0}
+--- !u!114 &778774138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778774133}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf54c008bf1775f4b8f9d2c4fc083460, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &806270384 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6258136261124412576, guid: 2cd1080e60d0ebc438ab05bdb752b667,
