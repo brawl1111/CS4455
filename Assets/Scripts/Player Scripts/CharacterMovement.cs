@@ -100,7 +100,9 @@ public class CharacterMovement : MonoBehaviour
     		RotateModel(input.x, input.y);
     	}
         //Debug.Log(isGrounded);
-        if (Input.GetButtonDown("Fire1") && isSpinningCooldownOver)
+
+        //Spin if player pushes LControl or any of the trigger buttons
+        if ((Input.GetAxis("XBOX_360_LTrigger") != 0 || Input.GetButtonDown("Fire1")) && isSpinningCooldownOver)
         {
             if (!(isGroundedCheck || isGrounded))
             {
