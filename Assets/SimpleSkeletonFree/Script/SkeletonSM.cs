@@ -50,9 +50,9 @@ public class SkeletonSM : MonoBehaviour
         ifSwapIdle = true;
         ifSwapPatrol = true;
         cooldown = new WaitForSeconds(5f);
-        idleTime = new WaitForSeconds(1f);
+        idleTime = new WaitForSeconds(.7f);
         player = GameObject.FindWithTag("Player");
-        readyTime = new WaitForSeconds(3f);
+        readyTime = new WaitForSeconds(2.5f);
         ifSwapReady = true;
         ifSwapAttack = true;
         isColliding = false;
@@ -206,7 +206,7 @@ public class SkeletonSM : MonoBehaviour
             if (skeletonAnim.GetBool("attackBuffer") && skeletonAnim.GetBool("inMeleeDist"))
             {
                 skeletonAnim.SetBool("Block", true);
-                Debug.Log("Hit");
+                //Debug.Log("Hit");
             }
             StartCoroutine(SkeletonHitCD());
         }
@@ -216,5 +216,6 @@ public class SkeletonSM : MonoBehaviour
     {
         yield return idleTime;
         isColliding = false;
+        skeletonAnim.SetBool("Block", false);
     }
 }
