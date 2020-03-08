@@ -64,7 +64,6 @@ public class SkeletonSM : MonoBehaviour
     void Update()
     {
         float distToPlayer = Vector3.Distance(transform.position, player.transform.position);
-        //Debug.Log(distToPlayer);
         switch(aiState)
         {
             case AIState.idle_state:
@@ -156,28 +155,28 @@ public class SkeletonSM : MonoBehaviour
 
     }
 
-    public IEnumerator SwapToPatrol()
+    IEnumerator SwapToPatrol()
     {
         yield return idleTime;
         aiState = AIState.patrol_state;
         skeletonAnim.SetBool("inPatrol", true);
     }
 
-    public IEnumerator SwapToIdle()
+    IEnumerator SwapToIdle()
     {
         yield return cooldown;
         aiState = AIState.idle_state;
         skeletonAnim.SetBool("inPatrol", false);
     }
 
-    public IEnumerator attackDelay()
+    IEnumerator attackDelay()
     {
         yield return readyTime;
         skeletonAnim.SetBool("attackBuffer", true);
         aiState = AIState.attack_state;
     }
 
-    public IEnumerator SwapToReady()
+    IEnumerator SwapToReady()
     {
         yield return readyTime;
         skeletonAnim.SetBool("attackBuffer", false);

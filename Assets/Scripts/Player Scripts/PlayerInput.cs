@@ -59,7 +59,6 @@ public class PlayerInput : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && canSpin)
         {
         	isSpinning = true;
-        	Debug.Log("spinning");
         	StartCoroutine(SpinCooldown());
 
         }
