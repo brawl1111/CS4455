@@ -53,7 +53,7 @@ public class SkeletonSM : MonoBehaviour
         ifSwapIdle = true;
         ifSwapPatrol = true;
         cooldown = new WaitForSeconds(5f);
-        idleTime = new WaitForSeconds(.7f);
+        idleTime = new WaitForSeconds(1f);
         player = GameObject.FindWithTag("Player");
         readyTime = new WaitForSeconds(2.5f);
         ifSwapReady = true;
