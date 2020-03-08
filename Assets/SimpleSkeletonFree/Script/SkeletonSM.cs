@@ -23,7 +23,7 @@ public class SkeletonSM : MonoBehaviour
     public float wanderTimer;
 
     private Transform target;
-    private float timer;
+    //private float timer;
 
     private WaitForSeconds cooldown;
     private WaitForSeconds idleTime;
@@ -35,8 +35,6 @@ public class SkeletonSM : MonoBehaviour
     bool inRange;
     bool ifSwapIdle;
     bool ifSwapPatrol;
-    bool inMeleeDist;
-    bool attackBuffer;
     bool ifSwapReady;
     bool ifSwapAttack;
 
@@ -46,15 +44,13 @@ public class SkeletonSM : MonoBehaviour
         skeletonNav = GetComponent<NavMeshAgent>();
         skeletonAnim = GetComponent<Animator>();
         aiState = AIState.idle_state;
-        timer = 0;
+        //timer = 0;
         inRange = false;
         ifSwapIdle = true;
         ifSwapPatrol = true;
         cooldown = new WaitForSeconds(5f);
         idleTime = new WaitForSeconds(1f);
         player = GameObject.FindWithTag("Player");
-        inMeleeDist = false;
-        attackBuffer = false;
         readyTime = new WaitForSeconds(3f);
         ifSwapReady = true;
         ifSwapAttack = true;

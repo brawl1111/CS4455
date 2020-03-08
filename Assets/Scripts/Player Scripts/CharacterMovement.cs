@@ -15,7 +15,7 @@ public class CharacterMovement : MonoBehaviour
 
     //variables for jumping/ground check
     private bool isGrounded = true;
-    private float verticalSpeed = 0f;
+    //private float verticalSpeed = 0f;
     public float gravityScale = 2f;
     public float jumpSpeed = 1f;
 
@@ -51,7 +51,7 @@ public class CharacterMovement : MonoBehaviour
     //information on llamas for each section, where each index is a section
     private int[] llamas = new int[] {0, 0, 0, 0};
 
-    private int cycleCount = 0;
+    //private int cycleCount = 0;
 
     protected bool IsMoveInput
      {
