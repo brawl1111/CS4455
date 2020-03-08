@@ -19,10 +19,8 @@ public class TeleportPlayerScript : MonoBehaviour
 
     void OnTriggerEnter(Collider c)
     {
-        Debug.Log("I got a something inside my bones");
         if (c.gameObject == GameObject.FindWithTag("Player"))
         {
-            Debug.Log("I got a player inside my bones");
             SceneManager.LoadScene("Section3&4");
         }
     }
