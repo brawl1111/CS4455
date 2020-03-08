@@ -6,20 +6,22 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public class EnemyDamageController : MonoBehaviour
 {
-    public int hitpoints;
+    public int maxHP;
+    public int curHP;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        curHP = maxHP;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (hitpoints <= 0)
+        if (curHP <= 0)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);          // this is for regular spawner
+            gameObject.SetActive(false);    // this is for advanced spawner?
         }
     }
 
@@ -27,7 +29,13 @@ public class EnemyDamageController : MonoBehaviour
     {
         if (other.CompareTag("Hurtbox"))
         {
-            hitpoints--;
+            curHP--;
         }
     }
+
+    private void OnDisable()
+    {
+        curHP = maxHP;
+    }
+
 }

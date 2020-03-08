@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -3959416538272240108}
   - component: {fileID: -1991298330937689231}
   m_Layer: 0
-  m_Name: Baby_Demon_Model
+  m_Name: Goomba
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -120,7 +120,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73b2a41811e0a7a4ba11d73cbf34f943, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitpoints: 1
+  maxHP: 1
+  curHP: 1
 --- !u!114 &-1991298330937689231
 MonoBehaviour:
   m_ObjectHideFlags: 0

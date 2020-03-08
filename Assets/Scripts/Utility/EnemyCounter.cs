@@ -6,15 +6,19 @@ public class EnemyCounter : MonoBehaviour
 {
 
     private GameObject mySpawner;
+    private AdvancedSpawnEnemy spawnScript;
     private SpawnEnemy spawnEnemyScript;
     //private Spawn spawnBombScriptPool;
+
+    private void Awake()
+    {
+
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        spawnEnemyScript = mySpawner.GetComponent<SpawnEnemy>();
-
-        //spawnBombScriptPool = GameObject.Find("BombSpawner2").GetComponent<Spawn>();      // for weird pooling stuff
+        //spawnEnemyScript = mySpawner.GetComponent<SpawnEnemy>();
     }
 
     // Update is called once per frame
@@ -25,14 +29,12 @@ public class EnemyCounter : MonoBehaviour
 
     private void OnDisable()
     {
-        spawnEnemyScript.decrementEnemyCount();
-
-        //spawnBombScriptPool.decrementBombs();     // for weird pooling stuff
-        //Debug.Log("bomb disabled");
+        spawnScript.decrementEnemyCount();
     }
 
-    public void setSpawner(GameObject spawner)
+    public void setSpawner(GameObject spawner)      // this is called by the spawner
     {
         mySpawner = spawner;
+        spawnScript = mySpawner.GetComponent<AdvancedSpawnEnemy>();
     }
 }
