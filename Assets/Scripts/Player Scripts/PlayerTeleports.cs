@@ -1,15 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /**
- * This script is meant for debugging purposes only
+ * Part of this script is meant for debugging purposes only
  * PlayerTeleports takes a keyboard input and moves
  * the princess to the beginning of each section based
  * on input.
+ *
+ * In addition, this script controls the movement of the player
+ * from section 2 to section 3
+ * We may also use it to reset the Player's spawn when they die
  **/
 public class PlayerTeleports : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +29,6 @@ public class PlayerTeleports : MonoBehaviour
         {
             Debug.Log("Teleport to section 1");
             gameObject.transform.position = new Vector3(-13.67f, 5.06f, 6f);
-
             // set llama counter as if we had gone through the previous section
             LlamaCounter.Instance.ResetLlamaCount();
         }
