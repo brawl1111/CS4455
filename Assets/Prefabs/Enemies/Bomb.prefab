@@ -29970,7 +29970,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!65 &2796185744922312415
 BoxCollider:
@@ -30022,7 +30022,7 @@ MonoBehaviour:
   player: {fileID: 0}
   waypoints: []
   curWaypoint: -1
-  fuseTime: 3
+  fuseTime: 7
   aggroRange: 4
   blastRadius: 5
   isExploded: 0
@@ -30040,6 +30040,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4118117c489037648ab7c1aaa9cceeaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  knockbackDist: 5
+  knockbackHeight: 8
+  knockbackMult: 1.2
 --- !u!82 &-5600731849318506507
 AudioSource:
   m_ObjectHideFlags: 0
