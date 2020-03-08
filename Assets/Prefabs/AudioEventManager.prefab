@@ -56,3 +56,5 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8dc0f377f1070a244b8817cef640d444, type: 3}
   - {fileID: 8300000, guid: 25536c739aa843c4594120128788cf4e, type: 3}
   - {fileID: 8300000, guid: 2add689f724a7144bb41532deb576888, type: 3}
+  boxBreak: {fileID: 8300000, guid: e99f720e578a5432e9e46d7f2990e829, type: 3}
+  spikeExtendSFX: {fileID: 8300000, guid: 3e06d7a057b69b045810f683ad7cd661, type: 3}

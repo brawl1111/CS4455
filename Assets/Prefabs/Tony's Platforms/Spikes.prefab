@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 6258136260270764581}
   - component: {fileID: 6258136260270764580}
   - component: {fileID: 6258136260270764582}
+  - component: {fileID: 1020408220836430410}
   m_Layer: 0
   m_Name: SpikyParts
   m_TagString: Untagged
@@ -183,6 +184,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e98291c75056664da4e32ab14133c8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1020408220836430410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6258136260270764578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84a6af2b886437b4c8cf878b791298d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6258136260381382143
@@ -2094,7 +2107,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6258136261124412607}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.4260502, y: -10.188587, z: 6.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
