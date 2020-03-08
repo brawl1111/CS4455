@@ -1060,7 +1060,7 @@ GameObject:
   - component: {fileID: -8500722297761044689}
   - component: {fileID: 7771547292639500424}
   m_Layer: 0
-  m_Name: spider_pref
+  m_Name: Spider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1092,7 +1092,7 @@ Animator:
   m_GameObject: {fileID: 1715103906888602}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 7a538f29bad700d47a681a6568b943b4, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e4f42a9e2bd1c1c4487813dabb31ddea, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
