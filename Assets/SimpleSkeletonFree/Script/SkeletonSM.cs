@@ -27,6 +27,7 @@ public class SkeletonSM : MonoBehaviour
 
     private WaitForSeconds cooldown;
     private WaitForSeconds idleTime;
+    private WaitForSeconds readyTime;
 
     private GameObject player;
 
@@ -34,6 +35,10 @@ public class SkeletonSM : MonoBehaviour
     bool inRange;
     bool ifSwapIdle;
     bool ifSwapPatrol;
+    bool inMeleeDist;
+    bool attackBuffer;
+    bool ifSwapReady;
+    bool ifSwapAttack;
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +53,11 @@ public class SkeletonSM : MonoBehaviour
         cooldown = new WaitForSeconds(5f);
         idleTime = new WaitForSeconds(1f);
         player = GameObject.FindWithTag("Player");
+        inMeleeDist = false;
+        attackBuffer = false;
+        readyTime = new WaitForSeconds(3f);
+        ifSwapReady = true;
+        ifSwapAttack = true;
     }
 
     // Update is called once per frame
@@ -106,10 +116,22 @@ public class SkeletonSM : MonoBehaviour
                 break;
             case AIState.ready_state:
                 skeletonAnim.SetBool("inPatrol", false);
+                if (distToPlayer < 3.0f)
+                {
+                    skeletonAnim.SetBool("inMeleeDist", true);
+                    if (ifSwapAttack)
+                    {
+                        StartCoroutine(attackDelay());
+                        ifSwapReady = true;
+                        ifSwapAttack = false;
+                        break;
+                    }
+                }
                 if (3.0f < distToPlayer && distToPlayer < 20.0f)
                 {
                     aiState = AIState.chase_state;
                     skeletonAnim.SetBool("inPatrol", true);
+                    skeletonAnim.SetBool("inMeleeDist", false);
                     break;
                 }
                 if (distToPlayer > 20.0f)
@@ -117,7 +139,16 @@ public class SkeletonSM : MonoBehaviour
                     inRange = false;
                     aiState = AIState.patrol_state;
                     skeletonAnim.SetBool("inPatrol", true);
+                    skeletonAnim.SetBool("inMeleeDist", false);
                     break;
+                }
+                break;
+            case AIState.attack_state:
+                if (ifSwapReady)
+                {
+                    StartCoroutine(SwapToReady());
+                    ifSwapAttack = true;
+                    ifSwapReady = false;
                 }
                 break;
         }
@@ -137,6 +168,20 @@ public class SkeletonSM : MonoBehaviour
         yield return cooldown;
         aiState = AIState.idle_state;
         skeletonAnim.SetBool("inPatrol", false);
+    }
+
+    public IEnumerator attackDelay()
+    {
+        yield return readyTime;
+        skeletonAnim.SetBool("attackBuffer", true);
+        aiState = AIState.attack_state;
+    }
+
+    public IEnumerator SwapToReady()
+    {
+        yield return readyTime;
+        skeletonAnim.SetBool("attackBuffer", false);
+        aiState = AIState.ready_state;
     }
 
     public static Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask)
