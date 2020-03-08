@@ -27,6 +27,7 @@ public class SkeletonSM : MonoBehaviour
 
     private WaitForSeconds cooldown;
     private WaitForSeconds idleTime;
+    private WaitForSeconds readyTime;
 
     private GameObject player;
 
@@ -36,6 +37,8 @@ public class SkeletonSM : MonoBehaviour
     bool ifSwapPatrol;
     bool inMeleeDist;
     bool attackBuffer;
+    bool ifSwapReady;
+    bool ifSwapAttack;
 
     // Start is called before the first frame update
     void Start()
@@ -52,6 +55,9 @@ public class SkeletonSM : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         inMeleeDist = false;
         attackBuffer = false;
+        readyTime = new WaitForSeconds(3f);
+        ifSwapReady = true;
+        ifSwapAttack = true;
     }
 
     // Update is called once per frame
@@ -113,8 +119,13 @@ public class SkeletonSM : MonoBehaviour
                 if (distToPlayer < 3.0f)
                 {
                     skeletonAnim.SetBool("inMeleeDist", true);
-                    StartCoroutine(attackDelay());
-                    break;
+                    if (ifSwapAttack)
+                    {
+                        StartCoroutine(attackDelay());
+                        ifSwapReady = true;
+                        ifSwapAttack = false;
+                        break;
+                    }
                 }
                 if (3.0f < distToPlayer && distToPlayer < 20.0f)
                 {
@@ -133,7 +144,12 @@ public class SkeletonSM : MonoBehaviour
                 }
                 break;
             case AIState.attack_state:
-                StartCoroutine(SwapToReady());
+                if (ifSwapReady)
+                {
+                    StartCoroutine(SwapToReady());
+                    ifSwapAttack = true;
+                    ifSwapReady = false;
+                }
                 break;
         }
 
@@ -156,14 +172,14 @@ public class SkeletonSM : MonoBehaviour
 
     public IEnumerator attackDelay()
     {
-        yield return cooldown;
+        yield return readyTime;
         skeletonAnim.SetBool("attackBuffer", true);
         aiState = AIState.attack_state;
     }
 
     public IEnumerator SwapToReady()
     {
-        yield return idleTime;
+        yield return readyTime;
         skeletonAnim.SetBool("attackBuffer", false);
         aiState = AIState.ready_state;
     }
