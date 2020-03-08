@@ -205,6 +205,7 @@ public class SkeletonSM : MonoBehaviour
             isColliding = true;
             if (skeletonAnim.GetBool("attackBuffer") && skeletonAnim.GetBool("inMeleeDist"))
             {
+                skeletonAnim.SetBool("Block", true);
                 Debug.Log("Hit");
             }
             StartCoroutine(SkeletonHitCD());
