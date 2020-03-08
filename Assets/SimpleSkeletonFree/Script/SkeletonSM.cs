@@ -28,6 +28,7 @@ public class SkeletonSM : MonoBehaviour
     private WaitForSeconds cooldown;
     private WaitForSeconds idleTime;
     private WaitForSeconds readyTime;
+    private WaitForSeconds deathTime;
 
     private GameObject player;
 
@@ -38,6 +39,8 @@ public class SkeletonSM : MonoBehaviour
     bool ifSwapReady;
     bool ifSwapAttack;
     bool isColliding;
+
+    private int skeletonHealth;
 
     // Start is called before the first frame update
     void Start()
@@ -56,11 +59,14 @@ public class SkeletonSM : MonoBehaviour
         ifSwapReady = true;
         ifSwapAttack = true;
         isColliding = false;
+        skeletonHealth = 3;
+        deathTime = new WaitForSeconds(2f);
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log(skeletonHealth);
         float distToPlayer = Vector3.Distance(transform.position, player.transform.position);
         switch(aiState)
         {
@@ -149,7 +155,11 @@ public class SkeletonSM : MonoBehaviour
                 }
                 break;
         }
-
+        if (skeletonHealth == 0)
+        {
+            skeletonAnim.SetBool("isDead", true);
+            StartCoroutine(DeathAnimation());
+        }
     }
 
     IEnumerator SwapToPatrol()
@@ -208,14 +218,38 @@ public class SkeletonSM : MonoBehaviour
                 skeletonAnim.SetBool("Block", true);
                 //Debug.Log("Hit");
             }
+            StartCoroutine(SkeletonShieldCD());
+        } else if (side < 0 && collision.gameObject.CompareTag("Hurtbox"))
+        {
+            isColliding = true;
+            if (skeletonAnim.GetBool("attackBuffer") && skeletonAnim.GetBool("inMeleeDist"))
+            {
+                skeletonAnim.SetBool("BackHit", true);
+                skeletonHealth -= 1;
+                //Debug.Log("Hit");
+            }
             StartCoroutine(SkeletonHitCD());
         }
+    }
+
+    IEnumerator SkeletonShieldCD()
+    {
+        yield return idleTime;
+        isColliding = false;
+        skeletonAnim.SetBool("Block", false);
     }
 
     IEnumerator SkeletonHitCD()
     {
         yield return idleTime;
         isColliding = false;
-        skeletonAnim.SetBool("Block", false);
+        skeletonAnim.SetBool("BackHit", false);
+    }
+
+    IEnumerator DeathAnimation()
+    {
+        yield return deathTime;
+        Destroy(gameObject);
+        //skeletonAnim.SetBool("isDead", false);
     }
 }
