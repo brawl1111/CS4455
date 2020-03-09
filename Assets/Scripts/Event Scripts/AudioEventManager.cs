@@ -109,6 +109,7 @@ public class AudioEventManager : MonoBehaviour
         sound.audioSrc.clip = treeHitGround;
         sound.audioSrc.minDistance = 0f;
         sound.audioSrc.maxDistance = 100f;
+        sound.audioSrc.volume = 0.2f;
         sound.audioSrc.Play();
     }
 
@@ -166,6 +167,7 @@ public class AudioEventManager : MonoBehaviour
         sound.audioSrc.clip = boxBreak;
         sound.audioSrc.minDistance = 0f;
         sound.audioSrc.maxDistance = 100f;
+        sound.audioSrc.volume = 0.2f;
         sound.audioSrc.Play();
     }
 
