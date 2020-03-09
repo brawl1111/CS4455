@@ -13,6 +13,7 @@ public class CatChase : MonoBehaviour
     public float aggroRange;
     public GameObject player;
     public int patrolRadius;
+    public float baseSpeed;
 
     public AIState aiState;
     public AIState prevState;
@@ -35,6 +36,7 @@ public class CatChase : MonoBehaviour
         //anim = GetComponent<Animator>();
         //patrolRadius = 3;            // or can set patrolRadius in prefab in Inspector
         patrolCenter = gameObject.transform.position;
+        baseSpeed = navAgent.speed;
     }
 
     // Update is called once per frame
@@ -87,8 +89,9 @@ public class CatChase : MonoBehaviour
                 break;
 
             case AIState.Eat:
-                if (prevState != AIState.Eat)
+                if (prevState != AIState.Eat)           // on enter eat
                 {
+                    navAgent.speed *= 2;
                     GameObject food = GameObject.FindGameObjectWithTag("food");
                     navAgent.SetDestination(food.transform.position);
                     StartCoroutine(Eating(food));
@@ -107,10 +110,13 @@ public class CatChase : MonoBehaviour
     IEnumerator Eating(GameObject eatenFood)
     {
         yield return new WaitUntil(() => Vector3.Distance(eatenFood.transform.position, transform.position) < 3);
+        navAgent.velocity = Vector3.zero;
         navAgent.ResetPath();
         yield return new WaitForSecondsRealtime(3);
         GetComponent<EnemyDamageController>().curHP++;
         eatenFood.GetComponent<GetEaten>().Eaten();
+        navAgent.speed = baseSpeed;
+        navAgent.isStopped = false;
 
     }
 
