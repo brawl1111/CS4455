@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 7194703147362854223}
   - component: {fileID: 6230908622533415594}
   - component: {fileID: 6727607825358915153}
-  - component: {fileID: 2496015794383868939}
   - component: {fileID: -3959416538272240108}
   - component: {fileID: -1991298330937689231}
+  - component: {fileID: 3270176983149351742}
+  - component: {fileID: 626182585236692925}
   m_Layer: 0
   m_Name: Goomba
   m_TagString: Untagged
@@ -31,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 1214937682188914204}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 1350150082947805644}
   m_Father: {fileID: 0}
@@ -95,19 +96,6 @@ MonoBehaviour:
   player: {fileID: 0}
   patrolRadius: 20
   aiState: 0
---- !u!65 &2496015794383868939
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1214937682188914204}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &-3959416538272240108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,6 +120,31 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f40f034b671a5a14eaa617522ad01efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &3270176983149351742
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214937682188914204}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.4
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &626182585236692925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214937682188914204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac3d2b616d720a4798bb92531087e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8896205609282538471

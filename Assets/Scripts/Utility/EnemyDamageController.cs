@@ -18,11 +18,7 @@ public class EnemyDamageController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (curHP <= 0)
-        {
-            //Destroy(gameObject);          // this is for regular spawner
-            gameObject.SetActive(false);    // this is for advanced spawner?
-        }
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -30,6 +26,11 @@ public class EnemyDamageController : MonoBehaviour
         if (other.CompareTag("Hurtbox"))
         {
             curHP--;
+            if (curHP <= 0)
+            {
+                //Destroy(gameObject);          // this is for regular spawner
+                gameObject.SetActive(false);    // this is for advanced spawner?
+            }
         }
     }
 
