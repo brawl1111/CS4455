@@ -8,9 +8,11 @@ public class CatChase : MonoBehaviour
 {
     private NavMeshAgent navAgent;
     private Animator anim;
+    private Rigidbody rb;
 
     public Vector3 patrolCenter;
     public float aggroRange;
+    public float attackRange;
     public GameObject player;
     public int patrolRadius;
     public float baseSpeed;
@@ -23,7 +25,8 @@ public class CatChase : MonoBehaviour
         Idle,
         Patrol,
         Chase,
-        Eat
+        Eat,
+        Attack
     };
 
     // Start is called before the first frame update
@@ -33,10 +36,11 @@ public class CatChase : MonoBehaviour
         aiState = AIState.Idle;
         player = GameObject.FindGameObjectWithTag("Player");
         aggroRange = 8.0f;
-        //anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
         //patrolRadius = 3;            // or can set patrolRadius in prefab in Inspector
         patrolCenter = gameObject.transform.position;
         baseSpeed = navAgent.speed;
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -49,6 +53,10 @@ public class CatChase : MonoBehaviour
         if (GetComponent<EnemyDamageController>().curHP == 1)
         {
             aiState = AIState.Eat;
+        }
+        else if (distToPlayer < attackRange)
+        {
+            aiState = AIState.Attack;
         }
         else if (distToPlayer < aggroRange)
         {
@@ -81,10 +89,24 @@ public class CatChase : MonoBehaviour
                 break;
 
             case AIState.Chase:
-                Vector3 dirToPlayer = transform.position - player.transform.position;
+                Vector3 dirToPlayer = transform.position - player.transform.position;       // this is not direction to player, idk what this is
                 Vector3 newPos = transform.position - dirToPlayer;
                 navAgent.SetDestination(newPos);
 
+
+                break;
+
+            case AIState.Attack:
+                if (prevState != AIState.Attack)
+                {
+                    Vector3 jumpDir = getDirToPlayer();      // direction to player
+                    rb.isKinematic = false;
+                    navAgent.enabled = false;
+                    Vector3 appliedForce = 10 * jumpDir;
+                    appliedForce.y = 7;
+                    rb.AddForce(appliedForce, ForceMode.Impulse);
+                    StartCoroutine(reactivateNav());
+                }
 
                 break;
 
@@ -92,6 +114,7 @@ public class CatChase : MonoBehaviour
                 if (prevState != AIState.Eat)           // on enter eat
                 {
                     navAgent.speed *= 2;
+                    //anim.Play("Run");         // figure out how to loop this
                     GameObject food = GameObject.FindGameObjectWithTag("food");
                     navAgent.SetDestination(food.transform.position);
                     StartCoroutine(Eating(food));
@@ -119,6 +142,20 @@ public class CatChase : MonoBehaviour
         navAgent.isStopped = false;
 
     }
+    IEnumerator reactivateNav()
+    {
+        // no idea how to do this
+        //Debug.Log("in reactivate");
+        yield return new WaitForSeconds(.5f);
+        //yield return new WaitWhile(() => rb.velocity.y >= 1);
+        yield return new WaitUntil(() => Mathf.Approximately(rb.velocity.y, 0) == true);
+        //yield return new WaitForSeconds(1);
+        //Debug.Log("should be reactive");
+        rb.velocity = Vector3.zero;
+        rb.isKinematic = true;
+        navAgent.enabled = true;
+        navAgent.Warp(transform.position);
+    }
 
     // origin is navAgent.position, distance is radius of sphere, layermask should = -1
     public Vector3 RandomNavSphere(Vector3 origin, float distance, int layermask)
@@ -129,5 +166,10 @@ public class CatChase : MonoBehaviour
         NavMesh.SamplePosition(randomDirection, out navHit, distance, layermask);
         return navHit.position;
 
+    }
+
+    private Vector3 getDirToPlayer()
+    {
+        return (player.transform.position - transform.position).normalized;
     }
 }
