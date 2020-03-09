@@ -128,7 +128,7 @@ public class AudioEventManager : MonoBehaviour
         sound.audioSrc.clip = jumpSFX;
         sound.audioSrc.minDistance = 0f;
         sound.audioSrc.maxDistance = 100f;
-        sound.audioSrc.volume = 0.5f;
+        sound.audioSrc.volume = 0.7f;
         sound.audioSrc.Play();
     }
 
