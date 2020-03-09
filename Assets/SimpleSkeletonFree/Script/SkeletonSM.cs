@@ -66,6 +66,9 @@ public class SkeletonSM : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector3 heading = player.transform.position - transform.position;
+        float side = Vector3.Dot(heading, transform.forward);
+        Debug.Log(side);
         //Debug.Log(skeletonHealth);
         float distToPlayer = Vector3.Distance(transform.position, player.transform.position);
         switch(aiState)
@@ -115,6 +118,7 @@ public class SkeletonSM : MonoBehaviour
                 {
                     aiState = AIState.ready_state;
                     skeletonNav.stoppingDistance = 3.0f;
+                    skeletonAnim.SetBool("inMeleeDist", true);
                 }
                 break;
             case AIState.ready_state:
@@ -217,6 +221,7 @@ public class SkeletonSM : MonoBehaviour
             if (skeletonAnim.GetBool("attackBuffer") && skeletonAnim.GetBool("inMeleeDist"))
             {
                 skeletonAnim.SetBool("Block", true);
+                EventManager.TriggerEvent<ShieldClang, Vector3>(this.transform.position);
                 //Debug.Log("Hit");
             }
             StartCoroutine(SkeletonShieldCD());
@@ -227,6 +232,7 @@ public class SkeletonSM : MonoBehaviour
             {
                 skeletonAnim.SetBool("BackHit", true);
                 skeletonHealth -= 1;
+                EventManager.TriggerEvent<FlinchHit, Vector3>(this.transform.position);
                 //Debug.Log("Hit");
             }
             StartCoroutine(SkeletonHitCD());
@@ -235,7 +241,6 @@ public class SkeletonSM : MonoBehaviour
 
     IEnumerator SkeletonShieldCD()
     {
-        EventManager.TriggerEvent<ShieldClang, Vector3>(this.transform.position);
         yield return idleTime;
         isColliding = false;
         skeletonAnim.SetBool("Block", false);
@@ -243,7 +248,6 @@ public class SkeletonSM : MonoBehaviour
 
     IEnumerator SkeletonHitCD()
     {
-        EventManager.TriggerEvent<FlinchHit, Vector3>(this.transform.position);
         yield return idleTime;
         isColliding = false;
         skeletonAnim.SetBool("BackHit", false);
