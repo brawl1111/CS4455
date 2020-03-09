@@ -11,6 +11,8 @@ TagManager:
   - WALL
   - spawner
   - SpawnHolder
+  - terrain
+  - drone
   layers:
   - Default
   - TransparentFX

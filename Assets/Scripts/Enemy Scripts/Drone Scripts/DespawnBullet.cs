@@ -41,7 +41,10 @@ public class DespawnBullet : MonoBehaviour
         {
             HealthManager.Instance.SubtractHealth(1);
         }
-        gameObject.SetActive(false);
+        if (!other.CompareTag("drone"))
+        {
+            gameObject.SetActive(false);
+        }
     }
 
 }

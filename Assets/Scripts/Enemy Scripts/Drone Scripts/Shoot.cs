@@ -48,10 +48,21 @@ public class Shoot : MonoBehaviour
     private void shootBullet()
     {
         GameObject spawnedObj = ammo[FindFirstDeactiveIndex()];
-        Vector3 dirToPlayer = (player.transform.position - transform.position).normalized;
         spawnedObj.SetActive(true);
+
+        Vector3 dirToPlayer = getDirToTarget(player.transform.position, transform.position);
         spawnedObj.transform.position = transform.position + (1.75f * dirToPlayer.normalized);           // spawns it a little in front of the drone so it doesnt hit the drone's collider and despawn
-        spawnedObj.GetComponent<Rigidbody>().velocity = dirToPlayer.normalized * bulletSpeed;
+        
+        //spawnedObj.GetComponent<Rigidbody>().velocity = dirToPlayer.normalized * bulletSpeed;
+
+        // distance / bullet velocity = time
+
+        Vector3 predictPos = (player.GetComponent<VelocityReporter>().velocity * 1) + player.transform.position;
+        Vector3 dirToPredict = getDirToTarget(predictPos, transform.position);
+        spawnedObj.GetComponent<Rigidbody>().velocity = dirToPredict * bulletSpeed;
+
+
+
     }
 
     private int FindFirstDeactiveIndex()
@@ -70,6 +81,11 @@ public class Shoot : MonoBehaviour
             Debug.Log("no deactive " + bullet + " objs");
         }
         return index;
+    }
+
+    private Vector3 getDirToTarget(Vector3 target, Vector3 origin)
+    {
+        return (target - origin).normalized;
     }
 
 
