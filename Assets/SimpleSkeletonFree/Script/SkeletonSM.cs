@@ -179,6 +179,7 @@ public class SkeletonSM : MonoBehaviour
     IEnumerator attackDelay()
     {
         yield return readyTime;
+        EventManager.TriggerEvent<SwordSwing, Vector3>(this.transform.position);
         skeletonAnim.SetBool("attackBuffer", true);
         aiState = AIState.attack_state;
     }
@@ -234,6 +235,7 @@ public class SkeletonSM : MonoBehaviour
 
     IEnumerator SkeletonShieldCD()
     {
+        EventManager.TriggerEvent<ShieldClang, Vector3>(this.transform.position);
         yield return idleTime;
         isColliding = false;
         skeletonAnim.SetBool("Block", false);
@@ -241,6 +243,7 @@ public class SkeletonSM : MonoBehaviour
 
     IEnumerator SkeletonHitCD()
     {
+        EventManager.TriggerEvent<FlinchHit, Vector3>(this.transform.position);
         yield return idleTime;
         isColliding = false;
         skeletonAnim.SetBool("BackHit", false);
