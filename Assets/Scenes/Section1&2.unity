@@ -9778,7 +9778,7 @@ PrefabInstance:
     - target: {fileID: 3008570856905566715, guid: f368e5894351cea4f95017440403d6f8,
         type: 3}
       propertyPath: m_Name
-      value: TestDrone
+      value: TurretDrone
       objectReference: {fileID: 0}
     - target: {fileID: 3008570856905733595, guid: f368e5894351cea4f95017440403d6f8,
         type: 3}
