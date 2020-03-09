@@ -13,6 +13,7 @@ TagManager:
   - SpawnHolder
   - terrain
   - drone
+  - food
   layers:
   - Default
   - TransparentFX

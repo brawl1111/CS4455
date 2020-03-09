@@ -18,6 +18,7 @@ public class AdvancedSpawnEnemy : MonoBehaviour
     public int maxEnemies;
     public int curEnemies;
     public int respawnTime;
+    public bool useRandBox;
 
     // Start is called before the first frame update
     void Start()
@@ -69,7 +70,17 @@ public class AdvancedSpawnEnemy : MonoBehaviour
         GameObject spawnedObj = pool[FindFirstDeactiveIndex()];
         spawnedObj.SetActive(true);
         spawnedObj.transform.position = transform.position;
-        spawnedObj.GetComponent<NavMeshAgent>().Warp(transform.position);
+        if (spawnedObj.GetComponent<NavMeshAgent>())
+        {
+            spawnedObj.GetComponent<NavMeshAgent>().Warp(transform.position);
+        }
+        if (useRandBox)
+        {
+            float range = 10f;
+            float boxRangeX = Random.Range(-range, range);
+            float boxRangeZ = Random.Range(-range, range);
+            spawnedObj.transform.position += new Vector3(boxRangeX, 0, boxRangeZ);
+        }
     }
 
     private int FindFirstDeactiveIndex()
