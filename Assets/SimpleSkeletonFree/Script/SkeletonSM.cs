@@ -227,6 +227,7 @@ public class SkeletonSM : MonoBehaviour
             {
                 skeletonAnim.SetBool("BackHit", true);
                 skeletonHealth -= 1;
+                EventManager.TriggerEvent<FlinchHit, Vector3>(this.transform.position);
                 //Debug.Log("Hit");
             }
             StartCoroutine(SkeletonHitCD());
@@ -243,7 +244,6 @@ public class SkeletonSM : MonoBehaviour
 
     IEnumerator SkeletonHitCD()
     {
-        EventManager.TriggerEvent<FlinchHit, Vector3>(this.transform.position);
         yield return idleTime;
         isColliding = false;
         skeletonAnim.SetBool("BackHit", false);
