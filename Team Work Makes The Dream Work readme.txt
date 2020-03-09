@@ -13,6 +13,7 @@ The goal of the game is to collect llamas. For scene 1 of the game, there are 6 
 We have several mechanics that satisfy the requirement for a 3D world with physics and spatial simulation.
 - Spin into the trees to cause them to fall.
 - The big crates in scene 1 can be pushed around to form platforms to higher areas. 
+- There are also crates that can be spun into to be destroyed. These crated are "boarded" up and look more like four fences arranged in a box formation.
 - The fans can be spun into to launch the player up. 
 - The orange platforms in scene 2 react to the player's weight and will tilt like a see-saw. 
 - The gray moving platforms in scene 2 were created with Mecanim, and can be stood upon.
@@ -23,7 +24,7 @@ There are multiple enemies that satisfy the real-time NPC steering behaviors/AI.
 - Every enemy has an "idle" state where they wander around aimlessly.
 - The little red monsters in scene 1 are the "simple" enemies and will chase the players around.
 - The bombs in scene 1 will chase the players and explode after a while. Lure them near the big brown wall and have them explode to destroy it.
-- The skeleton at the end of scene 2 is a complex enemy with multiple states. There is an idle state, where he will wander around. Once you are within a certain range, he will begin to walk towards you, and stop at a certain distance. He will then occasionally attack you. which you must dodge by circling around to the back. His backside is the only weakpoint; attacking him from his front will produce a "clang" noise as he defends with his shield. Right now, the states/animations and hitboxes are a bit wonky, but it will of course be polished later on. 
+- The skeleton at the end of scene 2 is a complex enemy with multiple states. There is an idle state, where he will wander around. Once you are within a certain range, he will begin to walk towards you, and stop at a certain distance. He will then occasionally attack you. which you must dodge by circling around to the back. His backside is the only weakpoint; attacking him from his front will produce a "clang" noise as he defends with his shield. Three successful hits will kill him. Right now, the states/animations and hitboxes are a bit wonky. YOu can only successfully land an attack right after he's done swinging his sword and he idles a bit and shakes his head. This will of course all be polished later on. 
 
 
 
