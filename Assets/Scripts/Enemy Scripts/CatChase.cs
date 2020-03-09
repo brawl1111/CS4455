@@ -9,6 +9,8 @@ public class CatChase : MonoBehaviour
     private NavMeshAgent navAgent;
     private Animator anim;
     private Rigidbody rb;
+    private int attackCD;
+    private bool attackReady;
 
     public Vector3 patrolCenter;
     public float aggroRange;
@@ -33,7 +35,7 @@ public class CatChase : MonoBehaviour
     void Start()
     {
         navAgent = GetComponent<NavMeshAgent>();
-        aiState = AIState.Idle;
+        aiState = AIState.Patrol;
         player = GameObject.FindGameObjectWithTag("Player");
         aggroRange = 8.0f;
         anim = GetComponent<Animator>();
@@ -41,6 +43,8 @@ public class CatChase : MonoBehaviour
         patrolCenter = gameObject.transform.position;
         baseSpeed = navAgent.speed;
         rb = GetComponent<Rigidbody>();
+        attackCD = 5;
+        attackReady = true;
     }
 
     // Update is called once per frame
@@ -54,7 +58,7 @@ public class CatChase : MonoBehaviour
         {
             aiState = AIState.Eat;
         }
-        else if (distToPlayer < attackRange)
+        else if (distToPlayer < attackRange && attackReady)
         {
             aiState = AIState.Attack;
         }
@@ -99,13 +103,9 @@ public class CatChase : MonoBehaviour
             case AIState.Attack:
                 if (prevState != AIState.Attack)
                 {
-                    Vector3 jumpDir = getDirToPlayer();      // direction to player
-                    rb.isKinematic = false;
-                    navAgent.enabled = false;
-                    Vector3 appliedForce = 10 * jumpDir;
-                    appliedForce.y = 7;
-                    rb.AddForce(appliedForce, ForceMode.Impulse);
-                    StartCoroutine(reactivateNav());
+                    transform.LookAt(player.transform);
+                    attackReady = false;
+                    StartCoroutine(ReadyJump());
                 }
 
                 break;
@@ -142,6 +142,25 @@ public class CatChase : MonoBehaviour
         navAgent.isStopped = false;
 
     }
+
+    IEnumerator ReadyJump()
+    {
+        //anim.Play("Idle_B");
+        //yield return new WaitForSecondsRealtime(anim.GetCurrentAnimatorStateInfo(0).length);        // layer 0?
+
+        yield return new WaitForSecondsRealtime(2);
+
+        transform.LookAt(player.transform);
+        Vector3 jumpDir = getDirToPlayer();      // direction to player
+        rb.isKinematic = false;
+        navAgent.enabled = false;
+        Vector3 appliedForce = 10 * jumpDir;
+        appliedForce.y = 7;
+        rb.AddForce(appliedForce, ForceMode.Impulse);
+        StartCoroutine(reactivateNav());
+        StartCoroutine(ResetAttack());
+    }
+
     IEnumerator reactivateNav()
     {
         // no idea how to do this
@@ -155,6 +174,12 @@ public class CatChase : MonoBehaviour
         rb.isKinematic = true;
         navAgent.enabled = true;
         navAgent.Warp(transform.position);
+    }
+
+    IEnumerator ResetAttack()
+    {
+        yield return new WaitForSecondsRealtime(attackCD);
+        attackReady = true;
     }
 
     // origin is navAgent.position, distance is radius of sphere, layermask should = -1
@@ -172,4 +197,13 @@ public class CatChase : MonoBehaviour
     {
         return (player.transform.position - transform.position).normalized;
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            HealthManager.Instance.SubtractHealth(1);
+        }
+    }
+
 }

@@ -1440,8 +1440,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patrolCenter: {x: 0, y: 0, z: 0}
-  aggroRange: 10
-  attackRange: 5
+  aggroRange: 20
+  attackRange: 10
   player: {fileID: 0}
   patrolRadius: 15
   baseSpeed: 0
@@ -1456,7 +1456,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 4235742648976704601}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.7836895
   m_Height: 2.8268776
   m_Direction: 2
@@ -1470,7 +1470,7 @@ SphereCollider:
   m_GameObject: {fileID: 4235742648976704601}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.7787997
   m_Center: {x: 0, y: 2.7000003, z: 1.4057401}
@@ -1502,7 +1502,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &8803041090101195495
 BoxCollider:
