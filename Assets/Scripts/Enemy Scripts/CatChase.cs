@@ -148,6 +148,8 @@ public class CatChase : MonoBehaviour
         //anim.Play("Idle_B");
         //yield return new WaitForSecondsRealtime(anim.GetCurrentAnimatorStateInfo(0).length);        // layer 0?
 
+        GetComponent<EnemyDamageController>().enabled = false;
+
         yield return new WaitForSecondsRealtime(2);
 
         transform.LookAt(player.transform);
@@ -163,6 +165,7 @@ public class CatChase : MonoBehaviour
 
     IEnumerator reactivateNav()
     {
+
         // no idea how to do this
         //Debug.Log("in reactivate");
         yield return new WaitForSeconds(.5f);
@@ -174,6 +177,7 @@ public class CatChase : MonoBehaviour
         rb.isKinematic = true;
         navAgent.enabled = true;
         navAgent.Warp(transform.position);
+        GetComponent<EnemyDamageController>().enabled = true;
     }
 
     IEnumerator ResetAttack()
@@ -204,6 +208,11 @@ public class CatChase : MonoBehaviour
         {
             HealthManager.Instance.SubtractHealth(1);
         }
+    }
+
+    private void OnEnable()
+    {
+        attackReady = true;
     }
 
 }
