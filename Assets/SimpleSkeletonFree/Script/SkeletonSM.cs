@@ -115,6 +115,7 @@ public class SkeletonSM : MonoBehaviour
                 {
                     aiState = AIState.ready_state;
                     skeletonNav.stoppingDistance = 3.0f;
+                    skeletonAnim.SetBool("inMeleeDist", true);
                 }
                 break;
             case AIState.ready_state:
@@ -217,6 +218,7 @@ public class SkeletonSM : MonoBehaviour
             if (skeletonAnim.GetBool("attackBuffer") && skeletonAnim.GetBool("inMeleeDist"))
             {
                 skeletonAnim.SetBool("Block", true);
+                EventManager.TriggerEvent<ShieldClang, Vector3>(this.transform.position);
                 //Debug.Log("Hit");
             }
             StartCoroutine(SkeletonShieldCD());
@@ -236,7 +238,6 @@ public class SkeletonSM : MonoBehaviour
 
     IEnumerator SkeletonShieldCD()
     {
-        EventManager.TriggerEvent<ShieldClang, Vector3>(this.transform.position);
         yield return idleTime;
         isColliding = false;
         skeletonAnim.SetBool("Block", false);
