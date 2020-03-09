@@ -17,6 +17,9 @@ public class AudioEventManager : MonoBehaviour
     public AudioClip[] footstepSFX;
     public AudioClip boxBreak;
     public AudioClip spikeExtendSFX;
+    public AudioClip swordSwing;
+    public AudioClip shieldClang;
+    public AudioClip flinchHit;
 
 
     private UnityAction<Vector3> treeCrackEventListener;
@@ -37,6 +40,12 @@ public class AudioEventManager : MonoBehaviour
 
     private UnityAction<Vector3> spikeExtendSFXListener;
 
+    private UnityAction<Vector3> swordSwingEventListener;
+
+    private UnityAction<Vector3> shieldClangEventListener;
+
+    private UnityAction<Vector3> flinchHitEventListener;
+
     void Awake()
     {
         treeCrackEventListener = new UnityAction<Vector3>(TreeCrackEventHandler);
@@ -56,6 +65,12 @@ public class AudioEventManager : MonoBehaviour
         boxBreakEventListener = new UnityAction<Vector3>(BoxBreakEventHandler);
 
         spikeExtendSFXListener = new UnityAction<Vector3>(SpikeExtendSFXHandler);
+
+        swordSwingEventListener = new UnityAction<Vector3>(swordSwingEventHandler);
+
+        shieldClangEventListener = new UnityAction<Vector3>(shieldClangEventHandler);
+
+        flinchHitEventListener = new UnityAction<Vector3>(flinchHitEventHandler);
     }
 
 
@@ -79,6 +94,9 @@ public class AudioEventManager : MonoBehaviour
         EventManager.StartListening<FootstepSFXEvent, Vector3>(footstepSFXListener);
         EventManager.StartListening<BreakableBoxBreakEvent, Vector3>(boxBreakEventListener);
         EventManager.StartListening<SpikeExtendSFXEvent, Vector3>(spikeExtendSFXListener);
+        EventManager.StartListening<SwordSwing, Vector3>(swordSwingEventListener);
+        EventManager.StartListening<ShieldClang, Vector3>(shieldClangEventListener);
+        EventManager.StartListening<FlinchHit, Vector3>(flinchHitEventListener);
     }
 
     void OnDisable()
@@ -92,6 +110,9 @@ public class AudioEventManager : MonoBehaviour
         EventManager.StopListening<FootstepSFXEvent, Vector3>(footstepSFXListener);
         EventManager.StopListening<BreakableBoxBreakEvent, Vector3>(boxBreakEventListener);
         EventManager.StopListening<SpikeExtendSFXEvent, Vector3>(spikeExtendSFXListener);
+        EventManager.StopListening<SwordSwing, Vector3>(swordSwingEventListener);
+        EventManager.StopListening<ShieldClang, Vector3>(shieldClangEventListener);
+        EventManager.StopListening<FlinchHit, Vector3>(flinchHitEventListener);
     }
 
     void TreeCrackEventHandler(Vector3 worldPos)
@@ -181,5 +202,32 @@ public class AudioEventManager : MonoBehaviour
         sound.audioSrc.spatialBlend = 0.5f;
         sound.audioSrc.rolloffMode = AudioRolloffMode.Linear;
         //sound.audioSrc.Play();
+    }
+
+    void swordSwingEventHandler(Vector3 worldPos)
+    {
+        EventSound3D sound = Instantiate(eventSound3DPrefab, worldPos, Quaternion.identity, null);
+        sound.audioSrc.clip = swordSwing;
+        sound.audioSrc.minDistance = 0f;
+        sound.audioSrc.maxDistance = 100f;
+        sound.audioSrc.Play();
+    }
+
+    void shieldClangEventHandler(Vector3 worldPos)
+    {
+        EventSound3D sound = Instantiate(eventSound3DPrefab, worldPos, Quaternion.identity, null);
+        sound.audioSrc.clip = shieldClang;
+        sound.audioSrc.minDistance = 0f;
+        sound.audioSrc.maxDistance = 100f;
+        sound.audioSrc.Play();
+    }
+
+    void flinchHitEventHandler(Vector3 worldPos)
+    {
+        EventSound3D sound = Instantiate(eventSound3DPrefab, worldPos, Quaternion.identity, null);
+        sound.audioSrc.clip = flinchHit;
+        sound.audioSrc.minDistance = 0f;
+        sound.audioSrc.maxDistance = 100f;
+        sound.audioSrc.Play();
     }
 }
