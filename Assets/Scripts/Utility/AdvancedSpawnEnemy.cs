@@ -37,6 +37,8 @@ public class AdvancedSpawnEnemy : MonoBehaviour
 
         StartCoroutine(EnemySpawner());
 
+        spawnFromPool();
+
     }
 
     IEnumerator EnemySpawner()

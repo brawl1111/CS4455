@@ -66,8 +66,9 @@ public class BombKnockback : MonoBehaviour
     {
         // no idea how to do this
         //Debug.Log("in reactivate");
-        yield return new WaitForSeconds(1);
+        //yield return new WaitForSeconds(1);
         //yield return new WaitWhile(() => rb.velocity.y >= 1);
+        yield return new WaitUntil(() => Mathf.Approximately(rb.velocity.y, 0) == false);           // this is probably best way
         yield return new WaitUntil(() => Mathf.Approximately(rb.velocity.y, 0) == true);
         //yield return new WaitForSeconds(1);
         //Debug.Log("should be reactive");

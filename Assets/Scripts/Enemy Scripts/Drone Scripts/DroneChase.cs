@@ -8,14 +8,16 @@ public class DroneChase : MonoBehaviour
 {
     private NavMeshAgent navAgent;
     private Animator anim;
-    public Vector3[] circlePoints;
     private int circleIndex = 0;
-    public AIState prevState;
+    public AIState prevState;       // public for testing purposes
+    private float baseSpeed;
+    private float baseStopDist;
 
     public Vector3 patrolCenter;
     public float aggroRange;
     public GameObject player;
     public int patrolRadius;
+    public float stopDist;
 
     public AIState aiState;
 
@@ -24,8 +26,9 @@ public class DroneChase : MonoBehaviour
         Idle,
         Patrol,
         Chase,
-        Circle
-    };
+        Circle,
+        Kite
+    }; // Idle, Circle currently unused
 
     // Start is called before the first frame update
     void Start()
@@ -33,11 +36,13 @@ public class DroneChase : MonoBehaviour
         navAgent = GetComponent<NavMeshAgent>();
         aiState = AIState.Idle;
         player = GameObject.FindGameObjectWithTag("Player");
-        aggroRange = 16f;
+        aggroRange = 30f;
         //anim = GetComponent<Animator>();
-        //patrolRadius = 3;            // or can set patrolRadius in prefab in Inspector
+        patrolRadius = 3;            // or can set patrolRadius in prefab in Inspector
         patrolCenter = gameObject.transform.position;
-        circlePoints = new Vector3[4];
+        baseSpeed = navAgent.speed;
+        baseStopDist = navAgent.stoppingDistance;
+        stopDist = navAgent.stoppingDistance;
     }
 
     // Update is called once per frame
@@ -47,17 +52,24 @@ public class DroneChase : MonoBehaviour
         float distToPlayer = Vector3.Distance(transform.position, player.transform.position);
         prevState = aiState;
 
-        if (distToPlayer < aggroRange)
+        if (Mathf.Abs(distToPlayer - stopDist) < 1)
+        {
+            aiState = AIState.Idle;
+        }
+        else if (distToPlayer < stopDist && isPlayerFacingThis(60))
+        {
+            aiState = AIState.Kite;
+        }
+        else if (distToPlayer < aggroRange)
         {
             aiState = AIState.Chase;
-        } else if (navAgent.isStopped)
-        {
-            aiState = AIState.Circle;
-        } else
+        }
+        else
         {
             aiState = AIState.Patrol;
         }
 
+        onStateChange(prevState, aiState);
 
         // switch for state actions
         switch (aiState)
@@ -85,17 +97,15 @@ public class DroneChase : MonoBehaviour
                 navAgent.SetDestination(newPos);
                 break;
 
-            case AIState.Circle:
+            case AIState.Kite:
 
-                if (prevState != AIState.Circle)
+                if (isPlayerFacingThis(60))
                 {
-                    circleIndex = 0;
-                }
-
-                for (int i = 0; i < circlePoints.Length; i++)
-                {
-                    Vector3 newPoint = new Vector3(Mathf.Cos((90 * i) * Mathf.Deg2Rad), player.transform.position.y, Mathf.Sin(90 * i) * Mathf.Deg2Rad) * 5;
-                    circlePoints[i] = player.transform.position + newPoint;
+                    //Debug.Log("kiting begun");
+                    navAgent.isStopped = false;
+                    //navAgent.stoppingDistance = 0;
+                    navAgent.SetDestination(transform.position + dirToTarget(gameObject, player));
+                    Debug.Log(navAgent.destination);
                 }
 
                 break;
@@ -104,6 +114,19 @@ public class DroneChase : MonoBehaviour
         } // switch
 
     } // update
+
+    private void LateUpdate()
+    {
+        /*      // scrapping this
+        switch (aiState)
+        {
+            case AIState.Circle:
+                Orbit();
+                break;
+        }
+        */
+
+    } // lateUpdate
 
     // origin is navAgent.position, distance is radius of sphere, layermask should = -1
     public Vector3 RandomNavSphere(Vector3 origin, float distance, int layermask)
@@ -115,4 +138,67 @@ public class DroneChase : MonoBehaviour
         return navHit.position;
 
     }
+
+    /*      // scrapped for now
+    private void Orbit()
+    {
+        Transform targetTransform = player.transform;
+
+        if (targetTransform != null)
+        {
+            // Keep us at orbitDistance from target
+            transform.position = targetTransform.position + (transform.position - targetTransform.position).normalized * orbitDistance;
+            transform.RotateAround(targetTransform.position, Vector3.up, orbitDegreesPerSec * Time.deltaTime);
+        }
+    }
+    */
+
+    private bool isPlayerFacingThis(float angle)
+    {
+        return Vector3.Angle(player.transform.forward, transform.position - player.transform.position) < angle;
+    }
+
+    private void onStateChange(AIState prev, AIState cur)
+    {
+        onStateExit(prev, cur);
+        onStateEnter(prev, cur);
+    }
+
+    private void onStateEnter(AIState prev, AIState cur)
+    {
+        if (cur != prev)
+        {
+            switch(cur)
+            {
+                case AIState.Patrol:
+                    navAgent.ResetPath();
+                    break;
+
+                case AIState.Kite:
+                    navAgent.stoppingDistance = 0;
+                    navAgent.speed = baseSpeed / 2;
+                    break;
+            }
+        }
+    }
+
+    private void onStateExit(AIState prev, AIState cur)
+    {
+        if (prev != cur)
+        {
+            switch(prev)
+            {
+                case AIState.Kite:
+                    navAgent.stoppingDistance = baseStopDist;
+                    navAgent.speed = baseSpeed;
+                    break;
+            }
+        }
+    }
+
+    private Vector3 dirToTarget(GameObject target, GameObject origin)
+    {
+        return (target.transform.position - origin.transform.position).normalized;
+    }
+
 }

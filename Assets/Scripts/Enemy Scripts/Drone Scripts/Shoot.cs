@@ -26,8 +26,6 @@ public class Shoot : MonoBehaviour
         {
             ammo[i] = Instantiate(bullet, bulletHolder.transform);
         }
-
-        StartCoroutine(Shooting());
     }
 
     // Update is called once per frame
@@ -59,9 +57,10 @@ public class Shoot : MonoBehaviour
 
         Vector3 predictPos = (player.GetComponent<VelocityReporter>().velocity * 1) + player.transform.position;
         Vector3 dirToPredict = getDirToTarget(predictPos, transform.position);
+        dirToPredict.y = 0;     // could also set .y = 0 only if .y is < 0, which means bullets can shoot up, this fixed shooting into ground issue
         spawnedObj.GetComponent<Rigidbody>().velocity = dirToPredict * bulletSpeed;
 
-
+        // need to fix angle at which bullet is shot, sometimes it is shot into the ground which hits the collider and despawns
 
     }
 
@@ -86,6 +85,11 @@ public class Shoot : MonoBehaviour
     private Vector3 getDirToTarget(Vector3 target, Vector3 origin)
     {
         return (target - origin).normalized;
+    }
+
+    private void OnEnable()
+    {
+        StartCoroutine(Shooting());
     }
 
 

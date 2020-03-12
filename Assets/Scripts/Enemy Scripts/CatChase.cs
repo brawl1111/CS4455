@@ -168,8 +168,9 @@ public class CatChase : MonoBehaviour
 
         // no idea how to do this
         //Debug.Log("in reactivate");
-        yield return new WaitForSeconds(.5f);
+        //yield return new WaitForSeconds(.5f);
         //yield return new WaitWhile(() => rb.velocity.y >= 1);
+        yield return new WaitUntil(() => Mathf.Approximately(rb.velocity.y, 0) == false);       // this works well
         yield return new WaitUntil(() => Mathf.Approximately(rb.velocity.y, 0) == true);
         //yield return new WaitForSeconds(1);
         //Debug.Log("should be reactive");

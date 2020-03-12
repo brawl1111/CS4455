@@ -99,7 +99,7 @@ MonoBehaviour:
   ammo: []
   bullet: {fileID: 1696744951994766826, guid: 8c5d44c838788974eaac3b9486d24c55, type: 3}
   maxAmmo: 10
-  shootDelay: 1
+  shootDelay: 2
   bulletSpeed: 15
 --- !u!54 &4734306587326726202
 Rigidbody:
@@ -129,8 +129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73b2a41811e0a7a4ba11d73cbf34f943, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 2
-  curHP: 2
+  maxHP: 1
+  curHP: 1
 --- !u!136 &8799877189246446710
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -155,11 +155,11 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 1.9812009
-  m_Speed: 2.5
+  m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 10
+  m_StoppingDistance: 15
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -179,8 +179,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85dcf61a4f336f24aa5675874aa629ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prevState: 0
   patrolCenter: {x: 0, y: 0, z: 0}
   aggroRange: 0
   player: {fileID: 0}
   patrolRadius: 0
+  stopDist: 0
   aiState: 0

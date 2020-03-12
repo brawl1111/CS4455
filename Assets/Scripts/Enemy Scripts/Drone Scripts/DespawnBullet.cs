@@ -37,10 +37,6 @@ public class DespawnBullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            HealthManager.Instance.SubtractHealth(1);
-        }
         if (!other.CompareTag("drone"))
         {
             gameObject.SetActive(false);
