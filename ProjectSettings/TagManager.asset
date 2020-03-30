@@ -9,6 +9,11 @@ TagManager:
   - Knockable Tree
   - BOMB
   - WALL
+  - spawner
+  - SpawnHolder
+  - terrain
+  - drone
+  - food
   layers:
   - Default
   - TransparentFX
