@@ -15,7 +15,7 @@ public class CameraController : MonoBehaviour
         mouseControl,
         joystickControl
     };
-    CamControlState state; 
+    CamControlState state;
 
     void Start()
     {
@@ -31,10 +31,10 @@ public class CameraController : MonoBehaviour
         // Quaternion rotation = Quaternion.Euler(0, desiredAngle, 0);
         // transform.position = target.transform.position - (rotation * offset);
         // transform.LookAt(target.transform);
-        Debug.Log(state);
+        // Debug.Log(state);
         switch(state)
         {
-            
+
             case CamControlState.mouseControl:
                 mouseX += Input.GetAxis("Mouse X") * rotationSpeed;
                 mouseY += Input.GetAxis("Mouse Y") * rotationSpeed;
@@ -79,7 +79,7 @@ public class CameraController : MonoBehaviour
             mouseY = Mathf.Clamp(mouseY, -35, 60);
             transform.LookAt(target);
             target.rotation = Quaternion.Euler(mouseY, mouseX, 0);
-        } else 
+        } else
         {
 
             if (!Mathf.Approximately(mouseX, 0f)) joystickX = mouseX;

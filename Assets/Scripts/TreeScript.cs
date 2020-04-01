@@ -22,28 +22,25 @@ public class TreeScript : MonoBehaviour
 
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collider)
     {
         // Gets the player object and checks if they are currently spinning
         // If so, we're gonna start the falling animation
-        //Debug.Log(collision);
-        GameObject collider = collision.gameObject;
-        if (collider.gameObject == GameObject.Find("Princess") &&
-            collider.gameObject.GetComponent<CharacterMovement>().GetIsSpinning() &&
-            !isFalling)
+        if (collider.CompareTag("Hurtbox") && !isFalling)
         {
-            // GameObject player = collider.gameObject.transform.GetChild(1).gameObject;
-            // if (player == GameObject.Find("Player") && player.GetComponent<SpinningAttackPrincess>().getIsSpinning())
-            // {
-                gameObject.GetComponent<Animation>().Play("Tree Fall");
-                EventManager.TriggerEvent<TreeCrackEvent, Vector3>(this.gameObject.transform.position);
-                isFalling = true;
-            // }
+            gameObject.GetComponent<Animation>().Play("Tree Fall");
+            EventManager.TriggerEvent<TreeCrackEvent, Vector3>(this.gameObject.transform.position);
+            isFalling = true;
         }
-        // But wait, what about when we hit the ground? We'll want to play
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        // We'll want to play
         // A sound to suggest that the tree has finished moving
         // In this case, Ground is eqivalent to layer 8
-        else if (collider.gameObject.layer == 8 && collider.gameObject.name != "Stump_3_3")
+        GameObject collider = collision.gameObject;
+        if (collider.gameObject.layer == 8 && collider.gameObject.name != "Stump_3_3")
         {
             EventManager.TriggerEvent<TreeHitGroundEvent, Vector3>(this.gameObject.transform.position);
         }

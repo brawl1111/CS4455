@@ -20,7 +20,7 @@ public class LifeSucker : MonoBehaviour
     {
         if (c.attachedRigidbody && c.gameObject == GameObject.FindWithTag("Player"))
         {
-            HealthManager.Instance.KillPlayer();
+            HealthManager.Instance.KillPlayerByFall();
         }
     }
 }

@@ -35,8 +35,20 @@ public class HealthManager : MonoBehaviour
 
     public void AddHealth(int i)
     {
-        health += i;
-        GameObject.Find("HeartContainer").GetComponent<HeartPopulator>().AddHeartIcon();
+        for (int j = 0; j < i; j++)
+        {
+            health++;
+            GameObject.Find("HeartContainer").GetComponent<HeartPopulator>().AddHeartIcon();
+        }
+        // A little bit of reviving action
+        if (!isAlive)
+        {
+            isAlive = true;
+            GameObject player = GameObject.FindWithTag("Player");
+            player.GetComponent<Animator>().SetTrigger("hasRevived");
+            player.GetComponent<CharacterMovement>().enabled = true;
+            gameOverToggle.GameOverMenuOff();
+        }
     }
 
     public void SubtractHealth(int i)
@@ -48,12 +60,7 @@ public class HealthManager : MonoBehaviour
             Debug.Log("health: " + health);
             inInvincibilityFrames = true;
             if (health == 0) {
-                isAlive = false;
-            	GameObject player = GameObject.FindWithTag("Player");
-            	player.GetComponent<Animator>().SetTrigger("hasDied");
-            	//player.GetComponent<Rigidbody>().isKinematic = true;
-                player.GetComponent<CharacterMovement>().enabled = false;
-                gameOverToggle.GameOverMenuOn();
+                HandleDeath();
             }
             else
             {
@@ -82,6 +89,22 @@ public class HealthManager : MonoBehaviour
     public void KillPlayer()
     {
         SubtractHealth(health);
+    }
+
+    public void KillPlayerByFall()
+    {
+        health = 0;
+        HandleDeath();
+    }
+
+    private void HandleDeath()
+    {
+        isAlive = false;
+        GameObject player = GameObject.FindWithTag("Player");
+        player.GetComponent<Animator>().SetTrigger("hasDied");
+        //player.GetComponent<Rigidbody>().isKinematic = true;
+        player.GetComponent<CharacterMovement>().enabled = false;
+        gameOverToggle.GameOverMenuOn();
     }
 
     public void RestoreAllHealth()
