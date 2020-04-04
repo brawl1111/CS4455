@@ -7,7 +7,6 @@ public class GateAnimator : MonoBehaviour
 
     public AudioClip gateOpen;
     public AudioSource audioSource;
-    public GameObject princess;
     public int section;
 
     private Animation anim;
@@ -60,6 +59,7 @@ public class GateAnimator : MonoBehaviour
 
     void OnTriggerEnter(Collider c)
     {
+        Debug.Log("Entered");
         if (c.attachedRigidbody && !inSwing && LlamaCounter.Instance.GetLlamaCount() == 3 * section)
         {
             swinging = true;
