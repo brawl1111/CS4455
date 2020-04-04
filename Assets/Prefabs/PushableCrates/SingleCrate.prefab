@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 9149406536368397546}
   - component: {fileID: 9083930205352872281}
   - component: {fileID: 9084948633586175979}
+  - component: {fileID: -2724999134971443039}
   m_Layer: 8
   m_Name: SingleCrate
   m_TagString: Untagged
@@ -123,3 +124,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.71, y: 0.65779936, z: 0.71}
   m_Center: {x: 0, y: 0.37110043, z: 0.0000009934107}
+--- !u!114 &-2724999134971443039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9084948633586175978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a528c251b5d3b4791875465c9a882a00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

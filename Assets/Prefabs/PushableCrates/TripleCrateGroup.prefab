@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6460757865840387913}
   - component: {fileID: 6460757865840387915}
   - component: {fileID: 6460757865840387912}
+  - component: {fileID: 7105140420944578531}
   m_Layer: 8
   m_Name: TripleCrateGroup
   m_TagString: Untagged
@@ -78,6 +79,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.3, y: 11.729878, z: 4.3}
   m_Center: {x: 0, y: 6.4875274, z: 0}
+--- !u!114 &7105140420944578531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6460757865840387927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a528c251b5d3b4791875465c9a882a00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6461992345888525191
 GameObject:
   m_ObjectHideFlags: 0
