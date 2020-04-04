@@ -15,6 +15,9 @@ public class Shoot : MonoBehaviour
     public int shootDelay;
     public int bulletSpeed;
 
+    public float aggroDistance = 20f;
+    private float distanceToPlayer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +29,7 @@ public class Shoot : MonoBehaviour
         {
             ammo[i] = Instantiate(bullet, bulletHolder.transform);
         }
+        StartCoroutine(Shooting());
     }
 
     // Update is called once per frame
@@ -36,6 +40,7 @@ public class Shoot : MonoBehaviour
 
     IEnumerator Shooting()
     {
+        //Debug.Log(Vector3.Distance(player.transform.position, transform.position));
         while (true)
         {
             yield return new WaitForSecondsRealtime(shootDelay);
@@ -45,10 +50,12 @@ public class Shoot : MonoBehaviour
 
     private void shootBullet()
     {
+        if (Vector3.Distance(player.transform.position, transform.position) > aggroDistance) return;
         GameObject spawnedObj = ammo[FindFirstDeactiveIndex()];
         spawnedObj.SetActive(true);
 
         Vector3 dirToPlayer = getDirToTarget(player.transform.position, transform.position);
+
         spawnedObj.transform.position = transform.position + (1.75f * dirToPlayer.normalized);           // spawns it a little in front of the drone so it doesnt hit the drone's collider and despawn
         
         //spawnedObj.GetComponent<Rigidbody>().velocity = dirToPlayer.normalized * bulletSpeed;
@@ -89,7 +96,7 @@ public class Shoot : MonoBehaviour
 
     private void OnEnable()
     {
-        StartCoroutine(Shooting());
+        // StartCoroutine(Shooting());
     }
 
 

@@ -68,7 +68,7 @@ public class SkeletonSM : MonoBehaviour
     {
         Vector3 heading = player.transform.position - transform.position;
         float side = Vector3.Dot(heading, transform.forward);
-        Debug.Log(side);
+        //Debug.Log(side);
         //Debug.Log(skeletonHealth);
         float distToPlayer = Vector3.Distance(transform.position, player.transform.position);
         switch(aiState)
