@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patrolCenter: {x: 0, y: 0, z: 0}
-  aggroRange: 0
+  aggroRange: 10
   player: {fileID: 0}
   patrolRadius: 20
   aiState: 0
