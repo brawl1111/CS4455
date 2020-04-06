@@ -12,6 +12,9 @@ GameObject:
   - component: {fileID: 33253243558922508}
   - component: {fileID: 23363714592162624}
   - component: {fileID: -6473984252337697121}
+  - component: {fileID: 6106995479829421988}
+  - component: {fileID: 7630890547128515402}
+  - component: {fileID: 7277759971554149451}
   m_Layer: 0
   m_Name: apple
   m_TagString: food
@@ -89,5 +92,42 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 593aba0a4d3e3e0408db9c7a047e4862, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &6106995479829421988
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829371231341652}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.0069654025
+  m_Center: {x: 0.0000000023841857, y: -0.0000000029802323, z: -0.000906983}
+--- !u!114 &7630890547128515402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829371231341652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f74aa406bd9c5d946b7dafd8b2bcdaf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7277759971554149451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829371231341652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2df9b2cea55fb3a41aca038259b4e99f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
