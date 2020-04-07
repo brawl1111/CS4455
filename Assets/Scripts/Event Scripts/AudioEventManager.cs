@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class AudioEventManager : MonoBehaviour
 {
 
+    public float spikeMaxDistance = 50.0f;
     public EventSound3D eventSound3DPrefab;
 
     public AudioClip treeCrack;
@@ -196,12 +197,12 @@ public class AudioEventManager : MonoBehaviour
     {
         EventSound3D sound = Instantiate(eventSound3DPrefab, worldPos, Quaternion.identity, null);
         sound.audioSrc.clip = spikeExtendSFX;
-        sound.audioSrc.minDistance = 0f;
-        sound.audioSrc.maxDistance = 100f;
-        sound.audioSrc.volume = 0.07f;
-        sound.audioSrc.spatialBlend = 0.5f;
+        sound.audioSrc.minDistance = 1f;
+        sound.audioSrc.maxDistance = spikeMaxDistance;
+        sound.audioSrc.volume = 0.7f;
+        sound.audioSrc.spatialBlend = 1.0f;
         sound.audioSrc.rolloffMode = AudioRolloffMode.Linear;
-        //sound.audioSrc.Play();
+        sound.audioSrc.Play();
     }
 
     void swordSwingEventHandler(Vector3 worldPos)
