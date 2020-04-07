@@ -21,6 +21,7 @@ public class AudioEventManager : MonoBehaviour
     public AudioClip swordSwing;
     public AudioClip shieldClang;
     public AudioClip flinchHit;
+    public AudioClip eatAppleSFX;
 
 
     private UnityAction<Vector3> treeCrackEventListener;
@@ -47,6 +48,8 @@ public class AudioEventManager : MonoBehaviour
 
     private UnityAction<Vector3> flinchHitEventListener;
 
+    private UnityAction<Vector3> eatAppleSFXEventListener;
+
     void Awake()
     {
         treeCrackEventListener = new UnityAction<Vector3>(TreeCrackEventHandler);
@@ -72,6 +75,8 @@ public class AudioEventManager : MonoBehaviour
         shieldClangEventListener = new UnityAction<Vector3>(shieldClangEventHandler);
 
         flinchHitEventListener = new UnityAction<Vector3>(flinchHitEventHandler);
+
+        eatAppleSFXEventListener = new UnityAction<Vector3>(eatAppleSFXEventHandler);
     }
 
 
@@ -98,6 +103,7 @@ public class AudioEventManager : MonoBehaviour
         EventManager.StartListening<SwordSwing, Vector3>(swordSwingEventListener);
         EventManager.StartListening<ShieldClang, Vector3>(shieldClangEventListener);
         EventManager.StartListening<FlinchHit, Vector3>(flinchHitEventListener);
+        EventManager.StartListening<EatAppleSFXEvent, Vector3>(eatAppleSFXEventListener);
     }
 
     void OnDisable()
@@ -114,6 +120,7 @@ public class AudioEventManager : MonoBehaviour
         EventManager.StopListening<SwordSwing, Vector3>(swordSwingEventListener);
         EventManager.StopListening<ShieldClang, Vector3>(shieldClangEventListener);
         EventManager.StopListening<FlinchHit, Vector3>(flinchHitEventListener);
+        EventManager.StopListening<EatAppleSFXEvent, Vector3>(eatAppleSFXEventListener);
     }
 
     void TreeCrackEventHandler(Vector3 worldPos)
@@ -228,6 +235,16 @@ public class AudioEventManager : MonoBehaviour
     {
         EventSound3D sound = Instantiate(eventSound3DPrefab, worldPos, Quaternion.identity, null);
         sound.audioSrc.clip = flinchHit;
+        sound.audioSrc.minDistance = 0f;
+        sound.audioSrc.maxDistance = 100f;
+        sound.audioSrc.volume = 0.2f;
+        sound.audioSrc.Play();
+    }
+
+    void eatAppleSFXEventHandler(Vector3 worldPos)
+    {
+        EventSound3D sound = Instantiate(eventSound3DPrefab, worldPos, Quaternion.identity, null);
+        sound.audioSrc.clip = eatAppleSFX;
         sound.audioSrc.minDistance = 0f;
         sound.audioSrc.maxDistance = 100f;
         sound.audioSrc.volume = 0.2f;

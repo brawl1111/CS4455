@@ -15,6 +15,7 @@ public class AppleRestoreHealth : MonoBehaviour
     	{
     		HealthManager.Instance.AddHealth(healthRestored);
     		gameObject.SetActive(false);
+    		EventManager.TriggerEvent<EatAppleSFXEvent, Vector3>(this.transform.position);
     	}
     }
 }
