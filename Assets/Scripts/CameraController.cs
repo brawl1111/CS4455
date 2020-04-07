@@ -7,6 +7,7 @@ public class CameraController : MonoBehaviour
     //public GameObject player;
     private Vector3 offset;
     public float rotationSpeed = 1f;
+    public float clampAngle = 80.0f;
     public Transform target, player;
     float joystickX, joystickY;
     float mouseX, mouseY;

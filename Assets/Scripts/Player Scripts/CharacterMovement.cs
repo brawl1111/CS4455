@@ -174,19 +174,6 @@ public class CharacterMovement : MonoBehaviour
     	isGrounded = charCtrl.isGrounded;
 
     	if (isGroundedCheck || isGrounded) extraJumps = maxExtraJumps;
-        // if (true)
-        // {
-        //     hurtbox.gameObject.SetActive(true);
-        //     anim.SetBool("isSpinning", true);
-        // }
-        // else
-        // {
-        //     hurtbox.gameObject.SetActive(false);
-        //     anim.SetBool("isSpinning", false);
-        // }
-    	//CalculateForwardMovement();
-    	//CalculateVerticalMovement();
-
     }
 
 
@@ -230,90 +217,6 @@ public class CharacterMovement : MonoBehaviour
 
     void CalculateVerticalMovement()
     {
-    	// if (!m_Input.Jump && (isGrounded || isGroundedCheck))
-    	// 	canJump = true;
-
-    	// if (isGroundedCheck)
-    	// {
-    	// 	verticalSpeed = Physics.gravity.y * 0.3f;
-    	// 	//Debug.Log("IsGrounded");
-    	// 	if (m_Input.Jump && canJump)
-    	// 	{
-    	// 		Debug.Log("detected jump");
-    	// 		verticalSpeed = jumpSpeed;
-    	// 		isGroundedCheck = false;
-    	// 	}
-    	// } else
-    	// {
-    	// 	//Debug.Log("not grounded");
-    	// 	verticalSpeed += Physics.gravity.y * gravityScale * Time.deltaTime;
-    	// 	if (m_Input.Jump && extraJumps > 0 && canJump)
-    	// 	{
-    	// 		Debug.Log("detected double jump");
-    	// 		verticalSpeed = jumpSpeed;
-    	// 		extraJumps--;
-    	// 		canJump = false;
-    	// 	}
-    	// 	//Debug.Log("not grounded verticalSpeed: " + verticalSpeed);
-    	// }
-    	// if (isGroundedCheck && Input.GetButtonDown("Jump"))
-    	// {
-
-    	// 	//verticalSpeed = Physics.gravity.y * 0.3f;
-    	// 	// if (Input.GetButtonDown("Jump"))
-    	// 	// {
-    	// 		Debug.Log("detected jump " + cycleCount);
-    	// 		verticalSpeed = jumpSpeed;
-    	// 	// 	//isGroundedCheck = false;
-    	// 	// }
-    	// } else if (Input.GetButtonDown("Jump") && extraJumps > 0)
-    	// {
-
-    	// 		verticalSpeed = jumpSpeed;
-    	// 		extraJumps--;
-    	// 		Debug.Log("detected double jump " + cycleCount);
-    	// } else if (!isGroundedCheck)
-    	// {
-    	// 	verticalSpeed += Physics.gravity.y * gravityScale * Time.deltaTime;
-
-    	// }
-    	// if (m_Input.Jump)
-    	// {
-    	// 	if (isGroundedCheck || isGrounded)
-    	// 	{
-    	// 		verticalSpeed = jumpSpeed;
-    	// 		canDoubleJump = true;
-    	// 	}
-    	// 	else
-    	// 	{
-    	// 		if (canDoubleJump)
-    	// 		{
-    	// 			canDoubleJump = false;
-    	// 			verticalSpeed = jumpSpeed;
-    	// 		}
-    	// 	}
-    	// }
-    	// verticalSpeed += Physics.gravity.y * gravityScale * Time.deltaTime;
-
-    	// if (isGrounded || isGroundedCheck)
-    	// {
-    	// 	verticalSpeed = Physics.gravity.y * 0.3f;
-    	// 	if (m_Input.Jump)
-    	// 	{
-    	// 		verticalSpeed = jumpSpeed;
-    	// 	}
-    	// }
-    	// else
-    	// {
-    	// 	if (m_Input.Jump && extraJumps > 0)
-    	// 	{
-    	// 		verticalSpeed = jumpSpeed;
-    	// 		extraJumps--;
-    	// 	}
-    	// 	verticalSpeed += Physics.gravity.y * gravityScale * Time.deltaTime;
-    	// }
-
-
     	if (m_Input.Jump && (isGrounded || isGroundedCheck))
     	{
     		rb.velocity = Vector3.up * jumpSpeed;
@@ -325,7 +228,6 @@ public class CharacterMovement : MonoBehaviour
             EventManager.TriggerEvent<JumpSFXEvent, Vector3>(this.transform.position);
     		extraJumps--;
     	}
-    	//cycleCount++;
     }
 
     void RotateModel(float h, float v)
@@ -336,35 +238,11 @@ public class CharacterMovement : MonoBehaviour
         targetDir.Set(targetDir.x, 0f, targetDir.z);
     	Quaternion targetRotation = Quaternion.LookRotation(targetDir, Vector3.up);
     	Quaternion newRotation = Quaternion.Lerp(rb.rotation, targetRotation, turnSmoothing * Time.deltaTime);
-    	//rb.MoveRotation(newRotation);
     	transform.rotation = newRotation;
     }
 
-    // void OnAnimatorMove()
-    // {
-    // 	// Vector3 movement;
-
-    // 	// movement = currSpeed * transform.forward * Time.deltaTime;
-    // 	// Debug.Log("verticalSpeed: " + verticalSpeed);
-    // 	// movement.y = verticalSpeed * Time.deltaTime;
-    // 	// //Debug.Log(movement.y);
-    // 	// Debug.Log("movement: " + movement + " transform: " + transform.position);
-    // 	// charCtrl.Move(movement);
-    // 	// //isGrounded = charCtrl.isGrounded;
-    // 	// if (isGroundedCheck || isGrounded) anim.SetBool(isGroundedState, true);
-    // 	// else anim.SetBool(isGroundedState, false);
-
-    // 	// Vector3 newRootPos = this.transform.position;
-    // 	// Vector3 lerpedPos = Vector3.LerpUnclamped(this.transform.position, newRootPos, 2f);
-    // 	// Debug.Log(lerpedPos);
-    // 	// this.transform.position = lerpedPos;
-    // 	// if (isGroundedCheck || isGrounded) anim.SetBool(isGroundedState, true);
-    // 	// else anim.SetBool(isGroundedState, false);
-    // 	// Vector3 move;
-    // 	// move = this.transform.forward * Time.deltaTime * currSpeed;
-    // 	// this.transform.position = move;
-    // 	// CalculateForwardMovement();
-    // 	// rb.MovePosition(this.transform.position + Vector3.one * currSpeed * Time.deltaTime);
-    // 	this.transform.position = anim.rootPosition;
-    // }
+    void OnCollisionEnter(Collision col)
+    {
+        Debug.Log(col.gameObject);
+    }
 }

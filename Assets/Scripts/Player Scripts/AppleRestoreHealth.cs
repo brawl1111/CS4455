@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AppleRestoreHealth : MonoBehaviour
 {
+	public int healthRestored = 1;
 	void Start()
 	{
 		gameObject.SetActive(true);
@@ -12,7 +13,7 @@ public class AppleRestoreHealth : MonoBehaviour
     {
     	if (col.gameObject.CompareTag("Player"))
     	{
-    		HealthManager.Instance.AddHealth(1);
+    		HealthManager.Instance.AddHealth(healthRestored);
     		gameObject.SetActive(false);
     	}
     }
