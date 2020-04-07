@@ -45,6 +45,7 @@ public class PlayerTeleports : MonoBehaviour
         {
             Debug.Log("Teleport to section 3");
             SceneManager.LoadScene("Section3&4");
+            //gameObject.transform.position = new Vector3(-36f, 8f, 28f);
             // set llama counter as if we had gone through the previous section
             LlamaCounter.Instance.ResetLlamaCount();
             LlamaCounter.Instance.ThreexLlamaCount();
@@ -59,6 +60,7 @@ public class PlayerTeleports : MonoBehaviour
             LlamaCounter.Instance.ThreexLlamaCount();
             LlamaCounter.Instance.ThreexLlamaCount();
             LlamaCounter.Instance.ThreexLlamaCount();
+            gameObject.transform.position = new Vector3(44f, 41f, 53f);
         }
     }
 }
