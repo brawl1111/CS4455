@@ -64,7 +64,11 @@ public class Shoot : MonoBehaviour
 
         Vector3 predictPos = (player.GetComponent<VelocityReporter>().velocity * 1) + player.transform.position;
         Vector3 dirToPredict = getDirToTarget(predictPos, transform.position);
-        dirToPredict.y = 0;     // could also set .y = 0 only if .y is < 0, which means bullets can shoot up, this fixed shooting into ground issue
+        // dirToPredict.y = 0;     // could also set .y = 0 only if .y is < 0, which means bullets can shoot up, this fixed shooting into ground issue
+        if (dirToPredict.y < 0)
+        {
+            dirToPredict.y = 0;
+        }
         spawnedObj.GetComponent<Rigidbody>().velocity = dirToPredict * bulletSpeed;
 
         // need to fix angle at which bullet is shot, sometimes it is shot into the ground which hits the collider and despawns
