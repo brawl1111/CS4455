@@ -172,6 +172,8 @@ public class CharacterMovement : MonoBehaviour
     {
     	isGroundedCheck = Physics.CheckSphere(groundCheck.position, distanceToGround, ground, QueryTriggerInteraction.Ignore);
     	isGrounded = charCtrl.isGrounded;
+        //Debug.Log(isGroundedCheck);
+        //anim.SetBool(isGroundedState, isGroundedCheck);
 
     	if (isGroundedCheck || isGrounded) extraJumps = maxExtraJumps;
     }
@@ -241,8 +243,8 @@ public class CharacterMovement : MonoBehaviour
     	transform.rotation = newRotation;
     }
 
-    void OnCollisionEnter(Collision col)
+    /*void OnCollisionEnter(Collision col)
     {
         Debug.Log(col.gameObject);
-    }
+    }*/
 }

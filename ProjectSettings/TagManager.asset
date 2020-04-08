@@ -15,6 +15,8 @@ TagManager:
   - drone
   - food
   - Platform
+  - Spikes
+  - Crate
   layers:
   - Default
   - TransparentFX
@@ -28,8 +30,8 @@ TagManager:
   - Llama
   - Bullet
   - DroneEnemy
-  - 
-  - 
+  - Crate
+  - Spikes
   - 
   - 
   - 
