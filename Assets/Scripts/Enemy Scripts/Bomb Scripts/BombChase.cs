@@ -173,7 +173,7 @@ public class BombChase : MonoBehaviour
         yield return new WaitForSecondsRealtime(animTime);        // wait until exploding animation is done to set wall to inactive
         foreach (GameObject wall in walls)
         {
-            if (Vector3.Distance(transform.position, wall.transform.position) <= blastRadius)
+            if (Vector3.Distance(transform.position, wall.transform.position) <= blastRadius + 5)
             {
                 wall.SetActive(false);
             }

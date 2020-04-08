@@ -21,6 +21,7 @@ public class DealDmgPlayerController : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             HealthManager.Instance.SubtractHealth(1);       // this still runs even if script is disabled, only update doesnt run
+            Debug.Log(HealthManager.Instance.GetHealth());
         }
     }
 
