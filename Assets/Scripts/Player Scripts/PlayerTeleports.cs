@@ -48,19 +48,23 @@ public class PlayerTeleports : MonoBehaviour
             //gameObject.transform.position = new Vector3(-36f, 8f, 28f);
             // set llama counter as if we had gone through the previous section
             LlamaCounter.Instance.ResetLlamaCount();
-            LlamaCounter.Instance.ThreexLlamaCount();
-            LlamaCounter.Instance.ThreexLlamaCount();
         }
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             Debug.Log("Teleport to section 4");
-            SceneManager.LoadScene("Section3&4");
+            // set llama counter as if we had gone through the previous section
+            LlamaCounter.Instance.ResetLlamaCount();
+            LlamaCounter.Instance.ThreexLlamaCount();
+            gameObject.transform.position = new Vector3(44f, 41f, 53f);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            Debug.Log("Teleport to skeleton");
             // set llama counter as if we had gone through the previous section
             LlamaCounter.Instance.ResetLlamaCount();
             LlamaCounter.Instance.ThreexLlamaCount();
             LlamaCounter.Instance.ThreexLlamaCount();
-            LlamaCounter.Instance.ThreexLlamaCount();
-            gameObject.transform.position = new Vector3(44f, 41f, 53f);
+            gameObject.transform.position = new Vector3(-20f, 182f, 96f);
         }
     }
 }
