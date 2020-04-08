@@ -3,20 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Hurtbox
-  - Enemy
-  - Knockable Tree
-  - BOMB
-  - WALL
-  - spawner
-  - SpawnHolder
-  - terrain
-  - drone
-  - food
-  - Platform
-  - Spikes
-  - Crate
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -26,12 +13,12 @@ TagManager:
   - UI
   - 
   - 
-  - Ground
-  - Llama
-  - Bullet
-  - DroneEnemy
-  - Crate
-  - Spikes
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 

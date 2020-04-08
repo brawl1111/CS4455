@@ -214,6 +214,7 @@ public class CatChase : MonoBehaviour
     private void OnEnable()
     {
         attackReady = true;
+        StartCoroutine(reactivateNav());
     }
 
 }

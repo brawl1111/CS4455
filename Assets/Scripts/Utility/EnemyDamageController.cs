@@ -8,11 +8,13 @@ public class EnemyDamageController : MonoBehaviour
 {
     public int maxHP;
     public int curHP;
+    private GameObject deathField;
     
     // Start is called before the first frame update
     void Start()
     {
         curHP = maxHP;
+        deathField = GameObject.Find("Death Field");
     }
 
     // Update is called once per frame
@@ -31,6 +33,10 @@ public class EnemyDamageController : MonoBehaviour
                 //Destroy(gameObject);          // this is for regular spawner
                 gameObject.SetActive(false);    // this is for advanced spawner?
             }
+        }
+        else if (other.gameObject.Equals(deathField))
+        {
+            gameObject.SetActive(false);
         }
     }
 
