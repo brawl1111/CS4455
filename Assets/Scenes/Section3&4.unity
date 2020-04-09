@@ -171,7 +171,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -244,8 +244,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74ef130fb6545a84d96399dc6b5cc86c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!65 &8633938
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -286,8 +286,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c03218f06000427eb0496d3a9c1f344, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!4 &13125537
 Transform:
   m_ObjectHideFlags: 0
@@ -650,7 +650,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -664,8 +664,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74ef130fb6545a84d96399dc6b5cc86c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!65 &50019218
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -803,7 +803,7 @@ PrefabInstance:
     - target: {fileID: 109828940779840965, guid: c850897d3e4d4a443b2cb5c80542db6d,
         type: 3}
       propertyPath: prefab
-      value: 
+      value:
       objectReference: {fileID: 1214937682188914204, guid: 7473ecec14cacd24c8c2b821f7befc9e,
         type: 3}
     - target: {fileID: 109828940779840965, guid: c850897d3e4d4a443b2cb5c80542db6d,
@@ -1130,7 +1130,7 @@ PrefabInstance:
     - target: {fileID: 3220684795176837603, guid: 4f84463d02358714ca63b92b8c780f77,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
-      value: 
+      value:
       objectReference: {fileID: 2100000, guid: 2d2b3ef963828d745a6768336de34a53, type: 2}
     - target: {fileID: 3220684795176837613, guid: 4f84463d02358714ca63b92b8c780f77,
         type: 3}
@@ -1215,7 +1215,7 @@ PrefabInstance:
     - target: {fileID: 3540333082903879351, guid: 4f84463d02358714ca63b92b8c780f77,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
-      value: 
+      value:
       objectReference: {fileID: 2100000, guid: 2d2b3ef963828d745a6768336de34a53, type: 2}
     - target: {fileID: 3927402746950126904, guid: 4f84463d02358714ca63b92b8c780f77,
         type: 3}
@@ -1453,8 +1453,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe9234d29a28db74289f3ccc54b7c1f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!114 &100309996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1465,8 +1465,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a999661153ba68c48938048fc3b8ad86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   fallMultiplier: 1.06
   lowJumpMultiplier: 1.07
   gravityScale: 35
@@ -1480,8 +1480,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd1b305d95ab86c45b4a7a27a4d44692, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   smoothingTimeFactor: 0.5
 --- !u!143 &100309998
 CharacterController:
@@ -1511,8 +1511,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d063abf5f9a1946829875016838fc7c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!114 &100310000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1523,8 +1523,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 224fad13435dd2c46906faaea8a4a6d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!54 &100310001
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1565,8 +1565,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f0ec01145be4ea498905c2a9a7bf921, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   charCtrl: {fileID: 0}
   camTransform: {fileID: 778774137}
   gravityScale: 4.2
@@ -1599,7 +1599,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -1611,7 +1611,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100309994}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.1, y: 134.7, z: 120}
+  m_LocalPosition: {x: -35.41, y: 9.229997, z: 24.690004}
   m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children:
   - {fileID: 1791392909}
@@ -1639,8 +1639,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 160f41abaf4f43b469077900c9193ed6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!1001 &104999435
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3219,7 +3219,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -3233,8 +3233,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74ef130fb6545a84d96399dc6b5cc86c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!65 &267495134
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3507,7 +3507,7 @@ PrefabInstance:
     - target: {fileID: 2991519951777029094, guid: 6e582e81d1d6bdf45874096c8eca05ac,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.6
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 2991519951777029094, guid: 6e582e81d1d6bdf45874096c8eca05ac,
         type: 3}
@@ -3562,7 +3562,7 @@ PrefabInstance:
     - target: {fileID: 2991519951777029094, guid: 6e582e81d1d6bdf45874096c8eca05ac,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 50
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 2991519951777029094, guid: 6e582e81d1d6bdf45874096c8eca05ac,
         type: 3}
@@ -3651,27 +3651,27 @@ PrefabInstance:
     - target: {fileID: 7629222877236713455, guid: f2b3a32e7f7174ba58e94328bd69904d,
         type: 3}
       propertyPath: spikeExtendSFX
-      value: 
+      value:
       objectReference: {fileID: 8300000, guid: 3e06d7a057b69b045810f683ad7cd661, type: 3}
     - target: {fileID: 7629222877236713455, guid: f2b3a32e7f7174ba58e94328bd69904d,
         type: 3}
       propertyPath: swordSwing
-      value: 
+      value:
       objectReference: {fileID: 8300000, guid: 5fb1ed3a3b92edf4e929879a2da4d73c, type: 3}
     - target: {fileID: 7629222877236713455, guid: f2b3a32e7f7174ba58e94328bd69904d,
         type: 3}
       propertyPath: shieldClang
-      value: 
+      value:
       objectReference: {fileID: 8300000, guid: fd7c4880c62cfaf4282f491ed72a2bd7, type: 3}
     - target: {fileID: 7629222877236713455, guid: f2b3a32e7f7174ba58e94328bd69904d,
         type: 3}
       propertyPath: flinchHit
-      value: 
+      value:
       objectReference: {fileID: 8300000, guid: 3645d972a6a3d664cbb9e97e9e45eb43, type: 3}
     - target: {fileID: 7629222877236713455, guid: f2b3a32e7f7174ba58e94328bd69904d,
         type: 3}
       propertyPath: eatAppleSFX
-      value: 
+      value:
       objectReference: {fileID: 8300000, guid: abbf09a04f08ae744bf005a8122729d6, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2b3a32e7f7174ba58e94328bd69904d, type: 3}
@@ -4031,8 +4031,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5c4cf34b263f43aaaa0be917e1d23d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!65 &345112490
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4158,7 +4158,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -4172,8 +4172,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74ef130fb6545a84d96399dc6b5cc86c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!65 &349418115
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4396,7 +4396,7 @@ PrefabInstance:
     - target: {fileID: 23363714592162624, guid: 426b44a7575f71e479fab4f4e8431989,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
-      value: 
+      value:
       objectReference: {fileID: 2100000, guid: e5c62b48599af1b40b992922548dcc42, type: 2}
     - target: {fileID: 7630890547128515402, guid: 426b44a7575f71e479fab4f4e8431989,
         type: 3}
@@ -4846,7 +4846,7 @@ PrefabInstance:
     - target: {fileID: 3220684795176837603, guid: 4f84463d02358714ca63b92b8c780f77,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
-      value: 
+      value:
       objectReference: {fileID: 2100000, guid: 2d2b3ef963828d745a6768336de34a53, type: 2}
     - target: {fileID: 3220684795176837613, guid: 4f84463d02358714ca63b92b8c780f77,
         type: 3}
@@ -4936,7 +4936,7 @@ PrefabInstance:
     - target: {fileID: 4880058733613222275, guid: 4f84463d02358714ca63b92b8c780f77,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f84463d02358714ca63b92b8c780f77, type: 3}
@@ -6620,7 +6620,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -6634,8 +6634,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74ef130fb6545a84d96399dc6b5cc86c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!65 &640411587
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7479,7 +7479,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -7493,8 +7493,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74ef130fb6545a84d96399dc6b5cc86c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!65 &712934852
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7723,7 +7723,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 753843966}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.4300003, y: 138, z: 114.5}
+  m_LocalPosition: {x: -35.74, y: 12.53, z: 19.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 778774137}
@@ -7740,8 +7740,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0f6060553dda0042b7f34f769c42c5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   camMoveSpeed: 50
   camFollowObj: {fileID: 1348888360}
   followPOS: {x: 0, y: 0, z: 0}
@@ -7806,8 +7806,8 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8b35df3c366f994da0954547bbededb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   rotationSpeed: 3
   clampAngle: 80
   target: {fileID: 1348888361}
@@ -7887,8 +7887,8 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf54c008bf1775f4b8f9d2c4fc083460, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!114 &778774139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7899,8 +7899,8 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 952df7e5401e37944a281486130487df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   player: {fileID: 100309994}
 --- !u!114 &778774140
 MonoBehaviour:
@@ -7912,8 +7912,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b695d758a698bd4193c147a58383a0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   minDistance: 1
   maxDistance: 10
   smooth: 2.5
@@ -7939,7 +7939,7 @@ PrefabInstance:
     - target: {fileID: 3875644942375757832, guid: d3b1a2e30b1504e59a387370a2867b7e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 90.4
+      value: 89.44
       objectReference: {fileID: 0}
     - target: {fileID: 3875644942375757832, guid: d3b1a2e30b1504e59a387370a2867b7e,
         type: 3}
@@ -8740,7 +8740,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -9376,12 +9376,12 @@ PrefabInstance:
     - target: {fileID: 3220684795176837614, guid: 4f84463d02358714ca63b92b8c780f77,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 8
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 3927402746950126904, guid: 4f84463d02358714ca63b92b8c780f77,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 8
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f84463d02358714ca63b92b8c780f77, type: 3}
@@ -9749,7 +9749,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -9763,8 +9763,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74ef130fb6545a84d96399dc6b5cc86c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!65 &1139091103
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10374,7 +10374,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -10388,8 +10388,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74ef130fb6545a84d96399dc6b5cc86c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!65 &1174521736
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10652,8 +10652,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66c6f51c6f91e2741b7d3d4454ddc602, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!4 &1196058969
 Transform:
   m_ObjectHideFlags: 0
@@ -11083,7 +11083,7 @@ PrefabInstance:
     - target: {fileID: 3220684795176837603, guid: 4f84463d02358714ca63b92b8c780f77,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
-      value: 
+      value:
       objectReference: {fileID: 2100000, guid: 2d2b3ef963828d745a6768336de34a53, type: 2}
     - target: {fileID: 3220684795176837613, guid: 4f84463d02358714ca63b92b8c780f77,
         type: 3}
@@ -11168,7 +11168,7 @@ PrefabInstance:
     - target: {fileID: 3540333082903879351, guid: 4f84463d02358714ca63b92b8c780f77,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
-      value: 
+      value:
       objectReference: {fileID: 2100000, guid: 2d2b3ef963828d745a6768336de34a53, type: 2}
     - target: {fileID: 3927402746950126904, guid: 4f84463d02358714ca63b92b8c780f77,
         type: 3}
@@ -11625,8 +11625,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11d1f24055b1ffa45a86154361db58df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   aiState: 0
   wanderRadius: 5
   wanderTimer: 0.5
@@ -12049,7 +12049,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -12063,8 +12063,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74ef130fb6545a84d96399dc6b5cc86c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!65 &1461623027
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12147,7 +12147,7 @@ PrefabInstance:
     - target: {fileID: 2803536135699671091, guid: 1610d78e4fbc2fb41b433ec727755b69,
         type: 3}
       propertyPath: enemyPrefab
-      value: 
+      value:
       objectReference: {fileID: 1818861082154570, guid: caed116357ac2e742b0551f19bae89c4,
         type: 3}
     - target: {fileID: 2803536135699671091, guid: 1610d78e4fbc2fb41b433ec727755b69,
@@ -12643,7 +12643,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1576888679}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 63.2, y: 46.1, z: 57.4}
+  m_LocalPosition: {x: 63.2, y: 45.01, z: 57.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1627914910}
@@ -13363,8 +13363,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8267e5a3a9a3af4bb6864ac741e1e5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!4 &1674582266
 Transform:
   m_ObjectHideFlags: 0
@@ -15304,7 +15304,7 @@ PrefabInstance:
     - target: {fileID: 95690985424869934, guid: dca8e056b77d49c4aafe4dbcc2bab713,
         type: 3}
       propertyPath: m_Avatar
-      value: 
+      value:
       objectReference: {fileID: 9000000, guid: b40d1bf3e39a52544a8c3ca2d15d48c2, type: 3}
     - target: {fileID: 7730764650832779503, guid: dca8e056b77d49c4aafe4dbcc2bab713,
         type: 3}
@@ -15558,7 +15558,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -15572,8 +15572,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74ef130fb6545a84d96399dc6b5cc86c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!65 &1973112190
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16170,17 +16170,17 @@ PrefabInstance:
     - target: {fileID: 3261777710772495266, guid: 695a322a422ca4ce488ad2cc089e212d,
         type: 3}
       propertyPath: respawns.Array.data[0]
-      value: 
+      value:
       objectReference: {fileID: 2026769348}
     - target: {fileID: 3261777710772495266, guid: 695a322a422ca4ce488ad2cc089e212d,
         type: 3}
       propertyPath: respawns.Array.data[1]
-      value: 
+      value:
       objectReference: {fileID: 93384075}
     - target: {fileID: 3261777710772495266, guid: 695a322a422ca4ce488ad2cc089e212d,
         type: 3}
       propertyPath: respawns.Array.data[2]
-      value: 
+      value:
       objectReference: {fileID: 633624501}
     - target: {fileID: 3461844239355581028, guid: 695a322a422ca4ce488ad2cc089e212d,
         type: 3}
@@ -16328,7 +16328,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2057501145}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: 34.6, y: 46.1, z: 103.5}
+  m_LocalPosition: {x: 34.6, y: 45.01, z: 103.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1979303002}
@@ -16529,7 +16529,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -16543,8 +16543,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74ef130fb6545a84d96399dc6b5cc86c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!65 &2065321982
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17133,8 +17133,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 84a6af2b886437b4c8cf878b791298d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!1001 &2991519951637184496
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17286,8 +17286,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74ef130fb6545a84d96399dc6b5cc86c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!1 &3111710925530083737
 GameObject:
   m_ObjectHideFlags: 0
@@ -17325,7 +17325,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -17431,7 +17431,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -17523,8 +17523,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74ef130fb6545a84d96399dc6b5cc86c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!33 &3111710926616323155
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -17579,7 +17579,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -17680,8 +17680,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74ef130fb6545a84d96399dc6b5cc86c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!33 &3111710926702337397
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -20404,8 +20404,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e98291c75056664da4e32ab14133c8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!95 &3522363661116705870
 Animator:
   serializedVersion: 3
@@ -20421,7 +20421,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -21018,8 +21018,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a528c251b5d3b4791875465c9a882a00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!114 &5445420599226684324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21030,8 +21030,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a528c251b5d3b4791875465c9a882a00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!4 &5649580494837028390 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3522363661417085231, guid: ec1ff5cc94ac1eb4db20fb331a51f7fa,
@@ -24076,8 +24076,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e98291c75056664da4e32ab14133c8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!95 &6258136261969481846
 Animator:
   serializedVersion: 3
@@ -24093,7 +24093,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -24212,8 +24212,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a528c251b5d3b4791875465c9a882a00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!1 &6855211020386379373
 GameObject:
   m_ObjectHideFlags: 0
@@ -24750,8 +24750,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 84a6af2b886437b4c8cf878b791298d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!1001 &7653802511748763131
 PrefabInstance:
   m_ObjectHideFlags: 0
