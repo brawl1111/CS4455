@@ -74,13 +74,17 @@ public class SkeletonSM : MonoBehaviour
         switch(aiState)
         {
             case AIState.idle_state:
-                if (distToPlayer < 20.0f)
+                if (distToPlayer < 5.0f)
                 {
-                    skeletonAnim.SetBool("inPatrol", true);
+                    skeletonAnim.SetBool("inMeleeDist", true);
+                    aiState = AIState.ready_state;
+                }
+                else if (distToPlayer < 10.0f && distToPlayer > 5.0f)
+                {
+                    skeletonAnim.SetBool("inChase", true);
                     aiState = AIState.chase_state;
                     break;
-                }
-                if (ifSwapIdle)
+                } else if (ifSwapIdle)
                 {
                     StartCoroutine(SwapToPatrol());
                     ifSwapIdle = false;
@@ -91,9 +95,9 @@ public class SkeletonSM : MonoBehaviour
                 //timer += Time.deltaTime;
                 //timer >= wanderTimer &&
                 //Debug.Log("patrol");
-                if (distToPlayer < 20.0f)
+                if (distToPlayer < 10.0f)
                 {
-                    skeletonAnim.SetBool("inPatrol", true);
+                    skeletonAnim.SetBool("inChase", true);
                     aiState = AIState.chase_state;
                     break;
                 }
@@ -111,19 +115,23 @@ public class SkeletonSM : MonoBehaviour
                 }
                 break;
             case AIState.chase_state:
-                Vector3 dirToPlayer = transform.position - player.transform.position;
-                Vector3 chasePos = transform.position - dirToPlayer;
-                skeletonNav.SetDestination(chasePos);
-                if (distToPlayer < 3.0f)
+                transform.LookAt(player.transform);
+                skeletonNav.SetDestination(player.transform.position);
+                //Vector3 dirToPlayer = transform.position - player.transform.position;
+                //Vector3 chasePos = transform.position - dirToPlayer;
+                //skeletonNav.SetDestination(chasePos);
+                if (distToPlayer < 5.0f)
                 {
-                    aiState = AIState.ready_state;
                     skeletonNav.stoppingDistance = 3.0f;
                     skeletonAnim.SetBool("inMeleeDist", true);
+                    aiState = AIState.ready_state;
+                    
                 }
                 break;
             case AIState.ready_state:
                 skeletonAnim.SetBool("inPatrol", false);
-                if (distToPlayer < 3.0f)
+                skeletonAnim.SetBool("inChase", false);
+                if (distToPlayer < 5.0f)
                 {
                     skeletonAnim.SetBool("inMeleeDist", true);
                     if (ifSwapAttack)
@@ -134,19 +142,19 @@ public class SkeletonSM : MonoBehaviour
                         break;
                     }
                 }
-                if (3.0f < distToPlayer && distToPlayer < 20.0f)
+                if (5.0f < distToPlayer && distToPlayer < 10.0f)
                 {
-                    aiState = AIState.chase_state;
-                    skeletonAnim.SetBool("inPatrol", true);
+                    skeletonAnim.SetBool("inChase", true);
                     skeletonAnim.SetBool("inMeleeDist", false);
+                    aiState = AIState.chase_state;
                     break;
                 }
-                if (distToPlayer > 20.0f)
+                if (distToPlayer > 10.0f)
                 {
                     inRange = false;
-                    aiState = AIState.patrol_state;
                     skeletonAnim.SetBool("inPatrol", true);
                     skeletonAnim.SetBool("inMeleeDist", false);
+                    aiState = AIState.patrol_state;                
                     break;
                 }
                 break;
@@ -169,15 +177,15 @@ public class SkeletonSM : MonoBehaviour
     IEnumerator SwapToPatrol()
     {
         yield return idleTime;
-        aiState = AIState.patrol_state;
         skeletonAnim.SetBool("inPatrol", true);
+        aiState = AIState.patrol_state;        
     }
 
     IEnumerator SwapToIdle()
     {
         yield return cooldown;
-        aiState = AIState.idle_state;
         skeletonAnim.SetBool("inPatrol", false);
+        aiState = AIState.idle_state;    
     }
 
     IEnumerator attackDelay()
