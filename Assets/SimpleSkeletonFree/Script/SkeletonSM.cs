@@ -9,7 +9,6 @@ public class SkeletonSM : MonoBehaviour
     public enum AIState
     {
         idle_state,
-        patrol_state,
         chase_state,
         attack_state,
         ready_state,
@@ -32,10 +31,6 @@ public class SkeletonSM : MonoBehaviour
 
     private GameObject player;
 
-    bool inPatrol;
-    bool inRange;
-    bool ifSwapIdle;
-    bool ifSwapPatrol;
     bool ifSwapReady;
     bool ifSwapAttack;
     bool isColliding;
@@ -47,11 +42,8 @@ public class SkeletonSM : MonoBehaviour
     {
         skeletonNav = GetComponent<NavMeshAgent>();
         skeletonAnim = GetComponent<Animator>();
+        //skeletonNav.stoppingDistance = 2.0f;
         aiState = AIState.idle_state;
-        //timer = 0;
-        inRange = false;
-        ifSwapIdle = true;
-        ifSwapPatrol = true;
         cooldown = new WaitForSeconds(5f);
         idleTime = new WaitForSeconds(1f);
         player = GameObject.FindWithTag("Player");
@@ -66,73 +58,60 @@ public class SkeletonSM : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 heading = player.transform.position - transform.position;
-        float side = Vector3.Dot(heading, transform.forward);
-        //Debug.Log(side);
-        //Debug.Log(skeletonHealth);
-        float distToPlayer = Vector3.Distance(transform.position, player.transform.position);
+        float distToPlayer = Vector3.Distance(base.transform.position, player.transform.position);
         switch(aiState)
         {
             case AIState.idle_state:
+                /*
                 if (distToPlayer < 5.0f)
                 {
+                    Debug.Log("In Melee");
                     skeletonAnim.SetBool("inMeleeDist", true);
+                    skeletonAnim.SetBool("inChase", false);
                     aiState = AIState.ready_state;
-                }
-                else if (distToPlayer < 10.0f && distToPlayer > 5.0f)
+                    break;
+                } else if (distToPlayer <= 10.0f)
                 {
                     skeletonAnim.SetBool("inChase", true);
                     aiState = AIState.chase_state;
                     break;
-                } else if (ifSwapIdle)
-                {
-                    StartCoroutine(SwapToPatrol());
-                    ifSwapIdle = false;
-                    ifSwapPatrol = true;
-                }
-                break;
-            case AIState.patrol_state:
-                //timer += Time.deltaTime;
-                //timer >= wanderTimer &&
-                //Debug.Log("patrol");
-                if (distToPlayer < 10.0f)
+                } */
+                if (distToPlayer <= 10.0f)
                 {
                     skeletonAnim.SetBool("inChase", true);
                     aiState = AIState.chase_state;
                     break;
                 }
-
-                Vector3 newPos = RandomNavSphere(transform.position, wanderRadius, NavMesh.AllAreas);
-                skeletonNav.SetDestination(newPos);
-                //timer = 0;
-
-                if (!inRange && !skeletonNav.pathPending && ifSwapPatrol)
+                if (distToPlayer > 10.0f && !skeletonNav.pathPending)
                 {
-                    StartCoroutine(SwapToIdle());
-                    ifSwapIdle = true;
-                    ifSwapPatrol = false;
-                    //Debug.Log("swap");
+                    skeletonAnim.SetBool("inChase", true);
+                    Vector3 newPos = RandomNavSphere(base.transform.position, wanderRadius, NavMesh.AllAreas);
+                    skeletonNav.SetDestination(newPos);
+                    break;
                 }
                 break;
             case AIState.chase_state:
-                transform.LookAt(player.transform);
-                skeletonNav.SetDestination(player.transform.position);
-                //Vector3 dirToPlayer = transform.position - player.transform.position;
-                //Vector3 chasePos = transform.position - dirToPlayer;
-                //skeletonNav.SetDestination(chasePos);
-                if (distToPlayer < 5.0f)
+                if (distToPlayer >= 4.0f && distToPlayer <= 10.0f)
                 {
-                    skeletonNav.stoppingDistance = 3.0f;
+                    Vector3 dirToPlayer = base.transform.position - player.transform.position;
+                    Vector3 newPos = base.transform.position - dirToPlayer;
+                    skeletonNav.SetDestination(newPos);
+                    break;
+                } else if (distToPlayer < 3.0f)
+                {
                     skeletonAnim.SetBool("inMeleeDist", true);
+                    skeletonAnim.SetBool("inChase", false);
+                    skeletonNav.stoppingDistance = 3.0f;
                     aiState = AIState.ready_state;
-                    
-                }
+                    break;                   
+                } 
                 break;
             case AIState.ready_state:
-                skeletonAnim.SetBool("inPatrol", false);
                 skeletonAnim.SetBool("inChase", false);
-                if (distToPlayer < 5.0f)
+                if (distToPlayer < 3.0f)
                 {
+                    Quaternion wantedRotation = Quaternion.LookRotation(player.transform.position - transform.position);
+                    transform.rotation = Quaternion.Lerp(transform.rotation, wantedRotation, Time.time * (float).0051);
                     skeletonAnim.SetBool("inMeleeDist", true);
                     if (ifSwapAttack)
                     {
@@ -141,24 +120,21 @@ public class SkeletonSM : MonoBehaviour
                         ifSwapAttack = false;
                         break;
                     }
-                }
-                if (5.0f < distToPlayer && distToPlayer < 10.0f)
+                } else if (distToPlayer >= 4.0f && distToPlayer <= 10.0f)
                 {
                     skeletonAnim.SetBool("inChase", true);
                     skeletonAnim.SetBool("inMeleeDist", false);
                     aiState = AIState.chase_state;
                     break;
-                }
+                } 
                 if (distToPlayer > 10.0f)
                 {
-                    inRange = false;
-                    skeletonAnim.SetBool("inPatrol", true);
+                    aiState = AIState.idle_state;
                     skeletonAnim.SetBool("inMeleeDist", false);
-                    aiState = AIState.patrol_state;                
-                    break;
                 }
                 break;
             case AIState.attack_state:
+                skeletonAnim.SetBool("inChase", false);
                 if (ifSwapReady)
                 {
                     StartCoroutine(SwapToReady());
@@ -172,20 +148,6 @@ public class SkeletonSM : MonoBehaviour
             skeletonAnim.SetBool("isDead", true);
             StartCoroutine(DeathAnimation());
         }
-    }
-
-    IEnumerator SwapToPatrol()
-    {
-        yield return idleTime;
-        skeletonAnim.SetBool("inPatrol", true);
-        aiState = AIState.patrol_state;        
-    }
-
-    IEnumerator SwapToIdle()
-    {
-        yield return cooldown;
-        skeletonAnim.SetBool("inPatrol", false);
-        aiState = AIState.idle_state;    
     }
 
     IEnumerator attackDelay()
@@ -219,8 +181,8 @@ public class SkeletonSM : MonoBehaviour
 
     void OnTriggerEnter(Collider collision)
     {
-        Vector3 heading = player.transform.position - transform.position;
-        float side = Vector3.Dot(heading, transform.forward);
+        Vector3 heading = player.transform.position - base.transform.position;
+        float side = Vector3.Dot(heading, base.transform.forward);
 
         if (isColliding) return;
         if (side > 0 && collision.gameObject.CompareTag("Hurtbox"))

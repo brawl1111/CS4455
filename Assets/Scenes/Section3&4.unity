@@ -9376,12 +9376,12 @@ PrefabInstance:
     - target: {fileID: 3220684795176837614, guid: 4f84463d02358714ca63b92b8c780f77,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3927402746950126904, guid: 4f84463d02358714ca63b92b8c780f77,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f84463d02358714ca63b92b8c780f77, type: 3}
@@ -11628,7 +11628,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aiState: 0
-  wanderRadius: 10
+  wanderRadius: 5
   wanderTimer: 0.5
 --- !u!195 &1371331090
 NavMeshAgent:
