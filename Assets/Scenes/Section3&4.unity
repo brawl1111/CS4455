@@ -3662,36 +3662,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7629222877236713455, guid: f2b3a32e7f7174ba58e94328bd69904d,
-        type: 3}
-      propertyPath: spikeExtendSFX
-      value: 
-      objectReference: {fileID: 8300000, guid: 3e06d7a057b69b045810f683ad7cd661, type: 3}
-    - target: {fileID: 7629222877236713455, guid: f2b3a32e7f7174ba58e94328bd69904d,
-        type: 3}
-      propertyPath: swordSwing
-      value: 
-      objectReference: {fileID: 8300000, guid: 5fb1ed3a3b92edf4e929879a2da4d73c, type: 3}
-    - target: {fileID: 7629222877236713455, guid: f2b3a32e7f7174ba58e94328bd69904d,
-        type: 3}
-      propertyPath: shieldClang
-      value: 
-      objectReference: {fileID: 8300000, guid: fd7c4880c62cfaf4282f491ed72a2bd7, type: 3}
-    - target: {fileID: 7629222877236713455, guid: f2b3a32e7f7174ba58e94328bd69904d,
-        type: 3}
-      propertyPath: flinchHit
-      value: 
-      objectReference: {fileID: 8300000, guid: 3645d972a6a3d664cbb9e97e9e45eb43, type: 3}
-    - target: {fileID: 7629222877236713455, guid: f2b3a32e7f7174ba58e94328bd69904d,
-        type: 3}
-      propertyPath: eatAppleSFX
-      value: 
-      objectReference: {fileID: 8300000, guid: abbf09a04f08ae744bf005a8122729d6, type: 3}
-    - target: {fileID: 7629222877236713455, guid: f2b3a32e7f7174ba58e94328bd69904d,
-        type: 3}
-      propertyPath: playerHurtSFX
-      value: 
-      objectReference: {fileID: 8300000, guid: 1d020f2f398df414e9076bdf1dc60172, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2b3a32e7f7174ba58e94328bd69904d, type: 3}
 --- !u!1001 &306984225
