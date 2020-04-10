@@ -19,7 +19,7 @@ public class TurnTile : MonoBehaviour
         
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Hurtbox"))
         {
