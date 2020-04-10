@@ -59,6 +59,7 @@ public class HealthManager : MonoBehaviour
             GameObject.Find("HeartContainer").GetComponent<HeartPopulator>().RemoveHeartIcon();
             Debug.Log("health: " + health);
             inInvincibilityFrames = true;
+            EventManager.TriggerEvent<PlayerHurtSFXEvent, Vector3>(this.transform.position);
             if (health == 0) {
                 HandleDeath();
             }

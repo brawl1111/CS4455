@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60f472993b1194202a3fa65f093cfaca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spikeMaxDistance: 50
   eventSound3DPrefab: {fileID: 399083756018636128, guid: 28b44c5f4265b4ad2bb085dca88cd8e3,
     type: 3}
   treeCrack: {fileID: 8300000, guid: 74a6533555e764b528806b189702cda3, type: 3}
@@ -58,3 +59,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 2add689f724a7144bb41532deb576888, type: 3}
   boxBreak: {fileID: 8300000, guid: e99f720e578a5432e9e46d7f2990e829, type: 3}
   spikeExtendSFX: {fileID: 8300000, guid: 3e06d7a057b69b045810f683ad7cd661, type: 3}
+  swordSwing: {fileID: 8300000, guid: 5fb1ed3a3b92edf4e929879a2da4d73c, type: 3}
+  shieldClang: {fileID: 8300000, guid: fd7c4880c62cfaf4282f491ed72a2bd7, type: 3}
+  flinchHit: {fileID: 8300000, guid: 3645d972a6a3d664cbb9e97e9e45eb43, type: 3}
+  eatAppleSFX: {fileID: 8300000, guid: abbf09a04f08ae744bf005a8122729d6, type: 3}
+  playerHurtSFX: {fileID: 8300000, guid: 1d020f2f398df414e9076bdf1dc60172, type: 3}
