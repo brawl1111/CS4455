@@ -18,6 +18,6 @@ public class GameResumer : MonoBehaviour
 
     public void ResumeGame()
     {
-        this.transform.parent.GetComponent<PauseMenuToggle>().PauseMenuOff();
+        this.transform.parent.transform.parent.GetComponent<PauseMenuToggle>().PauseMenuOff();
     }
 }
