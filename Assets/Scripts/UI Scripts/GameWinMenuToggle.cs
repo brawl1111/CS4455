@@ -30,10 +30,11 @@ public class GameWinMenuToggle : MonoBehaviour
 
     public void GameWinMenuOn()
     {
-        canvasGroup.interactable = true;
-        canvasGroup.blocksRaycasts = true;
-        canvasGroup.alpha = 1f;
-        Time.timeScale = 0f;
+        StartCoroutine(WasteTimeCoroutine());
+        // canvasGroup.interactable = true;
+        // canvasGroup.blocksRaycasts = true;
+        // canvasGroup.alpha = 1f;
+        // Time.timeScale = 0f;
     }
 
     public void GameWinMenuOff()
@@ -42,5 +43,14 @@ public class GameWinMenuToggle : MonoBehaviour
         canvasGroup.blocksRaycasts = false;
         canvasGroup.alpha = 0f;
         Time.timeScale = 1f;
+    }
+
+    IEnumerator WasteTimeCoroutine()
+    {
+        yield return new WaitForSeconds(4);
+        canvasGroup.interactable = true;
+        canvasGroup.blocksRaycasts = true;
+        canvasGroup.alpha = 1f;
+        Time.timeScale = 0f;
     }
 }
