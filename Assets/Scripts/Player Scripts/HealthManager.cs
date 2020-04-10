@@ -53,7 +53,7 @@ public class HealthManager : MonoBehaviour
 
     public void SubtractHealth(int i)
     {
-        Debug.Log("isalive: " + isAlive + " InvincibilityFrames: " + inInvincibilityFrames);
+        //Debug.Log("isalive: " + isAlive + " InvincibilityFrames: " + inInvincibilityFrames);
         if (!inInvincibilityFrames && isAlive)
         {
             health -= i;

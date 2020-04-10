@@ -1486,6 +1486,7 @@ GameObject:
   - component: {fileID: 100309996}
   - component: {fileID: 100309995}
   - component: {fileID: 100310006}
+  - component: {fileID: 100310007}
   m_Layer: 0
   m_Name: Princess
   m_TagString: Player
@@ -1691,6 +1692,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 160f41abaf4f43b469077900c9193ed6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &100310007
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100309994}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  m_Radius: 0.025
+  m_Height: 0.1306993
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.06581879, z: -0}
 --- !u!1001 &104999435
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17551,7 +17566,7 @@ PrefabInstance:
     - target: {fileID: 49916053079981670, guid: 695a322a422ca4ce488ad2cc089e212d,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 566312124105213410, guid: 695a322a422ca4ce488ad2cc089e212d,
         type: 3}
