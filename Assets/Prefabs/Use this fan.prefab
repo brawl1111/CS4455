@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1134895230712119354}
   - component: {fileID: 1134895230712119301}
   - component: {fileID: 1134895230712119300}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Diagonal Blade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 1134895231321818879}
   - component: {fileID: 1134895231321818878}
   - component: {fileID: 1134895231321818873}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 1134895231428840227}
   - component: {fileID: 1134895231428840226}
   - component: {fileID: 1134895231428840237}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Center
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -289,7 +289,7 @@ GameObject:
   - component: {fileID: 1134895231476854615}
   - component: {fileID: 1134895231476854614}
   - component: {fileID: 1134895231476854609}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Horizontal Blade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -383,8 +383,8 @@ GameObject:
   - component: {fileID: 1134895231589650563}
   - component: {fileID: 1134895231589650567}
   - component: {fileID: 1134895231589650564}
-  m_Layer: 0
-  m_Name: Fan 1
+  m_Layer: 10
+  m_Name: Use this fan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -504,7 +504,7 @@ GameObject:
   - component: {fileID: 1134895231781253419}
   - component: {fileID: 1134895231781253418}
   - component: {fileID: 1134895231781253429}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Vertical Blade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -596,7 +596,7 @@ GameObject:
   - component: {fileID: 1134895232249934500}
   - component: {fileID: 1134895232249934503}
   - component: {fileID: 1134895232249934502}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Diagonal Blade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -689,7 +689,7 @@ GameObject:
   - component: {fileID: 1134895232265698613}
   - component: {fileID: 1134895232265698603}
   - component: {fileID: 1134895232265698612}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FanBladesMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -792,7 +792,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1134895232557945296}
   - component: {fileID: 1134895232557945297}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FanBlades
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -849,7 +849,7 @@ GameObject:
   - component: {fileID: 7267845927579957453}
   - component: {fileID: 9172817765734960489}
   - component: {fileID: 2787542217374728934}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Line1505
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -926,7 +926,7 @@ GameObject:
   m_Component:
   - component: {fileID: 26947398043687738}
   - component: {fileID: 3892488165140015402}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Fan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -981,7 +981,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5364030180725168098}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FanHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1014,7 +1014,7 @@ GameObject:
   - component: {fileID: 2722452846471012713}
   - component: {fileID: 241772282065445970}
   - component: {fileID: 8634882022517323286}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Line1504
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1092,7 +1092,7 @@ GameObject:
   - component: {fileID: 8502787247659956540}
   - component: {fileID: 3125523672824536386}
   - component: {fileID: 3804894691001220364}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Line01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1170,7 +1170,7 @@ GameObject:
   - component: {fileID: 3414409338010199587}
   - component: {fileID: 5564722532698484126}
   - component: {fileID: 1450450044128951120}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Line1503
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1248,7 +1248,7 @@ GameObject:
   - component: {fileID: 8239690006272314751}
   - component: {fileID: 4664471825035473227}
   - component: {fileID: 6159437636252972010}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Line1506
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1326,7 +1326,7 @@ GameObject:
   - component: {fileID: 1128140961319666506}
   - component: {fileID: 4311192520724650650}
   - component: {fileID: 9094747543936651724}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
