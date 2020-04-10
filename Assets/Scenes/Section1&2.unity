@@ -654,10 +654,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1533099893}
     m_Modifications:
+    - target: {fileID: 6855211019518841660, guid: a2431ef078b222149a4f3dd639d574e5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6855211020185091939, guid: a2431ef078b222149a4f3dd639d574e5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6856229997609252691, guid: a2431ef078b222149a4f3dd639d574e5,
         type: 3}
       propertyPath: m_Name
       value: DoubleCrateGroup
+      objectReference: {fileID: 0}
+    - target: {fileID: 6856229997609252691, guid: a2431ef078b222149a4f3dd639d574e5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6856229997609252692, guid: a2431ef078b222149a4f3dd639d574e5,
         type: 3}
@@ -10271,7 +10286,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 305392118}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Section 2 Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11224,12 +11239,12 @@ PrefabInstance:
     - target: {fileID: 4810053661387604954, guid: 8d807d52d6af84504a52b34858d2f5c1,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5199994442445724839, guid: 8d807d52d6af84504a52b34858d2f5c1,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8002997654210444890, guid: 8d807d52d6af84504a52b34858d2f5c1,
         type: 3}
@@ -32223,6 +32238,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box_2_1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1083941557583290, guid: 0b054356ce925634183cb5e92cceb9fc, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4196028084717306, guid: 0b054356ce925634183cb5e92cceb9fc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -33.12
@@ -43513,10 +43532,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1533099893}
     m_Modifications:
+    - target: {fileID: 6855211019518841660, guid: a2431ef078b222149a4f3dd639d574e5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6855211020185091939, guid: a2431ef078b222149a4f3dd639d574e5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6856229997609252691, guid: a2431ef078b222149a4f3dd639d574e5,
         type: 3}
       propertyPath: m_Name
       value: DoubleCrateGroup
+      objectReference: {fileID: 0}
+    - target: {fileID: 6856229997609252691, guid: a2431ef078b222149a4f3dd639d574e5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6856229997609252692, guid: a2431ef078b222149a4f3dd639d574e5,
         type: 3}
@@ -52251,12 +52285,12 @@ PrefabInstance:
     - target: {fileID: 4810053661387604954, guid: 8d807d52d6af84504a52b34858d2f5c1,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5199994442445724839, guid: 8d807d52d6af84504a52b34858d2f5c1,
         type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8002997654210444890, guid: 8d807d52d6af84504a52b34858d2f5c1,
         type: 3}

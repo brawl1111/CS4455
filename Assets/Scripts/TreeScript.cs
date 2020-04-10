@@ -40,7 +40,7 @@ public class TreeScript : MonoBehaviour
         // A sound to suggest that the tree has finished moving
         // In this case, Ground is eqivalent to layer 8
         GameObject collider = collision.gameObject;
-        if (collider.gameObject.layer == 8 && collider.gameObject.name != "Stump_3_3")
+        if (collider.gameObject.layer == 10 && collider.gameObject.name != "Stump_3_3")
         {
             EventManager.TriggerEvent<TreeHitGroundEvent, Vector3>(this.gameObject.transform.position);
             StartCoroutine(WasteTimeCoroutine());
