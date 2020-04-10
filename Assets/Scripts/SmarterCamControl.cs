@@ -41,8 +41,11 @@ public class SmarterCamControl : MonoBehaviour
     {
         float inputX = Input.GetAxis("Joystick X") * joystickSensitivity;
         float inputY = Input.GetAxis("Joystick Y") * joystickSensitivity;
-        mouseX = Input.GetAxis("Mouse X");
-        mouseY = Input.GetAxis("Mouse Y");
+        if (Input.GetMouseButton(1))
+        {
+            mouseX = Input.GetAxis("Mouse X");
+            mouseY = Input.GetAxis("Mouse Y");
+        }
         finalInputX = inputX + mouseX;
         finalInputZ = inputY + mouseY;
 
