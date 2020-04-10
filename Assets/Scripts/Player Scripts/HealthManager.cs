@@ -53,10 +53,11 @@ public class HealthManager : MonoBehaviour
 
     public void SubtractHealth(int i)
     {
+        Debug.Log("isalive: " + isAlive + " InvincibilityFrames: " + inInvincibilityFrames);
         if (!inInvincibilityFrames && isAlive)
         {
             health -= i;
-            GameObject.Find("HeartContainer").GetComponent<HeartPopulator>().RemoveHeartIcon();
+            for (int j = 0; j < i; j++) GameObject.Find("HeartContainer").GetComponent<HeartPopulator>().RemoveHeartIcon();
             Debug.Log("health: " + health);
             inInvincibilityFrames = true;
             EventManager.TriggerEvent<PlayerHurtSFXEvent, Vector3>(this.transform.position);
@@ -94,18 +95,20 @@ public class HealthManager : MonoBehaviour
 
     public void KillPlayerByFall()
     {
-        health = 0;
+        SubtractHealth(health);
         HandleDeath();
     }
 
     private void HandleDeath()
     {
         isAlive = false;
+        inInvincibilityFrames = false;
         GameObject player = GameObject.FindWithTag("Player");
         player.GetComponent<Animator>().SetTrigger("hasDied");
         //player.GetComponent<Rigidbody>().isKinematic = true;
         player.GetComponent<CharacterMovement>().enabled = false;
         gameOverToggle.GameOverMenuOn();
+
     }
 
     public void RestoreAllHealth()
@@ -120,5 +123,9 @@ public class HealthManager : MonoBehaviour
     public void RestoreOneHealth()
     {
         AddHealth(1);
+    }
+    public void SetIsAlive(bool b)
+    {
+        isAlive = b;
     }
 }
