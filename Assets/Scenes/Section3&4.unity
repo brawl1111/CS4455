@@ -1621,7 +1621,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100309994}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 44.8, y: 24.54, z: 36.4}
+  m_LocalPosition: {x: 44.8, y: 50.5, z: 58.2}
   m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children:
   - {fileID: 1791392909}
@@ -3687,6 +3687,11 @@ PrefabInstance:
       propertyPath: eatAppleSFX
       value: 
       objectReference: {fileID: 8300000, guid: abbf09a04f08ae744bf005a8122729d6, type: 3}
+    - target: {fileID: 7629222877236713455, guid: f2b3a32e7f7174ba58e94328bd69904d,
+        type: 3}
+      propertyPath: playerHurtSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 1d020f2f398df414e9076bdf1dc60172, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2b3a32e7f7174ba58e94328bd69904d, type: 3}
 --- !u!1001 &306984225
@@ -7735,7 +7740,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 753843966}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 44.469997, y: 27.840004, z: 30.899998}
+  m_LocalPosition: {x: 44.469997, y: 53.800003, z: 52.699997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 778774137}
@@ -16018,7 +16023,7 @@ PrefabInstance:
     - target: {fileID: 3461844239355581028, guid: 695a322a422ca4ce488ad2cc089e212d,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3461844239355581032, guid: 695a322a422ca4ce488ad2cc089e212d,
         type: 3}
