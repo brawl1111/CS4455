@@ -111,7 +111,7 @@ public class SkeletonSM : MonoBehaviour
                 if (distToPlayer < 3.0f)
                 {
                     Quaternion wantedRotation = Quaternion.LookRotation(player.transform.position - transform.position);
-                    transform.rotation = Quaternion.Lerp(transform.rotation, wantedRotation, Time.time * (float).0051);
+                    transform.rotation = Quaternion.Lerp(transform.rotation, wantedRotation, Time.deltaTime * 0.1f);
                     skeletonAnim.SetBool("inMeleeDist", true);
                     if (ifSwapAttack)
                     {
