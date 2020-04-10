@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2991519951777029097}
   - component: {fileID: 2991519951777029096}
   - component: {fileID: 2991519951777029095}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: MountainCube
-  m_TagString: Untagged
+  m_TagString: terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 5145865958293287202}
   - component: {fileID: 3753717734888776892}
   - component: {fileID: 5084383497160930184}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}

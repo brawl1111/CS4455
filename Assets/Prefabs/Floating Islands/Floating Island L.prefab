@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5627371171368874008}
   - component: {fileID: 7031341633197571990}
   - component: {fileID: 4048748270922947575}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 1151499390316266161}
   - component: {fileID: 8334539911946212587}
   - component: {fileID: 1866953676386532668}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,7 +193,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8002997654210444890}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Floating Island L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,7 +230,7 @@ GameObject:
   - component: {fileID: 9210927234229585975}
   - component: {fileID: 8201547092467823119}
   - component: {fileID: 2220498398199332890}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Plane (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -323,7 +323,7 @@ GameObject:
   - component: {fileID: 8873743009961765671}
   - component: {fileID: 4757845403742244868}
   - component: {fileID: 1714184614803732830}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}

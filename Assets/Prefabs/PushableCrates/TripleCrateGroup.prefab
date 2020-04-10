@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6460757865840387915}
   - component: {fileID: 6460757865840387912}
   - component: {fileID: 7105140420944578531}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: TripleCrateGroup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 6475761304804813903}
   - component: {fileID: 6484004920712626421}
   - component: {fileID: 6431311431719295111}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: "\u0421rate_1_2 (3)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 6475761305344470377}
   - component: {fileID: 6484004921244680659}
   - component: {fileID: 6431311432260983201}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: "\u0421rate_1_2 (4)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -287,7 +287,7 @@ GameObject:
   - component: {fileID: 6475761305499251184}
   - component: {fileID: 6484004922028907850}
   - component: {fileID: 6431311432936408376}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: "\u0421rate_1_2 (5)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}

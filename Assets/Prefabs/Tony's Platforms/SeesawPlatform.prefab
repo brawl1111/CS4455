@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7985151708744063493}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SeesawPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 7985151709650797501}
   - component: {fileID: 7985151709650797498}
   - component: {fileID: 7985151709650797503}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

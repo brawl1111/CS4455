@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5468102296059992611}
   - component: {fileID: 7788525941497917875}
   - component: {fileID: 5550919555056696876}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3267213607045702684}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Floating Island Rect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 5560384845832140439}
   - component: {fileID: 8321153592542629020}
   - component: {fileID: 8820469784301401565}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

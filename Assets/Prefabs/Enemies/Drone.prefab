@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8799877189246446710}
   - component: {fileID: 6988320071586833938}
   - component: {fileID: 2059239542169462750}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Drone
   m_TagString: drone
   m_Icon: {fileID: 0}
@@ -101,6 +101,7 @@ MonoBehaviour:
   maxAmmo: 10
   shootDelay: 2
   bulletSpeed: 15
+  aggroDistance: 20
 --- !u!54 &4734306587326726202
 Rigidbody:
   m_ObjectHideFlags: 0

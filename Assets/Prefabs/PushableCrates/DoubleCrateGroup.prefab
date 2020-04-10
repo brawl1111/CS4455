@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6868419682708583668}
   - component: {fileID: 6878353187956267086}
   - component: {fileID: 6903906607066808380}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: "\u0421rate_1_2 (1)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 6868419682850789547}
   - component: {fileID: 6878353188889900049}
   - component: {fileID: 6903906607727029347}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: "\u0421rate_1_2 (2)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 6856229997609252695}
   - component: {fileID: 6856229997609252694}
   - component: {fileID: 5445420600501783210}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: DoubleCrateGroup
   m_TagString: Untagged
   m_Icon: {fileID: 0}

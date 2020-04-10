@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3220684795176837602}
   - component: {fileID: 3220684795176837603}
   - component: {fileID: 3220684795176837612}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: MountainWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 4782789376670501673}
   - component: {fileID: 3540333082903879351}
   - component: {fileID: 4880058733613222275}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
