@@ -17,6 +17,8 @@ public class SkeletonSM : MonoBehaviour
     public AIState aiState;
     private NavMeshAgent skeletonNav;
     private Animator skeletonAnim;
+    private GameObject sword;
+    private MeshCollider swordHitbox;
 
     public float wanderRadius;
     public float wanderTimer;
@@ -44,6 +46,9 @@ public class SkeletonSM : MonoBehaviour
         skeletonAnim = GetComponent<Animator>();
         //skeletonNav.stoppingDistance = 2.0f;
         aiState = AIState.idle_state;
+        sword = GameObject.Find("SWORD");
+        swordHitbox = sword.GetComponent<MeshCollider>();
+        swordHitbox.enabled = false;
         cooldown = new WaitForSeconds(5f);
         idleTime = new WaitForSeconds(1f);
         player = GameObject.FindWithTag("Player");
@@ -112,6 +117,7 @@ public class SkeletonSM : MonoBehaviour
                 {
                     Quaternion wantedRotation = Quaternion.LookRotation(player.transform.position - transform.position);
                     transform.rotation = Quaternion.Lerp(transform.rotation, wantedRotation, Time.deltaTime * 0.1f);
+                    swordHitbox.enabled = true;
                     skeletonAnim.SetBool("inMeleeDist", true);
                     if (ifSwapAttack)
                     {
@@ -155,6 +161,7 @@ public class SkeletonSM : MonoBehaviour
     IEnumerator attackDelay()
     {
         yield return readyTime;
+        swordHitbox.enabled = false;
         EventManager.TriggerEvent<SwordSwing, Vector3>(this.transform.position);
         skeletonAnim.SetBool("attackBuffer", true);
         aiState = AIState.attack_state;
