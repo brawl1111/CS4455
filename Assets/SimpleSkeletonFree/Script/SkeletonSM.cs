@@ -103,8 +103,8 @@ public class SkeletonSM : MonoBehaviour
                     skeletonAnim.SetBool("inChase", false);
                     skeletonNav.stoppingDistance = 3.0f;
                     aiState = AIState.ready_state;
-                    break;                   
-                } 
+                    break;
+                }
                 break;
             case AIState.ready_state:
                 skeletonAnim.SetBool("inChase", false);
@@ -126,7 +126,7 @@ public class SkeletonSM : MonoBehaviour
                     skeletonAnim.SetBool("inMeleeDist", false);
                     aiState = AIState.chase_state;
                     break;
-                } 
+                }
                 if (distToPlayer > 10.0f)
                 {
                     aiState = AIState.idle_state;
@@ -147,6 +147,8 @@ public class SkeletonSM : MonoBehaviour
         {
             skeletonAnim.SetBool("isDead", true);
             StartCoroutine(DeathAnimation());
+            // SET THE WIN SCREEN
+            GameObject.Find("GameWinCanvas").GetComponent<GameWinMenuToggle>().GameWinMenuOn();
         }
     }
 
