@@ -20073,9 +20073,9 @@ Transform:
   - {fileID: 1368780034}
   - {fileID: 991918308}
   - {fileID: 1688523144}
+  - {fileID: 757447159}
   - {fileID: 62322287}
   - {fileID: 1180307476}
-  - {fileID: 757447159}
   - {fileID: 29305783}
   - {fileID: 1811069205}
   - {fileID: 1860696856}
@@ -51872,7 +51872,8 @@ MonoBehaviour:
   followPOS: {x: 0, y: 0, z: 0}
   topClampAngle: 60
   bottomClampAngle: 15
-  inputSensitivity: 70
+  mouseSensitivity: 2
+  inputSensitivity: 55
   joystickSensitivity: 2.5
   camera: {fileID: 0}
   player: {fileID: 0}
@@ -73203,6 +73204,40 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 21594444, guid: 695a322a422ca4ce488ad2cc089e212d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 21594444, guid: 695a322a422ca4ce488ad2cc089e212d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 890531835, guid: 695a322a422ca4ce488ad2cc089e212d, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1577773188}
+    - target: {fileID: 894717375, guid: 695a322a422ca4ce488ad2cc089e212d, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 894717375, guid: 695a322a422ca4ce488ad2cc089e212d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 894717375, guid: 695a322a422ca4ce488ad2cc089e212d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 49916053079981670, guid: 695a322a422ca4ce488ad2cc089e212d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 566312124105213410, guid: 695a322a422ca4ce488ad2cc089e212d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3261777710772495266, guid: 695a322a422ca4ce488ad2cc089e212d,
         type: 3}
       propertyPath: respawns.Array.size
@@ -73238,6 +73273,11 @@ PrefabInstance:
       propertyPath: respawns.Array.data[5]
       value: 
       objectReference: {fileID: 520372218}
+    - target: {fileID: 3461844239308530747, guid: 695a322a422ca4ce488ad2cc089e212d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3461844239355581028, guid: 695a322a422ca4ce488ad2cc089e212d,
         type: 3}
       propertyPath: m_Name
@@ -73352,6 +73392,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881088950893595788, guid: 695a322a422ca4ce488ad2cc089e212d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8650893461483020833, guid: 695a322a422ca4ce488ad2cc089e212d,
         type: 3}

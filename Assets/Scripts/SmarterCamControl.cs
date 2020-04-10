@@ -78,6 +78,7 @@ public class SmarterCamControl : MonoBehaviour
                 rotX += joystickY * inputSensitivity * Time.deltaTime;
 
                 rotX = Mathf.Clamp(rotX, -bottomClampAngle, topClampAngle);
+                //Debug.Log("joystickx: " + joystickX + " joystickY: " + joystickY + " roty: " + rotY + " rotx: " + rotX);
 
                 Quaternion localRot = Quaternion.Euler(rotX, rotY, 0.0f);
                 transform.rotation = localRot;
@@ -125,5 +126,10 @@ public class SmarterCamControl : MonoBehaviour
     	//move towards target
     	float step = camMoveSpeed * Time.deltaTime;
     	transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+    }
+
+    public void changeMouseSensitivity(float f)
+    {
+        mouseSensitivity = f;
     }
 }
