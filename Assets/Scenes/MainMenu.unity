@@ -1006,6 +1006,84 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1514920702
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1514920703}
+  - component: {fileID: 1514920705}
+  - component: {fileID: 1514920704}
+  m_Layer: 5
+  m_Name: Subsubtitle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1514920703
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514920702}
+  m_LocalRotation: {x: 0.007218822, y: 0.0068958052, z: 0.7230637, w: 0.69070923}
+  m_LocalPosition: {x: 0, y: 0, z: -2.3848}
+  m_LocalScale: {x: 0.601563, y: 1.0000126, z: 0.600808}
+  m_Children: []
+  m_Father: {fileID: 1580004456}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 1.144, z: 92.622}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 3.7596, y: 5.4594}
+  m_SizeDelta: {x: 423.3, y: 150}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1514920704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514920702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 15d5f9d70b0c943e8b1030b0ca27453c, type: 3}
+    m_FontSize: 24
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 100
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Full of Luscious Trees, Bouncing Llamas, and Dangerous Gobbledygooks, with
+    a Wonderful Forest and a Towering Mountain
+--- !u!222 &1514920705
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514920702}
+  m_CullTransparentMesh: 0
 --- !u!1 &1518152906
 GameObject:
   m_ObjectHideFlags: 0
@@ -1127,6 +1205,8 @@ RectTransform:
   m_LocalScale: {x: 0.6, y: 1, z: 1}
   m_Children:
   - {fileID: 1834777350}
+  - {fileID: 1982147499}
+  - {fileID: 1514920703}
   m_Father: {fileID: 1286249657}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -77.105}
@@ -1197,15 +1277,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1834777349}
   m_LocalRotation: {x: 0.007218822, y: 0.0068958052, z: 0.7230637, w: 0.69070923}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
-  m_LocalScale: {x: 1.0015199, y: 1.664884, z: 1.0002631}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.6751943, y: 1.1224142, z: 0.674347}
   m_Children: []
   m_Father: {fileID: 1580004456}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 1.144, z: 92.622}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -171, y: 5}
+  m_AnchoredPosition: {x: -192, y: 0}
   m_SizeDelta: {x: 600, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1834777351
@@ -1227,7 +1307,84 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 15d5f9d70b0c943e8b1030b0ca27453c, type: 3}
+    m_FontSize: 56
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 100
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "Princess Duchess\u2019s"
+--- !u!222 &1834777352
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834777349}
+  m_CullTransparentMesh: 0
+--- !u!1 &1982147498
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1982147499}
+  - component: {fileID: 1982147501}
+  - component: {fileID: 1982147500}
+  m_Layer: 5
+  m_Name: Subtitle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1982147499
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982147498}
+  m_LocalRotation: {x: 0.007218822, y: 0.0068958052, z: 0.7230637, w: 0.69070923}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalScale: {x: 0.601563, y: 1.0000126, z: 0.600808}
+  m_Children: []
+  m_Father: {fileID: 1580004456}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 1.144, z: 92.622}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -106, y: -0}
+  m_SizeDelta: {x: 463.5, y: 150}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1982147500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982147498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 15d5f9d70b0c943e8b1030b0ca27453c, type: 3}
     m_FontSize: 42
     m_FontStyle: 1
     m_BestFit: 0
@@ -1239,14 +1396,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Spin to Win
---- !u!222 &1834777352
+  m_Text: Excellent Adventure of Extreme Peril and Heroism
+--- !u!222 &1982147501
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1834777349}
+  m_GameObject: {fileID: 1982147498}
   m_CullTransparentMesh: 0
 --- !u!1 &2012508246
 GameObject:
