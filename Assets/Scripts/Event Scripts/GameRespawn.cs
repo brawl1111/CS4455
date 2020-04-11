@@ -24,10 +24,9 @@ public class GameRespawn : MonoBehaviour
     public void RespawnGame()
     {
         player.transform.position = respawns[currentRespawn].transform.position;
-        for (int i = 0; i < 3; i++)
-        {
-            HealthManager.Instance.AddHealth(1);
-        }
+
+        HealthManager.Instance.AddHealth(3);
+
         HealthManager.Instance.SetIsAlive(true);
     }
 

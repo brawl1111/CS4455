@@ -115,8 +115,8 @@ public class SkeletonSM : MonoBehaviour
                 skeletonAnim.SetBool("inChase", false);
                 if (distToPlayer < 3.0f)
                 {
-                    Quaternion wantedRotation = Quaternion.LookRotation(player.transform.position - transform.position);
-                    transform.rotation = Quaternion.Lerp(transform.rotation, wantedRotation, Time.deltaTime * 10f);
+                    //Quaternion wantedRotation = Quaternion.LookRotation(player.transform.position - transform.position);
+                    //transform.rotation = Quaternion.Lerp(transform.rotation, wantedRotation, Time.deltaTime * 10f);
                     skeletonAnim.SetBool("inMeleeDist", true);
                     swordHitbox.enabled = true;
                     if (ifSwapAttack)

@@ -46,7 +46,8 @@ public class HealthManager : MonoBehaviour
             isAlive = true;
             GameObject player = GameObject.FindWithTag("Player");
             player.GetComponent<Animator>().SetTrigger("hasRevived");
-            player.GetComponent<CharacterMovement>().enabled = true;
+            CharacterMovement cm = player.GetComponent<CharacterMovement>();
+            cm.enabled = true;
             gameOverToggle.GameOverMenuOff();
         }
     }

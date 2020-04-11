@@ -140,6 +140,14 @@ public class CharacterMovement : MonoBehaviour
         anim.SetFloat(speedFloat, currSpeed);
     }
 
+    //to fix the respawn glitch where you're stuck in "spin" mode without it showing
+    public void resetSpin()
+    {
+        isSpinning = false;
+        isSpinningCooldownOver = true;
+        anim.SetBool(doneSpinning, true);
+    }
+
     public bool GetIsSpinning()
     {
         return isSpinning;

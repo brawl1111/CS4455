@@ -63,7 +63,31 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0
+        functionName: DisableHurtbox
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: fe9234d29a28db74289f3ccc54b7c1f0,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0
+        functionName: SetAnimDoneSpinning
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 6f0ec01145be4ea498905c2a9a7bf921,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0
+        functionName: resetSpin
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 6f0ec01145be4ea498905c2a9a7bf921,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
