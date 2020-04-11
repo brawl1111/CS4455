@@ -18384,6 +18384,7 @@ Transform:
   - {fileID: 1502858863}
   - {fileID: 1039139538}
   - {fileID: 769292893}
+  - {fileID: 1879237397}
   - {fileID: 360484484}
   - {fileID: 757386573}
   - {fileID: 2052693709}
@@ -18396,7 +18397,6 @@ Transform:
   - {fileID: 895263681}
   - {fileID: 951994391}
   - {fileID: 1744878455}
-  - {fileID: 1879237397}
   m_Father: {fileID: 990465561}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -41743,6 +41743,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AdvancedSpawner(Apple) 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 109828940779840966, guid: c850897d3e4d4a443b2cb5c80542db6d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c850897d3e4d4a443b2cb5c80542db6d, type: 3}
