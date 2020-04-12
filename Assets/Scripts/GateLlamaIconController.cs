@@ -48,14 +48,20 @@ public class GateLlamaIconController : MonoBehaviour
     private void UpdateCount()
     {
         int currLlamaCount = LlamaCounter.Instance.GetLlamaCount();
+        /*
         if (llamaCounter.activeSelf && currLlamaCount != System.Convert.ToInt32(textMesh.text))
         {
             textMesh.text = (llamasRequired - currLlamaCount).ToString();
 
-            if (llamasRequired - currLlamaCount == 0)
+            if (llamasRequired - currLlamaCount <= 0)
             {
                 llamaCounter.SetActive(false);
             }
+        }
+        */
+        if (llamasRequired - currLlamaCount <= 0)
+        {
+            llamaCounter.SetActive(false);
         }
     }
 }
