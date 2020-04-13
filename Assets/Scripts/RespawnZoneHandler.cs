@@ -5,6 +5,7 @@ using UnityEngine;
 public class RespawnZoneHandler : MonoBehaviour
 {
     public int respawnZone;
+    public float yDirection;
     private GameRespawn gameRespawn;
 
     // Start is called before the first frame update
@@ -23,7 +24,7 @@ public class RespawnZoneHandler : MonoBehaviour
     {
         if (collider.CompareTag("Player"))
         {
-            gameRespawn.UpdateCurrentRespawn(respawnZone);
+            gameRespawn.UpdateCurrentRespawn(respawnZone, yDirection);
         }
     }
 }

@@ -14127,6 +14127,11 @@ PrefabInstance:
       propertyPath: respawnZone
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 544008950481611966, guid: c8b8182a4c1d8492cac3cc0a7c2558e4,
+        type: 3}
+      propertyPath: yDirection
+      value: 180
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8b8182a4c1d8492cac3cc0a7c2558e4, type: 3}
 --- !u!4 &1544989528 stripped

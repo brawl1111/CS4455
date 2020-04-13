@@ -42530,6 +42530,11 @@ PrefabInstance:
       propertyPath: respawnZone
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 544008950481611966, guid: c8b8182a4c1d8492cac3cc0a7c2558e4,
+        type: 3}
+      propertyPath: yDirection
+      value: 90
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8b8182a4c1d8492cac3cc0a7c2558e4, type: 3}
 --- !u!4 &1360955074 stripped
@@ -68059,6 +68064,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 544008950481611966, guid: c8b8182a4c1d8492cac3cc0a7c2558e4,
+        type: 3}
+      propertyPath: yDirection
+      value: -90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8b8182a4c1d8492cac3cc0a7c2558e4, type: 3}
