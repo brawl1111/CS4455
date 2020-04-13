@@ -17,13 +17,15 @@ public class PopupToGame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (!CursorController.Instance.CursorIsShown())
+        {
+            CursorController.Instance.ShowCursor();
+        }
     }
 
     public void PopupOff()
@@ -32,5 +34,7 @@ public class PopupToGame : MonoBehaviour
         canvasGroup.blocksRaycasts = false;
         canvasGroup.alpha = 0f;
         Time.timeScale = 1f;
+        CursorController.Instance.HideCursor();
+        Destroy(gameObject);
     }
 }

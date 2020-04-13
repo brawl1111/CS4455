@@ -33,6 +33,7 @@ public class GameOverMenuToggle : MonoBehaviour
         canvasGroup.interactable = true;
         canvasGroup.blocksRaycasts = true;
         canvasGroup.alpha = 1f;
+        CursorController.Instance.ShowCursor();
     }
 
     public void GameOverMenuOff()
@@ -41,5 +42,6 @@ public class GameOverMenuToggle : MonoBehaviour
         canvasGroup.blocksRaycasts = false;
         canvasGroup.alpha = 0f;
         Time.timeScale = 1f;
+        CursorController.Instance.HideCursor();
     }
 }

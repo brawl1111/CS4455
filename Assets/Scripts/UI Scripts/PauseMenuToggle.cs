@@ -44,6 +44,7 @@ public class PauseMenuToggle : MonoBehaviour
         canvasGroup.blocksRaycasts = true;
         canvasGroup.alpha = 1f;
         Time.timeScale = 0f;
+        CursorController.Instance.ShowCursor();
     }
 
     public void PauseMenuOff()
@@ -52,5 +53,6 @@ public class PauseMenuToggle : MonoBehaviour
         canvasGroup.blocksRaycasts = false;
         canvasGroup.alpha = 0f;
         Time.timeScale = 1f;
+        CursorController.Instance.HideCursor();
     }
 }
