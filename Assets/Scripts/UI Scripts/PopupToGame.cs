@@ -1,14 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PopupToGame : MonoBehaviour
 {
     private CanvasGroup canvasGroup;
+    private PopupPanelController panelController;
 
     void Awake()
     {
-        canvasGroup = gameObject.transform.parent.GetComponent<CanvasGroup>();
+        canvasGroup = transform.parent.transform.parent.GetComponent<CanvasGroup>();
+        panelController = transform.parent.transform.parent.GetComponent<PopupPanelController>();
         if (!canvasGroup)
         {
             Debug.LogError("Canvas Group not found.");
@@ -26,6 +29,12 @@ public class PopupToGame : MonoBehaviour
         {
             CursorController.Instance.ShowCursor();
         }
+    }
+
+    public void NextPopupScreen()
+    {
+        string name = transform.parent.name;
+        panelController.TransitionPanels(Int32.Parse(name.Substring(name.Length - 1)));
     }
 
     public void PopupOff()
