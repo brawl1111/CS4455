@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /*
 Singleton design for tracking how many llamas the player has collected
 */
 public class LlamaCounter : MonoBehaviour
 {
-	private int llamaCount = 0;
     private LlamaPopulator llamaPopulator;
 	public static LlamaCounter Instance
 	{
@@ -23,19 +23,31 @@ public class LlamaCounter : MonoBehaviour
     		throw new UnityException("There cannot be more than one LlamaCounter script. The instances are " + s_Instance.name + " and " + name + ".");
         llamaPopulator = GameObject.Find("LlamaContainer").GetComponent<LlamaPopulator>();
         if (llamaPopulator == null) Debug.Log("LlamaContainer could not be found");
-
-
+        if (PlayerPrefs.HasKey("LlamaCount") && SceneManager.GetActiveScene().name == "Section1&2")
+        {
+            PlayerPrefs.DeleteKey("LlamaCount");
+        }
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        //ResetLlamaCount();
+        // If we're starting in the forest, basically
+        if (!PlayerPrefs.HasKey("LlamaCount"))
+        {
+            PlayerPrefs.SetInt("LlamaCount", 0);
+        }
+        // If we're starting in the mountain, basically
+        else
+        {
+            llamaPopulator.AddLlamaCount(GetLlamaCount());
+        }
     }
 
     public void IncrementLlamaCount()
     {
-    	llamaCount++;
+        int llamaCount = GetLlamaCount();
+    	PlayerPrefs.SetInt("LlamaCount", ++llamaCount);
         Debug.Log("you now have " + llamaCount + " llamas");
         llamaPopulator.AddLlamaCount(llamaCount);
     }
@@ -49,13 +61,12 @@ public class LlamaCounter : MonoBehaviour
 
     public void ResetLlamaCount()
     {
-    	llamaCount = 0;
-        //Debug.Log(llamaPopulator);
-        llamaPopulator.RemoveLlamaCount(llamaCount);
+        llamaPopulator.RemoveLlamaCount(GetLlamaCount());
+        PlayerPrefs.SetInt("LlamaCount", 0);
     }
 
     public int GetLlamaCount()
     {
-    	return llamaCount;
+    	return PlayerPrefs.GetInt("LlamaCount");
     }
 }

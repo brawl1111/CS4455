@@ -6,19 +6,30 @@ using UnityEngine.UI;
 public class HeartPopulator : MonoBehaviour
 {
     public Sprite heartIcon;
+    public Text heartCountText;
     private Stack<GameObject> hearts;
 
     // Start is called before the first frame update
     void Start()
     {
         hearts = new Stack<GameObject>();
-        InitHeartIcons();
+        // InitHeartIcons();
     }
 
     // Update is called once per frame
     void Update()
     {
 
+    }
+
+    public void AddHeartCount(int heartCount)
+    {
+        heartCountText.GetComponent<Text>().text = heartCount.ToString();
+    }
+
+    public void RemoveHeartCount(int heartCount)
+    {
+        heartCountText.GetComponent<Text>().text = heartCount.ToString();
     }
 
     public void AddHeartIcon()
@@ -55,5 +66,13 @@ public class HeartPopulator : MonoBehaviour
     public void RemoveHeartIcon()
     {
         Destroy(hearts.Pop());
+    }
+
+    public void RemoveHeartIcons()
+    {
+        while (hearts.Count > 0)
+        {
+            Destroy(hearts.Pop());
+        }
     }
 }

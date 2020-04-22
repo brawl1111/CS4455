@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HealthManager : MonoBehaviour
 {
-	private int health = 3;
+	// private int health = 3;
+    private HeartPopulator heartPopulator;
 	public static HealthManager Instance
 	{
 		get {return s_Instance;}
@@ -25,11 +27,26 @@ public class HealthManager : MonoBehaviour
 
         invincibilityFramesDuration = new WaitForSeconds(2f);
         gameOverToggle = GameObject.Find("GameOverCanvas").GetComponent<GameOverMenuToggle>();
+        heartPopulator = GameObject.Find("HeartContainer").GetComponent<HeartPopulator>();
+        if (PlayerPrefs.HasKey("HealthCount") && SceneManager.GetActiveScene().name == "Section1&2")
+        {
+            PlayerPrefs.DeleteKey("HealthCount");
+        }
+    }
+
+    void Start()
+    {
+        // If we're starting in the forest, basically
+        if (!PlayerPrefs.HasKey("HealthCount"))
+        {
+            PlayerPrefs.SetInt("HealthCount", 3);
+        }
+        heartPopulator.AddHeartCount(GetHealth());
     }
 
     public int GetHealth()
     {
-    	return health;
+    	return PlayerPrefs.GetInt("HealthCount");
     }
 
 
@@ -37,8 +54,8 @@ public class HealthManager : MonoBehaviour
     {
         for (int j = 0; j < i; j++)
         {
-            health++;
-            GameObject.Find("HeartContainer").GetComponent<HeartPopulator>().AddHeartIcon();
+            PlayerPrefs.SetInt("HealthCount", GetHealth() + 1);
+            heartPopulator.AddHeartCount(GetHealth());
         }
         // A little bit of reviving action
         if (!isAlive)
@@ -57,8 +74,10 @@ public class HealthManager : MonoBehaviour
         //Debug.Log("isalive: " + isAlive + " InvincibilityFrames: " + inInvincibilityFrames);
         if (!inInvincibilityFrames && isAlive)
         {
+            int health = GetHealth();
             health -= i;
-            for (int j = 0; j < i; j++) GameObject.Find("HeartContainer").GetComponent<HeartPopulator>().RemoveHeartIcon();
+            PlayerPrefs.SetInt("HealthCount", health);
+            heartPopulator.RemoveHeartCount(health);
             Debug.Log("health: " + health);
             inInvincibilityFrames = true;
             EventManager.TriggerEvent<PlayerHurtSFXEvent, Vector3>(this.transform.position);
@@ -91,12 +110,12 @@ public class HealthManager : MonoBehaviour
 
     public void KillPlayer()
     {
-        SubtractHealth(health);
+        SubtractHealth(GetHealth());
     }
 
     public void KillPlayerByFall()
     {
-        SubtractHealth(health);
+        SubtractHealth(GetHealth());
         HandleDeath();
     }
 
@@ -114,7 +133,7 @@ public class HealthManager : MonoBehaviour
 
     public void RestoreAllHealth()
     {
-        AddHealth(3 - health);
+        AddHealth(3 - GetHealth());
     }
 
     public void RemoveOneHealth()

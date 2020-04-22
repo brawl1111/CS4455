@@ -14,11 +14,17 @@ public class ChangeMouseSensitivity : MonoBehaviour
     {
         scc = cam.GetComponent<SmarterCamControl>();
         if (scc == null) Debug.Log("SmarterCamControl could not be found");
+        if (PlayerPrefs.HasKey("MouseSensitivity"))
+        {
+            s.value = PlayerPrefs.GetFloat("MouseSensitivity");
+            changeMouseSensitivity(s.value);
+        }
     }
 
     public void changeMouseSensitivity(float f)
     {
-    	scc.changeMouseSensitivity(s.value);
+        PlayerPrefs.SetFloat("MouseSensitivity", s.value);
+    	scc.changeMouseSensitivity(PlayerPrefs.GetFloat("MouseSensitivity"));
     }
 
     public void DebugStuff()
