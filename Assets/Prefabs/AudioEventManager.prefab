@@ -48,7 +48,7 @@ MonoBehaviour:
     type: 3}
   treeCrack: {fileID: 8300000, guid: 74a6533555e764b528806b189702cda3, type: 3}
   treeHitGround: {fileID: 8300000, guid: a60b88135287a4121b57f8542df5484d, type: 3}
-  gateSwing: {fileID: 8300000, guid: 251e516755372415998ca2eec1b4c85e, type: 3}
+  gateSwing: {fileID: 8300000, guid: d0e9374dfa7b64727a218ed75ae13919, type: 3}
   jumpSFX: {fileID: 8300000, guid: 999b67639624f904d87967c231cb126f, type: 3}
   llamaPickupSFX: {fileID: 8300000, guid: 224aeeb6fc0c8aa47847054c971bc600, type: 3}
   SpinSFX: {fileID: 8300000, guid: 52304db3cb062c54f8087812eac7a31a, type: 3}
