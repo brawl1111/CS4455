@@ -80,21 +80,29 @@ public class CatChase : MonoBehaviour
                 break;
 
             case AIState.Patrol:
-                //Debug.Log("spider patrol");
-                if (navAgent.remainingDistance == 0)
+
+                if (navAgent.isOnNavMesh)
                 {
-                    if (navAgent.pathPending == false)
+                    if (navAgent.remainingDistance == 0)
                     {
-                        Vector3 randPos = RandomNavSphere(patrolCenter, patrolRadius, -1);
-                        navAgent.SetDestination(randPos);
+                        if (navAgent.pathPending == false)
+                        {
+                            Vector3 randPos = RandomNavSphere(patrolCenter, patrolRadius, -1);
+                            navAgent.SetDestination(randPos);
+                        }
                     }
                 }
+
                 break;
 
             case AIState.Chase:
-                Vector3 dirToPlayer = transform.position - player.transform.position;       // this is not direction to player, idk what this is
-                Vector3 newPos = transform.position - dirToPlayer;
-                navAgent.SetDestination(newPos);
+
+                if (navAgent.isOnNavMesh)
+                {
+                    Vector3 dirToPlayer = transform.position - player.transform.position;       // this is not direction to player, idk what this is
+                    Vector3 newPos = transform.position - dirToPlayer;
+                    navAgent.SetDestination(newPos);
+                }
 
 
                 break;
