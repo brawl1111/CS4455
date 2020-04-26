@@ -8,6 +8,7 @@ public class TargetFollow : MonoBehaviour {
 
 	public void FixedUpdate () {
 		Vector3 destination = targetToFollow.position;
+		//destination.x = transform.position.x;
 		destination.y = transform.position.y;
 		destination.z = transform.position.z;
         transform.position = Vector3.SmoothDamp(transform.position, destination, ref velocity, dampTime);
