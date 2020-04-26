@@ -14,50 +14,72 @@ public class SkeletonSM : MonoBehaviour
         ready_state,
     };
 
+    // Get Components
     public AIState aiState;
     private NavMeshAgent skeletonNav;
     private Animator skeletonAnim;
     private GameObject sword;
     private MeshCollider swordHitbox;
 
+    // Navigation
     public float wanderRadius;
     public float wanderTimer;
-
     private Transform target;
-    //private float timer;
 
+    // Timers for coroutines
     private WaitForSeconds cooldown;
     private WaitForSeconds idleTime;
     private WaitForSeconds readyTime;
     private WaitForSeconds deathTime;
 
+    // Player Object
     private GameObject player;
 
+    // Flags
     bool ifSwapReady;
     bool ifSwapAttack;
     bool isColliding;
 
+    // Skeleton Stats
     private int skeletonHealth;
+    private Renderer skeletonRender;
+    private Material skeletonMat;
+
+    // Colors
+    Color defaultEmis = new Color(120 / 255f, 120 / 255f, 120 / 255f);
 
     // Start is called before the first frame update
     void Start()
     {
+        //Get Components
         skeletonNav = GetComponent<NavMeshAgent>();
         skeletonAnim = GetComponent<Animator>();
-        //skeletonNav.stoppingDistance = 2.0f;
+        skeletonRender = GetComponentInChildren<Renderer>();
+        skeletonMat = GetComponentInChildren<Renderer>().sharedMaterial;
+
+        //Sword Hitbox
         aiState = AIState.idle_state;
         sword = GameObject.Find("SWORD");
         swordHitbox = sword.GetComponent<MeshCollider>();
         swordHitbox.enabled = false;
+
+        //Find Player
+        player = GameObject.FindWithTag("Player");
+
+        //Timers for coroutines
         cooldown = new WaitForSeconds(5f);
         idleTime = new WaitForSeconds(1f);
-        player = GameObject.FindWithTag("Player");
         readyTime = new WaitForSeconds(2.5f);
+        deathTime = new WaitForSeconds(2f);
+
+        //Flags
         ifSwapReady = true;
         ifSwapAttack = true;
         isColliding = false;
+
+        //Skeleton 
         skeletonHealth = 3;
-        deathTime = new WaitForSeconds(2f);
+
     }
 
     // Update is called once per frame
@@ -67,20 +89,6 @@ public class SkeletonSM : MonoBehaviour
         switch(aiState)
         {
             case AIState.idle_state:
-                /*
-                if (distToPlayer < 5.0f)
-                {
-                    Debug.Log("In Melee");
-                    skeletonAnim.SetBool("inMeleeDist", true);
-                    skeletonAnim.SetBool("inChase", false);
-                    aiState = AIState.ready_state;
-                    break;
-                } else if (distToPlayer <= 10.0f)
-                {
-                    skeletonAnim.SetBool("inChase", true);
-                    aiState = AIState.chase_state;
-                    break;
-                } */
                 if (distToPlayer <= 10.0f)
                 {
                     skeletonAnim.SetBool("inChase", true);
@@ -115,8 +123,6 @@ public class SkeletonSM : MonoBehaviour
                 skeletonAnim.SetBool("inChase", false);
                 if (distToPlayer < 3.0f)
                 {
-                    //Quaternion wantedRotation = Quaternion.LookRotation(player.transform.position - transform.position);
-                    //transform.rotation = Quaternion.Lerp(transform.rotation, wantedRotation, Time.deltaTime * 10f);
                     skeletonAnim.SetBool("inMeleeDist", true);
                     swordHitbox.enabled = true;
                     if (ifSwapAttack)
@@ -190,39 +196,20 @@ public class SkeletonSM : MonoBehaviour
 
     void OnTriggerEnter(Collider collision)
     {
-        Vector3 heading = player.transform.position - base.transform.position;
-        float side = Vector3.Dot(heading, base.transform.forward);
-
         if (isColliding) return;
-        if (side > 0 && collision.gameObject.CompareTag("Hurtbox"))
+        if (collision.gameObject.CompareTag("Hurtbox"))
         {
             isColliding = true;
-            if (skeletonAnim.GetBool("attackBuffer") && skeletonAnim.GetBool("inMeleeDist"))
-            {
-                skeletonAnim.SetBool("Block", true);
-                EventManager.TriggerEvent<ShieldClang, Vector3>(this.transform.position);
-                //Debug.Log("Hit");
-            }
-            StartCoroutine(SkeletonShieldCD());
-        } else if (side < 0 && collision.gameObject.CompareTag("Hurtbox"))
-        {
-            isColliding = true;
-            if (skeletonAnim.GetBool("attackBuffer") && skeletonAnim.GetBool("inMeleeDist"))
+            if (skeletonAnim.GetBool("inMeleeDist"))
             {
                 skeletonAnim.SetBool("BackHit", true);
                 skeletonHealth -= 1;
                 EventManager.TriggerEvent<FlinchHit, Vector3>(this.transform.position);
-                //Debug.Log("Hit");
-            }
+                skeletonMat.SetColor("_Emission", Color.red);
+                skeletonMat.SetColor("_Color", Color.red);
+            }       
             StartCoroutine(SkeletonHitCD());
         }
-    }
-
-    IEnumerator SkeletonShieldCD()
-    {
-        yield return idleTime;
-        isColliding = false;
-        skeletonAnim.SetBool("Block", false);
     }
 
     IEnumerator SkeletonHitCD()
@@ -230,12 +217,13 @@ public class SkeletonSM : MonoBehaviour
         yield return idleTime;
         isColliding = false;
         skeletonAnim.SetBool("BackHit", false);
+        skeletonMat.SetColor("_Emission", defaultEmis);
+        skeletonMat.SetColor("_Color", Color.white);
     }
 
     IEnumerator DeathAnimation()
     {
         yield return deathTime;
         Destroy(gameObject);
-        //skeletonAnim.SetBool("isDead", false);
     }
 }
