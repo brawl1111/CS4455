@@ -64,3 +64,6 @@ MonoBehaviour:
   flinchHit: {fileID: 8300000, guid: 3645d972a6a3d664cbb9e97e9e45eb43, type: 3}
   eatAppleSFX: {fileID: 8300000, guid: abbf09a04f08ae744bf005a8122729d6, type: 3}
   playerHurtSFX: {fileID: 8300000, guid: 1d020f2f398df414e9076bdf1dc60172, type: 3}
+  DroneShootSFX: {fileID: 8300000, guid: 847543d9e6416474fa831ab223f00526, type: 3}
+  bombFootstepSFX: {fileID: 8300000, guid: 9d5e22017c5b14a489b065e7b0cbe854, type: 3}
+  checkpointSFX: {fileID: 8300000, guid: 8683bef5b193220418ba51419c846afd, type: 3}

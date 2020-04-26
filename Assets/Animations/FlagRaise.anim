@@ -718,4 +718,12 @@ AnimationClip:
     script: {fileID: 0}
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0
+    functionName: EmitCheckpoint
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: cae6b4328a02b93428908d873a782977,
+      type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
