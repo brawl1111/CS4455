@@ -321,7 +321,7 @@ public class AudioEventManager : MonoBehaviour
         sound.audioSrc.clip = checkpointSFX;
         sound.audioSrc.minDistance = 0f;
         sound.audioSrc.maxDistance = 100f;
-        sound.audioSrc.volume = 0.3f;
+        sound.audioSrc.volume = 0.15f;
         sound.audioSrc.Play();
     }
 }

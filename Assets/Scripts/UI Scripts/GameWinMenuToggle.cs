@@ -48,7 +48,7 @@ public class GameWinMenuToggle : MonoBehaviour
 
     IEnumerator WasteTimeCoroutine()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(0.5f);
         canvasGroup.interactable = true;
         canvasGroup.blocksRaycasts = true;
         canvasGroup.alpha = 1f;
