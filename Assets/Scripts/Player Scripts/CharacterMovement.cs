@@ -236,7 +236,7 @@ public class CharacterMovement : MonoBehaviour
     	} else if (m_Input.Jump && extraJumps > 0)
     	{
             //double jump
-            doubleJumpParticles.Emit(20);
+            //doubleJumpParticles.Emit(20);
     		rb.velocity = Vector3.up * jumpSpeed;
             EventManager.TriggerEvent<JumpSFXEvent, Vector3>(this.transform.position);
     		extraJumps--;

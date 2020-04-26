@@ -203,7 +203,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 19827200, guid: 6c1e328deef14cf41982d5f9232e04ff, type: 3}
       propertyPath: ShapeModule.radius.value
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 19827200, guid: 6c1e328deef14cf41982d5f9232e04ff, type: 3}
       propertyPath: InitialModule.maxNumParticles
@@ -232,6 +232,14 @@ PrefabInstance:
     - target: {fileID: 19827200, guid: 6c1e328deef14cf41982d5f9232e04ff, type: 3}
       propertyPath: InitialModule.startColor.minColor.b
       value: 0.252882
+      objectReference: {fileID: 0}
+    - target: {fileID: 19851714, guid: 6c1e328deef14cf41982d5f9232e04ff, type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19851714, guid: 6c1e328deef14cf41982d5f9232e04ff, type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 19877182, guid: 6c1e328deef14cf41982d5f9232e04ff, type: 3}
       propertyPath: looping
