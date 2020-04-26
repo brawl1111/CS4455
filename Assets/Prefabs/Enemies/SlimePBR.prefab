@@ -74,9 +74,9 @@ GameObject:
   - component: {fileID: 159028537856970702}
   - component: {fileID: 245626908961151004}
   - component: {fileID: -6381578471807770138}
-  - component: {fileID: -2334377018527094109}
   - component: {fileID: 1900070767803394429}
   - component: {fileID: -2910868503614507486}
+  - component: {fileID: 6221512806583951244}
   m_Layer: 0
   m_Name: SlimePBR
   m_TagString: Untagged
@@ -141,26 +141,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &-2334377018527094109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 161111300627753584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47dda4193df510842b4b17243dab70da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  patrolCenter: {x: 0, y: 0, z: 0}
-  aggroRange: 20
-  attackRange: 10
-  player: {fileID: -927199367670048503, guid: d680c521f8b66ec44bec4ccc9289990a, type: 3}
-  patrolRadius: 15
-  baseSpeed: 3
-  aiState: 0
-  prevState: 0
 --- !u!65 &1900070767803394429
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -190,6 +170,26 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &6221512806583951244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161111300627753584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91910130ab9a8c94cbaebb73f5a3149b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolCenter: {x: 0, y: 0, z: 0}
+  aggroRange: 0
+  attackRange: 0
+  player: {fileID: 0}
+  patrolRadius: 0
+  baseSpeed: 0
+  aiState: 0
+  prevState: 0
 --- !u!1 &161213442360375684
 GameObject:
   m_ObjectHideFlags: 0
