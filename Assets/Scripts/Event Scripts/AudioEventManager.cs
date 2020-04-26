@@ -23,6 +23,8 @@ public class AudioEventManager : MonoBehaviour
     public AudioClip flinchHit;
     public AudioClip eatAppleSFX;
     public AudioClip playerHurtSFX;
+    public AudioClip DroneShootSFX;
+    public AudioClip bombFootstepSFX;
 
 
     private UnityAction<Vector3> treeCrackEventListener;
@@ -53,6 +55,10 @@ public class AudioEventManager : MonoBehaviour
 
     private UnityAction<Vector3> playerHurtSFXEventListener;
 
+    private UnityAction<Vector3> droneShootSFXEventListener;
+
+    private UnityAction<Vector3> bombFootstepSFXEventListener;
+
     void Awake()
     {
         treeCrackEventListener = new UnityAction<Vector3>(TreeCrackEventHandler);
@@ -82,6 +88,10 @@ public class AudioEventManager : MonoBehaviour
         eatAppleSFXEventListener = new UnityAction<Vector3>(eatAppleSFXEventHandler);
 
         playerHurtSFXEventListener = new UnityAction<Vector3>(playerHUrtSFXEventHandler); 
+
+        droneShootSFXEventListener = new UnityAction<Vector3>(droneShootSFXEventHandler);
+
+        bombFootstepSFXEventListener = new UnityAction<Vector3>(bombFootstepSFXEventHandler);
     }
 
 
@@ -110,6 +120,8 @@ public class AudioEventManager : MonoBehaviour
         EventManager.StartListening<FlinchHit, Vector3>(flinchHitEventListener);
         EventManager.StartListening<EatAppleSFXEvent, Vector3>(eatAppleSFXEventListener);
         EventManager.StartListening<PlayerHurtSFXEvent, Vector3>(playerHurtSFXEventListener);
+        EventManager.StartListening<DroneShootSFX, Vector3>(droneShootSFXEventListener);
+        EventManager.StartListening<BombFootstepSFXEvent, Vector3>(bombFootstepSFXEventListener);
     }
 
     void OnDisable()
@@ -128,6 +140,8 @@ public class AudioEventManager : MonoBehaviour
         EventManager.StopListening<FlinchHit, Vector3>(flinchHitEventListener);
         EventManager.StopListening<EatAppleSFXEvent, Vector3>(eatAppleSFXEventListener);
         EventManager.StopListening<PlayerHurtSFXEvent, Vector3>(playerHurtSFXEventListener);
+        EventManager.StopListening<DroneShootSFX, Vector3>(droneShootSFXEventListener);
+        EventManager.StopListening<BombFootstepSFXEvent, Vector3>(bombFootstepSFXEventListener);
     }
 
     void TreeCrackEventHandler(Vector3 worldPos)
@@ -265,6 +279,30 @@ public class AudioEventManager : MonoBehaviour
         sound.audioSrc.minDistance = 0f;
         sound.audioSrc.maxDistance = 100f;
         sound.audioSrc.volume = 1.0f;
+        sound.audioSrc.Play();
+    }
+
+    void droneShootSFXEventHandler(Vector3 worldPos)
+    {
+        EventSound3D sound = Instantiate(eventSound3DPrefab, worldPos, Quaternion.identity, null);
+        sound.audioSrc.clip = DroneShootSFX;
+        sound.audioSrc.minDistance = 1f;
+        sound.audioSrc.maxDistance = spikeMaxDistance;
+        sound.audioSrc.volume = 0.2f;
+        sound.audioSrc.spatialBlend = 1.0f;
+        sound.audioSrc.rolloffMode = AudioRolloffMode.Linear;
+        sound.audioSrc.Play();
+    }
+
+    void bombFootstepSFXEventHandler(Vector3 worldPos)
+    {
+        EventSound3D sound = Instantiate(eventSound3DPrefab, worldPos, Quaternion.identity, null);
+        sound.audioSrc.clip = bombFootstepSFX;
+        sound.audioSrc.minDistance = 1f;
+        sound.audioSrc.maxDistance = spikeMaxDistance;
+        sound.audioSrc.volume = 0.2f;
+        sound.audioSrc.spatialBlend = 1.0f;
+        sound.audioSrc.rolloffMode = AudioRolloffMode.Linear;
         sound.audioSrc.Play();
     }
 }

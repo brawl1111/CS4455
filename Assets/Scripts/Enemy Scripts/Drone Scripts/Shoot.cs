@@ -70,7 +70,7 @@ public class Shoot : MonoBehaviour
             dirToPredict.y = 0;
         }
         spawnedObj.GetComponent<Rigidbody>().velocity = dirToPredict * bulletSpeed;
-
+        EventManager.TriggerEvent<DroneShootSFX, Vector3>(this.transform.position);
         // need to fix angle at which bullet is shot, sometimes it is shot into the ground which hits the collider and despawns
 
     }
