@@ -913,7 +913,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &43217353
 GameObject:
@@ -1436,7 +1436,7 @@ PrefabInstance:
     - target: {fileID: 109828940779840964, guid: c850897d3e4d4a443b2cb5c80542db6d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 109828940779840964, guid: c850897d3e4d4a443b2cb5c80542db6d,
         type: 3}
@@ -2436,6 +2436,7 @@ MonoBehaviour:
   maxExtraJumps: 1
   speedWhileSpinning: 8
   spinJumpBoost: 8
+  doubleJumpParticles: {fileID: 2008218387}
 --- !u!95 &100310004
 Animator:
   serializedVersion: 3
@@ -2471,6 +2472,7 @@ Transform:
   - {fileID: 1571215872}
   - {fileID: 930031977}
   - {fileID: 1348888361}
+  - {fileID: 548064870}
   - {fileID: 499778734}
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -3835,7 +3837,7 @@ Transform:
   - {fileID: 1109407198}
   - {fileID: 1343132823}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &153958550
 PrefabInstance:
@@ -34843,7 +34845,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4655139138601034, guid: dca8e056b77d49c4aafe4dbcc2bab713, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4655139138601034, guid: dca8e056b77d49c4aafe4dbcc2bab713, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
