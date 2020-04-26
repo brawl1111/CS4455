@@ -81,11 +81,11 @@ public class AudioEventManager : MonoBehaviour
 
         swordSwingEventListener = new UnityAction<Vector3>(swordSwingEventHandler);
 
-        flinchHitEventListener = new UnityAction<Vector3>(flinchHitEventHandler);
+        flinchHitEventListener = new UnityAction<Vector3>(FlinchHitEventHandler);
 
         eatAppleSFXEventListener = new UnityAction<Vector3>(eatAppleSFXEventHandler);
 
-        playerHurtSFXEventListener = new UnityAction<Vector3>(playerHUrtSFXEventHandler); 
+        playerHurtSFXEventListener = new UnityAction<Vector3>(playerHUrtSFXEventHandler);
 
         droneShootSFXEventListener = new UnityAction<Vector3>(droneShootSFXEventHandler);
 
@@ -243,7 +243,7 @@ public class AudioEventManager : MonoBehaviour
     }
 
 
-    void MinecraftEventHandler(Vector3 worldPos)
+    void FlinchHitEventHandler(Vector3 worldPos)
     {
         EventSound3D sound = Instantiate(eventSound3DPrefab, worldPos, Quaternion.identity, null);
         sound.audioSrc.clip = flinchHit;
