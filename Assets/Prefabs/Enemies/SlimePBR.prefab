@@ -77,6 +77,7 @@ GameObject:
   - component: {fileID: 1900070767803394429}
   - component: {fileID: -2910868503614507486}
   - component: {fileID: 6221512806583951244}
+  - component: {fileID: -151438113098877320}
   m_Layer: 0
   m_Name: SlimePBR
   m_TagString: Untagged
@@ -183,13 +184,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patrolCenter: {x: 0, y: 0, z: 0}
-  aggroRange: 0
-  attackRange: 0
-  player: {fileID: 0}
-  patrolRadius: 0
+  aggroRange: 20
+  attackRange: 10
+  player: {fileID: -927199367670048503, guid: d680c521f8b66ec44bec4ccc9289990a, type: 3}
+  patrolRadius: 15
   baseSpeed: 0
   aiState: 0
   prevState: 0
+--- !u!114 &-151438113098877320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161111300627753584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b2a41811e0a7a4ba11d73cbf34f943, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 2
+  curHP: 2
 --- !u!1 &161213442360375684
 GameObject:
   m_ObjectHideFlags: 0

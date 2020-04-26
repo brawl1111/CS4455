@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
-public class GoombaChase : MonoBehaviour
+public class ShellChase : MonoBehaviour
 {
     private NavMeshAgent navAgent;
     private Animator anim;
@@ -23,7 +23,7 @@ public class GoombaChase : MonoBehaviour
         Patrol,
         Chase
     };
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,7 +46,8 @@ public class GoombaChase : MonoBehaviour
         if (distToPlayer < aggroRange)
         {
             aiState = AIState.Chase;
-        } else
+        }
+        else
         {
             aiState = AIState.Patrol;
         }
@@ -78,13 +79,13 @@ public class GoombaChase : MonoBehaviour
                 Vector3 dirToPlayer = transform.position - player.transform.position;
                 Vector3 newPos = transform.position - dirToPlayer;
                 navAgent.SetDestination(newPos);
-                
+
 
                 break;
 
 
         } // switch
-        
+
     } // update
 
     // origin is navAgent.position, distance is radius of sphere, layermask should = -1
