@@ -5395,16 +5395,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7629222877236713455, guid: f2b3a32e7f7174ba58e94328bd69904d,
-        type: 3}
-      propertyPath: DroneShootSFX
-      value: 
-      objectReference: {fileID: 8300000, guid: 847543d9e6416474fa831ab223f00526, type: 3}
-    - target: {fileID: 7629222877236713455, guid: f2b3a32e7f7174ba58e94328bd69904d,
-        type: 3}
-      propertyPath: bombFootstepSFX
-      value: 
-      objectReference: {fileID: 8300000, guid: 9d5e22017c5b14a489b065e7b0cbe854, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2b3a32e7f7174ba58e94328bd69904d, type: 3}
 --- !u!1001 &306984225
