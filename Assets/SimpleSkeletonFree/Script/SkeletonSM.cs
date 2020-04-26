@@ -24,10 +24,8 @@ public class SkeletonSM : MonoBehaviour
     // Navigation
     public float wanderRadius;
     public float wanderTimer;
-    private Transform target;
 
     // Timers for coroutines
-    private WaitForSeconds cooldown;
     private WaitForSeconds idleTime;
     private WaitForSeconds readyTime;
     private WaitForSeconds deathTime;
@@ -67,10 +65,9 @@ public class SkeletonSM : MonoBehaviour
         player = GameObject.FindWithTag("Player");
 
         //Timers for coroutines
-        cooldown = new WaitForSeconds(5f);
         idleTime = new WaitForSeconds(1f);
-        readyTime = new WaitForSeconds(2.5f);
-        deathTime = new WaitForSeconds(2f);
+        readyTime = new WaitForSeconds(3f);
+        deathTime = new WaitForSeconds(1f);
 
         //Flags
         ifSwapReady = true;
@@ -117,6 +114,10 @@ public class SkeletonSM : MonoBehaviour
                     skeletonNav.stoppingDistance = 3.0f;
                     aiState = AIState.ready_state;
                     break;
+                } else if (distToPlayer > 12.0f)
+                {
+                    aiState = AIState.idle_state;
+                    break;
                 }
                 break;
             case AIState.ready_state:
@@ -124,9 +125,9 @@ public class SkeletonSM : MonoBehaviour
                 if (distToPlayer < 3.0f)
                 {
                     skeletonAnim.SetBool("inMeleeDist", true);
-                    swordHitbox.enabled = true;
                     if (ifSwapAttack)
                     {
+                        swordHitbox.enabled = true;
                         StartCoroutine(attackDelay());
                         ifSwapReady = true;
                         ifSwapAttack = false;
@@ -139,7 +140,7 @@ public class SkeletonSM : MonoBehaviour
                     aiState = AIState.chase_state;
                     break;
                 }
-                if (distToPlayer > 10.0f)
+                if (distToPlayer > 12.0f)
                 {
                     aiState = AIState.idle_state;
                     skeletonAnim.SetBool("inMeleeDist", false);
@@ -200,7 +201,6 @@ public class SkeletonSM : MonoBehaviour
             isColliding = true;
             if (skeletonAnim.GetBool("inMeleeDist"))
             {
-                skeletonAnim.SetBool("BackHit", true);
                 skeletonHealth -= 1;
                 EventManager.TriggerEvent<FlinchHit, Vector3>(this.transform.position);
                 skeletonMat.SetColor("_Emission", Color.red);
@@ -214,7 +214,6 @@ public class SkeletonSM : MonoBehaviour
     {
         yield return idleTime;
         isColliding = false;
-        skeletonAnim.SetBool("BackHit", false);
         skeletonMat.SetColor("_Emission", defaultEmis);
         skeletonMat.SetColor("_Color", Color.white);
     }
