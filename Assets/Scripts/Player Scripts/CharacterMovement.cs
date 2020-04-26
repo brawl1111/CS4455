@@ -52,7 +52,8 @@ public class CharacterMovement : MonoBehaviour
     //information on llamas for each section, where each index is a section
     private int[] llamas = new int[] {0, 0, 0, 0};
 
-    //private int cycleCount = 0;
+    public ParticleSystem doubleJumpParticles;
+
 
     protected bool IsMoveInput
      {
@@ -234,6 +235,8 @@ public class CharacterMovement : MonoBehaviour
             EventManager.TriggerEvent<JumpSFXEvent, Vector3>(this.transform.position);
     	} else if (m_Input.Jump && extraJumps > 0)
     	{
+            //double jump
+            //doubleJumpParticles.Emit(20);
     		rb.velocity = Vector3.up * jumpSpeed;
             EventManager.TriggerEvent<JumpSFXEvent, Vector3>(this.transform.position);
     		extraJumps--;
