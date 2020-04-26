@@ -15,10 +15,11 @@ public class AppleRestoreHealth : MonoBehaviour
     {
     	if (col.gameObject.CompareTag("Player"))
     	{
-    		HealthManager.Instance.AddHealth(healthRestored);
-    		Instantiate(heartParticles, transform.position, Quaternion.identity);
-    		gameObject.SetActive(false);
-    		EventManager.TriggerEvent<EatAppleSFXEvent, Vector3>(this.transform.position);
-    	}
+            HealthManager.Instance.AddHealth(healthRestored);
+            Instantiate(heartParticles, transform.position, Quaternion.identity);
+            gameObject.SetActive(false);
+            EventManager.TriggerEvent<EatAppleSFXEvent, Vector3>(this.transform.position);
+
+        }
     }
 }
