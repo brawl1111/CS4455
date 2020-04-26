@@ -16,6 +16,7 @@ public class HealthManager : MonoBehaviour
     private WaitForSeconds invincibilityFramesDuration;
     private bool inInvincibilityFrames = false;
     private bool isAlive = true;
+    private InvincibilityFrames iframeScript;
 
 	void Awake()
     {
@@ -32,6 +33,8 @@ public class HealthManager : MonoBehaviour
         {
             PlayerPrefs.DeleteKey("HealthCount");
         }
+        iframeScript = GameObject.FindWithTag("Player").GetComponent<InvincibilityFrames>();
+        if (iframeScript == null) Debug.Log("iframe script couldn't be found");
     }
 
     void Start()
@@ -81,6 +84,7 @@ public class HealthManager : MonoBehaviour
             Debug.Log("health: " + health);
             inInvincibilityFrames = true;
             EventManager.TriggerEvent<PlayerHurtSFXEvent, Vector3>(this.transform.position);
+            iframeScript.startIFrame();
             if (health == 0) {
                 HandleDeath();
             }
