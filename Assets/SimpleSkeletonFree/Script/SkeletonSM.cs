@@ -29,6 +29,7 @@ public class SkeletonSM : MonoBehaviour
     private WaitForSeconds idleTime;
     private WaitForSeconds readyTime;
     private WaitForSeconds deathTime;
+    private WaitForSeconds attackTime;
 
     // Player Object
     private GameObject player;
@@ -66,7 +67,8 @@ public class SkeletonSM : MonoBehaviour
 
         //Timers for coroutines
         idleTime = new WaitForSeconds(1f);
-        readyTime = new WaitForSeconds(3f);
+        attackTime = new WaitForSeconds(2f);
+        readyTime = new WaitForSeconds(2f);
         deathTime = new WaitForSeconds(1f);
 
         //Flags
@@ -109,8 +111,6 @@ public class SkeletonSM : MonoBehaviour
                     break;
                 } else if (distToPlayer < 3.0f)
                 {
-                    skeletonAnim.SetBool("inMeleeDist", true);
-                    skeletonAnim.SetBool("inChase", false);
                     skeletonNav.stoppingDistance = 3.0f;
                     aiState = AIState.ready_state;
                     break;
@@ -121,16 +121,14 @@ public class SkeletonSM : MonoBehaviour
                 }
                 break;
             case AIState.ready_state:
-                skeletonAnim.SetBool("inChase", false);
                 if (distToPlayer < 3.0f)
                 {
-                    skeletonAnim.SetBool("inMeleeDist", true);
                     if (ifSwapAttack)
                     {
+                        skeletonAnim.SetBool("inMeleeDist", true);
+                        skeletonAnim.SetBool("inChase", false);
                         swordHitbox.enabled = true;
                         StartCoroutine(attackDelay());
-                        ifSwapReady = true;
-                        ifSwapAttack = false;
                         break;
                     }
                 } else if (distToPlayer >= 4.0f && distToPlayer <= 10.0f)
@@ -142,17 +140,14 @@ public class SkeletonSM : MonoBehaviour
                 }
                 if (distToPlayer > 12.0f)
                 {
-                    aiState = AIState.idle_state;
                     skeletonAnim.SetBool("inMeleeDist", false);
+                    aiState = AIState.idle_state;           
                 }
                 break;
             case AIState.attack_state:
-                skeletonAnim.SetBool("inChase", false);
                 if (ifSwapReady)
                 {
                     StartCoroutine(SwapToReady());
-                    ifSwapAttack = true;
-                    ifSwapReady = false;
                 }
                 break;
         }
@@ -165,17 +160,19 @@ public class SkeletonSM : MonoBehaviour
 
     IEnumerator attackDelay()
     {
-        yield return readyTime;
+        //EventManager.TriggerEvent<SwordSwing, Vector3>(this.transform.position);
+        yield return attackTime;
         swordHitbox.enabled = false;
-        EventManager.TriggerEvent<SwordSwing, Vector3>(this.transform.position);
-        skeletonAnim.SetBool("attackBuffer", true);
+        ifSwapReady = true;
+        ifSwapAttack = false;
         aiState = AIState.attack_state;
     }
 
     IEnumerator SwapToReady()
     {
         yield return readyTime;
-        skeletonAnim.SetBool("attackBuffer", false);
+        ifSwapAttack = true;
+        ifSwapReady = false;
         aiState = AIState.ready_state;
     }
 
@@ -202,7 +199,7 @@ public class SkeletonSM : MonoBehaviour
             if (skeletonAnim.GetBool("inMeleeDist"))
             {
                 skeletonHealth -= 1;
-                EventManager.TriggerEvent<FlinchHit, Vector3>(this.transform.position);
+                EventManager.TriggerEvent<mineCraft, Vector3>(this.transform.position);
                 skeletonMat.SetColor("_Emission", Color.red);
                 skeletonMat.SetColor("_Color", Color.red);
             }       
