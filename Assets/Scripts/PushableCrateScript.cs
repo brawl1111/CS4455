@@ -6,6 +6,7 @@ public class PushableCrateScript : MonoBehaviour
 {
     private Rigidbody rigidbody;
     private CharacterMovement playerMvt;
+    private AudioSource audio;
     private int massPushable = 175;
     private int massHeavy = 10000;
 
@@ -14,6 +15,7 @@ public class PushableCrateScript : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody>();
         playerMvt = GameObject.FindWithTag("Player").GetComponent<CharacterMovement>();
+        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -26,6 +28,24 @@ public class PushableCrateScript : MonoBehaviour
         else
         {
             rigidbody.mass = massHeavy;
+        }
+    }
+
+    void OnTriggerEnter(Collider c)
+    {
+        Debug.Log("We be entered");
+        if (!audio.isPlaying && rigidbody.mass == massPushable && c.CompareTag("Player"))
+        {
+            Debug.Log("We be playin");
+            audio.Play();
+        }
+    }
+
+    void OnTriggerExit(Collider c)
+    {
+        if (c.CompareTag("Player") && audio.isPlaying)
+        {
+            audio.Pause();
         }
     }
 }

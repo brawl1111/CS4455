@@ -25,6 +25,7 @@ public class AudioEventManager : MonoBehaviour
     public AudioClip DroneShootSFX;
     public AudioClip bombFootstepSFX;
     public AudioClip checkpointSFX;
+    public AudioClip cratePushSFX;
 
 
     private UnityAction<Vector3> treeCrackEventListener;
@@ -59,6 +60,8 @@ public class AudioEventManager : MonoBehaviour
 
     private UnityAction<Vector3> checkpointSFXEventListener;
 
+    private UnityAction<Vector3> cratePushSFXEventListener;
+
     void Awake()
     {
         treeCrackEventListener = new UnityAction<Vector3>(TreeCrackEventHandler);
@@ -92,6 +95,8 @@ public class AudioEventManager : MonoBehaviour
         bombFootstepSFXEventListener = new UnityAction<Vector3>(bombFootstepSFXEventHandler);
 
         checkpointSFXEventListener = new UnityAction<Vector3>(checkpointSFXEventHandler);
+
+        cratePushSFXEventListener = new UnityAction<Vector3>(cratePushSFXEventHandler);
     }
 
 
@@ -122,6 +127,7 @@ public class AudioEventManager : MonoBehaviour
         EventManager.StartListening<DroneShootSFX, Vector3>(droneShootSFXEventListener);
         EventManager.StartListening<BombFootstepSFXEvent, Vector3>(bombFootstepSFXEventListener);
         EventManager.StartListening<CheckpointSFXEvent, Vector3>(checkpointSFXEventListener);
+        EventManager.StartListening<CratePushEvent, Vector3>(cratePushSFXEventListener);
     }
 
     void OnDisable()
@@ -142,6 +148,7 @@ public class AudioEventManager : MonoBehaviour
         EventManager.StopListening<DroneShootSFX, Vector3>(droneShootSFXEventListener);
         EventManager.StopListening<BombFootstepSFXEvent, Vector3>(bombFootstepSFXEventListener);
         EventManager.StopListening<CheckpointSFXEvent, Vector3>(checkpointSFXEventListener);
+        EventManager.StopListening<CratePushEvent, Vector3>(cratePushSFXEventListener);
     }
 
     void TreeCrackEventHandler(Vector3 worldPos)
@@ -303,6 +310,16 @@ public class AudioEventManager : MonoBehaviour
     {
         EventSound3D sound = Instantiate(eventSound3DPrefab, worldPos, Quaternion.identity, null);
         sound.audioSrc.clip = checkpointSFX;
+        sound.audioSrc.minDistance = 0f;
+        sound.audioSrc.maxDistance = 100f;
+        sound.audioSrc.volume = 0.15f;
+        sound.audioSrc.Play();
+    }
+
+    void cratePushSFXEventHandler(Vector3 worldPos)
+    {
+        EventSound3D sound = Instantiate(eventSound3DPrefab, worldPos, Quaternion.identity, null);
+        sound.audioSrc.clip = cratePushSFX;
         sound.audioSrc.minDistance = 0f;
         sound.audioSrc.maxDistance = 100f;
         sound.audioSrc.volume = 0.15f;

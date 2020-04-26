@@ -60,10 +60,10 @@ MonoBehaviour:
   boxBreak: {fileID: 8300000, guid: e99f720e578a5432e9e46d7f2990e829, type: 3}
   spikeExtendSFX: {fileID: 8300000, guid: 3e06d7a057b69b045810f683ad7cd661, type: 3}
   swordSwing: {fileID: 8300000, guid: 5fb1ed3a3b92edf4e929879a2da4d73c, type: 3}
-  shieldClang: {fileID: 8300000, guid: fd7c4880c62cfaf4282f491ed72a2bd7, type: 3}
   flinchHit: {fileID: 8300000, guid: 3645d972a6a3d664cbb9e97e9e45eb43, type: 3}
   eatAppleSFX: {fileID: 8300000, guid: abbf09a04f08ae744bf005a8122729d6, type: 3}
   playerHurtSFX: {fileID: 8300000, guid: 1d020f2f398df414e9076bdf1dc60172, type: 3}
   DroneShootSFX: {fileID: 8300000, guid: 847543d9e6416474fa831ab223f00526, type: 3}
   bombFootstepSFX: {fileID: 8300000, guid: 9d5e22017c5b14a489b065e7b0cbe854, type: 3}
   checkpointSFX: {fileID: 8300000, guid: 8683bef5b193220418ba51419c846afd, type: 3}
+  cratePushSFX: {fileID: 8300000, guid: e58564d07389945ce8bdf8c1d04cde59, type: 3}
