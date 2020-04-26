@@ -6,6 +6,7 @@ public class FlagController : MonoBehaviour
 {
     public GameObject flag;
     private Animation flagRaise;
+    private bool isRaised = false;
 
     // Start is called before the first frame update
     void Start()
@@ -21,9 +22,10 @@ public class FlagController : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        if (collider.CompareTag("Player"))
+        if (!isRaised && collider.CompareTag("Player"))
         {
             flagRaise.Play();
+            isRaised = true;
         }
     }
 }
