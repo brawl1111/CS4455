@@ -1440,6 +1440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47dda4193df510842b4b17243dab70da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackCD: 3
   patrolCenter: {x: 0, y: 0, z: 0}
   aggroRange: 20
   attackRange: 10
