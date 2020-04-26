@@ -3060,7 +3060,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You won! You defeated the Gobbledygooks and took back your precious llamas!
+  m_Text: You won! You rescued your precious llamas!
 --- !u!1 &4881088950893595788
 GameObject:
   m_ObjectHideFlags: 0
@@ -3203,7 +3203,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1216542193441118372
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3323,7 +3323,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1641760502382387601
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4103,7 +4103,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7636296976939186149
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4357,8 +4357,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Princess Duchess's Llamas have been let loose by gobbledygooks. \nCollect
-    all the llamas all to win!"
+  m_Text: 'Princess Duchess''s Llamas have escaped! She must travel through her kingdom
+    and rescue her llamas.
+
+    Collect all the llamas all to win!'
 --- !u!1 &8504075852241513571
 GameObject:
   m_ObjectHideFlags: 0
