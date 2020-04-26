@@ -121,6 +121,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthRestored: 1
+  heartParticles: {fileID: 1202522996400206, guid: f87e7926fd589094b8a269e14b8bea5e,
+    type: 3}
 --- !u!114 &7277759971554149451
 MonoBehaviour:
   m_ObjectHideFlags: 0
