@@ -19,7 +19,6 @@ public class AudioEventManager : MonoBehaviour
     public AudioClip boxBreak;
     public AudioClip spikeExtendSFX;
     public AudioClip swordSwing;
-    public AudioClip shieldClang;
     public AudioClip flinchHit;
     public AudioClip eatAppleSFX;
     public AudioClip playerHurtSFX;
@@ -47,8 +46,6 @@ public class AudioEventManager : MonoBehaviour
     private UnityAction<Vector3> spikeExtendSFXListener;
 
     private UnityAction<Vector3> swordSwingEventListener;
-
-    private UnityAction<Vector3> shieldClangEventListener;
 
     private UnityAction<Vector3> flinchHitEventListener;
 
@@ -83,8 +80,6 @@ public class AudioEventManager : MonoBehaviour
         spikeExtendSFXListener = new UnityAction<Vector3>(SpikeExtendSFXHandler);
 
         swordSwingEventListener = new UnityAction<Vector3>(swordSwingEventHandler);
-
-        shieldClangEventListener = new UnityAction<Vector3>(shieldClangEventHandler);
 
         flinchHitEventListener = new UnityAction<Vector3>(flinchHitEventHandler);
 
@@ -121,7 +116,6 @@ public class AudioEventManager : MonoBehaviour
         EventManager.StartListening<BreakableBoxBreakEvent, Vector3>(boxBreakEventListener);
         EventManager.StartListening<SpikeExtendSFXEvent, Vector3>(spikeExtendSFXListener);
         EventManager.StartListening<SwordSwing, Vector3>(swordSwingEventListener);
-        EventManager.StartListening<ShieldClang, Vector3>(shieldClangEventListener);
         EventManager.StartListening<FlinchHit, Vector3>(flinchHitEventListener);
         EventManager.StartListening<EatAppleSFXEvent, Vector3>(eatAppleSFXEventListener);
         EventManager.StartListening<PlayerHurtSFXEvent, Vector3>(playerHurtSFXEventListener);
@@ -142,7 +136,6 @@ public class AudioEventManager : MonoBehaviour
         EventManager.StopListening<BreakableBoxBreakEvent, Vector3>(boxBreakEventListener);
         EventManager.StopListening<SpikeExtendSFXEvent, Vector3>(spikeExtendSFXListener);
         EventManager.StopListening<SwordSwing, Vector3>(swordSwingEventListener);
-        EventManager.StopListening<ShieldClang, Vector3>(shieldClangEventListener);
         EventManager.StopListening<FlinchHit, Vector3>(flinchHitEventListener);
         EventManager.StopListening<EatAppleSFXEvent, Vector3>(eatAppleSFXEventListener);
         EventManager.StopListening<PlayerHurtSFXEvent, Vector3>(playerHurtSFXEventListener);
@@ -249,17 +242,8 @@ public class AudioEventManager : MonoBehaviour
         sound.audioSrc.Play();
     }
 
-    void shieldClangEventHandler(Vector3 worldPos)
-    {
-        EventSound3D sound = Instantiate(eventSound3DPrefab, worldPos, Quaternion.identity, null);
-        sound.audioSrc.clip = shieldClang;
-        sound.audioSrc.minDistance = 0f;
-        sound.audioSrc.maxDistance = 100f;
-        sound.audioSrc.volume = 0.2f;
-        sound.audioSrc.Play();
-    }
 
-    void flinchHitEventHandler(Vector3 worldPos)
+    void MinecraftEventHandler(Vector3 worldPos)
     {
         EventSound3D sound = Instantiate(eventSound3DPrefab, worldPos, Quaternion.identity, null);
         sound.audioSrc.clip = flinchHit;

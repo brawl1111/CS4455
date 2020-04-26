@@ -9,7 +9,7 @@ public class CatChase : MonoBehaviour
     private NavMeshAgent navAgent;
     private Animator anim;
     private Rigidbody rb;
-    private int attackCD;
+    public int attackCD;
     private bool attackReady;
 
     public Vector3 patrolCenter;
@@ -43,7 +43,6 @@ public class CatChase : MonoBehaviour
         patrolCenter = gameObject.transform.position;
         baseSpeed = navAgent.speed;
         rb = GetComponent<Rigidbody>();
-        attackCD = 5;
         attackReady = true;
     }
 
@@ -156,7 +155,7 @@ public class CatChase : MonoBehaviour
         Vector3 jumpDir = getDirToPlayer();      // direction to player
         rb.isKinematic = false;
         navAgent.enabled = false;
-        Vector3 appliedForce = 10 * jumpDir;
+        Vector3 appliedForce = 5 * jumpDir;
         appliedForce.y = 7;
         rb.AddForce(appliedForce, ForceMode.Impulse);
         StartCoroutine(reactivateNav());
