@@ -11,6 +11,7 @@ public class BombChase : MonoBehaviour
     private Animator anim;
     private GameObject[] walls;
     private AudioSource audioSource;
+    private AudioSource fuseSFX;
     //private HealthManager princessHealthManager;
 
     public GameObject player;
@@ -51,6 +52,7 @@ public class BombChase : MonoBehaviour
         waypoints[1] = GameObject.Find("Waypoint2");
 
         audioSource = GetComponent<AudioSource>();
+        fuseSFX = transform.GetChild(0).GetComponent<AudioSource>();
 
         //player = GameObject.Find("BombTestPlayer");
 
@@ -154,7 +156,8 @@ public class BombChase : MonoBehaviour
     IEnumerator DelayedExplosion()
     {
         speedUp();
-
+        // sound.audioSrc.loop = true;
+        fuseSFX.Play();
         Debug.Log("started coroutine at timestamp: " + Time.time);
         yield return new WaitForSecondsRealtime(fuseTime);
         Debug.Log("finish coroutine at timestamp: " + Time.time);
@@ -169,7 +172,9 @@ public class BombChase : MonoBehaviour
         //navAgent.isStopped = true;
         anim.Play("attack01");
         float animTime = anim.GetCurrentAnimatorStateInfo(0).length;
+        fuseSFX.enabled = false;
         audioSource.PlayDelayed(animTime / 2);
+
         yield return new WaitForSecondsRealtime(animTime);        // wait until exploding animation is done to set wall to inactive
         foreach (GameObject wall in walls)
         {

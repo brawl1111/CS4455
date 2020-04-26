@@ -13,6 +13,7 @@ public class GoombaChase : MonoBehaviour
     public float aggroRange;
     public GameObject player;
     public int patrolRadius;
+    public float baseSpeed;
 
     public AIState aiState;
 
@@ -33,6 +34,7 @@ public class GoombaChase : MonoBehaviour
         anim = GetComponent<Animator>();
         //patrolRadius = 3;            // or can set patrolRadius in prefab in Inspector
         patrolCenter = gameObject.transform.position;
+        baseSpeed = navAgent.speed;
     }
 
     // Update is called once per frame
@@ -60,6 +62,7 @@ public class GoombaChase : MonoBehaviour
 
             case AIState.Patrol:
                 //Debug.Log("spider patrol");
+                navAgent.speed = baseSpeed;
                 if (navAgent.remainingDistance == 0)
                 {
                     if (navAgent.pathPending == false)
@@ -71,6 +74,7 @@ public class GoombaChase : MonoBehaviour
                 break;
 
             case AIState.Chase:
+                navAgent.speed = baseSpeed * 2;
                 Vector3 dirToPlayer = transform.position - player.transform.position;
                 Vector3 newPos = transform.position - dirToPlayer;
                 navAgent.SetDestination(newPos);

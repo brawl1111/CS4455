@@ -16,6 +16,7 @@ TagManager:
   - Enemy
   - terrain
   - Knockable Tree
+  - Bullet
   layers:
   - Default
   - TransparentFX

@@ -38,7 +38,7 @@ public class DespawnBullet : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //Debug.Log(other.gameObject.tag);
-        if (!other.CompareTag("Platform"))
+        if (!other.CompareTag("Platform") && !other.CompareTag("drone"))
         {
             gameObject.SetActive(false);
         }

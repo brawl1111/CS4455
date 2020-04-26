@@ -159,8 +159,6 @@ public class SkeletonSM : MonoBehaviour
         {
             skeletonAnim.SetBool("isDead", true);
             StartCoroutine(DeathAnimation());
-            // SET THE WIN SCREEN
-            GameObject.Find("GameWinCanvas").GetComponent<GameWinMenuToggle>().GameWinMenuOn();
         }
     }
 
