@@ -73307,6 +73307,12 @@ PrefabInstance:
       propertyPath: section
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4236211401695621306, guid: d3b1a2e30b1504e59a387370a2867b7e,
+        type: 3}
+      propertyPath: starParticles
+      value: 
+      objectReference: {fileID: 1933607824282986, guid: 3c87503deada045dfad4b3f34d340ae0,
+        type: 3}
     - target: {fileID: 4461590636845074378, guid: d3b1a2e30b1504e59a387370a2867b7e,
         type: 3}
       propertyPath: m_Layer
