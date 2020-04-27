@@ -27,8 +27,6 @@ public class TurnTile : MonoBehaviour
             {
                 transform.Rotate(0, 90, 0);
                 bigTile.transform.Rotate(0, 90, 0);
-                //bigTile.GetComponent<Animator>().Play("RotateTile90");
-                Debug.Log("TurnTile.cs: tile rotated");
             }
         }
     }
