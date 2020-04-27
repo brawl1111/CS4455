@@ -243,6 +243,10 @@ PrefabInstance:
       propertyPath: InitialModule.startSizeZ.minMaxState
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 19851714, guid: 6c1e328deef14cf41982d5f9232e04ff, type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 19877182, guid: 6c1e328deef14cf41982d5f9232e04ff, type: 3}
       propertyPath: looping
       value: 1
@@ -270,6 +274,10 @@ PrefabInstance:
     - target: {fileID: 19877182, guid: 6c1e328deef14cf41982d5f9232e04ff, type: 3}
       propertyPath: InitialModule.startColor.minColor.b
       value: 0.042536218
+      objectReference: {fileID: 0}
+    - target: {fileID: 19877182, guid: 6c1e328deef14cf41982d5f9232e04ff, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c1e328deef14cf41982d5f9232e04ff, type: 3}
