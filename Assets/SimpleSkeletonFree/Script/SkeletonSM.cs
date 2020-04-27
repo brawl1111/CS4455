@@ -78,6 +78,7 @@ public class SkeletonSM : MonoBehaviour
 
         //Skeleton 
         skeletonHealth = 3;
+        skeletonNav.stoppingDistance = 3.0f;
 
     }
 
@@ -88,13 +89,13 @@ public class SkeletonSM : MonoBehaviour
         switch(aiState)
         {
             case AIState.idle_state:
-                if (distToPlayer <= 10.0f)
+                if (distToPlayer <= 15.0f)
                 {
                     skeletonAnim.SetBool("inChase", true);
                     aiState = AIState.chase_state;
                     break;
                 }
-                if (distToPlayer > 10.0f && !skeletonNav.pathPending)
+                if (distToPlayer > 15.0f && !skeletonNav.pathPending)
                 {
                     skeletonAnim.SetBool("inChase", true);
                     Vector3 newPos = RandomNavSphere(base.transform.position, wanderRadius, NavMesh.AllAreas);
@@ -103,26 +104,27 @@ public class SkeletonSM : MonoBehaviour
                 }
                 break;
             case AIState.chase_state:
-                if (distToPlayer >= 4.0f && distToPlayer <= 10.0f)
+                if (distToPlayer >= 5.0f && distToPlayer <= 15.0f)
                 {
                     Vector3 dirToPlayer = base.transform.position - player.transform.position;
                     Vector3 newPos = base.transform.position - dirToPlayer;
                     skeletonNav.SetDestination(newPos);
                     break;
-                } else if (distToPlayer < 3.0f)
+                } else if (distToPlayer < 5.0f)
                 {
-                    skeletonNav.stoppingDistance = 3.0f;
+                    skeletonNav.ResetPath();
                     aiState = AIState.ready_state;
                     break;
-                } else if (distToPlayer > 12.0f)
+                } else if (distToPlayer > 15.0f)
                 {
                     aiState = AIState.idle_state;
                     break;
                 }
                 break;
             case AIState.ready_state:
-                if (distToPlayer < 3.0f)
+                if (distToPlayer < 5.0f)
                 {
+                    skeletonNav.ResetPath();
                     if (ifSwapAttack)
                     {
                         skeletonAnim.SetBool("inMeleeDist", true);
@@ -131,14 +133,14 @@ public class SkeletonSM : MonoBehaviour
                         StartCoroutine(attackDelay());
                         break;
                     }
-                } else if (distToPlayer >= 4.0f && distToPlayer <= 10.0f)
+                } else if (distToPlayer >= 5.0f && distToPlayer <= 15.0f)
                 {
                     skeletonAnim.SetBool("inChase", true);
                     skeletonAnim.SetBool("inMeleeDist", false);
                     aiState = AIState.chase_state;
                     break;
                 }
-                if (distToPlayer > 12.0f)
+                if (distToPlayer > 15.0f)
                 {
                     skeletonAnim.SetBool("inMeleeDist", false);
                     aiState = AIState.idle_state;           
