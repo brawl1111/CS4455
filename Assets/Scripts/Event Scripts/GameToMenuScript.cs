@@ -19,6 +19,7 @@ public class GameToMenuScript : MonoBehaviour
 
     public void GoToMenu()
     {
+        EventManager.TriggerEvent<ButtonClickEvent, Vector3>(transform.position);
         SceneManager.LoadScene("MainMenu");
     }
 }

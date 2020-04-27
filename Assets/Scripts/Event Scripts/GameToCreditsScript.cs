@@ -19,6 +19,7 @@ public class GameToCreditsScript : MonoBehaviour
 
     public void GoToCredits()
     {
+        EventManager.TriggerEvent<ButtonClickEvent, Vector3>(transform.position);
         Time.timeScale = 1f;
         SceneManager.LoadScene("Credits");
     }
