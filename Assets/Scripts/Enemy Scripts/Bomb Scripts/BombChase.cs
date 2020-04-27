@@ -175,14 +175,19 @@ public class BombChase : MonoBehaviour
         fuseSFX.enabled = false;
         audioSource.PlayDelayed(animTime / 2);
 
-        yield return new WaitForSecondsRealtime(animTime);        // wait until exploding animation is done to set wall to inactive
-        foreach (GameObject wall in walls)
-        {
-            if (Vector3.Distance(transform.position, wall.transform.position) <= blastRadius + 5)
-            {
-                wall.SetActive(false);
-            }
-        }
+        yield return new WaitForSecondsRealtime(animTime * 0.75f);        // wait until exploding animation is done to set wall to inactive
+        transform.GetChild(1).SetActive(true);
+        // foreach (GameObject wall in walls)
+        // {
+        //     if (Vector3.Distance(transform.position, wall.transform.position) <= blastRadius + 5)
+        //     {
+        //         wall.SetActive(false);
+        //         if (wall.GetComponent<BlowUpWall>()) {
+        //             Debug.Log("expliding wall");
+        //             wall.GetComponent<BlowUpWall>().ExplodeWall();
+        //         }
+        //     }
+        // }
 
         if (Vector3.Distance(transform.position, player.transform.position) <= blastRadius / 2)
         {
