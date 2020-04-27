@@ -17,6 +17,7 @@ TagManager:
   - terrain
   - Knockable Tree
   - Bullet
+  - Explosion
   layers:
   - Default
   - TransparentFX

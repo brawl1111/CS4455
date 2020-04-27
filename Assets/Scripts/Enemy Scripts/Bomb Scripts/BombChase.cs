@@ -176,7 +176,7 @@ public class BombChase : MonoBehaviour
         audioSource.PlayDelayed(animTime / 2);
 
         yield return new WaitForSecondsRealtime(animTime * 0.75f);        // wait until exploding animation is done to set wall to inactive
-        transform.GetChild(1).SetActive(true);
+        transform.GetChild(1).gameObject.SetActive(true);
         // foreach (GameObject wall in walls)
         // {
         //     if (Vector3.Distance(transform.position, wall.transform.position) <= blastRadius + 5)

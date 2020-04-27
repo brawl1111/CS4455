@@ -6,8 +6,8 @@ public class RockLifetime : MonoBehaviour
 {
 	private MeshRenderer m;
 	private WaitForSeconds blinkWait, fasterBlinkWait;
-	private float blinkWaitSeconds = 0.15f;
-	private float fasterBlinkWaitSeconds = 0.07f;
+	private float blinkWaitSeconds = 0.2f;
+	private float fasterBlinkWaitSeconds = 0.15f;
     // Start is called before the first frame update
     void Start()
     {
@@ -75,16 +75,7 @@ public class RockLifetime : MonoBehaviour
     	yield return fasterBlinkWait;
     	m.enabled = false;
     	yield return fasterBlinkWait;
-    	m.enabled = true;
-    	yield return fasterBlinkWait;
-    	m.enabled = false;
-    	yield return fasterBlinkWait;
-    	m.enabled = true;
-    	yield return fasterBlinkWait;
-    	m.enabled = false;
-    	yield return fasterBlinkWait;
-    	m.enabled = true;
-    	yield return fasterBlinkWait;
+
     	Destroy(gameObject);
     }
 }
