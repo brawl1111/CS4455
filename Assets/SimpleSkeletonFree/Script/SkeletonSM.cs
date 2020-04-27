@@ -199,7 +199,7 @@ public class SkeletonSM : MonoBehaviour
             if (skeletonAnim.GetBool("inMeleeDist"))
             {
                 skeletonHealth -= 1;
-                EventManager.TriggerEvent<mineCraft, Vector3>(this.transform.position);
+                EventManager.TriggerEvent<FlinchHit, Vector3>(this.transform.position);
                 skeletonMat.SetColor("_Emission", Color.red);
                 skeletonMat.SetColor("_Color", Color.red);
             }       
