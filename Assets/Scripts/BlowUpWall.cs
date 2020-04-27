@@ -9,11 +9,11 @@ public class BlowUpWall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("b"))
-        {
-        	Instantiate(newWall, transform.position, transform.rotation);
-        	Destroy(gameObject);
-        }
+        // if (Input.GetKeyDown("b"))
+        // {
+        // 	Instantiate(newWall, transform.position, transform.rotation);
+        // 	Destroy(gameObject);
+        // }
     }
 
     void OnTriggerEnter(Collider col)
