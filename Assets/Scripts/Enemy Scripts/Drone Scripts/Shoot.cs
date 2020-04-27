@@ -51,7 +51,10 @@ public class Shoot : MonoBehaviour
     private void shootBullet()
     {
         if (Vector3.Distance(player.transform.position, transform.position) > aggroDistance) return;
-        GameObject spawnedObj = ammo[FindFirstDeactiveIndex()];
+
+        //GameObject spawnedObj = ammo[FindFirstDeactiveIndex()];
+        GameObject spawnedObj = GetFirstDeactiveBullet();
+
         spawnedObj.SetActive(true);
 
         Vector3 dirToPlayer = getDirToTarget(player.transform.position, transform.position);
@@ -91,6 +94,19 @@ public class Shoot : MonoBehaviour
             Debug.Log("no deactive " + bullet + " objs");
         }
         return index;
+    }
+
+    private GameObject GetFirstDeactiveBullet()
+    {
+        foreach (GameObject curBullet in ammo)
+        {
+            if (curBullet.activeSelf == false)
+            {
+                return curBullet;
+            }
+        }
+        Debug.LogError("no deactive bullets in GetFirstDeactiveBullet");
+        return null;
     }
 
     private Vector3 getDirToTarget(Vector3 target, Vector3 origin)
