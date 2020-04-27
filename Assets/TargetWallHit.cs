@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TargetWallHit : MonoBehaviour
 {
+    public GameObject particle;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,8 @@ public class TargetWallHit : MonoBehaviour
         if (other.CompareTag("Bullet"))
         {
             //Debug.Log("target hit");
+            EventManager.TriggerEvent<TargetHitSFXEvent, Vector3>(this.transform.position);
+            Instantiate(particle, transform.position, Quaternion.identity);
             gameObject.transform.parent.gameObject.SetActive(false);
         }
     }

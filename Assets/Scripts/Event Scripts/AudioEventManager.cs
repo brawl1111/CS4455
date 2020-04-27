@@ -27,6 +27,7 @@ public class AudioEventManager : MonoBehaviour
     public AudioClip checkpointSFX;
     public AudioClip buttonClick;
     public AudioClip startButtonClick;
+    public AudioClip targetHitSFX;
 
 
     private UnityAction<Vector3> treeCrackEventListener;
@@ -65,6 +66,8 @@ public class AudioEventManager : MonoBehaviour
 
     private UnityAction<Vector3> startButtonClickEventListener;
 
+    private UnityAction<Vector3> targetHitSFXEventListener;
+
     void Awake()
     {
         treeCrackEventListener = new UnityAction<Vector3>(TreeCrackEventHandler);
@@ -102,6 +105,8 @@ public class AudioEventManager : MonoBehaviour
         buttonClickEventListener = new UnityAction<Vector3>(ButtonClickEventHandler);
 
         startButtonClickEventListener = new UnityAction<Vector3>(StartButtonClickEventHandler);
+
+        targetHitSFXEventListener = new UnityAction<Vector3>(targetHitSFXEventHandler);
     }
 
 
@@ -134,6 +139,7 @@ public class AudioEventManager : MonoBehaviour
         EventManager.StartListening<CheckpointSFXEvent, Vector3>(checkpointSFXEventListener);
         EventManager.StartListening<ButtonClickEvent, Vector3>(buttonClickEventListener);
         EventManager.StartListening<StartButtonClickEvent, Vector3>(startButtonClickEventListener);
+        EventManager.StartListening<TargetHitSFXEvent, Vector3>(targetHitSFXEventListener);
     }
 
     void OnDisable()
@@ -156,6 +162,7 @@ public class AudioEventManager : MonoBehaviour
         EventManager.StopListening<CheckpointSFXEvent, Vector3>(checkpointSFXEventListener);
         EventManager.StopListening<ButtonClickEvent, Vector3>(buttonClickEventListener);
         EventManager.StopListening<StartButtonClickEvent, Vector3>(startButtonClickEventListener);
+        EventManager.StopListening<TargetHitSFXEvent, Vector3>(targetHitSFXEventListener);
     }
 
     void TreeCrackEventHandler(Vector3 worldPos)
@@ -340,6 +347,16 @@ public class AudioEventManager : MonoBehaviour
         sound.audioSrc.minDistance = 0f;
         sound.audioSrc.maxDistance = 100f;
         sound.audioSrc.volume = 0.15f;
+        sound.audioSrc.Play();
+    }
+
+    void targetHitSFXEventHandler(Vector3 worldPos)
+    {
+        EventSound3D sound = Instantiate(eventSound3DPrefab, worldPos, Quaternion.identity, null);
+        sound.audioSrc.clip = targetHitSFX;
+        sound.audioSrc.minDistance = 0f;
+        sound.audioSrc.maxDistance = 100f;
+        sound.audioSrc.volume = 0.50f;
         sound.audioSrc.Play();
     }
 }
