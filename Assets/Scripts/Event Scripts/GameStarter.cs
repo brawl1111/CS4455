@@ -19,6 +19,7 @@ public class GameStarter : MonoBehaviour
 
     public void StartGame()
     {
+        EventManager.TriggerEvent<StartButtonClickEvent, Vector3>(transform.position);
         SceneManager.LoadScene("Section1&2");
         CursorController.Instance.HideCursor();
     }

@@ -25,6 +25,7 @@ public class GameRespawn : MonoBehaviour
 
     public void RespawnGame()
     {
+        EventManager.TriggerEvent<ButtonClickEvent, Vector3>(transform.position);
         player.transform.position = respawns[currentRespawn].transform.position;
         player.transform.rotation = Quaternion.Euler(0f, yAxis, 0f);
 

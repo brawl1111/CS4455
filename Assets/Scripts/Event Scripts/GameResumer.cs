@@ -18,6 +18,7 @@ public class GameResumer : MonoBehaviour
 
     public void ResumeGame()
     {
+        EventManager.TriggerEvent<ButtonClickEvent, Vector3>(transform.position);
         this.transform.parent.transform.parent.GetComponent<PauseMenuToggle>().PauseMenuOff();
     }
 }

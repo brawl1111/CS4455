@@ -25,6 +25,8 @@ public class AudioEventManager : MonoBehaviour
     public AudioClip DroneShootSFX;
     public AudioClip bombFootstepSFX;
     public AudioClip checkpointSFX;
+    public AudioClip buttonClick;
+    public AudioClip startButtonClick;
 
 
     private UnityAction<Vector3> treeCrackEventListener;
@@ -59,6 +61,10 @@ public class AudioEventManager : MonoBehaviour
 
     private UnityAction<Vector3> checkpointSFXEventListener;
 
+    private UnityAction<Vector3> buttonClickEventListener;
+
+    private UnityAction<Vector3> startButtonClickEventListener;
+
     void Awake()
     {
         treeCrackEventListener = new UnityAction<Vector3>(TreeCrackEventHandler);
@@ -92,6 +98,10 @@ public class AudioEventManager : MonoBehaviour
         bombFootstepSFXEventListener = new UnityAction<Vector3>(bombFootstepSFXEventHandler);
 
         checkpointSFXEventListener = new UnityAction<Vector3>(checkpointSFXEventHandler);
+
+        buttonClickEventListener = new UnityAction<Vector3>(ButtonClickEventHandler);
+
+        startButtonClickEventListener = new UnityAction<Vector3>(StartButtonClickEventHandler);
     }
 
 
@@ -122,6 +132,8 @@ public class AudioEventManager : MonoBehaviour
         EventManager.StartListening<DroneShootSFX, Vector3>(droneShootSFXEventListener);
         EventManager.StartListening<BombFootstepSFXEvent, Vector3>(bombFootstepSFXEventListener);
         EventManager.StartListening<CheckpointSFXEvent, Vector3>(checkpointSFXEventListener);
+        EventManager.StartListening<ButtonClickEvent, Vector3>(buttonClickEventListener);
+        EventManager.StartListening<StartButtonClickEvent, Vector3>(startButtonClickEventListener);
     }
 
     void OnDisable()
@@ -142,6 +154,8 @@ public class AudioEventManager : MonoBehaviour
         EventManager.StopListening<DroneShootSFX, Vector3>(droneShootSFXEventListener);
         EventManager.StopListening<BombFootstepSFXEvent, Vector3>(bombFootstepSFXEventListener);
         EventManager.StopListening<CheckpointSFXEvent, Vector3>(checkpointSFXEventListener);
+        EventManager.StopListening<ButtonClickEvent, Vector3>(buttonClickEventListener);
+        EventManager.StopListening<StartButtonClickEvent, Vector3>(startButtonClickEventListener);
     }
 
     void TreeCrackEventHandler(Vector3 worldPos)
@@ -303,6 +317,26 @@ public class AudioEventManager : MonoBehaviour
     {
         EventSound3D sound = Instantiate(eventSound3DPrefab, worldPos, Quaternion.identity, null);
         sound.audioSrc.clip = checkpointSFX;
+        sound.audioSrc.minDistance = 0f;
+        sound.audioSrc.maxDistance = 100f;
+        sound.audioSrc.volume = 0.15f;
+        sound.audioSrc.Play();
+    }
+
+    void ButtonClickEventHandler(Vector3 worldPos)
+    {
+        EventSound3D sound = Instantiate(eventSound3DPrefab, worldPos, Quaternion.identity, null);
+        sound.audioSrc.clip = buttonClick;
+        sound.audioSrc.minDistance = 0f;
+        sound.audioSrc.maxDistance = 100f;
+        sound.audioSrc.volume = 0.15f;
+        sound.audioSrc.Play();
+    }
+
+    void StartButtonClickEventHandler(Vector3 worldPos)
+    {
+        EventSound3D sound = Instantiate(eventSound3DPrefab, worldPos, Quaternion.identity, null);
+        sound.audioSrc.clip = startButtonClick;
         sound.audioSrc.minDistance = 0f;
         sound.audioSrc.maxDistance = 100f;
         sound.audioSrc.volume = 0.15f;

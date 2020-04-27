@@ -18,6 +18,7 @@ public class GameQuitter : MonoBehaviour
 
     public void EndGame()
     {
+        EventManager.TriggerEvent<ButtonClickEvent, Vector3>(transform.position);
         Application.Quit();
     }
 }
