@@ -18,6 +18,7 @@ public class PopupPanelController : MonoBehaviour
 
     public void TransitionPanels(int currPanel)
     {
+        EventManager.TriggerEvent<ButtonClickEvent, Vector3>(transform.position);
         transform.Find("Panel " + currPanel.ToString()).gameObject.SetActive(false);
         transform.Find("Panel " + (currPanel + 1).ToString()).gameObject.SetActive(true);
     }
