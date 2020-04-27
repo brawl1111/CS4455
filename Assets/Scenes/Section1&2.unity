@@ -357,7 +357,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -1066,7 +1066,7 @@ PrefabInstance:
     - target: {fileID: 685462044740673561, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 896610426435349846, guid: 4bd89b97508d7a648beea1102f47f053,
@@ -1082,37 +1082,37 @@ PrefabInstance:
     - target: {fileID: 2266462442234819269, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 3942597522641610127, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 5197884483389951458, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 5558962202587806656, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 6177336508833429976, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 6181667252425615160, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 6275172035618353959, guid: 4bd89b97508d7a648beea1102f47f053,
@@ -1128,7 +1128,7 @@ PrefabInstance:
     - target: {fileID: 6898603201303558455, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 7691526401023413383, guid: 4bd89b97508d7a648beea1102f47f053,
@@ -1199,7 +1199,7 @@ PrefabInstance:
     - target: {fileID: 7691526401314837888, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 7691526401314837890, guid: 4bd89b97508d7a648beea1102f47f053,
@@ -1210,7 +1210,7 @@ PrefabInstance:
     - target: {fileID: 7691526402094292105, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 7691526402094292106, guid: 4bd89b97508d7a648beea1102f47f053,
@@ -1241,13 +1241,13 @@ PrefabInstance:
     - target: {fileID: 8779425606988209659, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 9093396793137850807, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     m_RemovedComponents: []
@@ -1832,8 +1832,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 890eb7b232b4c4e82804ff755e3d30db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!65 &49208464
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1999,8 +1999,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdf370fc54958cf41a7f563d78c5dc2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   bigTile: {fileID: 793516566}
 --- !u!65 &49408079
 BoxCollider:
@@ -2025,8 +2025,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42e9497912602694da8548596e2e13fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   bigTile: {fileID: 793516566}
 --- !u!1 &49979701 stripped
 GameObject:
@@ -2485,7 +2485,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -3130,7 +3130,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -3295,7 +3295,7 @@ PrefabInstance:
     - target: {fileID: 2803536135699671091, guid: 1610d78e4fbc2fb41b433ec727755b69,
         type: 3}
       propertyPath: enemyPrefab
-      value: 
+      value:
       objectReference: {fileID: 1214937682188914204, guid: 7473ecec14cacd24c8c2b821f7befc9e,
         type: 3}
     - target: {fileID: 5318017506150367557, guid: 1610d78e4fbc2fb41b433ec727755b69,
@@ -3381,7 +3381,7 @@ PrefabInstance:
     - target: {fileID: 2803536135699671091, guid: 1610d78e4fbc2fb41b433ec727755b69,
         type: 3}
       propertyPath: enemyPrefab
-      value: 
+      value:
       objectReference: {fileID: 1818861082154570, guid: caed116357ac2e742b0551f19bae89c4,
         type: 3}
     - target: {fileID: 5318017506150367557, guid: 1610d78e4fbc2fb41b433ec727755b69,
@@ -4406,7 +4406,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -4611,8 +4611,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8267e5a3a9a3af4bb6864ac741e1e5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!4 &120567695
 Transform:
   m_ObjectHideFlags: 0
@@ -4982,7 +4982,7 @@ PrefabInstance:
     - target: {fileID: 5550919555056696876, guid: b11b7c3d47fdd49759dea695f6aebcb1,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b11b7c3d47fdd49759dea695f6aebcb1, type: 3}
@@ -5442,7 +5442,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -5907,7 +5907,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -6529,7 +6529,7 @@ PrefabInstance:
     - target: {fileID: 109828940779840965, guid: c850897d3e4d4a443b2cb5c80542db6d,
         type: 3}
       propertyPath: prefab
-      value: 
+      value:
       objectReference: {fileID: 1214937682188914204, guid: 7473ecec14cacd24c8c2b821f7befc9e,
         type: 3}
     - target: {fileID: 109828940779840965, guid: c850897d3e4d4a443b2cb5c80542db6d,
@@ -6575,43 +6575,43 @@ PrefabInstance:
     - target: {fileID: 2201005237964023244, guid: 77986d07ae140e54ba9905d2edaeb814,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 2534120745170400050, guid: 77986d07ae140e54ba9905d2edaeb814,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 2671894467909287634, guid: 77986d07ae140e54ba9905d2edaeb814,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 2796101898899399552, guid: 77986d07ae140e54ba9905d2edaeb814,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 3285565902549562624, guid: 77986d07ae140e54ba9905d2edaeb814,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 4851477067304120312, guid: 77986d07ae140e54ba9905d2edaeb814,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 5090795133918920217, guid: 77986d07ae140e54ba9905d2edaeb814,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 5289743095829689228, guid: 77986d07ae140e54ba9905d2edaeb814,
@@ -6642,7 +6642,7 @@ PrefabInstance:
     - target: {fileID: 5289743095829689230, guid: 77986d07ae140e54ba9905d2edaeb814,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 5289743095864341308, guid: 77986d07ae140e54ba9905d2edaeb814,
@@ -6653,7 +6653,7 @@ PrefabInstance:
     - target: {fileID: 5289743095864341310, guid: 77986d07ae140e54ba9905d2edaeb814,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 5289743096013720232, guid: 77986d07ae140e54ba9905d2edaeb814,
@@ -6724,7 +6724,7 @@ PrefabInstance:
     - target: {fileID: 5490657279099609338, guid: 77986d07ae140e54ba9905d2edaeb814,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 5746541462867723991, guid: 77986d07ae140e54ba9905d2edaeb814,
@@ -6740,25 +6740,25 @@ PrefabInstance:
     - target: {fileID: 6949303475825466093, guid: 77986d07ae140e54ba9905d2edaeb814,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 7225487703305608315, guid: 77986d07ae140e54ba9905d2edaeb814,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 8184525179597138988, guid: 77986d07ae140e54ba9905d2edaeb814,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 8884981179309772129, guid: 77986d07ae140e54ba9905d2edaeb814,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     m_RemovedComponents: []
@@ -7077,7 +7077,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -7706,7 +7706,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -8861,7 +8861,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -9184,7 +9184,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -9720,7 +9720,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -10545,7 +10545,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -10616,12 +10616,12 @@ PrefabInstance:
     - target: {fileID: 1714184614803732830, guid: 8d807d52d6af84504a52b34858d2f5c1,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 0}
     - target: {fileID: 2220498398199332890, guid: 8d807d52d6af84504a52b34858d2f5c1,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 0}
     - target: {fileID: 2624579233664255892, guid: 8d807d52d6af84504a52b34858d2f5c1,
         type: 3}
@@ -10961,7 +10961,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -11221,7 +11221,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -11585,8 +11585,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85dadb21b8ad4ec4a98b05234ec010a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!65 &384226512
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12157,7 +12157,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -12472,7 +12472,7 @@ PrefabInstance:
     - target: {fileID: 2803536135699671091, guid: 1610d78e4fbc2fb41b433ec727755b69,
         type: 3}
       propertyPath: enemyPrefab
-      value: 
+      value:
       objectReference: {fileID: 1715103906888602, guid: 140a5d2d91418a74783a3aaa2cfe4938,
         type: 3}
     - target: {fileID: 5318017506150367557, guid: 1610d78e4fbc2fb41b433ec727755b69,
@@ -12804,7 +12804,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -13581,7 +13581,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -13595,25 +13595,25 @@ PrefabInstance:
     - target: {fileID: 3594014317331184978, guid: 9da4c90c2ec32d1409d2bc55dd0e3bcd,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 4178632734330396425, guid: 9da4c90c2ec32d1409d2bc55dd0e3bcd,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 4341340334198722790, guid: 9da4c90c2ec32d1409d2bc55dd0e3bcd,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 6140664456747418847, guid: 9da4c90c2ec32d1409d2bc55dd0e3bcd,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 6555971049721989920, guid: 9da4c90c2ec32d1409d2bc55dd0e3bcd,
@@ -13689,13 +13689,13 @@ PrefabInstance:
     - target: {fileID: 6555971050259613164, guid: 9da4c90c2ec32d1409d2bc55dd0e3bcd,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 6988855578809709029, guid: 9da4c90c2ec32d1409d2bc55dd0e3bcd,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     m_RemovedComponents: []
@@ -14116,7 +14116,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -14204,7 +14204,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -14581,8 +14581,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdf370fc54958cf41a7f563d78c5dc2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   bigTile: {fileID: 651327355}
 --- !u!65 &497843000
 BoxCollider:
@@ -14607,8 +14607,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42e9497912602694da8548596e2e13fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   bigTile: {fileID: 651327355}
 --- !u!4 &500460080 stripped
 Transform:
@@ -14929,7 +14929,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -15264,7 +15264,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -15614,7 +15614,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -15869,7 +15869,7 @@ PrefabInstance:
     - target: {fileID: 1118371319252661953, guid: c8b8182a4c1d8492cac3cc0a7c2558e4,
         type: 3}
       propertyPath: flag
-      value: 
+      value:
       objectReference: {fileID: 179073110}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8b8182a4c1d8492cac3cc0a7c2558e4, type: 3}
@@ -15904,7 +15904,7 @@ PrefabInstance:
     - target: {fileID: 3103615543703828824, guid: a78293d5271fecf47be1d736cf67206d,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 5987550532003847190, guid: a78293d5271fecf47be1d736cf67206d,
@@ -16438,7 +16438,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -17036,7 +17036,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -17904,7 +17904,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -18381,7 +18381,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -18641,7 +18641,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -18955,7 +18955,7 @@ PrefabInstance:
     - target: {fileID: 109828940779840965, guid: c850897d3e4d4a443b2cb5c80542db6d,
         type: 3}
       propertyPath: prefab
-      value: 
+      value:
       objectReference: {fileID: 1818861082154570, guid: caed116357ac2e742b0551f19bae89c4,
         type: 3}
     - target: {fileID: 109828940779840966, guid: c850897d3e4d4a443b2cb5c80542db6d,
@@ -19665,7 +19665,7 @@ PrefabInstance:
     - target: {fileID: 1844767250407276873, guid: 305e50d22faf24d488944a3811e1113d,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 4465510254984629533, guid: 305e50d22faf24d488944a3811e1113d,
@@ -20008,25 +20008,25 @@ PrefabInstance:
     - target: {fileID: 3594014317331184978, guid: 9da4c90c2ec32d1409d2bc55dd0e3bcd,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 4178632734330396425, guid: 9da4c90c2ec32d1409d2bc55dd0e3bcd,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 4341340334198722790, guid: 9da4c90c2ec32d1409d2bc55dd0e3bcd,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 6140664456747418847, guid: 9da4c90c2ec32d1409d2bc55dd0e3bcd,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 6555971049721989920, guid: 9da4c90c2ec32d1409d2bc55dd0e3bcd,
@@ -20102,13 +20102,13 @@ PrefabInstance:
     - target: {fileID: 6555971050259613164, guid: 9da4c90c2ec32d1409d2bc55dd0e3bcd,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 6988855578809709029, guid: 9da4c90c2ec32d1409d2bc55dd0e3bcd,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     m_RemovedComponents: []
@@ -20693,7 +20693,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -21040,7 +21040,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -21054,13 +21054,13 @@ PrefabInstance:
     - target: {fileID: 685462044740673561, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 2266462442234819269, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 2545388697629183553, guid: 4bd89b97508d7a648beea1102f47f053,
@@ -21086,37 +21086,37 @@ PrefabInstance:
     - target: {fileID: 3942597522641610127, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 5197884483389951458, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 5558962202587806656, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 6177336508833429976, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 6181667252425615160, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 6898603201303558455, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 7691526401023413383, guid: 4bd89b97508d7a648beea1102f47f053,
@@ -21187,7 +21187,7 @@ PrefabInstance:
     - target: {fileID: 7691526401314837888, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 7691526401314837890, guid: 4bd89b97508d7a648beea1102f47f053,
@@ -21198,7 +21198,7 @@ PrefabInstance:
     - target: {fileID: 7691526402094292105, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 7691526402094292106, guid: 4bd89b97508d7a648beea1102f47f053,
@@ -21229,13 +21229,13 @@ PrefabInstance:
     - target: {fileID: 8779425606988209659, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 9093396793137850807, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     m_RemovedComponents: []
@@ -21837,7 +21837,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -22097,7 +22097,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -22357,7 +22357,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -22946,7 +22946,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -23927,7 +23927,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -24345,8 +24345,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdf370fc54958cf41a7f563d78c5dc2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   bigTile: {fileID: 1746288662}
 --- !u!65 &748178039
 BoxCollider:
@@ -24371,8 +24371,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42e9497912602694da8548596e2e13fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   bigTile: {fileID: 1746288662}
 --- !u!4 &751654326 stripped
 Transform:
@@ -24799,7 +24799,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -25531,7 +25531,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -25587,8 +25587,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b695d758a698bd4193c147a58383a0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   minDistance: 1
   maxDistance: 10
   smooth: 2.5
@@ -25604,8 +25604,8 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 952df7e5401e37944a281486130487df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   player: {fileID: 0}
 --- !u!114 &769564096
 MonoBehaviour:
@@ -25617,8 +25617,8 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf54c008bf1775f4b8f9d2c4fc083460, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!114 &769564097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25629,8 +25629,8 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8b35df3c366f994da0954547bbededb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   rotationSpeed: 3
   clampAngle: 80
   target: {fileID: 0}
@@ -25916,7 +25916,7 @@ PrefabInstance:
     - target: {fileID: 685462044740673561, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 896610426435349846, guid: 4bd89b97508d7a648beea1102f47f053,
@@ -25932,7 +25932,7 @@ PrefabInstance:
     - target: {fileID: 2266462442234819269, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 2941485157580589983, guid: 4bd89b97508d7a648beea1102f47f053,
@@ -25948,37 +25948,37 @@ PrefabInstance:
     - target: {fileID: 3942597522641610127, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 5197884483389951458, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 5558962202587806656, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 6177336508833429976, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 6181667252425615160, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 6898603201303558455, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 7691526401023413383, guid: 4bd89b97508d7a648beea1102f47f053,
@@ -26049,7 +26049,7 @@ PrefabInstance:
     - target: {fileID: 7691526401314837888, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 7691526401314837890, guid: 4bd89b97508d7a648beea1102f47f053,
@@ -26060,7 +26060,7 @@ PrefabInstance:
     - target: {fileID: 7691526402094292105, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 7691526402094292106, guid: 4bd89b97508d7a648beea1102f47f053,
@@ -26091,13 +26091,13 @@ PrefabInstance:
     - target: {fileID: 8779425606988209659, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 9093396793137850807, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     m_RemovedComponents: []
@@ -26505,7 +26505,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -27072,7 +27072,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -27558,8 +27558,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb5431ca8a8df7f47bc4f3ec21bcd252, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   speed: 7
   jumpHeight: 9
   distanceToGround: 0.02
@@ -27577,8 +27577,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a999661153ba68c48938048fc3b8ad86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   fallMultiplier: 1.06
   lowJumpMultiplier: 1.05
   gravityScale: 2
@@ -27777,8 +27777,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdf370fc54958cf41a7f563d78c5dc2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   bigTile: {fileID: 1601849140}
 --- !u!65 &843260803
 BoxCollider:
@@ -27803,8 +27803,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42e9497912602694da8548596e2e13fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   bigTile: {fileID: 1601849140}
 --- !u!1 &846923697
 GameObject:
@@ -27844,8 +27844,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 160f41abaf4f43b469077900c9193ed6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!114 &846923699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27856,8 +27856,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe9234d29a28db74289f3ccc54b7c1f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!114 &846923700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27868,8 +27868,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a999661153ba68c48938048fc3b8ad86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   fallMultiplier: 1.06
   lowJumpMultiplier: 1.07
   gravityScale: 35
@@ -27883,8 +27883,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd1b305d95ab86c45b4a7a27a4d44692, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   smoothingTimeFactor: 0.5
 --- !u!143 &846923702
 CharacterController:
@@ -27914,8 +27914,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d063abf5f9a1946829875016838fc7c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!114 &846923704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27926,8 +27926,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 224fad13435dd2c46906faaea8a4a6d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!54 &846923705
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -27968,8 +27968,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f0ec01145be4ea498905c2a9a7bf921, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   charCtrl: {fileID: 0}
   camTransform: {fileID: 769564093}
   gravityScale: 4.2
@@ -28003,7 +28003,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -28015,7 +28015,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 846923697}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.23, y: 3.66, z: 8.34}
+  m_LocalPosition: {x: -149.8, y: 55.4, z: 200.3}
   m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children:
   - {fileID: 834704019}
@@ -28036,8 +28036,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7bebcbafa7b68a4c81358bbe3b2df18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!1 &847518591
 GameObject:
   m_ObjectHideFlags: 0
@@ -28331,7 +28331,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -28652,7 +28652,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -28912,7 +28912,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -29257,7 +29257,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -29288,8 +29288,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66c6f51c6f91e2741b7d3d4454ddc602, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!4 &874217305
 Transform:
   m_ObjectHideFlags: 0
@@ -29595,7 +29595,7 @@ PrefabInstance:
     - target: {fileID: 292173298647744493, guid: 58edd179f912360438ed6de597a737ec,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 292173299636345932, guid: 58edd179f912360438ed6de597a737ec,
@@ -29606,7 +29606,7 @@ PrefabInstance:
     - target: {fileID: 292173299636345934, guid: 58edd179f912360438ed6de597a737ec,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 292173299636345935, guid: 58edd179f912360438ed6de597a737ec,
@@ -29687,25 +29687,25 @@ PrefabInstance:
     - target: {fileID: 357030422422888122, guid: 58edd179f912360438ed6de597a737ec,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 437153704794784162, guid: 58edd179f912360438ed6de597a737ec,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 1887599872747087225, guid: 58edd179f912360438ed6de597a737ec,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 2673210841257573488, guid: 58edd179f912360438ed6de597a737ec,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 3772182527505762028, guid: 58edd179f912360438ed6de597a737ec,
@@ -29731,19 +29731,19 @@ PrefabInstance:
     - target: {fileID: 4521909483587521184, guid: 58edd179f912360438ed6de597a737ec,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 4884623503740093004, guid: 58edd179f912360438ed6de597a737ec,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 5291882253864810849, guid: 58edd179f912360438ed6de597a737ec,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 7322213385102557721, guid: 58edd179f912360438ed6de597a737ec,
@@ -29759,19 +29759,19 @@ PrefabInstance:
     - target: {fileID: 7394165102241363276, guid: 58edd179f912360438ed6de597a737ec,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 8463745997109637314, guid: 58edd179f912360438ed6de597a737ec,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 8985680874922022336, guid: 58edd179f912360438ed6de597a737ec,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     m_RemovedComponents: []
@@ -30232,7 +30232,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -31045,7 +31045,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -31921,8 +31921,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f318d020702664e5ba55c1c447da876d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!65 &956855145
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32245,7 +32245,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -33457,7 +33457,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -33881,7 +33881,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -33901,25 +33901,25 @@ PrefabInstance:
     - target: {fileID: 3594014317331184978, guid: 9da4c90c2ec32d1409d2bc55dd0e3bcd,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 4178632734330396425, guid: 9da4c90c2ec32d1409d2bc55dd0e3bcd,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 4341340334198722790, guid: 9da4c90c2ec32d1409d2bc55dd0e3bcd,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 6140664456747418847, guid: 9da4c90c2ec32d1409d2bc55dd0e3bcd,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 6555971049721989920, guid: 9da4c90c2ec32d1409d2bc55dd0e3bcd,
@@ -33995,13 +33995,13 @@ PrefabInstance:
     - target: {fileID: 6555971050259613164, guid: 9da4c90c2ec32d1409d2bc55dd0e3bcd,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 6988855578809709029, guid: 9da4c90c2ec32d1409d2bc55dd0e3bcd,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     m_RemovedComponents: []
@@ -34288,7 +34288,7 @@ PrefabInstance:
     - target: {fileID: 109828940779840965, guid: c850897d3e4d4a443b2cb5c80542db6d,
         type: 3}
       propertyPath: prefab
-      value: 
+      value:
       objectReference: {fileID: 4235742648976704601, guid: 72ff7f41515262b4e83dec986e7d6340,
         type: 3}
     - target: {fileID: 109828940779840966, guid: c850897d3e4d4a443b2cb5c80542db6d,
@@ -34559,7 +34559,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -35427,8 +35427,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdf370fc54958cf41a7f563d78c5dc2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   bigTile: {fileID: 39686918}
 --- !u!114 &1033836539
 MonoBehaviour:
@@ -35440,8 +35440,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42e9497912602694da8548596e2e13fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   bigTile: {fileID: 39686918}
 --- !u!1001 &1039139537
 PrefabInstance:
@@ -35780,7 +35780,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -36544,7 +36544,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -36575,8 +36575,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3b1a05a1c70746299eaed978df8d7c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!4 &1078401503
 Transform:
   m_ObjectHideFlags: 0
@@ -36835,8 +36835,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c03218f06000427eb0496d3a9c1f344, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!4 &1090518541
 Transform:
   m_ObjectHideFlags: 0
@@ -37123,8 +37123,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdf370fc54958cf41a7f563d78c5dc2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   bigTile: {fileID: 682072139}
 --- !u!65 &1101727439
 BoxCollider:
@@ -37149,8 +37149,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42e9497912602694da8548596e2e13fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   bigTile: {fileID: 682072139}
 --- !u!1001 &1101955287
 PrefabInstance:
@@ -37582,7 +37582,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -38251,8 +38251,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 224fad13435dd2c46906faaea8a4a6d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!54 &1136270840
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -38293,8 +38293,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8ecc0ca57781564195033f89ced92d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!95 &1136270843
 Animator:
   serializedVersion: 3
@@ -38310,7 +38310,7 @@ Animator:
   m_UpdateMode: 1
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -38339,7 +38339,7 @@ PrefabInstance:
     - target: {fileID: 1714184614803732830, guid: 8d807d52d6af84504a52b34858d2f5c1,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 0}
     - target: {fileID: 2624579233664255892, guid: 8d807d52d6af84504a52b34858d2f5c1,
         type: 3}
@@ -39213,7 +39213,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -39746,7 +39746,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -41248,7 +41248,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -41631,7 +41631,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -41903,7 +41903,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -42156,13 +42156,13 @@ PrefabInstance:
     - target: {fileID: 685462044740673561, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 2266462442234819269, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 2545388697629183553, guid: 4bd89b97508d7a648beea1102f47f053,
@@ -42188,37 +42188,37 @@ PrefabInstance:
     - target: {fileID: 3942597522641610127, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 5197884483389951458, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 5558962202587806656, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 6177336508833429976, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 6181667252425615160, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 6898603201303558455, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 7691526401023413383, guid: 4bd89b97508d7a648beea1102f47f053,
@@ -42289,7 +42289,7 @@ PrefabInstance:
     - target: {fileID: 7691526401314837888, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 7691526401314837889, guid: 4bd89b97508d7a648beea1102f47f053,
@@ -42310,7 +42310,7 @@ PrefabInstance:
     - target: {fileID: 7691526402094292105, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 7691526402094292107, guid: 4bd89b97508d7a648beea1102f47f053,
@@ -42331,13 +42331,13 @@ PrefabInstance:
     - target: {fileID: 8779425606988209659, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 9093396793137850807, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     m_RemovedComponents: []
@@ -42529,13 +42529,13 @@ PrefabInstance:
     - target: {fileID: 685462044740673561, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 2266462442234819269, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 2545388697629183553, guid: 4bd89b97508d7a648beea1102f47f053,
@@ -42561,37 +42561,37 @@ PrefabInstance:
     - target: {fileID: 3942597522641610127, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 5197884483389951458, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 5558962202587806656, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 6177336508833429976, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 6181667252425615160, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 6898603201303558455, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 7691526401023413383, guid: 4bd89b97508d7a648beea1102f47f053,
@@ -42662,7 +42662,7 @@ PrefabInstance:
     - target: {fileID: 7691526401314837888, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 7691526401314837889, guid: 4bd89b97508d7a648beea1102f47f053,
@@ -42683,7 +42683,7 @@ PrefabInstance:
     - target: {fileID: 7691526402094292105, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 7691526402094292107, guid: 4bd89b97508d7a648beea1102f47f053,
@@ -42704,13 +42704,13 @@ PrefabInstance:
     - target: {fileID: 8779425606988209659, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 9093396793137850807, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     m_RemovedComponents: []
@@ -43232,7 +43232,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -43893,7 +43893,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -44153,7 +44153,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -44364,7 +44364,7 @@ PrefabInstance:
     - target: {fileID: 109828940779840965, guid: c850897d3e4d4a443b2cb5c80542db6d,
         type: 3}
       propertyPath: prefab
-      value: 
+      value:
       objectReference: {fileID: 1829371231341652, guid: 426b44a7575f71e479fab4f4e8431989,
         type: 3}
     - target: {fileID: 109828940779840965, guid: c850897d3e4d4a443b2cb5c80542db6d,
@@ -44883,7 +44883,7 @@ PrefabInstance:
     - target: {fileID: 1118371319252661953, guid: c8b8182a4c1d8492cac3cc0a7c2558e4,
         type: 3}
       propertyPath: flag
-      value: 
+      value:
       objectReference: {fileID: 148875362}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8b8182a4c1d8492cac3cc0a7c2558e4, type: 3}
@@ -45745,7 +45745,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -46294,7 +46294,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -47382,7 +47382,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -47859,7 +47859,7 @@ PrefabInstance:
     - target: {fileID: 109828940779840965, guid: c850897d3e4d4a443b2cb5c80542db6d,
         type: 3}
       propertyPath: prefab
-      value: 
+      value:
       objectReference: {fileID: 3008570856905566715, guid: f368e5894351cea4f95017440403d6f8,
         type: 3}
     - target: {fileID: 109828940779840965, guid: c850897d3e4d4a443b2cb5c80542db6d,
@@ -48889,7 +48889,7 @@ PrefabInstance:
     - target: {fileID: 1844767250407276873, guid: 305e50d22faf24d488944a3811e1113d,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 0}
     - target: {fileID: 4465510254984629533, guid: 305e50d22faf24d488944a3811e1113d,
         type: 3}
@@ -49266,7 +49266,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -49938,7 +49938,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -50198,7 +50198,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -50458,7 +50458,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -50718,7 +50718,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -50978,7 +50978,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -51163,8 +51163,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdf370fc54958cf41a7f563d78c5dc2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   bigTile: {fileID: 1265613260}
 --- !u!65 &1549184153
 BoxCollider:
@@ -51189,8 +51189,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42e9497912602694da8548596e2e13fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   bigTile: {fileID: 1265613260}
 --- !u!1 &1549340333
 GameObject:
@@ -51327,7 +51327,7 @@ PrefabInstance:
     - target: {fileID: 5311147567138086533, guid: 247e79f8689b04955bd1b729450b43cc,
         type: 3}
       propertyPath: princess
-      value: 
+      value:
       objectReference: {fileID: 846923697}
     - target: {fileID: 5311147567138086533, guid: 247e79f8689b04955bd1b729450b43cc,
         type: 3}
@@ -51568,7 +51568,7 @@ PrefabInstance:
     - target: {fileID: 5550919555056696876, guid: b11b7c3d47fdd49759dea695f6aebcb1,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 0}
     - target: {fileID: 8332237174283032644, guid: b11b7c3d47fdd49759dea695f6aebcb1,
         type: 3}
@@ -51920,7 +51920,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -51993,8 +51993,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0f6060553dda0042b7f34f769c42c5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   camMoveSpeed: 50
   camFollowObj: {fileID: 1834392540}
   followPOS: {x: 0, y: 0, z: 0}
@@ -52018,7 +52018,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1577773188}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.59, y: 7.39, z: -0.15}
+  m_LocalPosition: {x: -149.8, y: 58.699997, z: 194.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 769564093}
@@ -52289,12 +52289,12 @@ PrefabInstance:
     - target: {fileID: 1714184614803732830, guid: 8d807d52d6af84504a52b34858d2f5c1,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 0}
     - target: {fileID: 2220498398199332890, guid: 8d807d52d6af84504a52b34858d2f5c1,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 0}
     - target: {fileID: 2624579233664255892, guid: 8d807d52d6af84504a52b34858d2f5c1,
         type: 3}
@@ -52725,7 +52725,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -52770,13 +52770,13 @@ PrefabInstance:
     - target: {fileID: 685462044740673561, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 2266462442234819269, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 2545388697629183553, guid: 4bd89b97508d7a648beea1102f47f053,
@@ -52792,31 +52792,31 @@ PrefabInstance:
     - target: {fileID: 3942597522641610127, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 5197884483389951458, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 5558962202587806656, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 6177336508833429976, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 6181667252425615160, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 6275172035618353959, guid: 4bd89b97508d7a648beea1102f47f053,
@@ -52832,7 +52832,7 @@ PrefabInstance:
     - target: {fileID: 6898603201303558455, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 7691526401023413383, guid: 4bd89b97508d7a648beea1102f47f053,
@@ -52903,7 +52903,7 @@ PrefabInstance:
     - target: {fileID: 7691526401314837888, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 7691526401314837889, guid: 4bd89b97508d7a648beea1102f47f053,
@@ -52924,7 +52924,7 @@ PrefabInstance:
     - target: {fileID: 7691526402094292105, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 7691526402094292107, guid: 4bd89b97508d7a648beea1102f47f053,
@@ -52945,13 +52945,13 @@ PrefabInstance:
     - target: {fileID: 8779425606988209659, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 9093396793137850807, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     m_RemovedComponents: []
@@ -53303,8 +53303,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdf370fc54958cf41a7f563d78c5dc2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   bigTile: {fileID: 1670819118}
 --- !u!65 &1612922923
 BoxCollider:
@@ -53329,8 +53329,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42e9497912602694da8548596e2e13fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   bigTile: {fileID: 1670819118}
 --- !u!4 &1614040689 stripped
 Transform:
@@ -53684,8 +53684,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdf370fc54958cf41a7f563d78c5dc2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   bigTile: {fileID: 996212808}
 --- !u!65 &1630691953
 BoxCollider:
@@ -53710,8 +53710,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42e9497912602694da8548596e2e13fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   bigTile: {fileID: 996212808}
 --- !u!4 &1634333082 stripped
 Transform:
@@ -54182,7 +54182,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -54442,7 +54442,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -54617,7 +54617,7 @@ PrefabInstance:
     - target: {fileID: 109828940779840965, guid: c850897d3e4d4a443b2cb5c80542db6d,
         type: 3}
       propertyPath: prefab
-      value: 
+      value:
       objectReference: {fileID: 4235742648976704601, guid: 72ff7f41515262b4e83dec986e7d6340,
         type: 3}
     - target: {fileID: 109828940779840965, guid: c850897d3e4d4a443b2cb5c80542db6d,
@@ -54981,7 +54981,7 @@ PrefabInstance:
     - target: {fileID: 685462044740673561, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 896610426435349846, guid: 4bd89b97508d7a648beea1102f47f053,
@@ -54997,37 +54997,37 @@ PrefabInstance:
     - target: {fileID: 2266462442234819269, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 3942597522641610127, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 5197884483389951458, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 5558962202587806656, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 6177336508833429976, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 6181667252425615160, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 6275172035618353959, guid: 4bd89b97508d7a648beea1102f47f053,
@@ -55043,7 +55043,7 @@ PrefabInstance:
     - target: {fileID: 6898603201303558455, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 7691526401023413383, guid: 4bd89b97508d7a648beea1102f47f053,
@@ -55114,7 +55114,7 @@ PrefabInstance:
     - target: {fileID: 7691526401314837888, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 7691526401314837890, guid: 4bd89b97508d7a648beea1102f47f053,
@@ -55125,7 +55125,7 @@ PrefabInstance:
     - target: {fileID: 7691526402094292105, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 7691526402094292106, guid: 4bd89b97508d7a648beea1102f47f053,
@@ -55156,13 +55156,13 @@ PrefabInstance:
     - target: {fileID: 8779425606988209659, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 9093396793137850807, guid: 4bd89b97508d7a648beea1102f47f053,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     m_RemovedComponents: []
@@ -55435,7 +55435,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -55978,7 +55978,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -56486,7 +56486,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -56746,7 +56746,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -57063,7 +57063,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -57403,7 +57403,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -57840,7 +57840,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -58594,8 +58594,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b624731e95662d45bf7b46f4bdfe0b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!95 &1744282636
 Animator:
   serializedVersion: 3
@@ -58611,7 +58611,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -58760,25 +58760,25 @@ PrefabInstance:
     - target: {fileID: 3594014317331184978, guid: 9da4c90c2ec32d1409d2bc55dd0e3bcd,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 4178632734330396425, guid: 9da4c90c2ec32d1409d2bc55dd0e3bcd,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 4341340334198722790, guid: 9da4c90c2ec32d1409d2bc55dd0e3bcd,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 6140664456747418847, guid: 9da4c90c2ec32d1409d2bc55dd0e3bcd,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 6555971049721989920, guid: 9da4c90c2ec32d1409d2bc55dd0e3bcd,
@@ -58854,13 +58854,13 @@ PrefabInstance:
     - target: {fileID: 6555971050259613164, guid: 9da4c90c2ec32d1409d2bc55dd0e3bcd,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 6988855578809709029, guid: 9da4c90c2ec32d1409d2bc55dd0e3bcd,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     m_RemovedComponents: []
@@ -58940,8 +58940,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5c4cf34b263f43aaaa0be917e1d23d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!65 &1749983329
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59558,8 +59558,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdf370fc54958cf41a7f563d78c5dc2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   bigTile: {fileID: 1249647680}
 --- !u!65 &1773479163
 BoxCollider:
@@ -59584,8 +59584,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42e9497912602694da8548596e2e13fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   bigTile: {fileID: 1249647680}
 --- !u!1 &1773789247
 GameObject:
@@ -59874,7 +59874,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -60741,7 +60741,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -60952,8 +60952,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdf370fc54958cf41a7f563d78c5dc2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   bigTile: {fileID: 198334926}
 --- !u!114 &1807322956
 MonoBehaviour:
@@ -60965,8 +60965,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42e9497912602694da8548596e2e13fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   bigTile: {fileID: 198334926}
 --- !u!1001 &1811069204
 PrefabInstance:
@@ -61348,8 +61348,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3105da6c804a8e9478e21ddc0fdced40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!4 &1833034999 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8002997654210444890, guid: 8d807d52d6af84504a52b34858d2f5c1,
@@ -61436,7 +61436,7 @@ PrefabInstance:
     - target: {fileID: 5550919555056696876, guid: b11b7c3d47fdd49759dea695f6aebcb1,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 0}
     - target: {fileID: 8332237174283032644, guid: b11b7c3d47fdd49759dea695f6aebcb1,
         type: 3}
@@ -61708,8 +61708,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdf370fc54958cf41a7f563d78c5dc2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   bigTile: {fileID: 881077350}
 --- !u!65 &1835949956
 BoxCollider:
@@ -61734,8 +61734,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42e9497912602694da8548596e2e13fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   bigTile: {fileID: 881077350}
 --- !u!1001 &1837205134
 PrefabInstance:
@@ -61999,8 +61999,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdf370fc54958cf41a7f563d78c5dc2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   bigTile: {fileID: 1888381414}
 --- !u!65 &1842881601
 BoxCollider:
@@ -62025,8 +62025,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42e9497912602694da8548596e2e13fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   bigTile: {fileID: 1888381414}
 --- !u!1001 &1842950397
 PrefabInstance:
@@ -62762,8 +62762,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdf370fc54958cf41a7f563d78c5dc2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   bigTile: {fileID: 465297403}
 --- !u!65 &1869856672
 BoxCollider:
@@ -62788,8 +62788,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42e9497912602694da8548596e2e13fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   bigTile: {fileID: 465297403}
 --- !u!1001 &1870267693
 PrefabInstance:
@@ -62946,7 +62946,7 @@ PrefabInstance:
     - target: {fileID: 109828940779840965, guid: c850897d3e4d4a443b2cb5c80542db6d,
         type: 3}
       propertyPath: prefab
-      value: 
+      value:
       objectReference: {fileID: 1214937682188914204, guid: 7473ecec14cacd24c8c2b821f7befc9e,
         type: 3}
     - target: {fileID: 109828940779840965, guid: c850897d3e4d4a443b2cb5c80542db6d,
@@ -63222,7 +63222,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -63482,7 +63482,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -63671,43 +63671,43 @@ PrefabInstance:
     - target: {fileID: 2201005237964023244, guid: 77986d07ae140e54ba9905d2edaeb814,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 2534120745170400050, guid: 77986d07ae140e54ba9905d2edaeb814,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 2671894467909287634, guid: 77986d07ae140e54ba9905d2edaeb814,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 2796101898899399552, guid: 77986d07ae140e54ba9905d2edaeb814,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 3285565902549562624, guid: 77986d07ae140e54ba9905d2edaeb814,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 4851477067304120312, guid: 77986d07ae140e54ba9905d2edaeb814,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 5090795133918920217, guid: 77986d07ae140e54ba9905d2edaeb814,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 5289743095829689228, guid: 77986d07ae140e54ba9905d2edaeb814,
@@ -63728,7 +63728,7 @@ PrefabInstance:
     - target: {fileID: 5289743095829689230, guid: 77986d07ae140e54ba9905d2edaeb814,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 5289743095864341308, guid: 77986d07ae140e54ba9905d2edaeb814,
@@ -63739,7 +63739,7 @@ PrefabInstance:
     - target: {fileID: 5289743095864341310, guid: 77986d07ae140e54ba9905d2edaeb814,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 5289743096013720232, guid: 77986d07ae140e54ba9905d2edaeb814,
@@ -63810,7 +63810,7 @@ PrefabInstance:
     - target: {fileID: 5490657279099609338, guid: 77986d07ae140e54ba9905d2edaeb814,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 5746541462867723991, guid: 77986d07ae140e54ba9905d2edaeb814,
@@ -63826,25 +63826,25 @@ PrefabInstance:
     - target: {fileID: 6949303475825466093, guid: 77986d07ae140e54ba9905d2edaeb814,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 7225487703305608315, guid: 77986d07ae140e54ba9905d2edaeb814,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 8184525179597138988, guid: 77986d07ae140e54ba9905d2edaeb814,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 8884981179309772129, guid: 77986d07ae140e54ba9905d2edaeb814,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     m_RemovedComponents: []
@@ -64281,7 +64281,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -65279,7 +65279,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -65596,25 +65596,25 @@ PrefabInstance:
     - target: {fileID: 3594014317331184978, guid: 9da4c90c2ec32d1409d2bc55dd0e3bcd,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 4178632734330396425, guid: 9da4c90c2ec32d1409d2bc55dd0e3bcd,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 4341340334198722790, guid: 9da4c90c2ec32d1409d2bc55dd0e3bcd,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 6140664456747418847, guid: 9da4c90c2ec32d1409d2bc55dd0e3bcd,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 6555971049721989920, guid: 9da4c90c2ec32d1409d2bc55dd0e3bcd,
@@ -65690,13 +65690,13 @@ PrefabInstance:
     - target: {fileID: 6555971050259613164, guid: 9da4c90c2ec32d1409d2bc55dd0e3bcd,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     - target: {fileID: 6988855578809709029, guid: 9da4c90c2ec32d1409d2bc55dd0e3bcd,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 13400000, guid: 32caab0e433f4b44392a8e5654006bd6,
         type: 2}
     m_RemovedComponents: []
@@ -66543,8 +66543,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdf370fc54958cf41a7f563d78c5dc2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   bigTile: {fileID: 1944737381}
 --- !u!65 &1975432544
 BoxCollider:
@@ -66569,8 +66569,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42e9497912602694da8548596e2e13fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   bigTile: {fileID: 1944737381}
 --- !u!1 &1976840891
 GameObject:
@@ -66756,8 +66756,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdf370fc54958cf41a7f563d78c5dc2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   bigTile: {fileID: 1729267607}
 --- !u!65 &1982777074
 BoxCollider:
@@ -66782,8 +66782,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42e9497912602694da8548596e2e13fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   bigTile: {fileID: 1729267607}
 --- !u!1001 &1983830341
 PrefabInstance:
@@ -67098,7 +67098,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -67796,7 +67796,7 @@ PrefabInstance:
     - target: {fileID: 2803536135699671091, guid: 1610d78e4fbc2fb41b433ec727755b69,
         type: 3}
       propertyPath: enemyPrefab
-      value: 
+      value:
       objectReference: {fileID: 1818861082154570, guid: caed116357ac2e742b0551f19bae89c4,
         type: 3}
     - target: {fileID: 2803536135699671091, guid: 1610d78e4fbc2fb41b433ec727755b69,
@@ -68406,7 +68406,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -68505,7 +68505,7 @@ PrefabInstance:
     - target: {fileID: 1714184614803732830, guid: 8d807d52d6af84504a52b34858d2f5c1,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 0}
     - target: {fileID: 2624579233664255892, guid: 8d807d52d6af84504a52b34858d2f5c1,
         type: 3}
@@ -69203,7 +69203,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -69756,7 +69756,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -70045,7 +70045,7 @@ PrefabInstance:
     - target: {fileID: 1844767250407276873, guid: 305e50d22faf24d488944a3811e1113d,
         type: 3}
       propertyPath: m_Material
-      value: 
+      value:
       objectReference: {fileID: 0}
     - target: {fileID: 3028564641287267411, guid: 305e50d22faf24d488944a3811e1113d,
         type: 3}
@@ -70401,7 +70401,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -70767,7 +70767,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -71135,7 +71135,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -71476,7 +71476,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -71965,7 +71965,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -72166,7 +72166,7 @@ PrefabInstance:
     - target: {fileID: 109828940779840965, guid: c850897d3e4d4a443b2cb5c80542db6d,
         type: 3}
       propertyPath: prefab
-      value: 
+      value:
       objectReference: {fileID: 1715103906888602, guid: 140a5d2d91418a74783a3aaa2cfe4938,
         type: 3}
     - target: {fileID: 109828940779840965, guid: c850897d3e4d4a443b2cb5c80542db6d,
@@ -72277,7 +72277,7 @@ PrefabInstance:
     - target: {fileID: 1118371319252661953, guid: c8b8182a4c1d8492cac3cc0a7c2558e4,
         type: 3}
       propertyPath: flag
-      value: 
+      value:
       objectReference: {fileID: 22323244}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8b8182a4c1d8492cac3cc0a7c2558e4, type: 3}
@@ -73015,7 +73015,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 890531835, guid: 695a322a422ca4ce488ad2cc089e212d, type: 3}
       propertyPath: cam
-      value: 
+      value:
       objectReference: {fileID: 1577773188}
     - target: {fileID: 894717375, guid: 695a322a422ca4ce488ad2cc089e212d, type: 3}
       propertyPath: m_AnchorMin.x
@@ -73047,32 +73047,32 @@ PrefabInstance:
     - target: {fileID: 3261777710772495266, guid: 695a322a422ca4ce488ad2cc089e212d,
         type: 3}
       propertyPath: respawns.Array.data[0]
-      value: 
+      value:
       objectReference: {fileID: 59262791}
     - target: {fileID: 3261777710772495266, guid: 695a322a422ca4ce488ad2cc089e212d,
         type: 3}
       propertyPath: respawns.Array.data[1]
-      value: 
+      value:
       objectReference: {fileID: 1930860820}
     - target: {fileID: 3261777710772495266, guid: 695a322a422ca4ce488ad2cc089e212d,
         type: 3}
       propertyPath: respawns.Array.data[2]
-      value: 
+      value:
       objectReference: {fileID: 520372218}
     - target: {fileID: 3261777710772495266, guid: 695a322a422ca4ce488ad2cc089e212d,
         type: 3}
       propertyPath: respawns.Array.data[3]
-      value: 
+      value:
       objectReference: {fileID: 1266140207}
     - target: {fileID: 3261777710772495266, guid: 695a322a422ca4ce488ad2cc089e212d,
         type: 3}
       propertyPath: respawns.Array.data[4]
-      value: 
+      value:
       objectReference: {fileID: 520372218}
     - target: {fileID: 3261777710772495266, guid: 695a322a422ca4ce488ad2cc089e212d,
         type: 3}
       propertyPath: respawns.Array.data[5]
-      value: 
+      value:
       objectReference: {fileID: 520372218}
     - target: {fileID: 3461844239308530747, guid: 695a322a422ca4ce488ad2cc089e212d,
         type: 3}
@@ -73534,7 +73534,7 @@ PrefabInstance:
     - target: {fileID: 4236211401695621306, guid: d3b1a2e30b1504e59a387370a2867b7e,
         type: 3}
       propertyPath: starParticles
-      value: 
+      value:
       objectReference: {fileID: 1933607824282986, guid: 3c87503deada045dfad4b3f34d340ae0,
         type: 3}
     - target: {fileID: 4461590636845074378, guid: d3b1a2e30b1504e59a387370a2867b7e,
@@ -73944,7 +73944,7 @@ PrefabInstance:
     - target: {fileID: 5311147567138086533, guid: 247e79f8689b04955bd1b729450b43cc,
         type: 3}
       propertyPath: princess
-      value: 
+      value:
       objectReference: {fileID: 846923697}
     - target: {fileID: 5311147567138086533, guid: 247e79f8689b04955bd1b729450b43cc,
         type: 3}
@@ -73959,7 +73959,7 @@ PrefabInstance:
     - target: {fileID: 6377358901414776573, guid: 247e79f8689b04955bd1b729450b43cc,
         type: 3}
       propertyPath: princess
-      value: 
+      value:
       objectReference: {fileID: 0}
     - target: {fileID: 6377358901414776573, guid: 247e79f8689b04955bd1b729450b43cc,
         type: 3}
