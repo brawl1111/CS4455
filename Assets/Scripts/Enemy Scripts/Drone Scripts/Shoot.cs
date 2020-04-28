@@ -50,7 +50,7 @@ public class Shoot : MonoBehaviour
 
     private void shootBullet()
     {
-        if (Vector3.Distance(player.transform.position, transform.position) > aggroDistance) return;
+        if (Time.deltaTime == 0 || Vector3.Distance(player.transform.position, transform.position) > aggroDistance) return;
 
         //GameObject spawnedObj = ammo[FindFirstDeactiveIndex()];
         GameObject spawnedObj = GetFirstDeactiveBullet();
@@ -60,7 +60,7 @@ public class Shoot : MonoBehaviour
         Vector3 dirToPlayer = getDirToTarget(player.transform.position, transform.position);
 
         spawnedObj.transform.position = transform.position + (1.75f * dirToPlayer.normalized);           // spawns it a little in front of the drone so it doesnt hit the drone's collider and despawn
-        
+
         //spawnedObj.GetComponent<Rigidbody>().velocity = dirToPlayer.normalized * bulletSpeed;
 
         // distance / bullet velocity = time

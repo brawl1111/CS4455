@@ -5,6 +5,7 @@ using UnityEngine;
 public class VelocityReporter : MonoBehaviour
 {
     private Vector3 prevPos;
+    private Vector3 prevVelocity;
 
     public Vector3 rawVelocity
     {
@@ -29,8 +30,11 @@ public class VelocityReporter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rawVelocity = (this.transform.position - prevPos) / Time.deltaTime;
-        velocity = Vector3.SmoothDamp(velocity, rawVelocity, ref smoothingParamVel, smoothingTimeFactor);
-        prevPos = this.transform.position;
+        if (Time.deltaTime != 0)
+        {
+            rawVelocity = (this.transform.position - prevPos) / Time.deltaTime;
+            velocity = Vector3.SmoothDamp(velocity, rawVelocity, ref smoothingParamVel, smoothingTimeFactor);
+            prevPos = this.transform.position;
+        }
     }
 }
