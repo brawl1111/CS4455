@@ -17,6 +17,8 @@ public class HealthManager : MonoBehaviour
     private bool inInvincibilityFrames = false;
     private bool isAlive = true;
     private InvincibilityFrames iframeScript;
+    private GameObject player;
+    private Animator anim;
 
 	void Awake()
     {
@@ -33,8 +35,10 @@ public class HealthManager : MonoBehaviour
         {
             PlayerPrefs.DeleteKey("HealthCount");
         }
-        iframeScript = GameObject.FindWithTag("Player").GetComponent<InvincibilityFrames>();
+        player = GameObject.FindWithTag("Player");
+        iframeScript = player.GetComponent<InvincibilityFrames>();
         if (iframeScript == null) Debug.Log("iframe script couldn't be found");
+        anim = player.GetComponent<Animator>();
     }
 
     void Start()
@@ -64,7 +68,7 @@ public class HealthManager : MonoBehaviour
         if (!isAlive)
         {
             isAlive = true;
-            GameObject player = GameObject.FindWithTag("Player");
+            //GameObject player = GameObject.FindWithTag("Player");
             player.GetComponent<Animator>().SetTrigger("hasRevived");
             CharacterMovement cm = player.GetComponent<CharacterMovement>();
             cm.enabled = true;
@@ -127,11 +131,14 @@ public class HealthManager : MonoBehaviour
     {
         isAlive = false;
         inInvincibilityFrames = false;
-        GameObject player = GameObject.FindWithTag("Player");
-        player.GetComponent<Animator>().SetTrigger("hasDied");
-        //player.GetComponent<Rigidbody>().isKinematic = true;
+        anim.SetTrigger("hasDied");
+        anim.SetFloat("forward", 0.0f);
+
         player.GetComponent<CharacterMovement>().enabled = false;
+        player.GetComponent<CharacterMovement>().SetAnimMovementToZero();
         gameOverToggle.GameOverMenuOn();
+        anim.SetFloat("forward", 0.0f);
+        anim.SetBool("isFalling", false);
 
     }
 
