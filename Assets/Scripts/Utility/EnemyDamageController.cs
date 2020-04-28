@@ -9,7 +9,8 @@ public class EnemyDamageController : MonoBehaviour
     public int maxHP;
     public int curHP;
     private GameObject deathField;
-    
+    public GameObject particles;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,7 @@ public class EnemyDamageController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -31,11 +32,13 @@ public class EnemyDamageController : MonoBehaviour
             if (curHP <= 0)
             {
                 //Destroy(gameObject);          // this is for regular spawner
+                Instantiate(particles, transform.position, Quaternion.identity);
                 gameObject.SetActive(false);    // this is for advanced spawner?
             }
         }
         else if (other.gameObject.Equals(deathField))
         {
+            Instantiate(particles, transform.position, Quaternion.identity);
             gameObject.SetActive(false);
         }
     }

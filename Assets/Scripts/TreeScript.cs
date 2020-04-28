@@ -7,6 +7,7 @@ public class TreeScript : MonoBehaviour
     public AudioClip treeCrack;
     public AudioClip treeHitGround;
     public AudioSource audioSource;
+    public GameObject particles;
 
     private bool isFalling = false;
 
@@ -30,6 +31,7 @@ public class TreeScript : MonoBehaviour
         {
             gameObject.GetComponent<Animation>().Play("Tree Fall");
             EventManager.TriggerEvent<TreeCrackEvent, Vector3>(this.gameObject.transform.position);
+            Instantiate(particles, transform.position, Quaternion.identity);
             isFalling = true;
         }
     }

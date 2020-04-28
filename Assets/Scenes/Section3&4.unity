@@ -11318,6 +11318,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc2d5163c75134ad28a60997f44fd863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shockwaveParticles: {fileID: 1714681308540598, guid: 5cbc537826220e04592d5a41a0dd985f,
+    type: 3}
+  smokeParticles: {fileID: 0}
 --- !u!1001 &580331456
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28743,6 +28746,7 @@ MonoBehaviour:
   wanderTimer: 0.5
   magicMtnWall: {fileID: 579062980}
   music: {fileID: 866872080}
+  particles: {fileID: 1876081050882714, guid: 3aa37594f4c9243b0a32b750bed619cb, type: 3}
 --- !u!195 &1371331090
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -30955,7 +30959,7 @@ PrefabInstance:
     - target: {fileID: 544008950481611966, guid: c8b8182a4c1d8492cac3cc0a7c2558e4,
         type: 3}
       propertyPath: respawnZone
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 544008950481611966, guid: c8b8182a4c1d8492cac3cc0a7c2558e4,
         type: 3}
