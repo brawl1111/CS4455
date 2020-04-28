@@ -31,9 +31,19 @@ public class PushableCrateScript : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider c)
+    /*void OnTriggerEnter(Collider c)
     {
-        if (!audio.isPlaying && c.gameObject.CompareTag("Player"))
+        //Debug.Log(Mathf.Approximately(0.0f, rigidbody.velocity.magnitude));
+        //Debug.Log(rigidbody.velocity.magnitude);
+        if (!audio.isPlaying && c.gameObject.CompareTag("Player") && !(rigidbody.velocity.magnitude < 0.001))
+        {
+            audio.Play();
+        }
+    }*/
+
+    void OnTriggerStay (Collider c)
+    {
+        if (!audio.isPlaying && c.gameObject.CompareTag("Player") && !(rigidbody.velocity.magnitude < 0.001))
         {
             audio.Play();
         }

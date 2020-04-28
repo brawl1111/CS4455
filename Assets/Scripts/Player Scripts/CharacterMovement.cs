@@ -206,7 +206,7 @@ public class CharacterMovement : MonoBehaviour
             currSpeed = Mathf.MoveTowards(currSpeed, desiredSpeed, acceleration * Time.deltaTime);
 
             // Set the animator parameter to control what animation is being played.
-            Debug.Log("currspeed " + currSpeed);
+            //Debug.Log("currspeed " + currSpeed);
             anim.SetFloat(speedFloat, currSpeed);
         }
         else
