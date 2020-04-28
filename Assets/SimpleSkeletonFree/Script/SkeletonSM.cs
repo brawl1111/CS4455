@@ -44,6 +44,10 @@ public class SkeletonSM : MonoBehaviour
     private Renderer skeletonRender;
     private Material skeletonMat;
 
+    // Mountain object
+    public GameObject magicMtnWall;
+    public GameObject music;
+
     // Colors
     Color defaultEmis = new Color(120 / 255f, 120 / 255f, 120 / 255f);
 
@@ -76,7 +80,7 @@ public class SkeletonSM : MonoBehaviour
         ifSwapAttack = true;
         isColliding = false;
 
-        //Skeleton 
+        //Skeleton
         skeletonHealth = 3;
         skeletonNav.stoppingDistance = 3.0f;
 
@@ -143,7 +147,7 @@ public class SkeletonSM : MonoBehaviour
                 if (distToPlayer > 15.0f)
                 {
                     skeletonAnim.SetBool("inMeleeDist", false);
-                    aiState = AIState.idle_state;           
+                    aiState = AIState.idle_state;
                 }
                 break;
             case AIState.attack_state:
@@ -204,7 +208,7 @@ public class SkeletonSM : MonoBehaviour
                 EventManager.TriggerEvent<FlinchHit, Vector3>(this.transform.position);
                 skeletonMat.SetColor("_Emission", Color.red);
                 skeletonMat.SetColor("_Color", Color.red);
-            }       
+            }
             StartCoroutine(SkeletonHitCD());
         }
     }
@@ -219,7 +223,9 @@ public class SkeletonSM : MonoBehaviour
 
     IEnumerator DeathAnimation()
     {
+        music.GetComponent<MusicChange>().VolumeDown();
         yield return deathTime;
+        magicMtnWall.GetComponent<MountainWallAnimator>().DropWall();
         Destroy(gameObject);
     }
 }

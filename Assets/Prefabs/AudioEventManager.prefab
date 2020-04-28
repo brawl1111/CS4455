@@ -68,3 +68,5 @@ MonoBehaviour:
   checkpointSFX: {fileID: 8300000, guid: 8683bef5b193220418ba51419c846afd, type: 3}
   buttonClick: {fileID: 8300000, guid: 13d0b0ed5865a3e499de0d31acd751cf, type: 3}
   startButtonClick: {fileID: 8300000, guid: 6a80077885c595d47981627506ebc71c, type: 3}
+  targetHitSFX: {fileID: 8300000, guid: 576f21d298cd40b4e95ef20ec1705cc8, type: 3}
+  mtnFallSFX: {fileID: 8300000, guid: 2f9b383d9b2e442389789175062a0af1, type: 3}

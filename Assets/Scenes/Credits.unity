@@ -914,62 +914,15 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'By Albert Xing, Corey Wen, Joey Bishop, and Tony Wu
-
-
-    schpeel
-
-    schpeel
-
-    schpeel
-
-
-    This was for CS 4455: Video Game Design
-
-    Professor Jeff Wilson
-
-    TAs Vinayak Gargya
-
-
-    schpeel
-
-    schpeel
-
-    schpeel
-
-
-    External things
-
-
-    some flag
-
-    some creature models
-
-    a fucking cat
-
-    trees, grass, flowers, and cacti
-
-
-    schpeel
-
-    schpeel
-
-    schpeel
-
-
-    Music and sound effects
-
-    so many sound effects
-
-    oh my god all the sound effects
-
-
-    Peace
-
-
-    Thanks for Playing!
-
-'
+  m_Text: "By Albert Xing, Corey Wen, Joey Bishop, and Tony Wu\n\nschpeel\nschpeel\nschpeel\n\n\n\nThis
+    was for CS 4455: Video Game Design\nProfessor Jeff Wilson\nTAs Vinayak Gargya\n\nschpeel\nschpeel\nschpeel\n\nExternal
+    things\n\na flag\nsome creature models\npurple bombs that are actually pretty
+    cute\ntrees, grass, flowers, and cacti\n\nschpeel\nschpeel\nschpeel\n\nMusic and
+    sound effects\nso many sound effects\noh my gosh all the sound effects\n\n\n\nTeam
+    Work Makes the Dream Work presents\n\na CS 4455 production\n\nPrincess Duchess's\nExcellent
+    Adventure of \nExtreme Peril and Heroism\nFull of Luscious Trees, Bouncing Llamas,
+    and\nDangerous Gobbledygooks, with a \nWonderful Forest and Towering Mountain\n\n\n\nThanks
+    for Playing!\n\nPeace"
 --- !u!222 &1244518381
 CanvasRenderer:
   m_ObjectHideFlags: 0

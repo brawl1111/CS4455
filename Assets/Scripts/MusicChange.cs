@@ -7,12 +7,12 @@ public class MusicChange : MonoBehaviour
     public AudioClip sectionAMusic;
     public AudioClip sectionBMusic;
     private AudioClip currMusic;
+    public AudioClip wind;
 
     // Start is called before the first frame update
     void Start()
     {
-        currMusic = sectionAMusic;
-        gameObject.GetComponent<AudioSource>().clip = currMusic;
+
     }
 
     // Update is called once per frame
@@ -24,5 +24,10 @@ public class MusicChange : MonoBehaviour
     void OnTriggerEnter(Collider c)
     {
 
+    }
+
+    public void VolumeDown()
+    {
+        GetComponent<Animation>().Play();
     }
 }
