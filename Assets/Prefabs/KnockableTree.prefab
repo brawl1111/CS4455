@@ -205,7 +205,7 @@ MonoBehaviour:
   treeCrack: {fileID: 8300000, guid: 74a6533555e764b528806b189702cda3, type: 3}
   treeHitGround: {fileID: 8300000, guid: a60b88135287a4121b57f8542df5484d, type: 3}
   audioSource: {fileID: 3442250283728585641}
-  particles: {fileID: 1015576372813440, guid: fbdb0b280789440678aa36806de97767, type: 3}
+  particles: {fileID: 1015576372813440, guid: 6aa5a9deddbbcb94b8ffa278aecca4d3, type: 3}
 --- !u!1001 &895209389033416200
 PrefabInstance:
   m_ObjectHideFlags: 0

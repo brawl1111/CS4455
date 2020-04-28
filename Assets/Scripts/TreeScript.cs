@@ -41,6 +41,14 @@ public class TreeScript : MonoBehaviour
         // We'll want to play
         // A sound to suggest that the tree has finished moving
         // In this case, Ground is eqivalent to layer 8
+        // if (collision.gameObject.CompareTag("Hurtbox") && !isFalling)
+        // {
+        //     gameObject.GetComponent<Animation>().Play("Tree Fall");
+        //     EventManager.TriggerEvent<TreeCrackEvent, Vector3>(this.gameObject.transform.position);
+        //     Instantiate(particles, collision.GetContact(0).point, Quaternion.identity);
+        //     isFalling = true;
+        //     return;
+        // }
         GameObject collider = collision.gameObject;
         if (collider.gameObject.layer == 10 && collider.gameObject.name != "Stump_3_3")
         {
