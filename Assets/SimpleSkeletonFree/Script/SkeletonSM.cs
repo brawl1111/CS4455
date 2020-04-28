@@ -47,6 +47,7 @@ public class SkeletonSM : MonoBehaviour
     // Mountain object
     public GameObject magicMtnWall;
     public GameObject music;
+    public GameObject particles;
 
     // Colors
     Color defaultEmis = new Color(120 / 255f, 120 / 255f, 120 / 255f);
@@ -226,6 +227,7 @@ public class SkeletonSM : MonoBehaviour
         music.GetComponent<MusicChange>().VolumeDown();
         yield return deathTime;
         magicMtnWall.GetComponent<MountainWallAnimator>().DropWall();
+        Instantiate(particles, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }
