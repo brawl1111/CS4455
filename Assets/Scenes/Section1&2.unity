@@ -45550,6 +45550,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Drone Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3723512266673340689, guid: 7b43fb891a453644f9e9724849d456bc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4177581514478802950, guid: 7b43fb891a453644f9e9724849d456bc,
         type: 3}
       propertyPath: maxAmmo
