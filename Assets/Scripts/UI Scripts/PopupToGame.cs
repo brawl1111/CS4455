@@ -39,6 +39,7 @@ public class PopupToGame : MonoBehaviour
 
     public void PopupOff()
     {
+        EventManager.TriggerEvent<StartButtonClickEvent, Vector3>(transform.position);
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
         canvasGroup.alpha = 0f;
