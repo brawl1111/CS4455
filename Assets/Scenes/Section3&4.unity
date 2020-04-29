@@ -41238,6 +41238,11 @@ PrefabInstance:
       propertyPath: black
       value: 
       objectReference: {fileID: 1021177178}
+    - target: {fileID: 2060871135408721416, guid: 695a322a422ca4ce488ad2cc089e212d,
+        type: 3}
+      propertyPath: black
+      value: 
+      objectReference: {fileID: 1021177178}
     - target: {fileID: 3261777710772495266, guid: 695a322a422ca4ce488ad2cc089e212d,
         type: 3}
       propertyPath: respawns.Array.size
