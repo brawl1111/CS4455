@@ -52,6 +52,8 @@ public class SkeletonSM : MonoBehaviour
     // Colors
     Color defaultEmis = new Color(120 / 255f, 120 / 255f, 120 / 255f);
 
+    public float turnSpeed = 10f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -82,7 +84,7 @@ public class SkeletonSM : MonoBehaviour
         isColliding = false;
 
         //Skeleton
-        skeletonHealth = 3;
+        skeletonHealth = 5;
         skeletonNav.stoppingDistance = 3.0f;
 
     }
@@ -90,6 +92,7 @@ public class SkeletonSM : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        skeletonNav.transform.LookAt(new Vector3(player.transform.position.x, this.transform.position.y, player.transform.position.z));
         float distToPlayer = Vector3.Distance(base.transform.position, player.transform.position);
         switch(aiState)
         {
@@ -126,7 +129,7 @@ public class SkeletonSM : MonoBehaviour
                     break;
                 }
                 break;
-            case AIState.ready_state:
+            case AIState.ready_state:            
                 if (distToPlayer < 5.0f)
                 {
                     skeletonNav.ResetPath();
