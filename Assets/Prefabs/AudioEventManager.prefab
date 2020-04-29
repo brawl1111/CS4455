@@ -61,7 +61,7 @@ MonoBehaviour:
   boxBreak: {fileID: 8300000, guid: e99f720e578a5432e9e46d7f2990e829, type: 3}
   spikeExtendSFX: {fileID: 8300000, guid: 3e06d7a057b69b045810f683ad7cd661, type: 3}
   swordSwing: {fileID: 8300000, guid: 5fb1ed3a3b92edf4e929879a2da4d73c, type: 3}
-  flinchHit: {fileID: 8300000, guid: 3645d972a6a3d664cbb9e97e9e45eb43, type: 3}
+  flinchHit: {fileID: 8300000, guid: 1fd73c422e6d1974ba599791cf5da65d, type: 3}
   eatAppleSFX: {fileID: 8300000, guid: abbf09a04f08ae744bf005a8122729d6, type: 3}
   playerHurtSFX: {fileID: 8300000, guid: 1d020f2f398df414e9076bdf1dc60172, type: 3}
   DroneShootSFX: {fileID: 8300000, guid: 847543d9e6416474fa831ab223f00526, type: 3}
@@ -74,3 +74,6 @@ MonoBehaviour:
   croakSFX: {fileID: 8300000, guid: 7d35bfe40329b429bb10d82a8e7ca2d3, type: 3}
   fanLiftSFX: {fileID: 8300000, guid: 06dabfbb743f74315b3327781b5c7358, type: 3}
   goombaDeathSFX: {fileID: 8300000, guid: 3645d972a6a3d664cbb9e97e9e45eb43, type: 3}
+  seesawSFX:
+  - {fileID: 8300000, guid: 7c58c5f7d47d8fe4880704213e82a9e2, type: 3}
+  - {fileID: 8300000, guid: 600a96ac0dedae846ad306e6f34828f8, type: 3}

@@ -33,6 +33,7 @@ public class AudioEventManager : MonoBehaviour
     public AudioClip croakSFX;
     public AudioClip fanLiftSFX;
     public AudioClip goombaDeathSFX;
+    public AudioClip[] seesawSFX;
 
 
     private UnityAction<Vector3> treeCrackEventListener;
@@ -81,6 +82,8 @@ public class AudioEventManager : MonoBehaviour
 
     private UnityAction<Vector3> goombaDeathSFXEventListener;
 
+    private UnityAction<Vector3> seesawSFXEventListener;
+
     void Awake()
     {
         treeCrackEventListener = new UnityAction<Vector3>(TreeCrackEventHandler);
@@ -128,6 +131,8 @@ public class AudioEventManager : MonoBehaviour
         fanLiftSFXEventListener = new UnityAction<Vector3>(FanLiftSFXEventHandler);
 
         goombaDeathSFXEventListener = new UnityAction<Vector3>(GoombaDeathSFXEventHandler);
+
+        seesawSFXEventListener = new UnityAction<Vector3>(seesawSFXEventHandler);
     }
 
 
@@ -165,6 +170,7 @@ public class AudioEventManager : MonoBehaviour
         EventManager.StartListening<CroakSFXEvent, Vector3>(croakSFXEventListener);
         EventManager.StartListening<FanSFXEvent, Vector3>(fanLiftSFXEventListener);
         EventManager.StartListening<GoombaDeathSFXEvent, Vector3>(goombaDeathSFXEventListener);
+        EventManager.StartListening<Seesaw1SFX, Vector3>(seesawSFXEventHandler);
     }
 
     void OnDisable()
@@ -192,6 +198,7 @@ public class AudioEventManager : MonoBehaviour
         EventManager.StopListening<CroakSFXEvent, Vector3>(croakSFXEventListener);
         EventManager.StopListening<FanSFXEvent, Vector3>(fanLiftSFXEventListener);
         EventManager.StopListening<GoombaDeathSFXEvent, Vector3>(goombaDeathSFXEventListener);
+        EventManager.StopListening<Seesaw1SFX, Vector3>(seesawSFXEventHandler);
     }
 
     void TreeCrackEventHandler(Vector3 worldPos)
@@ -219,6 +226,7 @@ public class AudioEventManager : MonoBehaviour
         sound.audioSrc.clip = gateSwing;
         sound.audioSrc.minDistance = 0f;
         sound.audioSrc.maxDistance = 100f;
+        sound.audioSrc.volume = 0.4f;
         sound.audioSrc.Play();
     }
 
@@ -261,6 +269,17 @@ public class AudioEventManager : MonoBehaviour
         sound.audioSrc.Play();
     }
 
+
+    void seesawSFXEventHandler(Vector3 worldPos)
+    {
+        EventSound3D sound = Instantiate(eventSound3DPrefab, worldPos, Quaternion.identity, null);
+        sound.audioSrc.clip = this.seesawSFX[Random.Range(0, seesawSFX.Length)];
+        sound.audioSrc.minDistance = 0f;
+        sound.audioSrc.maxDistance = 100f;
+        sound.audioSrc.volume = 0.1f;
+        sound.audioSrc.Play();
+    }
+
     void BoxBreakEventHandler(Vector3 worldPos)
     {
         EventSound3D sound = Instantiate(eventSound3DPrefab, worldPos, Quaternion.identity, null);
@@ -299,7 +318,7 @@ public class AudioEventManager : MonoBehaviour
         sound.audioSrc.clip = flinchHit;
         sound.audioSrc.minDistance = 0f;
         sound.audioSrc.maxDistance = 100f;
-        sound.audioSrc.volume = 0.2f;
+        sound.audioSrc.volume = 0.1f;
         sound.audioSrc.Play();
     }
 
@@ -319,7 +338,7 @@ public class AudioEventManager : MonoBehaviour
         sound.audioSrc.clip = playerHurtSFX;
         sound.audioSrc.minDistance = 0f;
         sound.audioSrc.maxDistance = 100f;
-        sound.audioSrc.volume = 1.0f;
+        sound.audioSrc.volume = 0.6f;
 
         sound.audioSrc.Play();
     }
@@ -385,7 +404,7 @@ public class AudioEventManager : MonoBehaviour
         sound.audioSrc.clip = targetHitSFX;
         sound.audioSrc.minDistance = 0f;
         sound.audioSrc.maxDistance = 100f;
-        sound.audioSrc.volume = 0.50f;
+        sound.audioSrc.volume = 0.30f;
         sound.audioSrc.Play();
     }
 
@@ -427,7 +446,7 @@ public class AudioEventManager : MonoBehaviour
         sound.audioSrc.clip = goombaDeathSFX;
         sound.audioSrc.minDistance = 0f;
         sound.audioSrc.maxDistance = 100f;
-        sound.audioSrc.volume = 0.50f;
+        sound.audioSrc.volume = 0.12f;
         sound.audioSrc.Play();
     }
 }
