@@ -85,14 +85,12 @@ public class SkeletonSM : MonoBehaviour
 
         //Skeleton
         skeletonHealth = 5;
-        skeletonNav.stoppingDistance = 3.0f;
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        //skeletonNav.transform.LookAt(new Vector3(player.transform.position.x, this.transform.position.y, player.transform.position.z));
         float distToPlayer = Vector3.Distance(base.transform.position, player.transform.position);
         switch(aiState)
         {
