@@ -73081,6 +73081,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2060871135408721416, guid: 695a322a422ca4ce488ad2cc089e212d,
+        type: 3}
+      propertyPath: black
+      value: 
+      objectReference: {fileID: 885894096}
     - target: {fileID: 3261777710772495266, guid: 695a322a422ca4ce488ad2cc089e212d,
         type: 3}
       propertyPath: respawns.Array.data[0]
