@@ -92,7 +92,7 @@ public class SkeletonSM : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        skeletonNav.transform.LookAt(new Vector3(player.transform.position.x, this.transform.position.y, player.transform.position.z));
+        //skeletonNav.transform.LookAt(new Vector3(player.transform.position.x, this.transform.position.y, player.transform.position.z));
         float distToPlayer = Vector3.Distance(base.transform.position, player.transform.position);
         switch(aiState)
         {
@@ -129,15 +129,15 @@ public class SkeletonSM : MonoBehaviour
                     break;
                 }
                 break;
-            case AIState.ready_state:            
+            case AIState.ready_state:
                 if (distToPlayer < 5.0f)
                 {
                     skeletonNav.ResetPath();
                     if (ifSwapAttack)
                     {
-                        skeletonAnim.SetBool("inMeleeDist", true);
-                        skeletonAnim.SetBool("inChase", false);
                         swordHitbox.enabled = true;
+                        skeletonAnim.SetBool("inMeleeDist", true);
+                        skeletonAnim.SetBool("inChase", false);   
                         StartCoroutine(attackDelay());
                         break;
                     }
