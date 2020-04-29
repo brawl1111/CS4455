@@ -6688,16 +6688,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7629222877236713455, guid: f2b3a32e7f7174ba58e94328bd69904d,
-        type: 3}
-      propertyPath: flinchHit
-      value: 
-      objectReference: {fileID: 8300000, guid: 1fd73c422e6d1974ba599791cf5da65d, type: 3}
-    - target: {fileID: 7629222877236713455, guid: f2b3a32e7f7174ba58e94328bd69904d,
-        type: 3}
-      propertyPath: targetHitSFX
-      value: 
-      objectReference: {fileID: 8300000, guid: 576f21d298cd40b4e95ef20ec1705cc8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2b3a32e7f7174ba58e94328bd69904d, type: 3}
 --- !u!1001 &305258337
@@ -18266,6 +18256,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cd1080e60d0ebc438ab05bdb752b667, type: 3}
+--- !u!114 &1021177178 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1886130071472663342, guid: 695a322a422ca4ce488ad2cc089e212d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2057031015}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1022259176
 GameObject:
   m_ObjectHideFlags: 0
@@ -41231,6 +41233,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1847601837054547175, guid: 695a322a422ca4ce488ad2cc089e212d,
+        type: 3}
+      propertyPath: black
+      value: 
+      objectReference: {fileID: 1021177178}
     - target: {fileID: 3261777710772495266, guid: 695a322a422ca4ce488ad2cc089e212d,
         type: 3}
       propertyPath: respawns.Array.size
