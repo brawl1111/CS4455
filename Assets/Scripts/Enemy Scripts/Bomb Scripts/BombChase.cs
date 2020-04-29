@@ -37,6 +37,8 @@ public class BombChase : MonoBehaviour
     public AIState aIState;
     private AIState prevState;
 
+    private GameObject sparkFX;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -59,6 +61,8 @@ public class BombChase : MonoBehaviour
         anim.Play("walk");      // muted transition walk->idle, so now it loops
 
         walls = GameObject.FindGameObjectsWithTag("WALL");
+
+        sparkFX = transform.Find("Spark").gameObject;
 
         //princessHealthManager = GetComponent<HealthManager>();
 
@@ -157,6 +161,7 @@ public class BombChase : MonoBehaviour
     {
         speedUp();
         // sound.audioSrc.loop = true;
+        sparkFX.SetActive(true);
         fuseSFX.Play();
         Debug.Log("started coroutine at timestamp: " + Time.time);
         yield return new WaitForSecondsRealtime(fuseTime);
@@ -173,6 +178,7 @@ public class BombChase : MonoBehaviour
         anim.Play("attack01");
         float animTime = anim.GetCurrentAnimatorStateInfo(0).length;
         fuseSFX.enabled = false;
+        sparkFX.SetActive(false);
         audioSource.PlayDelayed(animTime / 2);
 
         yield return new WaitForSecondsRealtime(animTime * 0.75f);        // wait until exploding animation is done to set wall to inactive
