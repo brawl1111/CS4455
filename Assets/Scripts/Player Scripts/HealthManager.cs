@@ -110,10 +110,12 @@ public class HealthManager : MonoBehaviour
     public void Update()
     {
         //Kill player or restore/remove health for testing purposes
+        /*
         if (Input.GetKeyDown("p")) KillPlayer();
         if (Input.GetKeyDown("o")) RestoreAllHealth();
         if (Input.GetKeyDown("i")) RemoveOneHealth();
         if (Input.GetKeyDown("u")) RestoreOneHealth();
+        */
     }
 
     public void KillPlayer()
