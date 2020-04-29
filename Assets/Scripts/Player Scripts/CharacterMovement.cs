@@ -182,7 +182,8 @@ public class CharacterMovement : MonoBehaviour
     	isGroundedCheck = Physics.CheckSphere(groundCheck.position, distanceToGround, ground, QueryTriggerInteraction.Ignore);
     	isGrounded = charCtrl.isGrounded;
         //Debug.Log(isGroundedCheck);
-        anim.SetBool("isFalling", (!isGroundedCheck && rb.velocity.y < 0));
+
+        anim.SetBool("isFalling", (!isGroundedCheck && rb.velocity.y < 0 && !isSpinning));
 
     	if (isGroundedCheck || isGrounded) extraJumps = maxExtraJumps;
     }

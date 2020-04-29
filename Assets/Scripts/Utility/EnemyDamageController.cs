@@ -32,6 +32,7 @@ public class EnemyDamageController : MonoBehaviour
             if (curHP <= 0)
             {
                 //Destroy(gameObject);          // this is for regular spawner
+                EventManager.TriggerEvent<GoombaDeathSFXEvent, Vector3>(transform.position);
                 Instantiate(particles, transform.position, Quaternion.identity);
                 gameObject.SetActive(false);    // this is for advanced spawner?
             }
