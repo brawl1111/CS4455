@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spikeMaxDistance: 50
+  croakMaxDistance: 40
   eventSound3DPrefab: {fileID: 399083756018636128, guid: 28b44c5f4265b4ad2bb085dca88cd8e3,
     type: 3}
   treeCrack: {fileID: 8300000, guid: 74a6533555e764b528806b189702cda3, type: 3}
@@ -70,3 +71,6 @@ MonoBehaviour:
   startButtonClick: {fileID: 8300000, guid: 6a80077885c595d47981627506ebc71c, type: 3}
   targetHitSFX: {fileID: 8300000, guid: 576f21d298cd40b4e95ef20ec1705cc8, type: 3}
   mtnFallSFX: {fileID: 8300000, guid: 2f9b383d9b2e442389789175062a0af1, type: 3}
+  croakSFX: {fileID: 8300000, guid: 7d35bfe40329b429bb10d82a8e7ca2d3, type: 3}
+  fanLiftSFX: {fileID: 8300000, guid: 06dabfbb743f74315b3327781b5c7358, type: 3}
+  goombaDeathSFX: {fileID: 8300000, guid: 3645d972a6a3d664cbb9e97e9e45eb43, type: 3}

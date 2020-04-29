@@ -7,6 +7,7 @@ public class AudioEventManager : MonoBehaviour
 {
 
     public float spikeMaxDistance = 50.0f;
+    public float croakMaxDistance = 40.0f;
     public EventSound3D eventSound3DPrefab;
 
     public AudioClip treeCrack;
@@ -29,6 +30,9 @@ public class AudioEventManager : MonoBehaviour
     public AudioClip startButtonClick;
     public AudioClip targetHitSFX;
     public AudioClip mtnFallSFX;
+    public AudioClip croakSFX;
+    public AudioClip fanLiftSFX;
+    public AudioClip goombaDeathSFX;
 
 
     private UnityAction<Vector3> treeCrackEventListener;
@@ -71,6 +75,12 @@ public class AudioEventManager : MonoBehaviour
 
     private UnityAction<Vector3> mtnFallSFXEventListener;
 
+    private UnityAction<Vector3> croakSFXEventListener;
+
+    private UnityAction<Vector3> fanLiftSFXEventListener;
+
+    private UnityAction<Vector3> goombaDeathSFXEventListener;
+
     void Awake()
     {
         treeCrackEventListener = new UnityAction<Vector3>(TreeCrackEventHandler);
@@ -112,6 +122,12 @@ public class AudioEventManager : MonoBehaviour
         targetHitSFXEventListener = new UnityAction<Vector3>(targetHitSFXEventHandler);
 
         mtnFallSFXEventListener = new UnityAction<Vector3>(MtnFallSFXEventHandler);
+
+        croakSFXEventListener = new UnityAction<Vector3>(CroakSFXEventHandler);
+
+        fanLiftSFXEventListener = new UnityAction<Vector3>(FanLiftSFXEventHandler);
+
+        goombaDeathSFXEventListener = new UnityAction<Vector3>(GoombaDeathSFXEventHandler);
     }
 
 
@@ -146,6 +162,9 @@ public class AudioEventManager : MonoBehaviour
         EventManager.StartListening<StartButtonClickEvent, Vector3>(startButtonClickEventListener);
         EventManager.StartListening<TargetHitSFXEvent, Vector3>(targetHitSFXEventListener);
         EventManager.StartListening<MtnFallSFXEvent, Vector3>(mtnFallSFXEventListener);
+        EventManager.StartListening<CroakSFXEvent, Vector3>(croakSFXEventListener);
+        EventManager.StartListening<FanSFXEvent, Vector3>(fanLiftSFXEventListener);
+        EventManager.StartListening<GoombaDeathSFXEvent, Vector3>(goombaDeathSFXEventListener);
     }
 
     void OnDisable()
@@ -170,6 +189,9 @@ public class AudioEventManager : MonoBehaviour
         EventManager.StopListening<StartButtonClickEvent, Vector3>(startButtonClickEventListener);
         EventManager.StopListening<TargetHitSFXEvent, Vector3>(targetHitSFXEventListener);
         EventManager.StopListening<MtnFallSFXEvent, Vector3>(mtnFallSFXEventListener);
+        EventManager.StopListening<CroakSFXEvent, Vector3>(croakSFXEventListener);
+        EventManager.StopListening<FanSFXEvent, Vector3>(fanLiftSFXEventListener);
+        EventManager.StopListening<GoombaDeathSFXEvent, Vector3>(goombaDeathSFXEventListener);
     }
 
     void TreeCrackEventHandler(Vector3 worldPos)
@@ -371,6 +393,38 @@ public class AudioEventManager : MonoBehaviour
     {
         EventSound3D sound = Instantiate(eventSound3DPrefab, worldPos, Quaternion.identity, null);
         sound.audioSrc.clip = mtnFallSFX;
+        sound.audioSrc.minDistance = 0f;
+        sound.audioSrc.maxDistance = 100f;
+        sound.audioSrc.volume = 0.50f;
+        sound.audioSrc.Play();
+    }
+
+    void CroakSFXEventHandler(Vector3 worldPos)
+    {
+        EventSound3D sound = Instantiate(eventSound3DPrefab, worldPos, Quaternion.identity, null);
+        sound.audioSrc.clip = croakSFX;
+        sound.audioSrc.minDistance = 1f;
+        sound.audioSrc.maxDistance = croakMaxDistance;
+        sound.audioSrc.volume = 0.2f;
+        sound.audioSrc.spatialBlend = 1.0f;
+        sound.audioSrc.rolloffMode = AudioRolloffMode.Linear;
+        sound.audioSrc.Play();
+    }
+
+    void FanLiftSFXEventHandler(Vector3 worldPos)
+    {
+        EventSound3D sound = Instantiate(eventSound3DPrefab, worldPos, Quaternion.identity, null);
+        sound.audioSrc.clip = fanLiftSFX;
+        sound.audioSrc.minDistance = 0f;
+        sound.audioSrc.maxDistance = 100f;
+        sound.audioSrc.volume = 0.50f;
+        sound.audioSrc.Play();
+    }
+
+    void GoombaDeathSFXEventHandler(Vector3 worldPos)
+    {
+        EventSound3D sound = Instantiate(eventSound3DPrefab, worldPos, Quaternion.identity, null);
+        sound.audioSrc.clip = goombaDeathSFX;
         sound.audioSrc.minDistance = 0f;
         sound.audioSrc.maxDistance = 100f;
         sound.audioSrc.volume = 0.50f;

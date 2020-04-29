@@ -17,7 +17,7 @@ public class FanLift : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -28,6 +28,7 @@ public class FanLift : MonoBehaviour
             princess.GetComponent<Rigidbody>().AddForce(0, fanLiftForce * 100, 0, ForceMode.Impulse);
 
             //Animator fanBladesAnim = GetComponentInChildren<Animator>();
+            EventManager.TriggerEvent<FanSFXEvent, Vector3>(transform.position);
             fanAnim.Play("FanSpin");
 
             //Debug.Log("fan lift");
