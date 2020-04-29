@@ -73126,6 +73126,11 @@ PrefabInstance:
       propertyPath: respawns.Array.data[5]
       value: 
       objectReference: {fileID: 520372218}
+    - target: {fileID: 3461844239298864448, guid: 695a322a422ca4ce488ad2cc089e212d,
+        type: 3}
+      propertyPath: black
+      value: 
+      objectReference: {fileID: 885894096}
     - target: {fileID: 3461844239308530747, guid: 695a322a422ca4ce488ad2cc089e212d,
         type: 3}
       propertyPath: m_IsActive
